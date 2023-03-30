@@ -54,7 +54,7 @@
   td {
   padding: 2vh;
   background-color: rgb(196, 223, 232);
-  border-bottom: 1px solid black;
+  border-bottom: 0.1vw solid black;
   }
   
   .user-table tr:last-child td {
@@ -92,7 +92,7 @@ label input[type="text"] {
   padding: 19px;
   border: 0.2vw solid  #337ab7;
   border-radius: 1vw;
-  font-size: 1.5rem;
+  font-size: 1.5vw;
   width: 100%;
   box-sizing: border-box;
   transition: all 0.3s ease-in-out;

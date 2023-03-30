@@ -69,6 +69,7 @@ function getAllTemp() {
         }
       } else if (data.status === false) {
         alert(`unsuccessful`);
+        window.location.href = "/ADMIN/admin.html"
       }
     })
     .catch((error) => console.error(error));

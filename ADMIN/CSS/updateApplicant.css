@@ -1,0 +1,132 @@
+@import url(/CSS-Main/btn.css);
+@import url(/CSS-Main/font.css);
+@import url(/CSS-Main/footer.css);
+@import url(/ADMIN/CSS/admin_header.css);
+/* Global styles */
+
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  }
+  body {
+  font-family: sans-serif;
+  }
+  /* Style the form */
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 1vh;
+  }
+  .dashboard-section {
+    width: 80vw;
+    margin: 0 auto;
+    padding: 0vh 0;
+    background: linear-gradient(135deg, #1764c3, #1764c3);
+    border-radius: 1vw;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
+  }
+  .image {
+    display: block; /* Ensures the image is on its own line */
+    max-width: 15%; /* Ensures the image doesn't exceed its parent's width */
+    height: auto; /* Maintains the aspect ratio of the image */
+    margin: 0 auto; /* Centers the image horizontally */
+    /* border-radius: 50%;  */
+    box-shadow: 0px 2px 6px rgba(0,0,0,0.1); 
+  }
+  /* Style the user table */
+  .user-table {
+    width: 80vw;
+    margin: 2vh;
+    border-collapse: collapse;
+  }
+  /* Style the table headers */
+  th {
+    padding: 1vH;
+    background-color: #1560bc;
+    text-align: left;
+    font-size: 1.2vw;
+    font-weight: bold;
+    color: white;
+    border: .3vh solid white;
+  }
+  /* Style the table data cells */
+  td {
+    padding: 1vh;
+    background-color: rgb(210, 238, 248);
+    border: .3vh solid #1560bc;
+  }
+  /* Style the input fields */
+  input[type="text"],
+  input[type="email"],
+  input[type="number"],
+  input[type="date"],
+  textarea {
+    width: 90%;
+    padding: .5vw;
+    border: .3vh solid #1560bc;
+    border-radius: 1vw;
+    resize: none;
+    margin-bottom: 1vh;
+    font-size: 1.2vw;
+  }
+  /* Style the select fields */
+  select {
+    width: 90%;
+    padding: 1vw;
+    border: .3vh solid black;
+    border-radius: 1vw;
+    margin-bottom: 1vh;
+    appearance: none;
+    background: url('data:image/svg+xml;utf8,<svg viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M1.8,5.5h16.5l-8.2,9.2L1.8,5.5z" fill="%23424242"/></svg>') no-repeat;
+    background-position: calc(100% - 1vw) center;
+    background-size: 1.2vw;
+    font-size: 1.2vw;
+    background-color: white;
+  }
+  /* Style the submit and reset buttons */
+  [type="submit"],
+  [type="reset"] {
+    width: 30%;
+    padding: 1vw;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 2vh;
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.3s ease-in-out;
+  }
+  [type="submit"] {
+    background-color: #4CAF50;
+    color: #fff;
+  }
+  [type="reset"] {
+    background-color: #f44336;
+    color: #fff;
+  }
+  [type="submit"]:hover,
+  [type="reset"]:hover {
+    transform: translateY(-2px);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  }
+  /* Style the table rows */
+  tr:nth-child(even) {
+    background-color: #f2f2f2;
+  }
+    /* for update bottom */
+  .btn-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 10vh;
+  }
+  .btn-1:hover {
+      background-color:white;
+      color: black;
+      box-shadow: 0 0.5vh 1.5vh rgba(0, 0, 0, 0.5);
+    }
