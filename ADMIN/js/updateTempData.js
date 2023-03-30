@@ -1,4 +1,7 @@
-function updateTempData() {
+const Form = document.getElementById("form");
+Form.addEventListener("submit", updateTable);
+function updateTable(para) {
+  para.preventDefault();
     // name
     const firstName = document.getElementById("personal_info_first_name").value;
     const middleName = document.getElementById("personal_info_middle_name").value;
@@ -17,9 +20,7 @@ function updateTempData() {
     const permanentDistrict = document.getElementById("permanent_district").value;
     const permanentState = document.getElementById("permanent_state").value;
     const date_Of_Birth = document.getElementById("dob").value;
-    const blood_Groop = document.getElementById(
-      "blood_group"
-    ).value;
+    const blood_Groop = document.getElementById("blood_group").value;
     const Category = document.getElementById("personal_info_category").value;
     const Email = document.getElementById("personal_info_email").value;
     const Contact = document.getElementById("personal_info_contact").value;
@@ -67,10 +68,10 @@ function updateTempData() {
       admission_year: Admission_Year,
     },
   };
-  const urlParams = new URLSearchParams(window.location.search);
-  const id = urlParams.get('id');
+  // const urlParams = new URLSearchParams(window.location.search);
+  // const id = urlParams.get('id');
   // updating data
-  fetch(`https://universa-api.onrender.com/student/temp/${id}`, {
+  fetch(`https://universa-api.onrender.com/student/temp`, {
     method: "PUT",
     headers: {
       "Content-Type": "application/json",
@@ -81,7 +82,7 @@ function updateTempData() {
     .then((data) => {
       console.log(data)
       alert("Data saved/updated successfully:");
-      window.location.href = "/ADMIN/temp_st.html";
+      window.location.href = "/ADMIN/manage_applicats.html";
     })
     .catch((error) => {
       console.error(error);

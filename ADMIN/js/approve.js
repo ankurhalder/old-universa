@@ -1,7 +1,6 @@
-
 function approve(){
       // name
-    const firstName = document.getElementById("first_name").value;
+    const firstName = document.getElementById("first_name").innerText;
     const middleName = document.getElementById("middle_name").value;
     const lastName = document.getElementById("last_name").value;
     //personal data
@@ -29,7 +28,8 @@ function approve(){
   const Stream = document.getElementById("stream").value;
   userID = localStorage.getItem("GotoPreview")
   console.log(userID)
-    
+  console.log(firstName)
+  console.log(Email)
       const userdata= {
         personal_info: {
           first_name: firstName,

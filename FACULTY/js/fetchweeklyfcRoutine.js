@@ -1,6 +1,5 @@
-let section = 'a'
-let stream = 'cst'
-let year = '2'
+let faculty_name = 'che'
+let day = 'monday'
 function fetchRoutine() {
     const userId = localStorage.getItem("userId");
     if(userId === null){
@@ -8,7 +7,7 @@ function fetchRoutine() {
     }
     // retrieve user_id from local storage
     console.log(7563975692387)
-    fetch(`https://universa-api.onrender.com/routine?year=${year}&stream=${stream}&section=${section}&day=monday`, {
+    fetch(`https://universa-api.onrender.com/routine/weekly?faculty=${faculty_name}`, {
       // include user_id in the URL
       method: "GET",
       headers: {
@@ -20,4 +19,4 @@ function fetchRoutine() {
         console.log(data)
     })
       .catch((error) => console.error(error));
-  } 
+  }

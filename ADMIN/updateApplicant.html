@@ -32,10 +32,14 @@
   <main>
         <!-- Body Part -->
   <section name="user_dashboard" id="user_dashboard" class="dashboard-section">
-    <form id="form"> 
+    <form action="#" enctype="multipart/form-data" id="image-form">
       <img class="image" src="/TEMP_STUDENT/image/login.png" alt="image" id="user-image">
-        <input type="file"> 
-        <script src="/TEMP_STUDENT/js/image.js"></script>
+      <input type="file" name="profile_image"> 
+      <script src="/TEMP_STUDENT/js/image.js"></script>
+      <script src="/TEMP_STUDENT/js/imageUpload.js"></script>
+      <input type="submit" class="upload_image">Upload Image</input>
+       </form>
+    <form id="form"> 
         <table class="user-table">
           <tr>
             <!-- Personal data Start's from here -->
@@ -177,18 +181,19 @@
 
             <tr>
               <th>Stream</th>
-              <td><input type="text" name="course_stream" id="course_stream" class="user-info"></td>
+              <td><input type="text" name="course_stream" id="stream" class="user-info"></td>
             </tr>
 
             <tr>
               <th>Addmission Year</th>
-              <td><input type="number" name="addmission_year" id="addmission_year" class="user-info"></td>
+              <td><input type="number" name="addmission_year" id="admission_year" class="user-info"></td>
             </tr>  
         </table>
         <br>
-        <script src="/TEMP_STUDENT/js/updateTable.js"></script>
-        <div class="btn-container"><button onclick="updateTempData()" class="btn btn-1">Save
+        <script src="/ADMIN/js/updateTempData.js"></script>
+        <div class="btn-container"><button class="btn btn-1">Save
         </button></div>
+      </div>
     </form>
   </section>
   </main>

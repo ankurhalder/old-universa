@@ -86,34 +86,6 @@ form {
     font-size: 1.2vw;
     background-color: white;
   }
-  /* Style the submit and reset buttons */
-  [type="submit"],
-  [type="reset"] {
-    width: 30%;
-    padding: 1vw;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    margin-top: 2vh;
-    font-size: 1.2rem;
-    font-weight: bold;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    transition: all 0.3s ease-in-out;
-  }
-  [type="submit"] {
-    background-color: #4CAF50;
-    color: #fff;
-  }
-  [type="reset"] {
-    background-color: #f44336;
-    color: #fff;
-  }
-  [type="submit"]:hover,
-  [type="reset"]:hover {
-    transform: translateY(-2px);
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
-  }
   /* Style the table rows */
   tr:nth-child(even) {
     background-color: #f2f2f2;

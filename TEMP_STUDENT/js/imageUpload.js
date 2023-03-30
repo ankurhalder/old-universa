@@ -17,6 +17,7 @@ function uploadImage(imageimage){
         .then((response) => response.json())
         .then((data) => {
           console.log(data);
+          alert(`Image Uploaded Successfully`)
         })
         .catch((error) => 
         console.error(error));

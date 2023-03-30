@@ -1,7 +1,6 @@
 function tempDataFetch() {
   const urlParams = new URLSearchParams(window.location.search);
   const id = urlParams.get('id'); 
-//  const userID = document.getElementById("temp_user_id").value
      console.log('hello world')
       localStorage.setItem("GotoPreview",id)
       console.log(localStorage.getItem("GotoPreview"));

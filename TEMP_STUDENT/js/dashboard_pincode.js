@@ -1,4 +1,7 @@
-const pincodeInput = document.getElementById("present_pincode");
+
+window.addEventListener('DOMContentLoaded', function() {
+  // your code here
+  const pincodeInput = document.getElementById("present_pincode");
 const cityInput = document.getElementById("present_city");
 const districtInput = document.getElementById("present_district");
 const stateInput = document.getElementById("present_state");
@@ -32,4 +35,5 @@ pincodeInput.addEventListener("blur", () => {
     .catch((error) => {
       console.error(error);
     });
+});
 });

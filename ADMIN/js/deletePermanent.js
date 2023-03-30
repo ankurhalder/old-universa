@@ -4,7 +4,7 @@ function deletePermanemt() {
     console.log("hehe boi")
     fetch(`https://universa-api.onrender.com/student/${userid}`, {
         method: "DELETE",
-        credentials: "include",
+        credentials: 'include',
         headers: {
         //   "token": d
         }
