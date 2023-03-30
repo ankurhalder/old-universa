@@ -82,5 +82,6 @@ function approve(){
           .then((data) => {
             console.log(data)
             alert("Student Created")
+            window.location.href = "/ADMIN/admin.html"
           }
      ).catch(error=>console.log(error))}

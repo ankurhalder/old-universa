@@ -28,31 +28,32 @@
   padding: 1%;
   border: .1vw solid rgb(208, 235, 244);
   border-radius: 4vh;
-  width: 100%;
+  width: 80%;
   }
   /* Form styles */
   form {
-  width: 100%;
+  width: 80%;
   max-width: 90vw;
   
   }
   
   table {
   border-collapse: collapse;
-  width: 100%;
+  width: 80%;
   }
   
   th {
   background-color: #0077cc;
   color: white;
   text-align:left;
-  padding:1%;
+  padding-left:1%;
   border: .1vh white solid;
-  font-size: 3vh;
+  font-size: 2vh;
+  height: 1vh;
   }
   
   td {
-  padding: 2vh;
+  padding: 0vh;
   background-color: rgb(196, 223, 232);
   border-bottom: 0.1vw solid black;
   }
