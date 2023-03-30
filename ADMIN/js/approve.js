@@ -18,9 +18,7 @@ function approve(){
     const permanentDistrict = document.getElementById("permanent_district").value;
     const permanentState = document.getElementById("permanent_state").value;
     const date_Of_Birth = document.getElementById("dob").value;
-    const blood_Groop = document.getElementById(
-      "blood_group"
-    ).value;
+    const blood_Groop = document.getElementById("blood_group").value;
     const Category = document.getElementById("category").value;
     const Email = document.getElementById("email").value;
     const Contact = document.getElementById("contact").value;

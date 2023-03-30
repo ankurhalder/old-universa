@@ -5,7 +5,7 @@ var fileInput = document.querySelector('input[type="file"]');
 // Add an event listener to the file input element
 fileInput.addEventListener('change', function() {
   // Get the selected file
-  console.log('hello world')
+  // console.log('hello world')
   var file = fileInput.files[0];
 
   // Create a new FileReader instance
