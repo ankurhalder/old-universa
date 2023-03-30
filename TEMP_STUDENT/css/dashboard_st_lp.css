@@ -1,0 +1,116 @@
+@import url(/CSS-Main/btn.css);
+@import url(/CSS-Main/font.css);
+@import url(/CSS-Main/footer.css);
+@import url(/TEMP_STUDENT/css/login_header.css);
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+body {
+	font-family: 'Roboto', sans-serif;
+	margin: 0;
+	padding: 0;
+}
+
+
+.dashboard-section h1 {
+  font-size: 3.5vw;
+  margin-bottom: 0vh;
+  text-align: center;
+  color: white;
+  text-transform: uppercase;
+  font-family: 'Poppins', sans-serif;
+  position: relative;
+}
+
+.dashboard-section {
+  width: 80vw;
+  margin: 0 auto;
+  padding: 0vh 0;
+  background: linear-gradient(135deg, #1764c3, #1560bc);
+  border-radius: 1vw;
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
+}
+.image {
+    display: block; /* Ensures the image is on its own line */
+    max-width: 15%; /* Ensures the image doesn't exceed its parent's width */
+    height: auto; /* Maintains the aspect ratio of the image */
+    margin: 0 auto; /* Centers the image horizontally */
+    /* border-radius: 50%;  */
+    box-shadow: 0px 2px 6px rgba(0,0,0,0.1); 
+  }
+  
+.user-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 1.2vw;
+  margin-top: .5vh;
+}
+
+.user-table th,
+.user-table td {
+  padding: 1vh;
+  border: 0.1vw solid white;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+}
+.user-table td{
+  border: 0.1vw solid #1560bc;
+}
+
+.user-table th {
+  text-align: left;
+  width: 40%;
+  font-weight: bold;
+  background-color:#1560bc;
+  color: white;
+}
+
+.user-info {
+  width: 60%;
+}
+
+.registration-number,
+.enrollment-number {
+  font-weight: bold;
+}
+
+.user-table tr:nth-child(odd) {
+  background-color: #f9f9f9;
+}
+
+.user-table tr {
+  transition: background-color 0.2s ease;
+}
+
+.user-table tr:hover {
+  background-color: #f5f5f5;
+}
+
+.user-table td {
+  background-color: #fff;
+  color: #555;
+}
+
+.user-table th:first-child,
+.user-table td:first-child {
+  padding-left: 3vw;
+}
+
+.user-table th:last-child,
+.user-table td:last-child {
+  padding-right: 3vw;
+}
+
+  /* for update bottom */
+.btn-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 10vh;
+}
+.btn-1:hover {
+    background-color:white;
+    color: black;
+    box-shadow: 0 0.5vh 1.5vh rgba(0, 0, 0, 0.5);
+  }

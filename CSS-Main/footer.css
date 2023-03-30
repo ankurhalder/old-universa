@@ -1,0 +1,122 @@
+/* Base styles for footer */
+footer {
+    position:relative;
+    bottom: 0;
+    width: 100%;
+    height: auto;
+    /* background-color: #003474a2; */
+    background-color:  #FEFAE0;
+    display: flex;
+    /* flex-wrap: wrap; */
+    justify-content: space-between;
+    align-items: center;
+    font-size: 2vh;
+    font-family: 'Oswald', sans-serif;
+  }
+  
+  
+  /* Style for contact info and social links headings */
+  .contact-info h3,
+  .social-links h3 {
+    margin: 0;
+    font-size: 2.2vh;
+  }
+  
+  /* Contact info */
+  .contact-info {
+    padding: 1.5vh 2vw;
+    /* flex: 1 1 30%; */
+  }
+  
+  .contact-info p {
+    margin: 0;
+  }
+  
+  /* Social links */
+  .social-links {
+    padding: 2vh 2vw;
+    /* flex: 1 1 40%; */
+    text-align: right;
+  }
+  
+  .social-links ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .social-links li {
+    display: inline-block;
+    margin-right: 1vw;
+  }
+  
+  .social-links li:last-child {
+    margin-right: 0;
+  }
+  
+  /* Footer info */
+  .footer-info {
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    font-size: 2vh;
+  }
+  
+  .footer-info p {
+    margin: 0;
+  }
+  
+  /* Media queries for different screen sizes */
+  @media (max-width: 991px) {
+    /* Adjust the flex values for contact info, social links, and footer info */
+    .contact-info {
+      flex: 1 1 40%;
+    }
+    
+    .social-links {
+      flex: 1 1 40%;
+    }
+    
+    .footer-info {
+      flex: 1 1 20%;
+    }
+  }
+  
+  @media (max-width: 767px) {
+    /* Adjust the flex values for contact info, social links, and footer info */
+    .contact-info {
+      flex: 1 1 100%;
+    }
+    
+    .social-links {
+      flex: 1 1 100%;
+      text-align: center;
+    }
+    
+    .social-links li {
+      margin-right: 1vw;
+    }
+    
+    .footer-info {
+      flex: 1 1 100%;
+    }
+  }
+  
+  @media (max-width: 479px) {
+    /* Adjust the font size and padding for contact info, social links, and footer info */
+    .contact-info {
+      font-size: 1.8vh;
+      padding: 1vh 1vw;
+    }
+    
+    .social-links {
+      font-size: 1.8vh;
+      padding: 1vh 1vw;
+    }
+    
+    .footer-info {
+      font-size: 2vh;
+      padding: 1vh 1vw;
+    }
+  }
+  

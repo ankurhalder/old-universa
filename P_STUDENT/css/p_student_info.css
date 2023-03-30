@@ -1,0 +1,21 @@
+@import url(/CSS-Main/btn.css);
+@import url(/CSS-Main/font.css);
+@import url(/CSS-Main/footer.css);
+@import url(/P_STUDENT/css/p_student_header.css);
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+  }
+ body {
+	font-family: Arial, sans-serif;
+	margin: 0;
+	padding: 0;
+}
+.footer-info {
+    padding: 0 0 0 0;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    font-size: 2.2vh;
+  }

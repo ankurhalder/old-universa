@@ -1,0 +1,132 @@
+@import url(/CSS-Main/btn.css);
+@import url(/CSS-Main/font.css);
+@import url(/CSS-Main/footer.css);
+@import url(/ADMIN/CSS/admin_header.css);
+/* Global styles */
+
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  }
+  body {
+  font-family: sans-serif;
+  }
+  
+  /* Main styles */
+  main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 1vh;
+  }
+  
+  /* Input styles */
+  input[type="text"] {
+  padding: 1%;
+  border: .1vw solid rgb(208, 235, 244);
+  border-radius: 4vh;
+  width: 100%;
+  }
+  /* Form styles */
+  form {
+  width: 100%;
+  max-width: 90vw;
+  
+  }
+  
+  table {
+  border-collapse: collapse;
+  width: 100%;
+  }
+  
+  th {
+  background-color: #0077cc;
+  color: white;
+  text-align:left;
+  padding:1%;
+  border: .1vh white solid;
+  font-size: 3vh;
+  }
+  
+  td {
+  padding: 2vh;
+  background-color: rgb(196, 223, 232);
+  border-bottom: 1px solid black;
+  }
+  
+  .user-table tr:last-child td {
+  border-bottom: none;
+  }
+  
+  /* Additional styles for specific table cells */
+  .user-info input[type="text"] {
+  background-color: #f0f0f0;
+  border: none;
+  }
+
+.footer-info {
+	padding: 0 0 0 2.3%;
+	display: flex;
+	justify-content:center;
+	align-items: center;
+	font-size: 2.2vh;
+  }
+  .btn-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: .5%;
+}
+/* label style  start's from here */
+label {
+  display: block;
+  margin-bottom: 0%;
+  margin: 2%;
+  position: relative;
+}
+
+label input[type="text"] {
+  padding: 19px;
+  border: 0.2vw solid  #337ab7;
+  border-radius: 1vw;
+  font-size: 1.5rem;
+  width: 100%;
+  box-sizing: border-box;
+  transition: all 0.3s ease-in-out;
+}
+
+/* Add styles for the label when it's hovered */
+label:hover {
+  cursor: pointer;
+}
+
+label:hover:before {
+  color:black;
+}
+
+label input:focus + label:before {
+  color: #337ab7;
+}
+
+label:after {
+  content: "";
+  font-family: FontAwesome;
+  font-size: 2.5vw;
+  position: absolute;
+  top: 50%;
+  right: 5%;
+  transform: translateY(-50%);
+  color: #999;
+  transition: all 0.3s ease-in-out;
+}
+
+label:hover:after {
+  color: black
+}
+label input:focus + label:after {
+  color: #337ab7;
+}
+

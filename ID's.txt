@@ -1,0 +1,12 @@
+Admin user id = 3797489034901849
+Admin password = You know
+/
+/
+Permanent Student id = 3797489034909958
+Permanent Student Password = You know
+/
+/
+Temporary student id =  3797489034908065
+Temporary stydent Password = you know
+ 
+

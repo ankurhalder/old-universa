@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Update Profile</title>
+</head>
+<link rel="stylesheet" href="/P_STUDENT/css/p_student_update.css">
+<body>
+<!-- Header -->
+<header>
+    <div class="left_side">
+      <ul class="nav_links">
+        <li class="home_link"><a href="/P_STUDENT/p_student.html">Universa</a></li>
+      </ul>
+    </div>
+    <div class="right_side">
+      <div class="dropdown">
+        <button class="dropbtn">Menu &#9660;</button>
+        <div class="dropdown-panel hide">
+          <a href="/P_STUDENT/p_student_services.html">Services</a>
+          <a href="/P_STUDENT/p_student_info.html">Info</a>
+          <a href="/P_STUDENT/p_student_update.html">Update Profile</a>
+          <div class="logout_container"> <button onclick="logout()" class="btn logout">Logout</button></div>
+        </div>
+      </div>
+    </div>
+  </header>
+          <script src="/TEMP_STUDENT/js/dropDown.js"></script>
+    <main>
+        <img src="" alt="Logo" id="student_image">
+    <!-- Body Part -->
+    <form id="student-form">
+        <table>
+            <tr>
+                <th>Personal Details</th>
+                <th>Present Address</th>
+                <th>Permanent Address</th>
+            </tr>
+            <tr>
+                <td>
+                    <label for="student_info_first_name">First Name:</label>
+                    <input type="text" name="first_name" id="student_info_first_name"><br>
+                    Middle Name: <br>
+                    <input type="text" name="middle_name" id="student_info_middle_name"><br>
+
+                    Last Name: <br>
+                    <input type="text" name="last_name" id="student_info_last_name"><br>
+                    Gender: <br>
+                    <select name="gender" id="student_gender" required>
+                        <option value="" disabled selected>Please Select</option>
+                        <option value="Male">Male</option>
+                        <option value="Female">Female</option>
+                        <option value="Others">Others</option>
+                    </select><br>
+                    Date of Birth: <br>
+                    <input type="date" name="dob" id="student_dob" required><br>
+
+                    Blood Group: <br>
+                    <select name="blood_group" id="student_blood_group" required>
+                        <option value="" disabled selected>Please Select</option>
+                        <option value="A+">A+</option>
+                        <option value="A-">A-</option>
+                        <option value="B+">B+</option>
+                        <option value="B-">B-</option>
+                        <option value="O+">O+</option>
+                        <option value="O-">O-</option>
+                        <option value="AB+">AB+</option>
+                        <option value="Ab-">AB-</option>
+                    </select><br>
+                    Category: <br>
+                    <select name="category" id="student_info_category" required>
+                        <option value="" disabled selected>Please Select</option>
+                        <option value="general">General</option>
+                        <option value="obc">OBC</option>
+                        <option value="sc">SC</option>
+                        <option value="st">ST</option>
+                    </select><br>
+
+                    Email: <br>
+                    <input type="email" name="email" id="student_info_email" required><br>
+
+                    Contact: <br>
+                    <input type="number" name="contact" id="student_info_contact" required><br>
+                </td>
+                <td>
+                    Address: <br>
+                    <textarea name="present_address" id="student_present_address" rows="4" cols="30"></textarea><br>
+
+                    Pincode: <br>
+                    <input type="number" name="present_pincode" id="student_present_pincode"><br>
+
+                    City: <br>
+                    <input type="text" name="present_city" id="student_present_city"><br>
+
+                    District: <br>
+                    <input type="text" name="present_district"
+                    id="student_present_district"><br>
+
+                    State: <br>
+                    <input type="text" name="present_state" id="student_present_state"><br>
+                <!-- </td>
+                <script src="/TEMP_STUDENT/js/dashboard_pincode.js"></script>
+                <td> -->
+                    Address: <br>
+                    <textarea name="permanent_address" id="student_permanent_address" rows="4" cols="30"></textarea><br>
+
+                    Pincode: <br>
+                    <input type="number" name="permanent_pincode" id="student_permanent_pincode"><br>
+
+                    City: <br>
+                    <input type="text" name="permanent_city" id="student_permanent_city"><br>
+
+                    District: <br>
+                    <input type="text" name="permanent_district" id="student_permanent_district"><br>
+
+                    State: <br>
+                    <input type="text" name="permanent_state" id="student_permanent_state"><br>
+                    <!-- <label for="permanent_checkbox">Same as present address</label>
+                    <input type="checkbox" id="student_permanent_checkbox" name="permanent_checkbox">
+                    <script src="/TEMP_STUDENT/js/dashboard_c_box.js"></script> -->
+                </td>
+            </tr>
+        </table>
+        <br>
+        <script src="/P_STUDENT/js/updateAccount.js"></script>
+        <div class="save-container"><button onclick="updateAccount()" class="">eargfweAFGWEFWEFWEFWQEfWEFWEFWQE4FW4EFW4EF
+        </button></div>
+    </form>
+    </main>
+   
+        <footer>
+            <div class="contact-info">
+                <h3>Contact Us</h3>
+                <p>Kolkata , WestBengal , India</p>
+                <p>Phone: +919748903490</p>
+                <p><a href="https://mail.google.com/mail/u/0/#inbox">Email</a></p>
+            </div>
+            <div class="footer-info">
+                <p>&copy;College Group 23,Uem Kolkata,2021.All rights reserved.</p>
+            </div>
+            <div class="social-links">
+                <h3>Follow Us</h3>
+               <ul>
+                    <li><a href="#">Facebook</a></li>
+                    <li><a href="#">Twitter</a></li>
+                    <li><a href="#">Instagram</a></li>
+                </ul>
+            </div>
+        </footer>
+    
+</body>
+</html>

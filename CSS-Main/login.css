@@ -1,0 +1,149 @@
+@import url(/CSS-Main/btn.css);
+@import url(/CSS-Main/header.css);
+@import url(/CSS-Main/font.css);
+@import url(/CSS-Main/footer.css);
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+  width: 100%;
+  height: 100vh;
+  background-color: #f5f5f5;
+}
+
+/* Login Form Styles */
+.login-form {
+  margin: 7vh auto;
+  width: 28vw;
+  padding: 3.5vh;
+  background-color: #f7f7f7;
+  border: 1px solid #ccc;
+  border-radius: 3.5px;
+  height: 60vh;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+.login-form:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.login-form:focus-within {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.login-form label {
+  display: block;
+  margin-bottom: 0.7vh;
+  margin-left: 5%;
+  color: #555;
+}
+
+.login-form input[type="text"],
+.login-form input[type="password"] {
+  width: 80%;
+  padding: 2vh;
+  border: 1px solid #ccc;
+  border-radius: 3.5px;
+  font-size: 1.75vw;
+  color: #333;
+  background-color: #f8f8f8;
+}
+
+.login-form input[type="text"]:focus,
+.login-form input[type="password"]:focus {
+  outline: none;
+  border-color: #4d90fe;
+  box-shadow: 0 0 3px rgba(77, 144, 254, 0.5);
+}
+h1 {
+  text-align: center;
+  font-size: 4.25vw;
+  margin-top: 3.5vh;
+  margin-bottom: 7vh;
+}
+
+
+/*Input Styles*/
+input[type="text"],
+input[type="password"] {
+  display: block;
+  width: 100%;
+  padding: 3.5vh;
+  margin-bottom: 3.5vh;
+  margin-left: 1.5vw;
+  border: none;
+  border-radius: 3.5px;
+  font-size: 1.75vw;
+  background-color: #f7f7f7;
+  color: #333;
+  transition: all 0.3s ease-in-out;
+}
+input[type="text"]:hover,
+input[type="password"]:hover {
+  background-color: #fff;
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus {
+  outline: none;
+  background-color: #fff;
+  box-shadow: 0 0 3.5vw rgba(77, 145, 254, 0.704);
+}
+/*Label Styles*/
+label {
+  display: block;
+  font-size: 1.75vw;
+  margin-bottom: 3.5vh;
+  cursor: pointer;
+}
+
+label:hover {
+  color: #4d90fe;
+}
+
+/*login container*/
+.login_container{
+  display: flex;
+  margin-left: 35%;
+  margin-top: 10%;
+}
+/*Footer settings for login page*/
+.footer-info {
+  padding: 0 0 0 0;
+  display: flex;
+  justify-content:center;
+  align-items: center;
+  font-size: 2.2vh;
+}
+/* Forget Password */
+.forget-password-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 10vh;
+  margin-right: 1.6vw;
+}
+
+.forget-password {
+  color: blue;
+  font-size: 1vw;
+  font-weight: bold;
+  text-decoration: underline;
+  cursor: pointer;
+  margin-top: 1vh;
+}
+
+.forget-password:hover {
+  color: red;
+}

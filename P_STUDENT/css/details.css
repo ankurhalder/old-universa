@@ -1,0 +1,70 @@
+@import url(/CSS-Main/btn.css);
+@import url(/CSS-Main/font.css);
+@import url(/CSS-Main/footer.css);
+@import url(/P_STUDENT/css/p_student_header.css);
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+  }
+  body {
+	font-family: Arial, sans-serif;
+	margin: 0;
+	padding: 0;
+}
+/* Set font size for entire page */
+html {
+    font-size: 1.6vw;
+  }
+  
+  /* Set logo width and margin */
+  main img {
+    width: 10vw;
+    margin: 2vh;
+  }
+  
+  /* Style the dashboard section */
+  .dashboard-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 4vh 0;
+  }
+  
+  /* Style the user name */
+  #student_name_dashboard {
+    font-size: 4vh;
+    margin-bottom: 2vh;
+  }
+  
+  /* Style the user table */
+  .user-table {
+    border-collapse: collapse;
+    width: 80vw;
+    margin: 4vh 0;
+  }
+  
+  /* Style table headers */
+  .user-table th {
+    text-align: left;
+    font-weight: normal;
+    padding: 1vh;
+    background-color: #f2f2f2;
+  }
+  
+  /* Style table data */
+  .user-table td {
+    padding: 1vh;
+    border: 2px solid #ddd;
+  }
+  
+  /* Style specific table data */
+  .user-table td.user-info {
+    font-weight: bold;
+  }
+  
+  /* Style the registration and enrollment numbers */
+  .registration-number, .enrollment-number {
+    font-family: monospace;
+  }
+  

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin</title>
+</head>
+<link rel="stylesheet" href="/ADMIN/CSS/admin.css">
+<script src="/TEMP_STUDENT/js/logout.js"></script>
+<script src="/ADMIN/js/verifyAdminLogin.js"></script>
+<body onload="veryfyLogin()">
+<!-- Header -->
+  <header>
+    <div class="left_side">
+      <ul class="nav_links">
+        <li class="home_link"><a href="/ADMIN/admin.html">Universa</a></li>
+      </ul>
+    </div>
+    <div class="right_side">
+      <div class="dropdown">
+        <button class="dropbtn">Menu &#9660;</button>
+        <div class="dropdown-panel hide">
+          <a href="/ADMIN/admin_services.html">Services</a>
+          <a href="/ADMIN/admin_info.html">Info</a>
+         <div class="logout_container"> <button onclick="logout()" class="logout btn">Logout</button>
+         </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+
+	<!-- Navigation Bar-1 -->
+	<nav class="nav-1">
+		<ul>
+			<li><span class="enrollment">Student Enrollment Management</span></li>
+			<li><span class="course">Course Management</span></li>
+			<li><span class="attendance">Attendance Tracking</span></li>
+			<li><span class="grading">Grading System</span></li>
+			<li><span class="communication">Communication and Notification</span></li>
+			<li><span class="applicant">Manage all Applicant's Profile</span></li>
+			<li><span class="student">Manage And view all Student's Profile</span></li>
+			<li><span class="security">Security and Access Control</span></li>
+			<li><span class="customization">Customization and UI/UX Design</span></li>
+		</ul>
+	</nav>
+	<!-- Navigation bar-2 -->
+	<script src="/ADMIN/js/gotoLinks.js"></script>
+	<button id="toggle-sidebar" onclick="toggleSidebar()">&#x25B6;</button>
+	<div id="mySidebar">
+		
+			<button onclick="goToManageApplicants()" class="sidebar-btn">Manage Applicants</button>
+			<button class="sidebar-btn">Manage Students</button>
+			<button class="sidebar-btn">Update Routine</button>
+	</div>
+	<script src="/ADMIN/js/sidebar.js"></script>
+	<h1 class="dashboard-title">Administration Dashboard</h1>
+	<h2 id="enrollment-management" class="section-title">Student Enrollment Management</h2>
+	<p>Add, edit, or remove students/Applicant's from the system.</p>
+	<h2 id="course-management" class="section-title">Course Management</h2>
+	<p>Add, edit, or remove courses and manage course materials.</p>
+	<h2 id="routine-management" class="section-title">Routine Management</h2>
+	<p>Add, edit, or remove Routine</p>
+	<h2 id="attendance-tracking" class="section-title">Attendance Tracking</h2>
+	<p>Mark attendance, view attendance reports, and notify students of attendance requirements.</p>
+	<h2 id="communication-notification" class="section-title">Communication and Notification</h2>
+	<p>Send group or individual messages to students, share campus news and announcements, and send notifications.</p>
+	<h2 id="resource-management" class="section-title">Resource Management</h2>
+	<p>Track resource availability, manage checkouts and returns, and notify students of resource availability.</p>
+</main>
+
+	<footer>
+		<div class="contact-info">
+			<h3>Contact Us</h3>
+			<p>Kolkata , WestBengal , India</p>
+			<p>Phone: +919748903490</p>
+			<p><a href="mailto: ankur.halder12345@gmail.com">Send Email</a></p>
+		</div>
+		<div class="footer-info">
+			<p>&copy;College Group 23,Uem Kolkata,2021.All rights reserved.</p>
+		</div>
+		<div class="social-links">
+			<h3>Follow Us</h3>
+			<ul>
+				<li><a href="#">Facebook</a></li>
+				<li><a href="#">Twitter</a></li>
+				<li><a href="#">Instagram</a></li>
+			</ul>
+		</div>
+	</footer>
+</body>
+</html>

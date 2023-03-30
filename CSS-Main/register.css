@@ -1,0 +1,87 @@
+@import url(/CSS-Main/btn.css);
+@import url(/CSS-Main/header.css);
+@import url(/CSS-Main/font.css);
+@import url(/CSS-Main/footer.css);
+body {
+	font-family: 'Roboto', sans-serif;
+	margin: 0;
+	padding: 0;
+}
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+h1 {
+  text-align: center;
+  font-size: 4.25vw;
+  margin-top: 3.5vh;
+  margin-bottom: 7vh;
+  cursor: default;
+}
+
+/* Style for form container */
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 90%;
+  max-width: 500px;
+  margin: 5vh auto;
+  animation: slide-up 0.5s ease-in-out;
+}
+
+/* Style for labels */
+label {
+  display: block;
+  margin-bottom: 1vh;
+  font-weight: bold;
+}
+
+/* Style for input fields */
+input {
+  padding: 2vh;
+  margin-bottom: 2.54vh;
+  width: 100%;
+  border: 0.3vh solid black;
+  border-radius: 2vh;
+  box-sizing: border-box;
+}
+
+/* Style for input fields when in focus */
+input:focus {
+  outline: none;
+  border-color: #0066cc;
+  box-shadow: 0 0 2vh #0066cc;
+}
+
+/* Style for error message */
+#error-message {
+  margin-top: 3vh;
+  color: red;
+}
+
+/* Style for form validation error */
+.invalid {
+  border-color: red;
+}
+
+/* Style for success message */
+#success-message {
+  margin-top: 3vh;
+  color: green;
+}
+
+
+/* Style for form on smaller screens */
+@media screen and (max-width: 600px) {
+  input {
+    margin-bottom: 3vh;
+  }
+}
+
+.btn{
+  padding: 2vh 1.2vw;
+}
+

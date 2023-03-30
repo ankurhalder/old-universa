@@ -1,0 +1,64 @@
+@import url(/CSS-Main/footer.css);
+@import url(/ADMIN/CSS/admin_header.css);
+@import url(/CSS-Main/font.css);
+@import url(/CSS-Main/btn.css);
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    }
+    body {
+    font-family: sans-serif;
+
+    }
+.full-body{
+  height: 80vh;
+  max-height: 200vh;
+}
+.heading{
+  text-transform: uppercase;
+  position: relative;
+  left: 35%;
+  margin-top: 3%;
+  margin-bottom: 3%;
+}
+/* Temporary from here */
+  #tempimcontainer{
+    width: 100vw;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+  }
+  
+  .temp {
+    width: 30vw;
+    margin-bottom: 3vw;
+    margin-left: 1vw;
+    padding: 2vw;
+    border-radius: 2vw;
+    box-shadow: 0 0.4vw 0.8vw rgba(0, 0, 0, 0.1);
+    background-color:rgb(206, 235, 244);
+    border: solid  rgba(0, 0, 0, 0.1);
+
+  }
+  
+  .temp p {
+    margin: 0;
+    font-size: 1.6vw;
+    margin-bottom: .5vh;
+  }
+  
+  .temp #innerDiv1 {
+    font-weight: bold;
+    color: #333;
+  }
+  
+  .temp #innerDiv2 {
+    color: #666;
+  }
+  
+  .temp:hover {
+    box-shadow: 0 0.6vw 1.2vw rgba(0, 0, 0, 0.1);
+    transform: translateY(-0.5vw);
+    transition: all 0.3s ease;
+  }
+  

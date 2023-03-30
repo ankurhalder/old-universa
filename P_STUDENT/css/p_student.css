@@ -1,0 +1,94 @@
+@import url(/CSS-Main/btn.css);
+@import url(/CSS-Main/font.css);
+@import url(/CSS-Main/footer.css);
+@import url(/P_STUDENT/css/p_student_header.css);
+@import url(/P_STUDENT/css/id_card.css);
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+  }
+body {
+	font-family: Arial, sans-serif;
+	margin: 0;
+	padding: 0;
+}
+  
+/* Style for the main element */
+main {
+  width: 100%;
+  height: 85vh;
+  margin: 0 auto;
+  font-family: 'Roboto', sans-serif;
+}
+/* Ankur's dashboard */
+.dashboard_heading{
+	padding: 5vh;
+	margin-left: 36vw;
+	font-size: 8vh;
+}
+/* Side panel */
+#mySidebar {
+	height: 100vh;
+	width: 20vw;
+	position:fixed;
+	z-index: 1;
+	top: 0vh;
+	left: -25vw;
+	background-color: #0e52a4;
+	overflow-x: hidden;
+	transition: 0.5s;
+	padding-top: 6vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	
+  }
+  
+  #mySidebar.open {
+	left: 0;
+  }
+  #toggle-sidebar {
+	position: absolute;
+	top: 50%;
+	left: 0;
+	transform: translateY(-50%);
+	width: 3vw;
+	height: 6vh;
+	/* border-radius: 50%; */
+	background-color: #ccc;
+	border: none;
+	/* z-index: 1; */
+	cursor: pointer;
+	transition: all 0.5s;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+  }
+  #toggle-sidebar.open {
+	left: 20vw;
+	background-color: black;
+	color: white;
+	/* border-radius:50%; */
+	text-align: center;
+	transform: rotate(180deg);
+  }
+   .sidebar-btn {
+	display:inherit;
+	width: 90%;
+	margin-bottom: 2%;
+	padding: 15px 25px;
+	margin-left: .5vw;
+	text-align: center;
+	border: none;
+	border-radius: 10px;
+	cursor: pointer;
+	font-size: 1.5rem;
+	font-weight: bold;
+	text-transform: uppercase;
+	
+  }
+  .sidebar-btn:hover {
+	background-color: #ddd;
+  }
+  

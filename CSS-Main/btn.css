@@ -1,0 +1,30 @@
+.btn {
+  background-color: black;
+  border: 0.1vh solid black;
+  border-radius: 2vw;
+  color: white;
+  cursor: pointer;
+  font-family: 'Roboto', sans-serif;
+  font-size: 2vh;
+  font-weight: bold;
+  padding: 2vh 2vw;
+  transition: all 0.3s ease-in-out;
+  text-shadow: 0 0.1vh 0.1vh black;
+  box-shadow: 0 0.5vh 1vh rgba(0, 0, 0, 0.3);
+}
+
+.btn:hover {
+  background-color: #003474e2;
+  color: #ffffff;
+  box-shadow: 0 0.5vh 1.5vh rgba(0, 0, 0, 0.5);
+}
+
+.btn:focus {
+  box-shadow: 0 0 0 0.2rem rgba(0, 52, 116, 0.5);
+  outline: none;
+}
+
+.btn:active {
+  transform: translateY(0.2vh);
+}
+

@@ -1,0 +1,125 @@
+@import url(/CSS-Main/btn.css);
+@import url(/CSS-Main/header.css);
+@import url(/CSS-Main/font.css);
+@import url(/CSS-Main/login_box.css);
+@import url(/CSS-Main/footer.css);
+
+body {
+	font-family: Arial, sans-serif;
+	margin: 0;
+	padding: 0;
+}
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+.background {
+  height: 110vh;
+  width: 100%;
+  background-color: #0b4388;
+  font-family: "Roboto", sans-serif;
+}
+
+.main_text {
+  left: 5.62vw;
+  top: 32.4vh;
+  position: absolute;
+  color: white;
+}
+
+.main_text h1 {
+  font-size: 3.24vw;
+  font-weight: 400;
+}
+
+.typing_text {
+  left: 5.62vw;
+  top: 56.7vh;
+  position: absolute;
+  transform: translateY(-50%);
+  font-size: 3.24vw;
+  font-weight: 400;
+  line-height: 3.24vh;
+  color: rgba(255, 255, 255, 0.346);
+}
+
+.typing_text .p1 {
+  font-size: 3.24vw;
+  font-weight: 400;
+  line-height: 3.24vh;
+  color: rgba(255, 255, 255, 0.346);
+}
+
+span {
+  color:white;
+  letter-spacing: 0.10125vw;
+  line-height: 12.15vh;
+}
+@media (max-width: 768px) {
+  .main_text {
+   display: none;
+  }
+
+  .main_text h1 {
+    font-size: 8vw;
+    display: none;
+  }
+
+  .typing_text {
+    left: 3%;
+    top: 40%;
+    font-size: 8vw;
+    line-height: 12vw;
+    display: none;
+  }
+
+  .typing_text .p1 {
+    font-size: 5vw;
+    line-height: 7vw;
+    display: none;
+  }
+
+  span {
+    letter-spacing: 2vw;
+    display: none;
+  }
+}
+/* Extraa Header for landing page */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(128, 128, 128, 0.3); /* translucent gray background */
+  color: #fff;
+  padding: 2vh 5vw;
+  font-family: 'Playfair Display', serif;
+  z-index: 999; /* ensure header appears on top */
+}
+
+/* Forget Password */
+.forget-password-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 10vh;
+}
+
+.forget-password {
+  color: blue;
+  font-size: 1vw;
+  font-weight: bold;
+  text-decoration: underline;
+  cursor: pointer;
+  margin-top: 1vh;
+}
+
+.forget-password:hover {
+  color: red;
+}
