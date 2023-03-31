@@ -33,6 +33,7 @@ function getAllTemp() {
             const p2Id = event.target.closest(".temp").querySelector("p[id^='p2-']").getAttribute("data-id");
             console.log("p2 id:", p2Id);
             window.location.href = `/ADMIN/temp_st.html?id=${p2Id}`;
+            window.location.href = `/ADMIN/updateApplicant.html?id=${p2Id}`;
           });
           innerDiv1.appendChild(anchor1);
           const innerDiv2 = document.createElement("div");

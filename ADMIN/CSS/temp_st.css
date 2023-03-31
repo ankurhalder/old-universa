@@ -10,105 +10,68 @@
   padding: 0;
   }
   body {
-  font-family: sans-serif;
-  }
-  
-  /* Main styles */
-  main {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  min-height: 100vh;
-  padding: 1vh;
-  }
-  
-  /* Input styles */
-  input[type="text"] {
-  padding: 1%;
-  border: .1vw solid rgb(208, 235, 244);
-  border-radius: 4vh;
-  width: 100%;
-  }
-  /* Form styles */
-  form {
-  width: 80%;
-  max-width: 90vw;
-  
-  }
-  
-  table {
-  border-collapse: collapse;
-  width: 80%;
-  }
-  
-  th {
-  background-color: #0077cc;
-  color: white;
-  text-align:left;
-  padding-left:1%;
-  border: .1vh white solid;
-  font-size: 2vh;
-  height: 1vh;
-  }
-  
-  td {
-  padding: 0vh;
-  background-color: rgb(196, 223, 232);
-  border-bottom: 0.1vw solid black;
-  }
-  
-  .user-table tr:last-child td {
-  border-bottom: none;
-  }
-  
-  /* Additional styles for specific table cells */
-  .user-info input[type="text"] {
-  background-color: #f0f0f0;
-  border: none;
-  }
-
-.footer-info {
-	padding: 0 0 0 2.3%;
-	display: flex;
-	justify-content:center;
-	align-items: center;
-	font-size: 2.2vh;
-  }
-  .btn-container {
+    font-family: sans-serif;
+    }
+    
+    /* Main styles */
+    main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 1vh;
+    }
+    
+    /* Form styles */
+    form {
+    width: 90%;
+    max-width: 100vw;
+    } 
+    /* Table styles */
+    table {
+      position: relative;
+    width: 90%;
+    border-collapse: collapse;
+    left: 5%;
+    }
+    
+    th {
+      width: 45%;
+    background-color: #0077cc;
+    color: white;
+    text-align: left;
+    padding-left: 1%;
+    border: 0.1vh solid white;
+    font-size: 2.5vh;
+    height: 1vh;
+    }
+    
+    td {
+    width: 45%;
+    background-color: rgb(196, 223, 232);
+    border-bottom: 0.1vw solid black;
+    font-size: 2.5vh;
+    }
+    
+    .user-table tr:last-child td {
+    border-bottom: none;
+    } 
+    /* Button container styles */
+    .btn-container {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: .5%;
-}
-/* label style  start's from here */
-label {
-  display: block;
-  margin-bottom: 0%;
-  margin: 2%;
-  position: relative;
-}
+    padding: 0.5%;
+    }
+    
+    /* Label styles */
+    label {
+    display: block;
+    margin: 2% 0%;
+    position: relative;
+    }
 
-label input[type="text"] {
-  padding: 19px;
-  border: 0.2vw solid  #337ab7;
-  border-radius: 1vw;
-  font-size: 1.5vw;
-  width: 100%;
-  box-sizing: border-box;
-  transition: all 0.3s ease-in-out;
+td,th{
+padding:1%;
 }
-
-/* Add styles for the label when it's hovered */
-label:hover {
-  cursor: pointer;
-}
-
-label:hover:before {
-  color:black;
-}
-
-label input:focus + label:before {
-  color: #337ab7;
-}
-

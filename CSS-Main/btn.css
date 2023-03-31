@@ -16,11 +16,11 @@
 .btn:hover {
   background-color: #003474e2;
   color: #ffffff;
-  box-shadow: 0 0.5vh 1.5vh rgba(0, 0, 0, 0.5);
+  box-shadow: 0 0.5vh ,.5vh rgba(0, 0, 0, 0.5);
 }
 
 .btn:focus {
-  box-shadow: 0 0 0 0.2rem rgba(0, 52, 116, 0.5);
+  box-shadow: 0 0 0 0.2vh black;
   outline: none;
 }
 

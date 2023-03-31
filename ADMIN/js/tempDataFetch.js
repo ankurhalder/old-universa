@@ -1,10 +1,16 @@
 function tempDataFetch() {
   const urlParams = new URLSearchParams(window.location.search);
-  const id = urlParams.get('id'); 
-     console.log('hello world')
-      localStorage.setItem("GotoPreview",id)
-      console.log(localStorage.getItem("GotoPreview"));
-    fetch(`https://universa-api.onrender.com/student/temp/${id}`, {
+  let applicant_id = urlParams.get('id'); 
+     if (applicant_id === null)
+     {
+      
+      console.log(localStorage.getItem("getApplicantID"));
+      applicant_id = localStorage.getItem("getApplicantID");
+
+     }
+     console.log('trying to get id you see')
+     console.log(applicant_id)
+    fetch(`https://universa-api.onrender.com/student/temp/${applicant_id}`, {
       method: "GET",
       headers: {
         "Content-Type": "application/json",

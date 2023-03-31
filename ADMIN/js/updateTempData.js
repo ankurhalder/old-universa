@@ -31,7 +31,8 @@ function updateTable(para) {
   const Stream = document.getElementById("stream").value;
 
 
-  const userid = localStorage.getItem("GotoPreview");
+  const urlParams = new URLSearchParams(window.location.search);
+  let userid = urlParams.get('id');
   console.log(userid);
   const personalInfo = {
     personal_info: {
@@ -81,8 +82,10 @@ function updateTable(para) {
     .then((response) => response.json())
     .then((data) => {
       console.log(data)
+      localStorage.setItem("getApplicantID",userid );
+      console.log(localStorage.getItem("getApplicantID"));
       alert("Data saved/updated successfully:");
-      window.location.href = "/ADMIN/manage_applicats.html";
+      window.location.href = "/ADMIN/temp_st.html";
     })
     .catch((error) => {
       console.error(error);

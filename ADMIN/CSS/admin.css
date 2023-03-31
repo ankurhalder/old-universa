@@ -141,14 +141,14 @@ main {
 	display:flex;
 	justify-content: center;
 	width: 90%;
-	margin-bottom: 2%;
-	padding: 10px 15px;
+	margin-bottom: 5%;
+	padding: 15px 20px;
 	margin-left: .5vw;
 	/* text-align: center; */
 	border: none;
 	border-radius: 10px;
 	cursor: pointer;
-	font-size: 1vw;
+	font-size: 1.5vw;
 	font-weight: bold;
 	text-transform:capitalize;
 	
