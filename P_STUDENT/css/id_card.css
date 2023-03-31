@@ -1,137 +1,119 @@
-/* ID Card Container */
+/* ID Card styles */
+
+/* ID Card container */
 .id-card-content {
-display: flex;
-flex-direction: column;
-justify-content:flex-start;
-width: 33vw;
-height: 38.5vh;
-border: 2.2px solid #000;
-/* padding: 1.1vh 1.1vw; */
-box-sizing: border-box;
-font-size: 1.32vw;
-line-height: 3.3vh;
-font-family: Arial, sans-serif;
-margin-left: 39.6vw;
+  width: 40vw;
+  max-width: 100vw;
+  margin: 1vh auto;
+  background-color: #fff;
+  /* border-radius: 5px; */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
 }
 
-/* ID Card Header */
+/* ID Card header */
 .id-card-header {
-display: flex;
-/* flex-direction: column; */
-justify-content:space-evenly;
-align-items:center;
-margin-bottom: 0.1vh;
-font-size: 1.1vh;
-background-color: #0e52a4;
-color: white;
-}
-.id-card-header-text {
-display: flex;
-flex-direction: column;
-justify-content:center;
-align-items:center;
-/* margin-bottom: 4.4vh; */
-font-size: 2vh;
-background-color: #0e52a4;
-color: white;
+  background-color: #004680;
+  color: #fff;
+  padding: .5vh;
 }
 
-.collage.name {
-font-size: 2.2vh;
-}
-
+/* Logo */
 .logo {
-width: 5.5vw;
-height: auto;
+  width: 15vw;
+  max-width: 100px;
+  display: block;
+  margin: 0 auto 1vh;
 }
 
-.id-card-header-address,
-.id-card-phone-number,
-.id-card-email-address {
-margin-left: 0.1vw;
+/* Header text */
+.id-card-header-text {
+  font-size: 2.5vh;
+  margin: 0;
+  text-align: center;
 }
 
-/* ID Card Body */
+.id-card-header-text:first-of-type {
+  margin-top: 1vh;
+}
+
+/* Contact details */
+.id-card-header-text:not(:first-of-type) {
+  font-size: 1.5vh;
+  margin-bottom: 0;
+}
+
+/* ID Card body */
 .id-card-body {
-display: flex;
-justify-content:flex-start;
-align-items: center;
-height: 55%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 1vh;
 }
 
+/* Left side of ID card body */
+.id-card-left-side {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* justify-content: space-between; */
+}
+
+/* Student photo */
 .id-card-photo img {
-width: 7.8vw;
-height: auto;
-border: 1.1px solid #000;
-margin-left: .13vw;
-mix-blend-mode: color-burn;
+  width: 7vw;
+  max-width: 10vw;
+  height: auto;
+  border: 2px solid #ccc;
+  /* border-radius: 50%; */
+  overflow: hidden;
 }
 
-.id-card-qr-code img {
-width: 5.6vw;
-height: auto;
-margin-left: .05vw;
-margin-right: .5vw;
+/* QR code */
+.id-card-qr-code {
+  margin-top: 0vh;
 }
 
-.id-card-info {
-flex: 1;
-display: flex;
-flex-direction: column;
-justify-content: space-around;
-margin-top: 4.4vh;
+.qrcode {
+  width: 7vw;
+  max-width: 10vw;
+  height: auto;
+  border: none;
 }
 
-.id-card-label {
-font-weight: bold;
-font-size: 2.5vh;
+/* Signature value */
+.id-card-signature-value {
+  margin-top: 1vh;
+  font-size: 2vh;
 }
 
-/* ID Card Values */
+#signature {
+  display: inline-block;
+  width: 5vw;
+  max-width: 150px;
+  height: 2vh;
+  border-bottom: 1px solid #000;
+}
+
+/* Signature label */
+.id-card-signature {
+  margin-top: 1vh;
+  font-size: 1.5vh;
+}
+
+.id-card-right-side {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+}
+
+.id-card {
+  font-size: 2vh;
+  color: #5d5d5d;
+}
+
 .id-card-value {
-margin-left: 1.1vw;
-font-size: 1.9vh;
-}
-
-/* ID Card Name */
-.id-card-name {
-display: flex;
-align-items: center;
-color: #0e52a4;
-}
-
-/* ID Card Contact No */
-.id-card-contact-no {
-display: flex;
-align-items: center;
-}
-
-/* ID Card Blood Group */
-.id-card-blood-group {
-display: flex;
-align-items: center;
-}
-
-/* ID Card DOB */
-.id-card-dob {
-display: flex;
-align-items: center;
-}
-
-/* ID Card Stream */
-.id-card-stream {
-display: flex;
-align-items: center;
-}
-
-/* ID Card Enrollment No */
-.id-card-enrollment-no {
-display: flex;
-align-items: center;
-}
-
-/* ID Card Registration No */
-.id-card-registration-no {
-display: flex;
-align-items: center;
+  font-size:2vh;
+  color: #5d5d5d;
+  float: right;
 }

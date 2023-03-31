@@ -2,101 +2,100 @@
 @import url(/CSS-Main/font.css);
 @import url(/CSS-Main/footer.css);
 @import url(/P_STUDENT/css/p_student_header.css);
-/* Global styles */
+/* apply a reset */
 * {
-	box-sizing: border-box;
-	margin: 0;
-	padding: 0;
-  }
-body {
-	font-family: Arial, sans-serif;
-	margin: 0;
-	padding: 0;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-  
-  /* Form styles */
-  main {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
-  }
-  
-  form {
-    background-color: #fff;
-    padding: 40px;
-    border-radius: 10px;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-  }
-  
-  table {
-    width: 100%;
-    border-collapse: collapse;
-    margin: 20px 0;
-  }
-  
-  th,
-  td {
-    padding: 15px;
-    border: 1px solid #ccc;
-    text-align: left;
-  }
-  
-  th {
-    background-color: #f9f9f9;
-  }
-  
-  input,
-  select,
-  textarea {
-    width: 100%;
-    padding: 15px;
-    margin-bottom: 20px;
-    border-radius: 5px;
-    border: 1px solid #ccc;
-    font-size: 16px;
-    color: #555;
-  }
-  
-  select option:first-child {
-    color: #888;
-  }
-  
-  label {
-    display: block;
-    font-weight: bold;
-    margin-bottom: 5px;
-  }
-  
-  /* Animations */
+/* Style the form */
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 1vh;
+}
+.dashboard-section {
+  width: 80vw;
+  margin: 0 auto;
+  padding: 0vh 0;
+  background: linear-gradient(135deg, #1764c3, #1764c3);
+  border-radius: 1vw;
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
+}
+.image {
+  display: block; /* Ensures the image is on its own line */
+  max-width: 15%; /* Ensures the image doesn't exceed its parent's width */
+  height: auto; /* Maintains the aspect ratio of the image */
+  margin: 0 auto; /* Centers the image horizontally */
+  /* border-radius: 50%;  */
+  box-shadow: 0px 2px 6px rgba(0,0,0,0.1); 
+}
+/* Style the user table */
+.user-table {
+  width: 80vw;
+  margin: 2vh;
+  border-collapse: collapse;
+}
+/* Style the table headers */
+th {
+  padding: 1vH;
+  background-color: #1560bc;
+  text-align: left;
+  font-size: 1.2vw;
+  font-weight: bold;
+  color: white;
+  border: .3vh solid white;
+}
+/* Style the table data cells */
+td {
+  padding: 1vh;
+  background-color: rgb(210, 238, 248);
+  border: .3vh solid #1560bc;
+}
+/* Style the input fields */
+input[type="text"],
+input[type="email"],
+input[type="number"],
+input[type="date"],
+textarea {
+  width: 90%;
+  padding: .5vw;
+  border: .3vh solid #1560bc;
+  border-radius: 1vw;
+  resize: none;
+  margin-bottom: 1vh;
+  font-size: 1.2vw;
+}
+/* Style the select fields */
+select {
+  width: 90%;
+  padding: 1vw;
+  border: .3vh solid black;
+  border-radius: 1vw;
+  margin-bottom: 1vh;
+  appearance: none;
+  background: url('data:image/svg+xml;utf8,<svg viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M1.8,5.5h16.5l-8.2,9.2L1.8,5.5z" fill="%23424242"/></svg>') no-repeat;
+  background-position: calc(100% - 1vw) center;
+  background-size: 1.2vw;
+  font-size: 1.2vw;
+  background-color: white;
+}
 
-/* Animate table rows on hover */
-.table-hoverable tbody tr:hover {
-    background-color: #f1f1f1;
-    transition: background-color 0.3s ease-in-out;
-    }
-    
-    /* Animate form labels on focus */
-    .form-input label:focus-within {
-    color: #333;
-    transition: color 0.3s ease-in-out;
-    }
-    
-    /* Animate form inputs on focus */
-    .form-input input:focus,
-    .form-input textarea:focus {
-    border-color: blue;
-    transition: border-color 0.3s ease-in-out;
-    }
-    
-    /* Animate form checkboxes on hover */
-    .form-checkbox input[type="checkbox"]:hover {
-    transform: scale(1.5);
-    transition: transform 0.5s ease-in-out;
-    }
-  .footer-info {
-    padding: 0 0 0 0;
+/* Style the table rows */
+tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+  /* for update bottom */
+.btn-container {
     display: flex;
-    justify-content:center;
+    justify-content: center;
     align-items: center;
-    font-size: 2.2vh;
-  }
+    height: 10vh;
+}
+.btn-1:hover {
+    background-color:white;
+    color: black;
+    box-shadow: 0 0.5vh 1.5vh rgba(0, 0, 0, 0.5);
+}

@@ -1,30 +1,36 @@
-function updateAccount() {
-  const userid = localStorage.getItem("userId");
+const Form = document.getElementById("form");
+Form.addEventListener("submit", updateTable);
+function updateTable(para) {
+  para.preventDefault();
+  const userid = localStorage.getItem("loginUserId");
   console.log(userid);
   // name
-  const firstName = document.getElementById("student_first_name").value;
-  const middleName = document.getElementById("student_middle_name").value;
-  const lastName = document.getElementById("student_last_name").value;
+  const firstName = document.getElementById("personal_info_first_name").value;
+  const middleName = document.getElementById("personal_info_middle_name").value;
+  const lastName = document.getElementById("personal_info_last_name").value;
   //personal data
-  const Gender = document.getElementById("student_gender").value;
+  const Gender = document.getElementById("gender").value;
   // address
-  const presentAddress = document.getElementById("student_present_address").value;
-  const presentPincode = document.getElementById("student_present_pincode").value;
-  const presentCity = document.getElementById("student_present_city").value;
-  const presentDistrict = document.getElementById("student_present_district").value;
-  const presentState = document.getElementById("student_present_state").value;
-  const permanentAddress = document.getElementById("student_permanent_address").value;
-  const permanentPincode = document.getElementById("student_permanent_pincode").value;
-  const permanentCity = document.getElementById("student_permanent_city").value;
-  const permanentDistrict = document.getElementById("student_permanent_district").value;
-  const permanentState = document.getElementById("student_permanent_state").value;
-  const date_Of_Birth = document.getElementById("student_dob").value;
-  const blood_Groop = document.getElementById(
-    "student_blood_group"
-  ).value;
-  const Category = document.getElementById("student_category").value;
-  const Email = document.getElementById("student_email").value;
-  const Contact = document.getElementById("student_contact").value;
+  const presentAddress = document.getElementById("present_address").value;
+  const presentPincode = document.getElementById("present_pincode").value;
+  const presentCity = document.getElementById("present_city").value;
+  const presentDistrict = document.getElementById("present_district").value;
+  const presentState = document.getElementById("present_state").value;
+  const permanentAddress = document.getElementById("permanent_address").value;
+  const permanentPincode = document.getElementById("permanent_pincode").value;
+  const permanentCity = document.getElementById("permanent_city").value;
+  const permanentDistrict = document.getElementById("permanent_district").value;
+  const permanentState = document.getElementById("permanent_state").value;
+  const date_Of_Birth = document.getElementById("dob").value;
+  const blood_Groop = document.getElementById("blood_group").value;
+  const Category = document.getElementById("personal_info_category").value;
+  const Email = document.getElementById("personal_info_email").value;
+  const Contact = document.getElementById("personal_info_contact").value;
+  // Academic Info
+  const courseName = document.getElementById("course_name").value;
+  const Duration = document.getElementById("course_duration").value;
+  const Stream = document.getElementById("course_stream").value;
+  const addmissionYear = document.getElementById("addmission_year").value;
 
   const personalInfo = {
     personal_info: {
@@ -55,6 +61,10 @@ function updateAccount() {
     },
     course_info: {
       enrollment_number: `${userid}`,
+      course_name: courseName,
+      duration: Duration,
+      stream: Stream,
+      admission_year: addmissionYear,
     },
   };
   // calling function
@@ -117,7 +127,7 @@ function updateAccount() {
     .then((response) => response.json())
     .then((data) => {
       alert("Data saved/updated successfully:");
-    //   window.location.href = "/TEMP_STUDENT/dashboard_st_lp.html";
+      window.location.href = "/P_STUDENT/p_student.html";
     })
     .catch((error) => {
       console.error(error);
@@ -125,16 +135,16 @@ function updateAccount() {
     });
   // for name
   function firstname() {
-    let firstNameField = document.getElementById("student_first_name");
+    let firstNameField = document.getElementById("personal_info_first_name");
     if (firstNameField.value.length === 0) {
       firstNameField.focus();
       return false;
     }
-    firstNameField.addEventListener("blur", firstname);student_
+    firstNameField.addEventListener("blur", firstname);
     return true;
   }
   function lastname() {
-    let lastNameField = document.getElementById("student_last_name");
+    let lastNameField = document.getElementById("personal_info_last_name");
     if (lastNameField.value.length === 0) {
       lastNameField.focus();
       return false;
@@ -144,7 +154,7 @@ function updateAccount() {
   }
   // for present address
   function presentaddress() {
-    let presentAddress = document.getElementById("student_present_address");
+    let presentAddress = document.getElementById("present_address");
     if (presentAddress.value.length === 0) {
       presentAddress.focus();
       return false;
@@ -153,7 +163,7 @@ function updateAccount() {
     return true;
   }
   function presentpincode() {
-    let presentPincode = document.getElementById("student_present_pincode");
+    let presentPincode = document.getElementById("present_pincode");
     if (presentPincode.value.length === 0) {
       presentPincode.focus();
       return false;
@@ -162,7 +172,7 @@ function updateAccount() {
     return true;
   }
   function presentcity() {
-    let presentCity = document.getElementById("student_present_city");
+    let presentCity = document.getElementById("present_city");
     if (presentCity.value.length === 0) {
       presentCity.focus();
       return false;
@@ -171,7 +181,7 @@ function updateAccount() {
     return true;
   }
   function presentdistrict() {
-    let presentDistrict = document.getElementById("student_present_district");
+    let presentDistrict = document.getElementById("present_district");
     if (presentDistrict.value.length === 0) {
       presentDistrict.focus();
       return false;
@@ -180,7 +190,7 @@ function updateAccount() {
     return true;
   }
   function presentstate() {
-    let presentState = document.getElementById("student_present_state");
+    let presentState = document.getElementById("present_state");
     if (presentState.value.length === 0) {
       presentState.focus();
       return false;
@@ -190,7 +200,7 @@ function updateAccount() {
   }
   //for permanent permanent
   function permanentaddress() {
-    let permanentAddress = document.getElementById("student_permanent_address");
+    let permanentAddress = document.getElementById("permanent_address");
     if (permanentAddress.value.length === 0) {
       permanentAddress.focus();
       return false;
@@ -199,7 +209,7 @@ function updateAccount() {
     return true;
   }
   function permanentpincode() {
-    let permanentPincode = document.getElementById("student_permanent_pincode");
+    let permanentPincode = document.getElementById("permanent_pincode");
     if (permanentPincode.value.length === 0) {
       permanentPincode.focus();
       return false;
@@ -208,7 +218,7 @@ function updateAccount() {
     return true;
   }
   function permanentcity() {
-    let permanentCity = document.getElementById("student_permanent_city");
+    let permanentCity = document.getElementById("permanent_city");
     if (permanentCity.value.length === 0) {
       permanentCity.focus();
       return false;
@@ -217,7 +227,7 @@ function updateAccount() {
     return true;
   }
   function permanentdistrict() {
-    let permanentDistrict = document.getElementById("student_permanent_district");
+    let permanentDistrict = document.getElementById("permanent_district");
     if (permanentDistrict.value.length === 0) {
       permanentDistrict.focus();
       return false;
@@ -226,7 +236,7 @@ function updateAccount() {
     return true;
   }
   function permanentstate() {
-    let permanentState = document.getElementById("student_permanent_state");
+    let permanentState = document.getElementById("permanent_state");
     if (permanentState.value.length === 0) {
       permanentState.focus();
       return false;
@@ -235,3 +245,4 @@ function updateAccount() {
     return true;
   }
 }
+

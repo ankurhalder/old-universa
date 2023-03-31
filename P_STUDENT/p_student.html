@@ -36,56 +36,66 @@
     <script src="/TEMP_STUDENT/js/dropDown.js"></script>
   <main>
   <h1 class="dashboard_heading" id="dashboard"></h1>
-  <!-- ID card  -->
-    <div class="id-card-content">
-      <div class="id-card-header">
-        <img src="/P_STUDENT/image/logo.png" alt="logo" class="logo">
-        <div class="id-card-header-text">
-        <h1 class="collage name">University Of Engineering & Management</h1>
-        <p class="id-card-header-address">Plot No - III-B/5, New Town Action Area - III, Kolka700160</p>
-        <p class="id-card-phone-number">PH: 080107 00500</p>
-        <p class="id-card-email-address">EMAIL: admissions@iemcal.com</p>
+<!-- ID card  -->
+<div class="id-card">
+  <div class="id-card-content">
+    <div class="id-card-header">
+      <img src="/P_STUDENT/image/logo.png" alt="logo" class="logo">
+      <h1 class="id-card-header-text">University Of Engineering & Management</h1>
+      <div class="id-card-header-details">
+        <p class="id-card-header-text">Plot No - III-B/5, New Town Action Area - III, Kolkata 700160</p>
+        <p class="id-card-header-text">PH: 080107 00500</p>
+        <p class="id-card-header-text">EMAIL: admissions@iemcal.com</p>
       </div>
     </div>
-      <div class="id-card-body">
+    <div class="id-card-body">
+      <div class="id-card-left-side">
         <div class="id-card-photo">
           <img src="/P_STUDENT/image/student_sample.jpg" alt="Student Photo">
         </div>
         <div class="id-card-qr-code">
           <img src="/P_STUDENT/image/QR.png" alt="QR code" class="qrcode">
         </div>
-        <div class="id-card-info">
-          <div class="id-card-name">
-            <span class="id-card-label">Full Name:</span>
-            <span class="id-card-value" id="full_name"></span>
-          </div>
-          <div class="id-card-contact-no">
-            <span class="id-card-label">Contact No.:</span>
-            <span class="id-card-value" id="contact_no"></span>
-          </div>
-          <div class="id-card-blood-group">
-            <span class="id-card-label">Blood Group:</span>
-            <span class="id-card-value" id="blood_group"></span>
-          </div>
-          <div class="id-card-dob">
-            <span class="id-card-label">Date Of Birth:</span>
-            <span class="id-card-value" id="dob"></span>
-          </div>
-          <div class="id-card-stream">
-            <span class="id-card-label">Stream:</span>
-            <span class="id-card-value" id="stream"></span>
-          </div>
-          <div class="id-card-enrollment-no">
-            <span class="id-card-label">Enrollment no:</span>
-            <span class="id-card-value" id="enrollment_number"></span>
-          </div>
-          <div class="id-card-registration-no">
-            <span class="id-card-label">Registration no:</span>
-            <span class="id-card-value" id="registration_number">To be updated</span>
-          </div>
+        <div class="id-card-signature">
+          <p class="id-card-signature-label">Signature</p>
+          <span class="id-card-signature-value" id="signature"></span>
+        </div>
+      </div>
+      <div class="id-card-right-side">
+        <div class="id-card-name">
+          <p class="id-card-label">Full Name:</p>
+          <span class="id-card-value" id="full_name"></span>
+        </div>
+        <div class="id-card-contact-no">
+          <p class="id-card-label">Contact No.:</p>
+          <span class="id-card-value" id="contact_no"></span>
+        </div>
+        <div class="id-card-blood-group">
+          <p class="id-card-label">Blood Group:</p>
+          <span class="id-card-value" id="blood_group"></span>
+        </div>
+        <div class="id-card-dob">
+          <p class="id-card-label">Date Of Birth:</p>
+          <span class="id-card-value" id="dob"></span>
+        </div>
+        <div class="id-card-stream">
+          <p class="id-card-label">Stream:</p>
+          <span class="id-card-value" id="stream"></span>
+        </div>
+        <div class="id-card-enrollment-no">
+          <p class="id-card-label">Enrollment no:</p>
+          <span class="id-card-value" id="enrollment_number"></span>
+        </div>
+        <div class="id-card-registration-no">
+          <p class="id-card-label">Registration no:</p>
+          <span class="id-card-value" id="registration_number">To be updated</span>
         </div>
       </div>
     </div>
+  </div>
+</div>
+
+    <!-- Sidebar -->
     <button id="toggle-sidebar" onclick="toggleSidebar()">&#x25B6;</button>
     <div id="mySidebar">
       <button id="download-btn" class="sidebar-btn">Download ID Card</button>
