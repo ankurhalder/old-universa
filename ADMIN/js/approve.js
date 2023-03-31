@@ -1,31 +1,31 @@
 function approve(){
       // name
     const firstName = document.getElementById("first_name").innerText;
-    const middleName = document.getElementById("middle_name").value;
-    const lastName = document.getElementById("last_name").value;
+    const middleName = document.getElementById("middle_name").innerText;
+    const lastName = document.getElementById("last_name").innerText;
     //personal data
-    const Gender = document.getElementById("gender").value;
+    const Gender = document.getElementById("gender").innerText;
     // address
-    const presentAddress = document.getElementById("present_address").value;
-    const presentPincode = document.getElementById("present_pincode").value;
-    const presentCity = document.getElementById("present_city").value;
-    const presentDistrict = document.getElementById("present_district").value;
-    const presentState = document.getElementById("present_state").value;
-    const permanentAddress = document.getElementById("permanent_address").value;
-    const permanentPincode = document.getElementById("permanent_pincode").value;
-    const permanentCity = document.getElementById("permanent_city").value;
-    const permanentDistrict = document.getElementById("permanent_district").value;
-    const permanentState = document.getElementById("permanent_state").value;
-    const date_Of_Birth = document.getElementById("dob").value;
-    const blood_Groop = document.getElementById("blood_group").value;
-    const Category = document.getElementById("category").value;
-    const Email = document.getElementById("email").value;
-    const Contact = document.getElementById("contact").value;
+    const presentAddress = document.getElementById("present_address").innerText;
+    const presentPincode = document.getElementById("present_pincode").innerText;
+    const presentCity = document.getElementById("present_city").innerText;
+    const presentDistrict = document.getElementById("present_district").innerText;
+    const presentState = document.getElementById("present_state").innerText;
+    const permanentAddress = document.getElementById("permanent_address").innerText;
+    const permanentPincode = document.getElementById("permanent_pincode").innerText;
+    const permanentCity = document.getElementById("permanent_city").innerText;
+    const permanentDistrict = document.getElementById("permanent_district").innerText;
+    const permanentState = document.getElementById("permanent_state").innerText;
+    const date_Of_Birth = document.getElementById("dob").innerText;
+    const blood_Groop = document.getElementById("blood_group").innerText;
+    const Category = document.getElementById("category").innerText;
+    const Email = document.getElementById("email").innerText;
+    const Contact = document.getElementById("contact").innerText;
   // Academic Info
-  const Admission_Year = document.getElementById("admission_year").value;
-  const Course_Name = document.getElementById("course_name").value;
-  const Course_Duration = document.getElementById("course_duration").value;
-  const Stream = document.getElementById("stream").value;
+  const Admission_Year = document.getElementById("admission_year").innerText;
+  const Course_Name = document.getElementById("course_name").innerText;
+  const Course_Duration = document.getElementById("course_duration").innerText;
+  const Stream = document.getElementById("stream").innerText;
   userID = localStorage.getItem("GotoPreview")
   console.log(userID)
   console.log(firstName)

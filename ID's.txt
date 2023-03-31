@@ -1,10 +1,21 @@
 Admin user id = 3797489034901849
 Admin password = You know
-/
-/
-Permanent Student id = 3797489034909958
-Permanent Student Password = You know
-/
-/
-Temporary student id =  3797489034908065
-Temporary stydent Password = you know
+
+
+method: POST
+https://universa-api.onrender.com/account
+body  
+
+{
+  "first_name": "test1551",
+  "middle_name": "Student",
+  "last_name": "test11",
+  "contact": "7412589635",
+  "email": "ankur.cloudstorage@gmail.com",
+  "password": "Ankur@1234",
+  "confirm_password": "Ankur@1234"
+}
+
+header
+ Content-Type    application/json
+
