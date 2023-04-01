@@ -85,3 +85,15 @@ header {
   cursor: pointer;
   padding: .8vw;
 }
+.forget-password {
+  color: blue;
+  font-size: 1vw;
+  font-weight: bold;
+  text-decoration: underline;
+  cursor: pointer;
+  margin-left: 6.3vw;
+}
+
+.forget-password:hover {
+  color: red;
+}
