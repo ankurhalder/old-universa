@@ -12,8 +12,8 @@ body
   "last_name": "test11",
   "contact": "7412589635",
   "email": "ankur.cloudstorage@gmail.com",
-  "password": "Ankur@1234",
-  "confirm_password": "Ankur@1234"
+  "password": "Project@23",
+  "confirm_password": "Project@23"
 }
 
 header
