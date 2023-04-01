@@ -7,3 +7,6 @@ function goToManageApplicants(){
 function goToUpdateApplicant(){
     window.location.href = "/ADMIN/updateApplicant.html"
 }
+function gotoManageStudents(){
+    window.location.href = "/ADMIN/manage_students.html"
+}
