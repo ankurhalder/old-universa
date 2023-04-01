@@ -12,6 +12,8 @@ function getAllPermanent() {
           Applicants = document.getElementById("applicant")
           if (data.status === true) {
             console.log("Permanent Account Received");
+            const dataCount = data.data.length;
+            console.log(dataCount)
           } else if (data.status === false) {
             alert(`unsuccessful`)
           }
