@@ -9,6 +9,7 @@ function fetchData() {
     // include user_id in the URL
     method: "GET",
     headers: {
+      'token':verify,
       "Content-Type": "application/json",
     },
   })

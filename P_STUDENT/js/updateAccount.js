@@ -4,6 +4,7 @@ function updateTable(para) {
   para.preventDefault();
   const userid = localStorage.getItem("loginUserId");
   console.log(userid);
+  const verify = localStorage.getItem("token");
   // name
   const firstName = document.getElementById("personal_info_first_name").value;
   const middleName = document.getElementById("personal_info_middle_name").value;
@@ -120,7 +121,8 @@ function updateTable(para) {
   fetch(`https://universa-api.onrender.com/student/`, {
     method: "PUT",
     headers: {
-      "Content-Type": "application/json",
+      "token":verify,
+      "Content-Type": "application/json"
     },
     body: JSON.stringify(personalInfo),
   })

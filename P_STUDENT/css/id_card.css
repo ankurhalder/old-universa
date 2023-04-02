@@ -75,8 +75,8 @@
 }
 
 .qrcode {
-  width: 7vw;
-  max-width: 10vw;
+  width: 200px;
+  /* max-width: 10vw; */
   height: auto;
   border: none;
 }

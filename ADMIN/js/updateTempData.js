@@ -2,6 +2,8 @@ const Form = document.getElementById("form");
 Form.addEventListener("submit", updateTable);
 function updateTable(para) {
   para.preventDefault();
+  const token1 = localStorage.getItem("token");
+  console.log(token1);
     // name
     const firstName = document.getElementById("personal_info_first_name").value;
     const middleName = document.getElementById("personal_info_middle_name").value;
@@ -77,6 +79,7 @@ function updateTable(para) {
     method: "PUT",
     headers: {
       "Content-Type": "application/json",
+      "token": token1
     },
     body: JSON.stringify(personalInfo),
   })
@@ -86,6 +89,7 @@ function updateTable(para) {
       const userID =  localStorage.getItem("userid");
       console.log(localStorage.getItem("userid"))
       localStorage.setItem("getApplicantID",userid)
+      console.log(token1);
       alert("Data saved/updated successfully:");
       window.location.href = "/ADMIN/temp_st.html";
     })

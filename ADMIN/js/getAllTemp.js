@@ -1,5 +1,6 @@
 function getAllTemp() {
-  const token1 = localStorage.getItem("token");
+  let token1 = localStorage.getItem("token");
+  // token1 = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiMzc3NDEyNTg5NjM1MjMyNCIsImVtYWlsIjoiYW5rdXJoYWxkZXIxMjM0NUBtYWlsLmNvbSIsImlhdCI6MTY4MDAyMDg1Mn0.ok37YHQ8fZLyhNLDtQZlueELv-C-2ii8l2YXJU7a4Ok';
   console.log("token working");
   if (token1 === null) {
     window.location.href = "/index.html";
@@ -8,7 +9,7 @@ function getAllTemp() {
     method: "GET",
     credentials: "include",
     headers: {
-      //   "token": d
+        "token": token1
     },
   })
     .then((response) => response.json())

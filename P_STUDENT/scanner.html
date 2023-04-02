@@ -26,7 +26,7 @@
         <a href="/P_STUDENT/scanner.html">Go To Scanner</a>
         <div class="logout_container"> <button onclick="logout()" class="btn logout">Logout</button></div>
         <div class="forget-password-container">
-          <label class="forget-password" for="forget-password">Forget Password</label><br>
+          <label class="forget-password" for="forget-password">Change Password</label><br>
         </div>
       </div>
     </div>
@@ -34,6 +34,7 @@
 </header>
 <h1>QR code reader</h1>
 <script src="/P_STUDENT/js/html5-qrcode.min.js"></script>
+<script src="/P_STUDENT/js/generateQr.js"></script>
 <style>
   .result{
     background-color: green;
@@ -54,9 +55,10 @@
   </div>
 </div>
 <script type="text/javascript">
+
 function onScanSuccess(qrCodeMessage) {
     document.getElementById('result').innerHTML = '<span class="result">'+qrCodeMessage+'</span>';
-}
+    generateQr(qrCodeMessage)}
 function onScanError(errorMessage) {
   //handle scan error
 }

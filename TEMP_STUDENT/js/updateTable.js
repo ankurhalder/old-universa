@@ -2,6 +2,7 @@ const Form = document.getElementById("form");
 Form.addEventListener("submit", updateTable);
 function updateTable(para) {
   para.preventDefault();
+  const verify = localStorage.getItem("token");
   const userid = localStorage.getItem("loginUserId");
   console.log(userid);
   // name
@@ -122,12 +123,14 @@ function updateTable(para) {
   fetch(`https://universa-api.onrender.com/student/temp/`, {
     method: "PUT",
     headers: {
+      'token':verify,
       "Content-Type": "application/json",
     },
     body: JSON.stringify(personalInfo),
   })
     .then((response) => response.json())
     .then((data) => {
+      // localStorage.setItem("applicant-email",Email)
       alert("Data saved/updated successfully:");
       window.location.href = "/TEMP_STUDENT/dashboard_st_lp.html";
     })

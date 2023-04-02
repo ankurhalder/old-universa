@@ -19,3 +19,4 @@ body
 header
  Content-Type    application/json
 
+https://goqr.me/api/

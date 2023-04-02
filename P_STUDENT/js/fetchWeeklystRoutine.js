@@ -2,6 +2,7 @@ let section = 'a'
 let stream = 'cst'
 let year = '2'
 let day = 'monday'
+const verify = localStorage.getItem("token");
 function fetchRoutine() {
     const userId = localStorage.getItem("userId");
     if(userId === null){
@@ -14,6 +15,7 @@ function fetchRoutine() {
       method: "GET",
       headers: {
         "Content-Type": "application/json",
+        "token": verify
       },
     })
       .then((response) => response.json())

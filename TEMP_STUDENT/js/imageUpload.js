@@ -2,15 +2,17 @@ document.getElementById("image-form").addEventListener("submit",uploadImage)
 function uploadImage(imageimage){
   imageimage.preventDefault();
     let image = new FormData(document.getElementById("image-form"))
+    const Token = localStorage.getItem("token");
+    console.log(Token);
     image.append("vidit","ankur")
     console.log(image);
     console.log('hello world');
-    fetch(`https://universa-api.onrender.com/upload`, {
-        method: "POST",
+    fetch(`https://universa-api.onrender.com/uploads/images/profile`, {
+        method: "PUT",
         credentials: "include",
         headers: {
-        //   "token": d
-        "profile_image_name": "universa-image"
+           "token": Token,
+        "profile_image_name": Token
         },
         body:image
       })

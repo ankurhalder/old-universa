@@ -26,7 +26,7 @@ function approve(){
   const Course_Name = document.getElementById("course_name").innerText;
   const Course_Duration = document.getElementById("course_duration").innerText;
   const Stream = document.getElementById("stream").innerText;
-  userID = localStorage.getItem("GotoPreview")
+  userID = localStorage.getItem("userid")
   console.log(userID)
   console.log(firstName)
   console.log(Email)
@@ -35,7 +35,7 @@ function approve(){
           first_name: firstName,
           middle_name: middleName,
           last_name: lastName,
-           dob: date_Of_Birth,
+           dob: Date(date_Of_Birth),
            gender: Gender,
     
           present_address: {
@@ -80,6 +80,6 @@ function approve(){
           .then((data) => {
             console.log(data)
             alert("Student Created")
-            window.location.href = "/ADMIN/admin.html"
+            window.location.href = "/ADMIN/manage_applicats.html"
           }
      ).catch(error=>console.log(error))}

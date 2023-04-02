@@ -5,12 +5,21 @@ function retrieve() {
     if (verify === null) {
       window.location.href = "/index.html"
     }
+
+    const creatingQr = {
+      type: "id-card",
+      data: {
+        identity_token:'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiMzI3NDEyNTg5NjM1NjAzMCIsImVtYWlsIjoiYW5rdXIuY2xvdWRzdG81NHJhZ2VAZ21haWwuY29tIiwiaWF0IjoxNjgwMjUxNDQ4fQ.9Tq9BXK5xZkFNm05Re5Pm_bXxDjIuDUwsmZ985Mbi-g'
+      }
+    }
+    document.getElementById('idcard_qrcode').src=`https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=${JSON.stringify(creatingQr)}`
     // retrieve user_id from local storage
     fetch(`https://universa-api.onrender.com/student/${userId}`, {
       // include user_id in the URL
       method: "GET",
       headers: {
-        "Content-Type": "application/json",
+        "token": verify,
+        "Content-Type": "application/json"
       },
     })
       .then((response) => response.json())
