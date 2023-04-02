@@ -14,6 +14,7 @@ function getAllPermanent() {
         console.log("Permanent Account Received");
         const dataCount = data.data.length;
         console.log(dataCount)
+        console.log('hello world')
         for(let i = 0; i < dataCount; i++){
           const pTag = document.createElement("p");
           pTag.textContent = data.data[i].course_info.enrollment_number;
