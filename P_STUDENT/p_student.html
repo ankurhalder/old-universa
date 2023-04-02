@@ -11,6 +11,7 @@
 <script src="/TEMP_STUDENT/js/logout.js"></script>
 <link rel="stylesheet" href="/P_STUDENT/css/p_student.css">
 <script src="/P_STUDENT/js/retrieve.js"></script>
+<script src="/P_STUDENT/js/redirect.js"></script>
 <body onload="retrieve()">
 <!-- Header -->
   <header>
@@ -102,15 +103,13 @@
     <div id="mySidebar">
       <button id="download-btn" class="sidebar-btn">Download ID Card</button>
       <script src="/P_STUDENT/js/capture-ID.js"></script>
-      <script src="/P_STUDENT/js/redirect.js"></script>
       <button onclick="scanner()" id="go-to-scanner-btn" class="sidebar-btn">Go to Scanner</button>
-      <script src="/P_STUDENT/js/redirect.js"></script>
-      <button onclick="routine()" id="go-to-routine-btn" class="sidebar-btn">Go to Routine</button>
+      <button onclick="goToRoutine()" id="go-to-routine-btn" class="sidebar-btn">Go to Routine</button>
       <button onclick="updateProfile()" id="update-permanent-Account" class="sidebar-btn">Update Your Profile</button>
     </div>
     <script src="/P_STUDENT/js/sidebar.js"></script>
   </main>        
-  <!-- <footer>
+  <footer>
 		<div class="contact-info">
 			<h3>Contact Us</h3>
 			<p>Kolkata , WestBengal , India</p>
@@ -128,6 +127,6 @@
 			 	 <li><a href="#">Instagram</a></li>
 			 </ul>
 		</div>
-  </footer> -->
+  </footer>
 </body>
 </html>

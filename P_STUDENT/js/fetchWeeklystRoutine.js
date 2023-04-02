@@ -1,9 +1,9 @@
 let section = 'a'
 let stream = 'cst'
 let year = '2'
-let day = 'monday'
 const verify = localStorage.getItem("token");
-function fetchRoutine() {
+function fetchWeeklyRoutine() {
+  console.log("hello world")
     const userId = localStorage.getItem("userId");
     if(userId === null){
     //   window.location.href = "/index.html"
