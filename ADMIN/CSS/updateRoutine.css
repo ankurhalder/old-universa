@@ -1,0 +1,40 @@
+@import url(/CSS-Main/btn.css);
+@import url(/CSS-Main/font.css);
+@import url(/CSS-Main/footer.css);
+@import url(/ADMIN/CSS/admin_header.css);
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+  }
+  table {
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  th, td {
+    border: 1px solid black;
+    padding: 10px;
+    text-align: center;
+  }
+  
+  th {
+    background-color: #c9c9c9;
+  }
+  
+  tr:nth-child(even) {
+    background-color: #f2f2f2;
+  }
+  
+  tr:nth-child(odd) {
+    background-color: #ffffff;
+  }
+  
+  td:first-child {
+    font-weight: bold;
+  }
+  
+  td:nth-child(3n+1) {
+    background-color: #f5f5f5;
+  }
+  

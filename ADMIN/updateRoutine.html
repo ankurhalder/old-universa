@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Update Routine</title>
+</head>
+<link rel="stylesheet" href="/ADMIN/CSS/updateRoutine.css">
+<body>
+    <!-- Header -->
+  <header>
+    <div class="left_side">
+      <ul class="nav_links">
+        <li class="home_link"><a href="/ADMIN/admin.html">Universa</a></li>
+      </ul>
+    </div>
+    <div class="right_side">
+      <div class="dropdown">
+        <button class="dropbtn">Menu &#9660;</button>
+        <div class="dropdown-panel hide">
+          <a href="/ADMIN/admin_services.html">Services</a>
+          <a href="/ADMIN/admin_info.html">Info</a>
+         <div class="logout_container"> <button onclick="logout()" class="logout btn">Logout</button>
+         </div>
+        </div>
+      </div>
+    </div>
+  </header>
+  <main>
+    <h1 class="heading">Update Student Routine</h1>
+    <p class="student_year" id="student-year">Please Select Student's Year:</p>
+
+    <input type="number" id="year-select" name="year-select" min="1900" max="2099" step="1">
+    
+    
+    <!-- Routine table start's from here -->
+    <table>
+        <tr>
+          <th>Monday</th>
+          <th>Tuesday</th>
+          <th>Wednesday</th>
+          <th>Thursday</th>
+          <th>Friday</th>
+        </tr>
+        <tr>
+          <td>
+            <input type="text" id="monday-period-1" value="abc">
+          </td>
+          <td>Physics<br>Jane<br>102</td>
+          <td>English<br>Sarah<br>103</td>
+          <td>History<br>David<br>104</td>
+          <td>Science<br>Emily<br>105</td>
+        </tr>
+        <tr>
+          <td>10:00-11:00</td>
+          <td>English<br>Sarah<br>102</td>
+          <td>Art<br>Mark<br>103</td>
+          <td>Math<br>John<br>104</td>
+          <td>Science<br>Emily<br>105</td>
+        </tr>
+        <tr>
+          <td>Break</td>
+          <td>Break</td>
+          <td>Break</td>
+          <td>Break</td>
+          <td>Break</td>
+        </tr>
+        <tr>
+          <td>History<br>David<br>103</td>
+          <td>Science<br>Emily<br>104</td>
+          <td>Physics<br>Jane<br>105</td>
+          <td>Music<br>Susan<br>106</td>
+          <td>PE<br>Tom<br>107</td>
+        </tr>
+        <tr>
+          <td>Science<br>Emily<br>104</td>
+          <td>PE<br>Tom<br>105</td>
+          <td>English<br>Sarah<br>106</td>
+          <td>Art<br>Mark<br>107</td>
+          <td>Physics<br>Jane<br>101</td>
+        </tr>
+        <tr>
+          <td>Art<br>Mark<br>105</td>
+          <td>Physics<br>Jane<br>106</td>
+          <td>History<br>David<br>107</td>
+          <td>PE<br>Tom<br>101</td>
+          <td>English<br>Sarah<br>102</td>
+        </tr>
+        <tr>
+          <td>Music<br>Susan<br>106</td>
+          <td>English<br>Sarah<br>107</td>
+          <td>Art<br>Mark<br>101</td>
+          <td>Physics<br>Jane<br>102</td>
+          <td>History<br>David<br>103</td>
+        </tr>
+        <tr>
+          <td>Music<br>Susan<br>106</td>
+          <td>English<br>Sarah<br>107</td>
+          <td>Art<br>Mark<br>101</td>
+          <td>Physics<br>Jane<br>102</td>
+          <td>History<br>David<br>103</td>
+        </tr>
+      </table>      
+      <script src="/ADMIN/js/createRoutine.js"></script>
+      <button onclick="createRoutine()">Create Routine</button>
+  </main>
+  <footer>
+    <div class="contact-info">
+        <h3>Contact Us</h3>
+        <p>Kolkata , WestBengal , India</p>
+        <p>Phone: +919748903490</p>
+        <p><a href="mailto: ankur.halder12345@gmail.com">Send Email</a></p>
+    </div>
+    <div class="footer-info">
+        <p>&copy;College Group 23,Uem Kolkata,2021.All rights reserved.</p>
+    </div>
+    <div class="social-links">
+        <h3>Follow Us</h3>
+        <ul>
+            <li><a href="#">Facebook</a></li>
+            <li><a href="#">Twitter</a></li>
+            <li><a href="#">Instagram</a></li>
+        </ul>
+    </div>
+</footer>
+</body>
+</html>

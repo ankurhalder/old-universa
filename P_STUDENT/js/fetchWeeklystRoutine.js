@@ -4,12 +4,6 @@ let year = '2'
 const verify = localStorage.getItem("token");
 function fetchWeeklyRoutine() {
   console.log("hello world")
-    const userId = localStorage.getItem("userId");
-    if(userId === null){
-    //   window.location.href = "/index.html"
-    }
-    // retrieve user_id from local storage
-    console.log(7563975692387)
     fetch(`https://universa-api.onrender.com/routine/weekly?year=${year}&stream=${stream}&section=${section}`, {
       // include user_id in the URL
       method: "GET",
@@ -21,6 +15,19 @@ function fetchWeeklyRoutine() {
       .then((response) => response.json())
       .then((data) => {
         console.log(data)
+        // counting total period's
+      const total_periods = data.data.length;
+      console.log(total_periods)
+      //  Counting total day's 
+      let count_monday = 0;
+      for(i=0; i < total_periods; i++){
+        if(data.data[i].day === 'monday'){
+           count_monday = count_monday +1 ;
+        }        
+      }
+      console.log(count_monday) 
+     
+        
     })
       .catch((error) => console.error(error));
   } 

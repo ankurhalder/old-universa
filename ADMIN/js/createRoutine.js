@@ -1,14 +1,14 @@
+const yearSelect = document.getElementById("year-select");
 
-function createRoutine() {
-    const userId = localStorage.getItem("userId");
-    if(userId === null){
-    //   window.location.href = "/index.html"
-    }
-    // retrieve user_id from local storage
-    console.log(7563975692387)
-
+yearSelect.addEventListener("input", function() {
+  const selectedYear = this.value;
+  console.log("Selected year:", selectedYear);
+  // do something with the selected year
+});
+function createRoutine() { 
+   const monday_period_1 =  document.getElementById("monday-period-1");
     let hello = {
-        year: "2",
+        year: yearSelect.value,
         stream: "cst",
         section: "d",
         routine_data: [
@@ -16,7 +16,7 @@ function createRoutine() {
             day: "monday",
             periods: [
               {
-                subject: "AIML Lab",
+                subject: monday_period_1.value,
                 start: "9:30",
                 end: "10:25",
                 room: "ccfl-iii",
@@ -32,6 +32,18 @@ function createRoutine() {
               },   
               ]
           }]
+      }
+// student year validation
+      if (!checkStudentYear()) {
+        console.log(yearSelect.value.length)
+        alert("Please enter valid Student Year");
+        return;
+      }
+      function checkStudentYear() {
+        if (yearSelect.value.length === 4) {
+          yearSelect.focus();
+          return true;
+        }
       }
     fetch(`https://universa-api.onrender.com/routine`, {
       // include user_id in the URL
