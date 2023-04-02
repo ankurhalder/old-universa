@@ -79,7 +79,7 @@ function updateTable(para) {
     method: "PUT",
     headers: {
       "Content-Type": "application/json",
-      "token": token1
+      "token": localStorage.getItem('token')
     },
     body: JSON.stringify(personalInfo),
   })

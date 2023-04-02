@@ -1,7 +1,6 @@
 function tempDataFetch() {
   const urlParams = new URLSearchParams(window.location.search);
   let applicant_id = urlParams.get('id'); 
-  let token1 = localStorage.getItem("token");
      if (applicant_id === null)
      {
       
@@ -15,7 +14,7 @@ function tempDataFetch() {
       method: "GET",
       headers: {
         "Content-Type": "application/json",
-        "token": token1
+        "token": localStorage.getItem('token'),
       },
     })
       .then((response) => response.json())

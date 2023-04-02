@@ -12,6 +12,7 @@ function fetchRoutine() {
       method: "GET",
       headers: {
         "Content-Type": "application/json",
+        "token": localStorage.getItem('token')
       },
     })
       .then((response) => response.json())

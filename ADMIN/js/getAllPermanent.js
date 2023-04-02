@@ -3,7 +3,7 @@ function getAllPermanent() {
         method: "GET",
         credentials: "include",
         headers: {
-        //   "token": d
+          "token": localStorage.getItem('token'),
         }
       })
         .then((response) => response.json())
