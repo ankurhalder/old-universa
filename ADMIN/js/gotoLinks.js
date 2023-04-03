@@ -10,6 +10,6 @@ function goToUpdateApplicant(){
 function gotoManageStudents(){
     window.location.href = "/ADMIN/manage_students.html"
 }
-function gotoUpdateRoutine(){
+function gotoCreateRoutine(){
     window.location.href = "/ADMIN/updateRoutine.html"
 }

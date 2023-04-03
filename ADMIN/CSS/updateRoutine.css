@@ -30,9 +30,6 @@
     background-color: #ffffff;
   }
   
-  td:first-child {
-    font-weight: bold;
-  }
   
   td:nth-child(3n+1) {
     background-color: #f5f5f5;

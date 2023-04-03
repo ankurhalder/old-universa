@@ -9,6 +9,7 @@
 <link rel="stylesheet" href="/ADMIN/CSS/admin.css">
 <script src="/TEMP_STUDENT/js/logout.js"></script>
 <script src="/ADMIN/js/verifyAdminLogin.js"></script>
+<script src="/ADMIN/js/gotoLinks.js"></script>
 <body onload="veryfyLogin()">
 <!-- Header -->
   <header>
@@ -47,16 +48,15 @@
 		</ul>
 	</nav>
 	<!-- Navigation bar-2 -->
-	<script src="/ADMIN/js/gotoLinks.js"></script>
+
 	<button id="toggle-sidebar" onclick="toggleSidebar()">&#x25B6;</button>
 	<div id="mySidebar">
 		
 			<button onclick="goToManageApplicants()" class="sidebar-btn">Manage Applicants</button>
 			<button onclick="gotoManageStudents()" class="sidebar-btn">Manage Students</button>
-			<button onclick="gotoUpdateRoutine()" class="sidebar-btn">Update Routine</button>
-			<script src="/ADMIN/js/createRoutine.js"></script>
-			<button onclick="createRoutine()" class="sidebar-btn">Create Routine</button>
-
+			<button onclick="gotoCreateRoutine()" class="sidebar-btn">Create Routine</button>
+			<script src="/P_STUDENT/js/fetchWeeklystRoutine.js"></script>
+			<button onclick="fetchWeeklyRoutine()" class="sidebar-btn">Fetch Weekly Student Routine</button>
 	</div>
 	<script src="/ADMIN/js/sidebar.js"></script>
 	<h1 class="dashboard-title">Administration Dashboard</h1>

@@ -28,12 +28,46 @@
     </div>
   </header>
   <main>
-    <h1 class="heading">Update Student Routine</h1>
-    <p class="student_year" id="student-year">Please Select Student's Year:</p>
+    <h1 class="heading">Create Student Routine</h1>
+    <p class="student_year" id="student-year">Please Select Student Year:</p>
+    <select name="select-year" id="select-year" class="select_year" required>
+      <option value="" disabled selected>Please Select</option>
+      <option value="1">First Year</option>
+      <option value="2">Second Year</option>
+      <option value="3">Third Year</option>
+      <option value="4">Fourth Year</option>
+    </select>
 
-    <input type="number" id="year-select" name="year-select" min="1900" max="2099" step="1">
-    
-    
+    <p class="student_stream" id="student-stream">PLease Select Student Stream</p>
+    <select name="select-stream" id="select-stream" class="select_stream" required>
+      <option value="" disabled selected>Please Select</option>
+      <option value="CST">CST</option>
+      <option value="CSIT">CSIT</option>
+      <option value="CSE">CSE</option>
+      <option value="CS(A.I.M.L)">CS(A.I.M.L)</option>
+      <option value="CS(I.O.T)">CS(I.O.T)</option>
+      <option value="BIO-TECH">BIO-TECH</option>
+  </select>
+
+  <p class="student_section" id="student-section">PLease Select Student Section</p>
+  <select name="select-section" id="select-section" class="select_stream" required>
+    <option value="" disabled selected>Please Select</option>
+    <option value="A">A</option>
+    <option value="B">B</option>
+    <option value="C">C</option>
+    <option value="D">D</option>
+    <option value="E">E</option>
+    <option value="F">F</option>
+    <option value="G">G</option>
+    <option value="H">H</option>
+    <option value="I">I</option>
+    <option value="J">J</option>
+    <option value="K">K</option>
+    <option value="L">L</option>
+    <option value="M">M</option>
+    <option value="N">N</option>
+  </select>
+
     <!-- Routine table start's from here -->
     <table>
         <tr>
@@ -43,22 +77,91 @@
           <th>Thursday</th>
           <th>Friday</th>
         </tr>
+        <!-- First Period -->
         <tr>
           <td>
-            <input type="text" id="monday-period-1" value="abc">
+            <input class="monday_period_1" type="text" id="monday-period-1" value="Enter Subject"> <br>
+            <input class="faculty_monday_period_1" type="text" id="faculty-monday-period-1" value="Enter Faculty Name"> <br>
+            <input class="roomno_monday_period_1" type="text" id="roomno-monday-period-1" value="Enter Room No.">
           </td>
-          <td>Physics<br>Jane<br>102</td>
-          <td>English<br>Sarah<br>103</td>
-          <td>History<br>David<br>104</td>
-          <td>Science<br>Emily<br>105</td>
+          <td>
+            <input class="tuesday_period_1" type="text" id="tuesday-period-1" value="Enter Subject"> <br>
+            <input class="faculty_tuesday_period_1" type="text" id="faculty-tuesday-period-1" value="Enter Faculty Name"> <br>
+            <input class="roomno_tuesday_period_1" type="text" id="roomno-tuesday-period-1" value="Enter Room No.">
+          </td>
+          <td>
+            <input class="wednesday_period_1" type="text" id="wednesday-period-1" value="Enter Subject"> <br>
+            <input class="faculty_wednesday_period_1" type="text" id="faculty-wednesday-period-1" value="Enter Faculty Name"> <br>
+            <input class="roomno_wednesday_period_1" type="text" id="roomno-wednesday-period-1" value="Enter Room No.">
+          </td>
+          <td>
+            <input class="thursday_period_1" type="text" id="thursday-period-1" value="Enter Subject"> <br>
+            <input class="faculty_thursday_period_1" type="text" id="faculty-thursday-period-1" value="Enter Faculty Name"> <br>
+            <input class="roomno_thursday_period_1" type="text" id="roomno-thursday-period-1" value="Enter Room No.">
+          </td>
+          <td>
+            <input class="friday_period_1" type="text" id="friday-period-1" value="Enter Subject"> <br>
+            <input class="faculty_friday_period_1" type="text" id="faculty-friday-period-1" value="Enter Faculty Name"> <br>
+            <input class="roomno_friday_period_1" type="text" id="roomno-friday-period-1" value="Enter Room No.">
+          </td>
         </tr>
+        <!-- 2nd Period -->
         <tr>
-          <td>10:00-11:00</td>
-          <td>English<br>Sarah<br>102</td>
-          <td>Art<br>Mark<br>103</td>
-          <td>Math<br>John<br>104</td>
-          <td>Science<br>Emily<br>105</td>
+          <td>
+            <input class="monday_period_2" type="text" id="monday-period-2" value="Enter Subject"> <br>
+            <input class="faculty_monday_period_2" type="text" id="faculty-monday-period-2" value="Enter Faculty Name"> <br>
+            <input class="roomno_monday_period_2" type="text" id="roomno-monday-period-2" value="Enter Room No.">
+          </td>
+          <td>
+            <input class="tuesday_period_2" type="text" id="tuesday-period-2" value="Enter Subject"> <br>
+            <input class="faculty_tuesday_period_2" type="text" id="faculty-tuesday-period-2" value="Enter Faculty Name"> <br>
+            <input class="roomno_tuesday_period_2" type="text" id="roomno-tuesday-period-2" value="Enter Room No.">
+          </td>
+          <td>
+            <input class="wednesday_period_2" type="text" id="wednesday-period-2" value="Enter Subject"> <br>
+            <input class="faculty_wednesday_period_2" type="text" id="faculty-wednesday-period-2" value="Enter Faculty Name"> <br>
+            <input class="roomno_wednesday_period_2" type="text" id="roomno-wednesday-period-2" value="Enter Room No.">
+          </td>
+          <td>
+            <input class="thursday_period_2" type="text" id="thursday-period-2" value="Enter Subject"> <br>
+            <input class="faculty_thursday_period_2" type="text" id="faculty-thursday-period-2" value="Enter Faculty Name"> <br>
+            <input class="roomno_thursday_period_2" type="text" id="roomno-thursday-period-2" value="Enter Room No.">
+          </td>
+          <td>
+            <input class="friday_period_2" type="text" id="friday-period-2" value="Enter Subject"> <br>
+            <input class="faculty_friday_period_2" type="text" id="faculty-friday-period-2" value="Enter Faculty Name"> <br>
+            <input class="roomno_friday_period_2" type="text" id="roomno-friday-period-2" value="Enter Room No.">
+          </td>
         </tr>
+        <!-- 3rd Period -->
+        <tr>
+          <td>
+            <input class="monday_period_3" type="text" id="monday-period-3" value="Enter Subject"> <br>
+            <input class="faculty_monday_period_3" type="text" id="faculty-monday-period-3" value="Enter Faculty Name"> <br>
+            <input class="roomno_monday_period_3" type="text" id="roomno-monday-period-3" value="Enter Room No.">
+          </td>
+          <td>
+            <input class="tuesday_period_3" type="text" id="tuesday-period-3" value="Enter Subject"> <br>
+            <input class="faculty_tuesday_period_3" type="text" id="faculty-tuesday-period-3" value="Enter Faculty Name"> <br>
+            <input class="roomno_tuesday_period_3" type="text" id="roomno-tuesday-period-3" value="Enter Room No.">
+          </td>
+          <td>
+            <input class="wednesday_period_3" type="text" id="wednesday-period-3" value="Enter Subject"> <br>
+            <input class="faculty_wednesday_period_3" type="text" id="faculty-wednesday-period-3" value="Enter Faculty Name"> <br>
+            <input class="roomno_wednesday_period_3" type="text" id="roomno-wednesday-period-3" value="Enter Room No.">
+          </td>
+          <td>
+            <input class="thursday_period_3" type="text" id="thursday-period-3" value="Enter Subject"> <br>
+            <input class="faculty_thursday_period_3" type="text" id="faculty-thursday-period-3" value="Enter Faculty Name"> <br>
+            <input class="roomno_thursday_period_3" type="text" id="roomno-thursday-period-3" value="Enter Room No.">
+          </td>
+          <td>
+            <input class="friday_period_3" type="text" id="friday-period-3" value="Enter Subject"> <br>
+            <input class="faculty_friday_period_3" type="text" id="faculty-friday-period-3" value="Enter Faculty Name"> <br>
+            <input class="roomno_friday_period_3" type="text" id="roomno-friday-period-3" value="Enter Room No.">
+          </td>
+        </tr>
+        <!-- 4th Period -->
         <tr>
           <td>Break</td>
           <td>Break</td>
@@ -66,41 +169,121 @@
           <td>Break</td>
           <td>Break</td>
         </tr>
+        <!-- 5th Period -->
         <tr>
-          <td>History<br>David<br>103</td>
-          <td>Science<br>Emily<br>104</td>
-          <td>Physics<br>Jane<br>105</td>
-          <td>Music<br>Susan<br>106</td>
-          <td>PE<br>Tom<br>107</td>
+          <td>
+            <input class="monday_period_5" type="text" id="monday-period-5" value="Enter Subject"> <br>
+            <input class="faculty_monday_period_5" type="text" id="faculty-monday-period-5" value="Enter Faculty Name"> <br>
+            <input class="roomno_monday_period_5" type="text" id="roomno-monday-period-5" value="Enter Room No.">
+          </td>
+          <td>
+            <input class="tuesday_period_5" type="text" id="tuesday-period-5" value="Enter Subject"> <br>
+            <input class="faculty_tuesday_period_5" type="text" id="faculty-tuesday-period-5" value="Enter Faculty Name"> <br>
+            <input class="roomno_tuesday_period_5" type="text" id="roomno-tuesday-period-5" value="Enter Room No.">
+          </td>
+          <td>
+            <input class="wednesday_period_5" type="text" id="wednesday-period-5" value="Enter Subject"> <br>
+            <input class="faculty_wednesday_period_5" type="text" id="faculty-wednesday-period-5" value="Enter Faculty Name"> <br>
+            <input class="roomno_wednesday_period_5" type="text" id="roomno-wednesday-period-5" value="Enter Room No.">
+          </td>
+          <td>
+            <input class="thursday_period_5" type="text" id="thursday-period-5" value="Enter Subject"> <br>
+            <input class="faculty_thursday_period_5" type="text" id="faculty-thursday-period-5" value="Enter Faculty Name"> <br>
+            <input class="roomno_thursday_period_5" type="text" id="roomno-thursday-period-5" value="Enter Room No.">
+          </td>
+          <td>
+            <input class="friday_period_5" type="text" id="friday-period-5" value="Enter Subject"> <br>
+            <input class="faculty_friday_period_5" type="text" id="faculty-friday-period-5" value="Enter Faculty Name"> <br>
+            <input class="roomno_friday_period_5" type="text" id="roomno-friday-period-5" value="Enter Room No.">
+          </td>
         </tr>
+        
+        <!-- 6th Period -->
         <tr>
-          <td>Science<br>Emily<br>104</td>
-          <td>PE<br>Tom<br>105</td>
-          <td>English<br>Sarah<br>106</td>
-          <td>Art<br>Mark<br>107</td>
-          <td>Physics<br>Jane<br>101</td>
+          <td>
+            <input class="monday_period_6" type="text" id="monday-period-6" value="Enter Subject"> <br>
+            <input class="faculty_monday_period_6" type="text" id="faculty-monday-period-6" value="Enter Faculty Name"> <br>
+            <input class="roomno_monday_period_6" type="text" id="roomno-monday-period-6" value="Enter Room No.">
+          </td>
+          <td>
+            <input class="tuesday_period_6" type="text" id="tuesday-period-6" value="Enter Subject"> <br>
+            <input class="faculty_tuesday_period_6" type="text" id="faculty-tuesday-period-6" value="Enter Faculty Name"> <br>
+            <input class="roomno_tuesday_period_6" type="text" id="roomno-tuesday-period-6" value="Enter Room No.">
+          </td>
+          <td>
+            <input class="wednesday_period_6" type="text" id="wednesday-period-6" value="Enter Subject"> <br>
+            <input class="faculty_wednesday_period_6" type="text" id="faculty-wednesday-period-6" value="Enter Faculty Name"> <br>
+            <input class="roomno_wednesday_period_6" type="text" id="roomno-wednesday-period-6" value="Enter Room No.">
+          </td>
+          <td>
+            <input class="thursday_period_6" type="text" id="thursday-period-6" value="Enter Subject"> <br>
+            <input class="faculty_thursday_period_6" type="text" id="faculty-thursday-period-6" value="Enter Faculty Name"> <br>
+            <input class="roomno_thursday_period_6" type="text" id="roomno-thursday-period-6" value="Enter Room No.">
+          </td>
+          <td>
+            <input class="friday_period_6" type="text" id="friday-period-6" value="Enter Subject"> <br>
+            <input class="faculty_friday_period_6" type="text" id="faculty-friday-period-6" value="Enter Faculty Name"> <br>
+            <input class="roomno_friday_period_6" type="text" id="roomno-friday-period-6" value="Enter Room No.">
+          </td>
         </tr>
+        
+        <!-- 7th Period -->
         <tr>
-          <td>Art<br>Mark<br>105</td>
-          <td>Physics<br>Jane<br>106</td>
-          <td>History<br>David<br>107</td>
-          <td>PE<br>Tom<br>101</td>
-          <td>English<br>Sarah<br>102</td>
+          <td>
+            <input class="monday_period_7" type="text" id="monday-period-7" value="Enter Subject"> <br>
+            <input class="faculty_monday_period_7" type="text" id="faculty-monday-period-7" value="Enter Faculty Name"> <br>
+            <input class="roomno_monday_period_7" type="text" id="roomno-monday-period-7" value="Enter Room No.">
+          </td>
+          <td>
+            <input class="tuesday_period_7" type="text" id="tuesday-period-7" value="Enter Subject"> <br>
+            <input class="faculty_tuesday_period_7" type="text" id="faculty-tuesday-period-7" value="Enter Faculty Name"> <br>
+            <input class="roomno_tuesday_period_7" type="text" id="roomno-tuesday-period-7" value="Enter Room No.">
+          </td>
+          <td>
+            <input class="wednesday_period_7" type="text" id="wednesday-period-7" value="Enter Subject"> <br>
+            <input class="faculty_wednesday_period_7" type="text" id="faculty-wednesday-period-7" value="Enter Faculty Name"> <br>
+            <input class="roomno_wednesday_period_7" type="text" id="roomno-wednesday-period-7" value="Enter Room No.">
+          </td>
+          <td>
+            <input class="thursday_period_7" type="text" id="thursday-period-7" value="Enter Subject"> <br>
+            <input class="faculty_thursday_period_7" type="text" id="faculty-thursday-period-7" value="Enter Faculty Name"> <br>
+            <input class="roomno_thursday_period_7" type="text" id="roomno-thursday-period-7" value="Enter Room No.">
+          </td>
+          <td>
+            <input class="friday_period_7" type="text" id="friday-period-7" value="Enter Subject"> <br>
+            <input class="faculty_friday_period_7" type="text" id="faculty-friday-period-7" value="Enter Faculty Name"> <br>
+            <input class="roomno_friday_period_7" type="text" id="roomno-friday-period-7" value="Enter Room No.">
+          </td>
         </tr>
+        
+        <!-- 8th Period -->
         <tr>
-          <td>Music<br>Susan<br>106</td>
-          <td>English<br>Sarah<br>107</td>
-          <td>Art<br>Mark<br>101</td>
-          <td>Physics<br>Jane<br>102</td>
-          <td>History<br>David<br>103</td>
-        </tr>
-        <tr>
-          <td>Music<br>Susan<br>106</td>
-          <td>English<br>Sarah<br>107</td>
-          <td>Art<br>Mark<br>101</td>
-          <td>Physics<br>Jane<br>102</td>
-          <td>History<br>David<br>103</td>
-        </tr>
+          <td>
+            <input class="monday_period_8" type="text" id="monday-period-8" value="Enter Subject"> <br>
+            <input class="faculty_monday_period_8" type="text" id="faculty-monday-period-8" value="Enter Faculty Name"> <br>
+            <input class="roomno_monday_period_8" type="text" id="roomno-monday-period-8" value="Enter Room No.">
+          </td>
+          <td>
+            <input class="tuesday_period_8" type="text" id="tuesday-period-8" value="Enter Subject"> <br>
+            <input class="faculty_tuesday_period_8" type="text" id="faculty-tuesday-period-8" value="Enter Faculty Name"> <br>
+            <input class="roomno_tuesday_period_8" type="text" id="roomno-tuesday-period-8" value="Enter Room No.">
+          </td>
+          <td>
+            <input class="wednesday_period_8" type="text" id="wednesday-period-8" value="Enter Subject"> <br>
+            <input class="faculty_wednesday_period_8" type="text" id="faculty-wednesday-period-8" value="Enter Faculty Name"> <br>
+            <input class="roomno_wednesday_period_8" type="text" id="roomno-wednesday-period-8" value="Enter Room No.">
+          </td>
+          <td>
+            <input class="thursday_period_8" type="text" id="thursday-period-8" value="Enter Subject"> <br>
+            <input class="faculty_thursday_period_8" type="text" id="faculty-thursday-period-8" value="Enter Faculty Name"> <br>
+            <input class="roomno_thursday_period_8" type="text" id="roomno-thursday-period-8" value="Enter Room No.">
+          </td>
+          <td>
+            <input class="friday_period_8" type="text" id="friday-period-8" value="Enter Subject"> <br>
+            <input class="faculty_friday_period_8" type="text" id="faculty-friday-period-8" value="Enter Faculty Name"> <br>
+            <input class="roomno_friday_period_8" type="text" id="roomno-friday-period-8" value="Enter Room No.">
+          </td>
+        </tr>        
       </table>      
       <script src="/ADMIN/js/createRoutine.js"></script>
       <button onclick="createRoutine()">Create Routine</button>
