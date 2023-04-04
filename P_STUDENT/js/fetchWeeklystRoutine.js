@@ -1,5 +1,5 @@
-let section = 'A'
-let stream = 'csit'
+let section = 'm'
+let stream = 'cst'
 let year = '1'
 const verify = localStorage.getItem("token");
 function fetchWeeklyRoutine() {
