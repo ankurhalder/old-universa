@@ -12,8 +12,8 @@
   <link rel="stylesheet" href="/P_STUDENT/css/p_student.css" />
   <script src="/P_STUDENT/js/retrieve.js"></script>
   <script src="/P_STUDENT/js/redirect.js"></script>
-  <script src="/P_STUDENT/js/verifyLogin.js"></script>
-  <body onload="veryfyLogin()">
+  <script src="/P_STUDENT/js/setIdCard.js"></script>
+  <body onload="setIdCard()">
     <!-- Header -->
     <header>
       <div class="left_side">
@@ -43,10 +43,7 @@
     <script src="/TEMP_STUDENT/js/dropDown.js"></script>
     <main>
       <h1 class="dashboard_heading" id="dashboard"></h1>
-      <script src="/P_STUDENT/js/id-card.js"></script>
-      <script>
-        setIdCard();
-      </script>
+      <!-- ID Card -->
       <div class="id-card--container">
         <div class="id-card id-card__side" id="id-card__front">
           <div class="id-card__college bg--blue">
@@ -111,6 +108,7 @@
           <img class="id-card__back__qrcode" id="id-card__qr-code--back" />
         </div>
       </div>
+
       <!-- Sidebar -->
       <button id="toggle-sidebar" onclick="toggleSidebar()">&#x25B6;</button>
       <div id="mySidebar">

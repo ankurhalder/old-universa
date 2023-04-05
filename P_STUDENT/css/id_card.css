@@ -1,13 +1,4 @@
-      /* Ignore the below code */
-
-      body {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-      }
-
-      /* All the colors ever used */
+     /* All the colors ever used */
       :root {
         --blue: rgb(0, 102, 255);
         --blue-deep: rgb(0, 75, 187);
@@ -78,6 +69,7 @@
         aspect-ratio: 7/4;
         position: relative;
         perspective: 3000px;
+        left: 32%;
       }
       .id-card--container:hover #id-card__front {
         transform: rotateY(-180deg);

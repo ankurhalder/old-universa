@@ -1,5 +1,5 @@
 const downloadBtn = document.getElementById("download-btn");
-const idCard = document.querySelector(".id-card-content");
+const idCard = document.querySelector(".id-card--container");
 
 downloadBtn.addEventListener("click", () => {
   html2canvas(idCard).then((canvas) => {

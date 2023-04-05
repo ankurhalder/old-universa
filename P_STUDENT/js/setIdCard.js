@@ -1,3 +1,7 @@
+const token1 = localStorage.getItem("token");
+if (token1 === null) {
+  window.location.href = "/index.html";
+}
 const setIdCard = () => {
   const qrCode = document.getElementById("id-card__qr-code");
   const qrCodeBack = document.getElementById("id-card__qr-code--back");
