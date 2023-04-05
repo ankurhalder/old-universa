@@ -7,7 +7,8 @@
     <title>DServices</title>
   </head>
   <link rel="stylesheet" href="/P_STUDENT/css/p_student_services.css" />
-  <body>
+  <script src="/P_STUDENT/js/verifyLogin.js"></script>
+  <body onload="veryfyLogin()">
     <!-- Header -->
     <header>
       <div class="left_side">
@@ -24,15 +25,11 @@
             <a href="/P_STUDENT/p_student_services.html">Services</a>
             <a href="/P_STUDENT/p_student_info.html">Info</a>
             <a href="/P_STUDENT/p_student_update.html">Update Profile</a>
-            <a href="/P_STUDENT/routine.html">See Routine</a>
+            <a href="/P_STUDENT/student_routine.html">See Routine</a>
             <a href="/P_STUDENT/scanner.html">Go To Scanner</a>
+            <a href="">Change Password</a>
             <div class="logout_container">
               <button onclick="logout()" class="btn logout">Logout</button>
-            </div>
-            <div class="forget-password-container">
-              <label class="forget-password" for="forget-password"
-                >Change Password</label
-              ><br />
             </div>
           </div>
         </div>

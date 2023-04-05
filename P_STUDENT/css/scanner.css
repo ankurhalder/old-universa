@@ -12,4 +12,11 @@ body {
 	margin: 0;
 	padding: 0;
 }
- 
+.result {
+	background-color: green;
+	color: #fff;
+	padding: 200px;
+  }
+  .row {
+	display: flex;
+  }
