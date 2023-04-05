@@ -7,3 +7,86 @@
 	margin: 0;
 	padding: 0;
   }
+/* Set the font family and size for the heading and paragraph elements */
+.heading, .student_year, .student_stream, .student_section {
+	font-family: "Roboto", Arial, sans-serif;
+	font-size: 1.5vw;
+	font-weight: bold;
+	color: white;
+	letter-spacing: 1.5px;
+	margin-left: 2vh;
+	}
+	
+	/* Style the select elements */
+	select {
+	padding: 1.5vh;
+	font-family: "Roboto", Arial, sans-serif;
+	font-size: 1.5vw;
+	font-weight: bold;
+	border: none;
+	border-radius: 2vh;
+	background-color: #f5f5f5;
+	width: 30vw;
+	margin-left: 1vw;
+	box-shadow: 0 2vh 4vh rgba(0, 0, 0, 0.2);
+	color: black;
+	transition: all 0.3s ease-in-out;
+	margin-bottom: 5vh;
+	}
+	
+	/* Position the select elements */
+	.student_year, .student_stream, .student_section {
+	display: inline-block;
+	width: 40vw;
+	vertical-align: middle;
+	}
+	
+	/* Add some spacing between the heading and paragraph elements */
+	.heading {
+	margin-bottom: 5vh;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	text-align: center;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 10vh;
+	font-size: 3.5vw;
+	}
+	
+	/* Add a gradient background to the body */
+	body {
+	background: linear-gradient(135deg, #1764c3, #1764c3);
+	}
+	
+	/* Add hover and focus styles to the select elements */
+	select:hover, select:focus {
+	background-color: #a2c1e8;
+	outline: none;
+	}
+
+
+  /* Table start's From Here */
+  table {
+	border-collapse: collapse;
+	width: 100%;
+  }
+  
+  th, td {
+	padding: 10px;
+	text-align: center;
+	border: 1px solid black;
+  }
+  
+  th {
+	background-color: white;
+  }
+  
+  input[type="text"] {
+	width: 100%;
+	box-sizing: border-box;
+	padding: 5px;
+	margin-bottom: 5px;
+  }
+  
+  
