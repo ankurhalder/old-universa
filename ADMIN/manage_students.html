@@ -7,27 +7,30 @@
     <title>Manage Student's</title>
 </head>
 <link rel="stylesheet" href="/ADMIN/CSS/manage_student's.css">
+<script src="/TEMP_STUDENT/js/logout.js"></script>
 <script src="/ADMIN/js/verifyAdminLogin.js"></script>
+<script src="/ADMIN/js/gotoLinks.js"></script>
 <body onload="veryfyLogin()">
-    <header>
-        <div class="left_side">
-            <ul class="nav_links">
-                <li class="home_link"><a href="/ADMIN/admin.html">Universa</a></li>
-            </ul>
-          </div>
-          <div class="right_side">
-            <div class="dropdown">
-              <button class="dropbtn">Menu &#9660;</button>
-              <div class="dropdown-panel hide">
-                <a href="/ADMIN/admin_services.html">Services</a>
-                <a href="/ADMIN/admin_info.html">Info</a>
-                <a href="">Change Password</a>
-               <div class="logout_container"> <button onclick="logout()" class="logout btn">Logout</button>
-               </div>
-              </div>
-            </div>
-          </div>
-    </header>
+<!-- Header -->
+  <header>
+    <div class="left_side">
+      <ul class="nav_links">
+        <li class="home_link"><a href="/ADMIN/admin.html">Universa</a></li>
+      </ul>
+    </div>
+    <div class="right_side">
+      <div class="dropdown">
+        <button class="dropbtn">Menu &#9660;</button>
+        <div class="dropdown-panel hide">
+          <a href="/ADMIN/admin_services.html">Services</a>
+          <a href="/ADMIN/admin_info.html">Info</a>
+		  <a href="">Change Password</a>
+         <div class="logout_container"> <button onclick="logout()" class="logout btn">Logout</button>
+         </div>
+        </div>
+      </div>
+    </div>
+  </header>
     <main class="full-body">
         <h1 class="heading">
           All Student's
