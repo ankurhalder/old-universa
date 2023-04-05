@@ -147,9 +147,9 @@ const fridayPeriod3Input = document.getElementById("friday-period-3");
 const fridayPeriod3FacultyInput = document.getElementById("faculty-friday-period-3");
 const fridayPeriod3RoomNoInput = document.getElementById("roomno-friday-period-3");
 
-const fridayPeriod4Input = document.getElementById("friday-period-4");
-const fridayPeriod4FacultyInput = document.getElementById("faculty-friday-period-4");
-const fridayPeriod4RoomNoInput = document.getElementById("roomno-friday-period-4");
+// const fridayPeriod4Input = document.getElementById("friday-period-4");
+// const fridayPeriod4FacultyInput = document.getElementById("faculty-friday-period-4");
+// const fridayPeriod4RoomNoInput = document.getElementById("roomno-friday-period-4");
 
 const fridayPeriod5Input = document.getElementById("friday-period-5");
 const fridayPeriod5FacultyInput = document.getElementById("faculty-friday-period-5");
