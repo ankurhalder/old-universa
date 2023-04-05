@@ -1,3 +1,4 @@
+
 function tempDataFetch() {
   const urlParams = new URLSearchParams(window.location.search);
   let applicant_id = urlParams.get('id'); 
@@ -10,6 +11,13 @@ function tempDataFetch() {
      }
      console.log('trying to get id you see')
      console.log(applicant_id)
+    //  verifying login status 
+    const token1 = localStorage.getItem("token");
+      console.log("token working")
+      if (token1 === null) {
+          window.location.href = "/index.html"
+      }
+  
     fetch(`https://universa-api.onrender.com/student/temp/${applicant_id}`, {
       method: "GET",
       headers: {

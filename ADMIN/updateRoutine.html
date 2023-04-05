@@ -7,7 +7,8 @@
     <title>Update Routine</title>
 </head>
 <link rel="stylesheet" href="/ADMIN/CSS/updateRoutine.css">
-<body>
+<script src="/ADMIN/js/verifyAdminLogin.js"></script>
+<body onload="veryfyLogin()">
     <!-- Header -->
   <header>
     <div class="left_side">
@@ -180,11 +181,11 @@
             <p class="period_4_start_time" id="period-4-start-time"></p>
             <p class="period_4_end_time" id="period-4-end-time"></p>
           </td>
-          <td>Break</td>
-          <td>Break</td>
-          <td>Break</td>
-          <td>Break</td>
-          <td>Break</td>
+          <td class="break" id="break-id">Break</td>
+          <td class="break" id="break-id">Break</td>
+          <td class="break" id="break-id">Break</td>
+          <td class="break" id="break-id">Break</td>
+          <td class="break" id="break-id">Break</td>
         </tr>
         <!-- 5th Period -->
         <tr>
@@ -302,7 +303,7 @@
             <input class="roomno_tuesday_period_8" type="text" id="roomno-tuesday-period-8" placeholder="Enter Room No.">
           </td>
           <td>
-            <input class="wednesday_period_8" type="text" id="wednesday-period-8" placeholder="Enter Subject"> <br>
+             <input class="wednesday_period_8" type="text" id="wednesday-period-8" placeholder="Enter Subject"> <br>
             <input class="faculty_wednesday_period_8" type="text" id="faculty-wednesday-period-8" placeholder="Enter Faculty Name"> <br>
             <input class="roomno_wednesday_period_8" type="text" id="roomno-wednesday-period-8" placeholder="Enter Room No.">
           </td>
@@ -317,7 +318,7 @@
             <input class="roomno_friday_period_8" type="text" id="roomno-friday-period-8" placeholder="Enter Room No.">
           </td>
         </tr>        
-      </table>      
+      </table>     
       <script src="/ADMIN/js/createRoutine.js"></script>
       <button onclick="createRoutine()">Create Routine</button>
   </main>
