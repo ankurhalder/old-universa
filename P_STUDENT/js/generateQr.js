@@ -1,4 +1,4 @@
-function generateQr(qrCodeMessage) {
+function generateQr(qrCodeMessage, element) {
   const verify = localStorage.getItem("token");
   qrCodeMessage = JSON.parse(qrCodeMessage);
   if (qrCodeMessage.type === "id-card") {
@@ -15,6 +15,7 @@ function generateQr(qrCodeMessage) {
       .then((response) => response.json())
       .then((data) => {
         console.log(data);
+        element.innerHTML = '<span class="result">' + data.message + "</span>";
       })
       .catch((error) => console.error(error));
   }

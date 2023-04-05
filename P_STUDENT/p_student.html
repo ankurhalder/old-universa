@@ -14,6 +14,9 @@
   <script src="/P_STUDENT/js/redirect.js"></script>
   <script src="/P_STUDENT/js/setIdCard.js"></script>
   <body onload="setIdCard()">
+    <script>
+      retrieve();
+    </script>
     <!-- Header -->
     <header>
       <div class="left_side">
@@ -44,7 +47,7 @@
     <main>
       <h1 class="dashboard_heading" id="dashboard"></h1>
       <!-- ID Card -->
-      <div class="id-card--container">
+      <div class="id-card--container" id="container">
         <div class="id-card id-card__side" id="id-card__front">
           <div class="id-card__college bg--blue">
             <div class="id-card__college__logo"></div>
@@ -63,37 +66,37 @@
           </div>
           <div class="id-card__body bg--white">
             <div class="id-card__body__left">
-              <div class="id-card__body__image">
+              <div class="id-card__body__image" id="id-card-body-image">
                 <img class="id-card__body__qr-code" id="id-card__qr-code" />
               </div>
             </div>
             <div class="id-card__body__right">
               <div class="id-card__body__course">
-                <p class="content">cst - 2021</p>
+                <p class="content" id="stream"></p>
                 <p class="title">student</p>
               </div>
               <div class="id-card__body__dob">
-                <p class="content">DOB: 22-05-1998</p>
-                <p class="title">blood group: A+</p>
+                <p class="content" id="dob"></p>
+                <p class="title" id="blood_group">A+</p>
               </div>
               <div class="id-card__body__name">
-                <p class="content">vidit modi</p>
+                <p class="content" id="full_name"></p>
                 <p class="title">name</p>
               </div>
               <div class="id-card__body__blood-group">
-                <p class="content">365256988955458</p>
+                <p class="content" id="registration_number"></p>
                 <p class="title">Reistration No</p>
               </div>
               <div class="id-card__body__contact">
-                <p class="content">9638527415</p>
+                <p class="content" id="contact_no"></p>
                 <p class="title">contact</p>
               </div>
               <div class="id-card__body__enroll">
-                <p class="content">14785236985478</p>
+                <p class="content" id="enrollment_number"></p>
                 <p class="title">enrollment no</p>
               </div>
               <div class="id-card__body__address">
-                <p class="content">64 pathuria ghat street, kolkata-700006</p>
+                <p class="content" id="permanent_address"></p>
                 <p class="title">address</p>
               </div>
             </div>

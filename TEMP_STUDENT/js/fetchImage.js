@@ -12,6 +12,8 @@ function fetchImage() {
     .then((data) => {
       const img = document.getElementById("user-image");
       img.src = data.data.files[0].url;
+      console.log(data.data.files[0].url);
+      localStorage.setItem("imgurl", data.data.files[0].url);
     })
     .catch((error) => {
       console.error(error);

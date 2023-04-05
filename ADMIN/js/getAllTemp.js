@@ -1,5 +1,6 @@
 function getAllTemp() {
   let token1 = localStorage.getItem("token");
+  console.log(token1);
 
   console.log("token working");
   if (token1 === null) {
@@ -9,7 +10,7 @@ function getAllTemp() {
     method: "GET",
     credentials: "include",
     headers: {
-      token: localStorage.getItem("token"),
+      token: token1,
     },
   })
     .then((response) => response.json())

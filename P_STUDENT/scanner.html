@@ -59,9 +59,9 @@
     </div>
     <script type="text/javascript">
       function onScanSuccess(qrCodeMessage) {
-        document.getElementById("result").innerHTML =
-          '<span class="result">' + qrCodeMessage + "</span>";
-        generateQr(qrCodeMessage);
+        // .innerHTML =
+        //   '<span class="result">' + qrCodeMessage + "</span>";
+        generateQr(qrCodeMessage, document.getElementById("result"));
       }
       function onScanError(errorMessage) {
         //handle scan error

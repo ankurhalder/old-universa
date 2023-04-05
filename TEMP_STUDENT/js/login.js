@@ -28,7 +28,6 @@ function login() {
         // Login successful
         console.log("Login successful");
         console.log(data.message);
-
         // Store user ID in local storage
         localStorage.setItem("loginUserId", data.data.user_id);
         localStorage.setItem("userData", JSON.stringify(data.data));

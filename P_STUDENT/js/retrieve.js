@@ -13,14 +13,12 @@ function retrieve() {
         "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiMzI3NDEyNTg5NjM1NjAzMCIsImVtYWlsIjoiYW5rdXIuY2xvdWRzdG81NHJhZ2VAZ21haWwuY29tIiwiaWF0IjoxNjgwMjUxNDQ4fQ.9Tq9BXK5xZkFNm05Re5Pm_bXxDjIuDUwsmZ985Mbi-g",
     },
   };
-  document.getElementById(
-    "idcard_qrcode"
-  ).src = `https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=${JSON.stringify(
-    creatingQr
-  )}`;
-  // retrieve user_id from local storage
+  // document.getElementById(
+  //   "idcard_qrcode"
+  // ).src = `https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=${JSON.stringify(
+  //   creatingQr
+  // )}`;
   fetch(`https://universa-api.onrender.com/student/${userId}`, {
-    // include user_id in the URL
     method: "GET",
     headers: {
       token: verify,
@@ -50,24 +48,33 @@ function retrieve() {
         Dob.innerText = "Please Update";
       } else {
         let DOB = new Date(data.data.personal_info.dob);
-        Dob.innerText = `${DOB.getDate()}/${
+        Dob.innerText = `DOB: ${DOB.getDate()}/${
           DOB.getMonth() + 1
         }/${DOB.getFullYear()}`;
       }
       // let Category = document.getElementById("category");
       // Category.innerText = data.data.personal_info.category;
       let blood_Groop = document.getElementById("blood_group");
-      blood_Groop.innerText = data.data.personal_info.blood_group;
-      //   let admissionYear = document.getElementById('admission_year');
-      //   admissionYear.innerText = data.data.course_info.admission_year;
+      blood_Groop.innerText =
+        `blood group: ` + data.data.personal_info.blood_group;
+      // let admissionYear = document.getElementById("admission_year");
+      // admissionYear.innerText = data.data.course_info.admission_year;
       //  let courseName = document.getElementById('course_name');
       //   courseName.innerText = data.data.course_info.course_name;
       //  let CourseDuration = document.getElementById('course_duration');
       //   CourseDuration.innerText = data.data.course_info.duration;
       let stream = document.getElementById("stream");
-      stream.innerText = data.data.course_info.stream;
-      let registrationNumber = document.getElementById("enrollment_number");
-      registrationNumber.innerText = data.data.course_info.enrollment_number;
+      stream.innerText =
+        data.data.course_info.stream +
+        ` ` +
+        data.data.course_info.admission_year;
+      let enrollmentNumber = document.getElementById("enrollment_number");
+      enrollmentNumber.innerText = data.data.course_info.enrollment_number;
+      let Permanent_address = document.getElementById("permanent_address");
+      Permanent_address.innerHTML =
+        data.data.personal_info.permanent_address.street;
+      let registrationNumber = document.getElementById("registration_number");
+      registrationNumber.innerText = data.data.course_info.registration_number;
     })
     .catch((error) => console.error(error));
 }
