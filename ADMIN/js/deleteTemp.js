@@ -1,5 +1,7 @@
 function deleteApplicant(enrollmentNumber) {
-  const confirmed = window.confirm("Are you sure you want to delete this applicant?");
+  const confirmed = window.confirm(
+    "Are you sure you want to delete this applicant?"
+  );
   if (!confirmed) {
     window.location.href = "/ADMIN/manage_applicats.html";
     return;
@@ -10,7 +12,7 @@ function deleteApplicant(enrollmentNumber) {
     method: "DELETE",
     credentials: "include",
     headers: {
-      "token": localStorage.getItem('token'),
+      token: localStorage.getItem("token"),
     },
   })
     .then((response) => response.json())
@@ -19,7 +21,7 @@ function deleteApplicant(enrollmentNumber) {
 
       if (data.status === true) {
         alert(`Applicant Removed Successfully`);
-        window.location.href = "/ADMIN/manage_applicats.html"
+        window.location.href = "/ADMIN/manage_applicats.html";
       } else if (data.status === false) {
         alert(`unsuccessful`);
       }

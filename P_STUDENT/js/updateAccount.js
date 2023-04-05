@@ -38,8 +38,8 @@ function updateTable(para) {
       first_name: firstName,
       middle_name: middleName,
       last_name: lastName,
-       dob: date_Of_Birth,
-       gender: Gender,
+      dob: date_Of_Birth,
+      gender: Gender,
 
       present_address: {
         street: presentAddress,
@@ -121,8 +121,8 @@ function updateTable(para) {
   fetch(`https://universa-api.onrender.com/student/`, {
     method: "PUT",
     headers: {
-      "token":verify,
-      "Content-Type": "application/json"
+      token: verify,
+      "Content-Type": "application/json",
     },
     body: JSON.stringify(personalInfo),
   })
@@ -247,4 +247,3 @@ function updateTable(para) {
     return true;
   }
 }
-

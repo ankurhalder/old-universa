@@ -19,7 +19,7 @@ registerForm.addEventListener("submit", function (event) {
     password: Password.value,
     confirm_password: confirm_Password.value,
   };
-  
+
   if (!validateFirstName()) {
     alert("Please enter your first name");
     return;
@@ -37,14 +37,16 @@ registerForm.addEventListener("submit", function (event) {
     return;
   }
   if (!validatePassword()) {
-    alert("Please enter a password that is at least 8 characters long and contains at least one uppercase letter, one lowercase letter, and one special character");
+    alert(
+      "Please enter a password that is at least 8 characters long and contains at least one uppercase letter, one lowercase letter, and one special character"
+    );
     return;
   }
   if (!validateConfirmPassword()) {
     alert("Password does't match");
     return;
   }
-  
+
   console.log(JSON.stringify(userdata));
   fetch("https://universa-api.onrender.com/account", {
     method: "POST",
@@ -121,18 +123,18 @@ function validatePassword() {
   if (!passwordRegex.test(password.value)) {
     password.focus();
     return false;
-    }
-    password.addEventListener("blur", validatePassword);
-    return true;
-    }
-    
-    function validateConfirmPassword() {
-    let password = document.getElementById("password");
-    let confirmPassword = document.getElementById("confirm-password");
-    if (password.value !== confirmPassword.value) {
+  }
+  password.addEventListener("blur", validatePassword);
+  return true;
+}
+
+function validateConfirmPassword() {
+  let password = document.getElementById("password");
+  let confirmPassword = document.getElementById("confirm-password");
+  if (password.value !== confirmPassword.value) {
     confirmPassword.focus();
     return false;
-    }
-    confirmPassword.addEventListener("blur", validateConfirmPassword);
-    return true;
-    }
+  }
+  confirmPassword.addEventListener("blur", validateConfirmPassword);
+  return true;
+}

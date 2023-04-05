@@ -31,15 +31,14 @@ function login() {
 
         // Store user ID in local storage
         localStorage.setItem("loginUserId", data.data.user_id);
-        localStorage.setItem("userData",JSON.stringify(data.data))
-        localStorage.setItem("token",data.authToken);
+        localStorage.setItem("userData", JSON.stringify(data.data));
+        localStorage.setItem("token", data.authToken);
         if (data.data.type === "guest") {
           window.location.href = "/TEMP_STUDENT/dashboard_st_lp.html";
-        } else if(data.data.type === "admin"){
-          window.location.href = "/ADMIN/admin.html"
-        }
-        else if (data.data.type === "student"){
-          window.location.href = "/P_STUDENT/p_student.html"
+        } else if (data.data.type === "admin") {
+          window.location.href = "/ADMIN/admin.html";
+        } else if (data.data.type === "student") {
+          window.location.href = "/P_STUDENT/p_student.html";
         }
         console.log(localStorage.getItem("userId"));
       } else if (data.status === false) {
@@ -52,47 +51,47 @@ function login() {
     })
     .catch((error) => console.error(error));
 
-    function validateUserId() {
-      const userIdValue = userId.value.trim();
-      if (userIdValue.length === 0) {
-        userId.focus();
-        return false;
-      }
-      return true;
+  function validateUserId() {
+    const userIdValue = userId.value.trim();
+    if (userIdValue.length === 0) {
+      userId.focus();
+      return false;
     }
-  
-    // function validatePassword() {
-    //   const passwordValue = password.value.trim();
-    //   if (passwordValue.length < 8) {
-    //     password.focus();
-    //     alert("Password must be at least 8 characters long.");
-    //     return false;
-    //   }
-    //   if (!/[A-Z]/.test(passwordValue)) {
-    //     password.focus();
-    //     alert("Password must contain at least one uppercase letter.");
-    //     return false;
-    //   }
-    //   if (!/[a-z]/.test(passwordValue)) {
-    //     password.focus();
-    //     alert("Password must contain at least one lowercase letter.");
-    //     return false;
-    //   }
-    //   if (!/[\W_]/.test(passwordValue)) {
-    //     password.focus();
-    //     alert("Password must contain at least one special character.");
-    //     return false;
-    //   }
-    //   return true;
-    // }
-    function validatePassword() {
-      let password = document.getElementById("password");
-      let passwordRegex = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[!@#$%^&*]).{8,}$/;
-      if (!passwordRegex.test(password.value)) {
-        password.focus();
-        return false;
-        }
-        password.addEventListener("blur", validatePassword);
-        return true;
-        }
+    return true;
   }
+
+  // function validatePassword() {
+  //   const passwordValue = password.value.trim();
+  //   if (passwordValue.length < 8) {
+  //     password.focus();
+  //     alert("Password must be at least 8 characters long.");
+  //     return false;
+  //   }
+  //   if (!/[A-Z]/.test(passwordValue)) {
+  //     password.focus();
+  //     alert("Password must contain at least one uppercase letter.");
+  //     return false;
+  //   }
+  //   if (!/[a-z]/.test(passwordValue)) {
+  //     password.focus();
+  //     alert("Password must contain at least one lowercase letter.");
+  //     return false;
+  //   }
+  //   if (!/[\W_]/.test(passwordValue)) {
+  //     password.focus();
+  //     alert("Password must contain at least one special character.");
+  //     return false;
+  //   }
+  //   return true;
+  // }
+  function validatePassword() {
+    let password = document.getElementById("password");
+    let passwordRegex = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[!@#$%^&*]).{8,}$/;
+    if (!passwordRegex.test(password.value)) {
+      password.focus();
+      return false;
+    }
+    password.addEventListener("blur", validatePassword);
+    return true;
+  }
+}

@@ -2,42 +2,44 @@ function fetchData() {
   const userId = localStorage.getItem("loginUserId");
   const verify = localStorage.getItem("token");
   if (verify === null) {
-    window.location.href = "/index.html"
+    window.location.href = "/index.html";
   }
   // retrieve user_id from local storage
   fetch(`https://universa-api.onrender.com/student/temp/${userId}`, {
     // include user_id in the URL
     method: "GET",
     headers: {
-      'token':verify,
+      token: verify,
       "Content-Type": "application/json",
     },
   })
     .then((response) => response.json())
     .then((data) => {
-      console.log(data)
+      console.log(data);
       let first_name_db = document.getElementById("full_name");
       first_name_db.innerText =
         data.data.personal_info.first_name +
         " " +
         data.data.personal_info.last_name;
-        let User_Name_Dashboard = document.getElementById("user_name_dashboard");
-        User_Name_Dashboard.innerText =
-          data.data.personal_info.first_name +`'s DASHBOARD`
+      let User_Name_Dashboard = document.getElementById("user_name_dashboard");
+      User_Name_Dashboard.innerText =
+        data.data.personal_info.first_name + `'s DASHBOARD`;
       let Email = document.getElementById("email");
       Email.innerText = data.data.personal_info.email;
       let contactNo = document.getElementById("contact_no");
       contactNo.innerText = data.data.personal_info.contact;
       let Gender = document.getElementById("gender");
       Gender.innerText = data.data.personal_info.gender;
-      
+
       // check if DOB is null or not before setting innerText of Dob element
       let Dob = document.getElementById("dob");
-      if(data.data.personal_info.dob === null){
+      if (data.data.personal_info.dob === null) {
         Dob.innerText = "Please Update";
       } else {
-        let DOB = new Date(data.data.personal_info.dob)
-        Dob.innerText = `${DOB.getDate()}/${DOB.getMonth()+1}/${DOB.getFullYear()}`;
+        let DOB = new Date(data.data.personal_info.dob);
+        Dob.innerText = `${DOB.getDate()}/${
+          DOB.getMonth() + 1
+        }/${DOB.getFullYear()}`;
       }
       let Category = document.getElementById("category");
       Category.innerText = data.data.personal_info.category;
@@ -71,17 +73,17 @@ function fetchData() {
       let permanentState = document.getElementById("permanent_state");
       permanentState.innerText =
         data.data.personal_info.permanent_address.state;
-        // course Info
-        let admissionYear = document.getElementById("admission_year");
-        admissionYear.innerText = data.data.course_info.admission_year;
-        let enrollmentNumber = document.getElementById("enrollment_number");
-        enrollmentNumber.innerText = data.data.course_info.enrollment_number;
-        let courseName = document.getElementById("course_name");
-        courseName.innerText = data.data.course_info.course_name;
-        let courseDuration = document.getElementById("course_duration");
-        courseDuration.innerText = data.data.course_info.duration;
-        let Stream = document.getElementById("stream");
-        Stream.innerText = data.data.course_info.stream;
+      // course Info
+      let admissionYear = document.getElementById("admission_year");
+      admissionYear.innerText = data.data.course_info.admission_year;
+      let enrollmentNumber = document.getElementById("enrollment_number");
+      enrollmentNumber.innerText = data.data.course_info.enrollment_number;
+      let courseName = document.getElementById("course_name");
+      courseName.innerText = data.data.course_info.course_name;
+      let courseDuration = document.getElementById("course_duration");
+      courseDuration.innerText = data.data.course_info.duration;
+      let Stream = document.getElementById("stream");
+      Stream.innerText = data.data.course_info.stream;
     })
     .catch((error) => console.error(error));
-} 
+}

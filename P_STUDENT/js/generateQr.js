@@ -1,19 +1,21 @@
 function generateQr(qrCodeMessage) {
-    const verify = localStorage.getItem("token");
-    qrCodeMessage = JSON.parse(qrCodeMessage);
-    if(qrCodeMessage.type === "id-card"){
-        fetch(`https://universa-api.onrender.com/auth/qr/id-card?identity_token=${qrCodeMessage.data.identity_token}`, {
-            method: "GET",
-            credentials: "include",
-            headers: {
-              "token": verify,
-            }
-          })
-            .then((response) => response.json())
-            .then((data) => {
-                console.log(data)
-            })
-            .catch((error) => console.error(error));
-    }
-
+  const verify = localStorage.getItem("token");
+  qrCodeMessage = JSON.parse(qrCodeMessage);
+  if (qrCodeMessage.type === "id-card") {
+    fetch(
+      `https://universa-api.onrender.com/auth/qr/id-card?identity_token=${qrCodeMessage.data.identity_token}`,
+      {
+        method: "GET",
+        credentials: "include",
+        headers: {
+          token: verify,
+        },
+      }
+    )
+      .then((response) => response.json())
+      .then((data) => {
+        console.log(data);
+      })
+      .catch((error) => console.error(error));
+  }
 }

@@ -1,33 +1,34 @@
-let section = 'm'
-let stream = 'cst'
-let year = '1'
+let section = "m";
+let stream = "cst";
+let year = "1";
 const verify = localStorage.getItem("token");
 function fetchWeeklyRoutine() {
-  console.log("hello world")
-    fetch(`https://universa-api.onrender.com/routine/weekly?year=${year}&stream=${stream}&section=${section}`, {
+  console.log("hello world");
+  fetch(
+    `https://universa-api.onrender.com/routine/weekly?year=${year}&stream=${stream}&section=${section}`,
+    {
       // include user_id in the URL
       method: "GET",
       headers: {
         "Content-Type": "application/json",
-        "token": verify
+        token: verify,
       },
-    })
-      .then((response) => response.json())
-      .then((data) => {
-        console.log(data)
-        // counting total period's
+    }
+  )
+    .then((response) => response.json())
+    .then((data) => {
+      console.log(data);
+      // counting total period's
       const total_periods = data.data.length;
-      console.log(total_periods)
-      //  Counting total day's 
+      console.log(total_periods);
+      //  Counting total day's
       let count_monday = 0;
-      for(i=0; i < total_periods; i++){
-        if(data.data[i].day === 'monday'){
-           count_monday = count_monday +1 ;
-        }        
+      for (i = 0; i < total_periods; i++) {
+        if (data.data[i].day === "monday") {
+          count_monday = count_monday + 1;
+        }
       }
-      console.log(count_monday) 
-     
-        
+      console.log(count_monday);
     })
-      .catch((error) => console.error(error));
-  } 
+    .catch((error) => console.error(error));
+}

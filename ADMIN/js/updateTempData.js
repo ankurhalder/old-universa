@@ -4,46 +4,45 @@ function updateTable(para) {
   para.preventDefault();
   const token1 = localStorage.getItem("token");
   console.log(token1);
-    // name
-    const firstName = document.getElementById("personal_info_first_name").value;
-    const middleName = document.getElementById("personal_info_middle_name").value;
-    const lastName = document.getElementById("personal_info_last_name").value;
-    //personal data
-    const Gender = document.getElementById("gender").value;
-    // address
-    const presentAddress = document.getElementById("present_address").value;
-    const presentPincode = document.getElementById("present_pincode").value;
-    const presentCity = document.getElementById("present_city").value;
-    const presentDistrict = document.getElementById("present_district").value;
-    const presentState = document.getElementById("present_state").value;
-    const permanentAddress = document.getElementById("permanent_address").value;
-    const permanentPincode = document.getElementById("permanent_pincode").value;
-    const permanentCity = document.getElementById("permanent_city").value;
-    const permanentDistrict = document.getElementById("permanent_district").value;
-    const permanentState = document.getElementById("permanent_state").value;
-    const date_Of_Birth = document.getElementById("dob").value;
-    const blood_Groop = document.getElementById("blood_group").value;
-    const Category = document.getElementById("personal_info_category").value;
-    const Email = document.getElementById("personal_info_email").value;
-    const Contact = document.getElementById("personal_info_contact").value;
+  // name
+  const firstName = document.getElementById("personal_info_first_name").value;
+  const middleName = document.getElementById("personal_info_middle_name").value;
+  const lastName = document.getElementById("personal_info_last_name").value;
+  //personal data
+  const Gender = document.getElementById("gender").value;
+  // address
+  const presentAddress = document.getElementById("present_address").value;
+  const presentPincode = document.getElementById("present_pincode").value;
+  const presentCity = document.getElementById("present_city").value;
+  const presentDistrict = document.getElementById("present_district").value;
+  const presentState = document.getElementById("present_state").value;
+  const permanentAddress = document.getElementById("permanent_address").value;
+  const permanentPincode = document.getElementById("permanent_pincode").value;
+  const permanentCity = document.getElementById("permanent_city").value;
+  const permanentDistrict = document.getElementById("permanent_district").value;
+  const permanentState = document.getElementById("permanent_state").value;
+  const date_Of_Birth = document.getElementById("dob").value;
+  const blood_Groop = document.getElementById("blood_group").value;
+  const Category = document.getElementById("personal_info_category").value;
+  const Email = document.getElementById("personal_info_email").value;
+  const Contact = document.getElementById("personal_info_contact").value;
   // Academic Info
   const Admission_Year = document.getElementById("admission_year").value;
   const Course_Name = document.getElementById("course_name").value;
   const Course_Duration = document.getElementById("course_duration").value;
   const Stream = document.getElementById("stream").value;
 
-
   // const urlParams = new URLSearchParams(window.location.search);
   // let userid = urlParams.get('id');
-  const userid =  localStorage.getItem("userid");
+  const userid = localStorage.getItem("userid");
   console.log(userid);
   const personalInfo = {
     personal_info: {
       first_name: firstName,
       middle_name: middleName,
       last_name: lastName,
-       dob: date_Of_Birth,
-       gender: Gender,
+      dob: date_Of_Birth,
+      gender: Gender,
 
       present_address: {
         street: presentAddress,
@@ -79,16 +78,16 @@ function updateTable(para) {
     method: "PUT",
     headers: {
       "Content-Type": "application/json",
-      "token": localStorage.getItem('token')
+      token: localStorage.getItem("token"),
     },
     body: JSON.stringify(personalInfo),
   })
     .then((response) => response.json())
     .then((data) => {
-      console.log(data)
-      const userID =  localStorage.getItem("userid");
-      console.log(localStorage.getItem("userid"))
-      localStorage.setItem("getApplicantID",userid)
+      console.log(data);
+      const userID = localStorage.getItem("userid");
+      console.log(localStorage.getItem("userid"));
+      localStorage.setItem("getApplicantID", userid);
       console.log(token1);
       alert("Data saved/updated successfully:");
       window.location.href = "/ADMIN/temp_st.html";
