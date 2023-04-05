@@ -40,64 +40,74 @@
     <script src="/TEMP_STUDENT/js/dropDown.js"></script>
   <main>
   <h1 class="dashboard_heading" id="dashboard"></h1>
-<!-- ID card  -->
-<div class="id-card">
-  <div class="id-card-content">
-    <div class="id-card-header">
-      <img src="/P_STUDENT/image/logo.png" alt="logo" class="logo">
-      <h1 class="id-card-header-text">University Of Engineering & Management</h1>
-      <div class="id-card-header-details">
-        <p class="id-card-header-text">Plot No - III-B/5, New Town Action Area - III, Kolkata 700160</p>
-        <p class="id-card-header-text">PH: 080107 00500</p>
-        <p class="id-card-header-text">EMAIL: admissions@iemcal.com</p>
+  <script src="/P_STUDENT/js/id-card.js"></script>
+  <script>
+    setIdCard()
+  </script>
+      <div class="id-card--container">
+        <div class="id-card id-card__side" id="id-card__front">
+          <div class="id-card__college bg--blue">
+            <div class="id-card__college__logo"></div>
+            <div class="id-card__college__details">
+              <div class="id-card__college__name">
+                university of engineering & management
+              </div>
+              <div class="id-card__college__address">
+                Plot No - III-B/5, New Town <br />
+                Action Area - III, Newtown, Kolkata - 700160
+              </div>
+              <div class="id-card__college__contact">
+                Ph: 033 2357 2059 | Email: admissions@iemcal.com
+              </div>
+            </div>
+          </div>
+          <div class="id-card__body bg--white">
+            <div class="id-card__body__left">
+              <div class="id-card__body__image">
+                <img class="id-card__body__qr-code" id="id-card__qr-code" />
+              </div>
+            </div>
+            <div class="id-card__body__right">
+              <div class="id-card__body__course">
+                <p class="content">cst - 2021</p>
+                <p class="title">student</p>
+              </div>
+              <div class="id-card__body__dob">
+                <p class="content">DOB: 22-05-1998</p>
+                <p class="title">blood group: A+</p>
+              </div>
+              <div class="id-card__body__name">
+                <p class="content">vidit modi</p>
+                <p class="title">name</p>
+              </div>
+              <div class="id-card__body__blood-group">
+                <p class="content">365256988955458</p>
+                <p class="title">Reistration No</p>
+              </div>
+              <div class="id-card__body__contact">
+                <p class="content">9638527415</p>
+                <p class="title">contact</p>
+              </div>
+              <div class="id-card__body__enroll">
+                <p class="content">14785236985478</p>
+                <p class="title">enrollment no</p>
+              </div>
+              <div class="id-card__body__address">
+                <p class="content">64 pathuria ghat street, kolkata-700006</p>
+                <p class="title">address</p>
+              </div>
+            </div>
+          </div>
+          <div class="id-card__sign bg--blue">
+            <div class="id-card__sign__image"></div>
+          </div>
+          <div class="id-card__footer bg--blue"></div>
+        </div>
+  
+        <div class="id-card id-card__side" id="id-card__back">
+          <img class="id-card__back__qrcode" id="id-card__qr-code--back" />
+        </div>
       </div>
-    </div>
-    <div class="id-card-body">
-      <div class="id-card-left-side">
-        <div class="id-card-photo">
-          <img src="/P_STUDENT/image/student_sample.jpg" alt="Student Photo">
-        </div>
-        <div class="id-card-qr-code">
-          <img src="/P_STUDENT/image/QR.png" alt="QR code" class="qrcode" id="idcard_qrcode">
-        </div>
-        <div class="id-card-signature">
-          <p class="id-card-signature-label">Signature</p>
-          <span class="id-card-signature-value" id="signature"></span>
-        </div>
-      </div>
-      <div class="id-card-right-side">
-        <div class="id-card-name">
-          <p class="id-card-label">Full Name:</p>
-          <span class="id-card-value" id="full_name"></span>
-        </div>
-        <div class="id-card-contact-no">
-          <p class="id-card-label">Contact No.:</p>
-          <span class="id-card-value" id="contact_no"></span>
-        </div>
-        <div class="id-card-blood-group">
-          <p class="id-card-label">Blood Group:</p>
-          <span class="id-card-value" id="blood_group"></span>
-        </div>
-        <div class="id-card-dob">
-          <p class="id-card-label">Date Of Birth:</p>
-          <span class="id-card-value" id="dob"></span>
-        </div>
-        <div class="id-card-stream">
-          <p class="id-card-label">Stream:</p>
-          <span class="id-card-value" id="stream"></span>
-        </div>
-        <div class="id-card-enrollment-no">
-          <p class="id-card-label">Enrollment no:</p>
-          <span class="id-card-value" id="enrollment_number"></span>
-        </div>
-        <div class="id-card-registration-no">
-          <p class="id-card-label">Registration no:</p>
-          <span class="id-card-value" id="registration_number">To be updated</span>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
     <!-- Sidebar -->
     <button id="toggle-sidebar" onclick="toggleSidebar()">&#x25B6;</button>
     <div id="mySidebar">

@@ -27,7 +27,7 @@
           <a href="/P_STUDENT/scanner.html">Go To Scanner</a>
           <div class="logout_container"> <button onclick="logout()" class="btn logout">Logout</button></div>
           <div class="forget-password-container">
-            <label class="forget-password" for="forget-password">Change Password</label><br>
+            <label class="forget-password" for="forget-password">Change Password</label></p><br>
           </div>
         </div>
       </div>
@@ -40,57 +40,255 @@
     fetchWeeklyRoutine()
   </script>
 <h1>My College Class Routine</h1>
-<p>Here is my weekly class routine:</p>
 <table>
-    <tr>
-      <th>Time</th>
-      <th>Monday</th>
-      <th>Tuesday</th>
-      <th>Wednesday</th>
-      <th>Thursday</th>
-      <th>Friday</th>
-    </tr>
-    <tr>
-      <td>
-        <div class="class" id="monday-period-1">
-          <p class="class-name" id="monday-class-1">Calculus</p>
-          <p class="faculty" id="monday-faculty-1">Prof. Smith</p>
-          <p class="room" id="monday-room-1">room1</p>
-        </div>
-      </td>
-      <td>
-        <div class="class" id="tuesday-period-1">
-          <p class="class-name" id="tuesday-class-1">English</p>
-          <p class="faculty" id="tuesday-faculty-1">Prof. Johnson</p>
-          <p class="room" id="tuesday-room-1">room2</p>
-        </div>
-      </td>
-      <td>
-        <div class="class" id="wednesday-period-1">
-          <p class="class-name" id="wednesday-class-1">History</p>
-          <p class="faculty" id="wednesday-faculty-1">Prof. Lee</p>
-          <p class="room" id="wednesday-room-1">room3</p>
-        </div>
-      </td>
-      <td>
-        <div class="class" id="thursday-period-1">
-          <p class="class-name" id="thursday-class-1">Chemistry</p>
-          <p class="faculty" id="thursday-faculty-1">Prof. Brown</p>
-          <p class="room" id="thursday-room-1">room4</p>
-        </div>
-      </td>
-      <td>
-        <div class="class" id="friday-period-1">
-          <p class="class-name" id="friday-class-1">Physics</p>
-          <p class="faculty" id="friday-faculty-1">Prof. Davis</p>
-          <p class="room" id="friday-room-1">room5</p>
-        </div>
-      </td>
-    </tr>
-  </table>
+  <tr>
+    <th>Time Table</th>
+    <th>Monday</th>
+    <th>Tuesday</th>
+    <th>Wednesday</th>
+    <th>Thursday</th>
+    <th>Friday</th>
+  </tr>
+  <!-- First Period -->
+  <tr>
+    <td>
+      <p class="period_1_start_time" id="period-1-start-time"></p>
+      <p class="period_1_end_time" id="period-1-end-time"></p>
+    </td>
+    <td>
+      <p class="monday_period_1" type="text" id="monday-period-1"> </p><br>
+      <p class="faculty_monday_period_1" type="text" id="faculty-monday-period-1"> </p><br>
+      <p class="roomno_monday_period_1" type="text" id="roomno-monday-period-1"></p>
+    </td>
+    <td>
+      <p class="tuesday_period_1" type="text" id="tuesday-period-1"> </p><br>
+      <p class="faculty_tuesday_period_1" type="text" id="faculty-tuesday-period-1"> </p><br>
+      <p class="roomno_tuesday_period_1" type="text" id="roomno-tuesday-period-1"></p>
+    </td>
+    <td>
+      <p class="wednesday_period_1" type="text" id="wednesday-period-1"> </p><br>
+      <p class="faculty_wednesday_period_1" type="text" id="faculty-wednesday-period-1"> </p><br>
+      <p class="roomno_wednesday_period_1" type="text" id="roomno-wednesday-period-1"></p>
+    </td>
+    <td>
+      <p class="thursday_period_1" type="text" id="thursday-period-1"> </p><br>
+      <p class="faculty_thursday_period_1" type="text" id="faculty-thursday-period-1"> </p><br>
+      <p class="roomno_thursday_period_1" type="text" id="roomno-thursday-period-1"></p>
+    </td>
+    <td>
+      <p class="friday_period_1" type="text" id="friday-period-1"> </p><br>
+      <p class="faculty_friday_period_1" type="text" id="faculty-friday-period-1"> </p><br>
+      <p class="roomno_friday_period_1" type="text" id="roomno-friday-period-1"></p>
+    </td>
+  </tr>
+  <!-- 2nd Period -->
+  <tr>
+    <td>
+      <p class="period_2_start_time" id="period-2-start-time"></p>
+      <p class="period_2_end_time" id="period-2-end-time"></p>
+    </td>
+    <td>
+      <p class="monday_period_2" type="text" id="monday-period-2"> </p><br>
+      <p class="faculty_monday_period_2" type="text" id="faculty-monday-period-2"> </p><br>
+      <p class="roomno_monday_period_2" type="text" id="roomno-monday-period-2"></p>
+    </td>
+    <td>
+      <p class="tuesday_period_2" type="text" id="tuesday-period-2"> </p><br>
+      <p class="faculty_tuesday_period_2" type="text" id="faculty-tuesday-period-2"> </p><br>
+      <p class="roomno_tuesday_period_2" type="text" id="roomno-tuesday-period-2"></p>
+    </td>
+    <td>
+      <p class="wednesday_period_2" type="text" id="wednesday-period-2"> </p><br>
+      <p class="faculty_wednesday_period_2" type="text" id="faculty-wednesday-period-2"> </p><br>
+      <p class="roomno_wednesday_period_2" type="text" id="roomno-wednesday-period-2"></p>
+    </td>
+    <td>
+      <p class="thursday_period_2" type="text" id="thursday-period-2"> </p><br>
+      <p class="faculty_thursday_period_2" type="text" id="faculty-thursday-period-2"> </p><br>
+      <p class="roomno_thursday_period_2" type="text" id="roomno-thursday-period-2"></p>
+    </td>
+    <td>
+      <p class="friday_period_2" type="text" id="friday-period-2"> </p><br>
+      <p class="faculty_friday_period_2" type="text" id="faculty-friday-period-2"> </p><br>
+      <p class="roomno_friday_period_2" type="text" id="roomno-friday-period-2"></p>
+    </td>
+  </tr>
+  <!-- 3rd Period -->
+  <tr>
+    <td>
+      <p class="period_3_start_time" id="period-3-start-time"></p>
+      <p class="period_3_end_time" id="period-3-end-time"></p>
+    </td>
+    <td>
+      <p class="monday_period_3" type="text" id="monday-period-3"> </p><br>
+      <p class="faculty_monday_period_3" type="text" id="faculty-monday-period-3"> </p><br>
+      <p class="roomno_monday_period_3" type="text" id="roomno-monday-period-3"></p>
+    </td>
+    <td>
+      <p class="tuesday_period_3" type="text" id="tuesday-period-3"> </p><br>
+      <p class="faculty_tuesday_period_3" type="text" id="faculty-tuesday-period-3"> </p><br>
+      <p class="roomno_tuesday_period_3" type="text" id="roomno-tuesday-period-3"></p>
+    </td>
+    <td>
+      <p class="wednesday_period_3" type="text" id="wednesday-period-3"> </p><br>
+      <p class="faculty_wednesday_period_3" type="text" id="faculty-wednesday-period-3"> </p><br>
+      <p class="roomno_wednesday_period_3" type="text" id="roomno-wednesday-period-3"></p>
+    </td>
+    <td>
+      <p class="thursday_period_3" type="text" id="thursday-period-3"> </p><br>
+      <p class="faculty_thursday_period_3" type="text" id="faculty-thursday-period-3"> </p><br>
+      <p class="roomno_thursday_period_3" type="text" id="roomno-thursday-period-3"></p>
+    </td>
+    <td>
+      <p class="friday_period_3" type="text" id="friday-period-3"> </p><br>
+      <p class="faculty_friday_period_3" type="text" id="faculty-friday-period-3"> </p><br>
+      <p class="roomno_friday_period_3" type="text" id="roomno-friday-period-3"></p>
+    </td>
+  </tr>
+  <!-- 4th Period -->
+  <tr>
+    <td>
+      <p class="period_4_start_time" id="period-4-start-time"></p>
+      <p class="period_4_end_time" id="period-4-end-time"></p>
+    </td>
+    <td class="break" id="break-id">Break</td>
+    <td class="break" id="break-id">Break</td>
+    <td class="break" id="break-id">Break</td>
+    <td class="break" id="break-id">Break</td>
+    <td class="break" id="break-id">Break</td>
+  </tr>
+  <!-- 5th Period -->
+  <tr>
+    <td>
+      <p class="period_5_start_time" id="period-5-start-time"></p>
+      <p class="period_5_end_time" id="period-5-end-time"></p>
+    </td>
+    <td>
+      <p class="monday_period_5" type="text" id="monday-period-5"> </p><br>
+      <p class="faculty_monday_period_5" type="text" id="faculty-monday-period-5"> </p><br>
+      <p class="roomno_monday_period_5" type="text" id="roomno-monday-period-5"></p>
+    </td>
+    <td>
+      <p class="tuesday_period_5" type="text" id="tuesday-period-5"> </p><br>
+      <p class="faculty_tuesday_period_5" type="text" id="faculty-tuesday-period-5"> </p><br>
+      <p class="roomno_tuesday_period_5" type="text" id="roomno-tuesday-period-5"></p>
+    </td>
+    <td>
+      <p class="wednesday_period_5" type="text" id="wednesday-period-5"> </p><br>
+      <p class="faculty_wednesday_period_5" type="text" id="faculty-wednesday-period-5"> </p><br>
+      <p class="roomno_wednesday_period_5" type="text" id="roomno-wednesday-period-5"></p>
+    </td>
+    <td>
+      <p class="thursday_period_5" type="text" id="thursday-period-5"> </p><br>
+      <p class="faculty_thursday_period_5" type="text" id="faculty-thursday-period-5"> </p><br>
+      <p class="roomno_thursday_period_5" type="text" id="roomno-thursday-period-5"></p>
+    </td>
+    <td>
+      <p class="friday_period_5" type="text" id="friday-period-5"> </p><br>
+      <p class="faculty_friday_period_5" type="text" id="faculty-friday-period-5"> </p><br>
+      <p class="roomno_friday_period_5" type="text" id="roomno-friday-period-5"></p>
+    </td>
+  </tr>
   
-
-      
+  <!-- 6th Period -->
+  <tr>
+    <td>
+      <p class="period_6_start_time" id="period-6-start-time"></p>
+      <p class="period_6_end_time" id="period-6-end-time"></p>
+    </td>
+    <td>
+      <p class="monday_period_6" type="text" id="monday-period-6"> </p><br>
+      <p class="faculty_monday_period_6" type="text" id="faculty-monday-period-6"> </p><br>
+      <p class="roomno_monday_period_6" type="text" id="roomno-monday-period-6"></p>
+    </td>
+    <td>
+      <p class="tuesday_period_6" type="text" id="tuesday-period-6"> </p><br>
+      <p class="faculty_tuesday_period_6" type="text" id="faculty-tuesday-period-6"> </p><br>
+      <p class="roomno_tuesday_period_6" type="text" id="roomno-tuesday-period-6"></p>
+    </td>
+    <td>
+      <p class="wednesday_period_6" type="text" id="wednesday-period-6"> </p><br>
+      <p class="faculty_wednesday_period_6" type="text" id="faculty-wednesday-period-6"> </p><br>
+      <p class="roomno_wednesday_period_6" type="text" id="roomno-wednesday-period-6"></p>
+    </td>
+    <td>
+      <p class="thursday_period_6" type="text" id="thursday-period-6"> </p><br>
+      <p class="faculty_thursday_period_6" type="text" id="faculty-thursday-period-6"> </p><br>
+      <p class="roomno_thursday_period_6" type="text" id="roomno-thursday-period-6"></p>
+    </td>
+    <td>
+      <p class="friday_period_6" type="text" id="friday-period-6"> </p><br>
+      <p class="faculty_friday_period_6" type="text" id="faculty-friday-period-6"> </p><br>
+      <p class="roomno_friday_period_6" type="text" id="roomno-friday-period-6"></p>
+    </td>
+  </tr>
+  
+  <!-- 7th Period -->
+  <tr>
+    <td>
+      <p class="period_7_start_time" id="period-7-start-time"></p>
+      <p class="period_7_end_time" id="period-7-end-time"></p>
+    </td>
+    <td>
+      <p class="monday_period_7" type="text" id="monday-period-7"> </p><br>
+      <p class="faculty_monday_period_7" type="text" id="faculty-monday-period-7"> </p><br>
+      <p class="roomno_monday_period_7" type="text" id="roomno-monday-period-7"></p>
+    </td>
+    <td>
+      <p class="tuesday_period_7" type="text" id="tuesday-period-7"> </p><br>
+      <p class="faculty_tuesday_period_7" type="text" id="faculty-tuesday-period-7"> </p><br>
+      <p class="roomno_tuesday_period_7" type="text" id="roomno-tuesday-period-7"></p>
+    </td>
+    <td>
+      <p class="wednesday_period_7" type="text" id="wednesday-period-7"> </p><br>
+      <p class="faculty_wednesday_period_7" type="text" id="faculty-wednesday-period-7"> </p><br>
+      <p class="roomno_wednesday_period_7" type="text" id="roomno-wednesday-period-7"></p>
+    </td>
+    <td>
+      <p class="thursday_period_7" type="text" id="thursday-period-7"> </p><br>
+      <p class="faculty_thursday_period_7" type="text" id="faculty-thursday-period-7"> </p><br>
+      <p class="roomno_thursday_period_7" type="text" id="roomno-thursday-period-7"></p>
+    </td>
+    <td>
+      <p class="friday_period_7" type="text" id="friday-period-7"> </p><br>
+      <p class="faculty_friday_period_7" type="text" id="faculty-friday-period-7"> </p><br>
+      <p class="roomno_friday_period_7" type="text" id="roomno-friday-period-7"></p>
+    </td>
+  </tr>
+  
+  <!-- 8th Period -->
+  <tr>
+    <td>
+      <p class="period_8_start_time" id="period-8-start-time"></p>
+      <p class="period_8_end_time" id="period-8-end-time"></p>
+    </td>
+    <td>
+      <p class="monday_period_8" type="text" id="monday-period-8"> </p><br>
+      <p class="faculty_monday_period_8" type="text" id="faculty-monday-period-8"> </p><br>
+      <p class="roomno_monday_period_8" type="text" id="roomno-monday-period-8"></p>
+    </td>
+    <td>
+      <p class="tuesday_period_8" type="text" id="tuesday-period-8"> </p><br>
+      <p class="faculty_tuesday_period_8" type="text" id="faculty-tuesday-period-8"> </p><br>
+      <p class="roomno_tuesday_period_8" type="text" id="roomno-tuesday-period-8"></p>
+    </td>
+    <td>
+       <p class="wednesday_period_8" type="text" id="wednesday-period-8"> </p><br>
+      <p class="faculty_wednesday_period_8" type="text" id="faculty-wednesday-period-8"> </p><br>
+      <p class="roomno_wednesday_period_8" type="text" id="roomno-wednesday-period-8"></p>
+    </td>
+    <td>
+      <p class="thursday_period_8" type="text" id="thursday-period-8"> </p><br>
+      <p class="faculty_thursday_period_8" type="text" id="faculty-thursday-period-8"> </p><br>
+      <p class="roomno_thursday_period_8" type="text" id="roomno-thursday-period-8"></p>
+    </td>
+    <td>
+      <p class="friday_period_8" type="text" id="friday-period-8"> </p><br>
+      <p class="faculty_friday_period_8" type="text" id="faculty-friday-period-8"> </p><br>
+      <p class="roomno_friday_period_8" type="text" id="roomno-friday-period-8"></p>
+    </td>
+  </tr>        
+</table>      
   </main>
   <footer>
     <div class="contact-info">
