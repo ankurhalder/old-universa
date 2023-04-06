@@ -7,13 +7,6 @@ function createRoutine() {
   localStorage.setItem("routine_year", yearSelect.value);
   localStorage.setItem("stream_year", streamSelect.value);
   localStorage.setItem("section_year", sectionSelect.value);
-  const routineYear = localStorage.getItem("routine_year");
-  const streamYear = localStorage.getItem("stream_year");
-  const sectionYear = localStorage.getItem("section_year");
-
-  console.log(routineYear); // prints the stored value of "routine_year" key
-  console.log(streamYear); // prints the stored value of "stream_year" key
-  console.log(sectionYear); // prints the stored value of "section_year" key
 
   // Monday
   const mondayPeriod1Input = document.getElementById("monday-period-1");
@@ -328,8 +321,8 @@ function createRoutine() {
           {
             // Monday - period 1
             subject: mondayPeriod1Input.value,
-            start: "9:30",
-            end: "10:25",
+            // start: "9:30",
+            // end: "10:25",
             room: mondayPeriod1RoomNoInput.value,
             faculty: [
               {
@@ -341,8 +334,8 @@ function createRoutine() {
           {
             // Monday - period 2
             subject: mondayPeriod2Input.value,
-            start: "10:30",
-            end: "11:25",
+            // start: "10:30",
+            // end: "11:25",
             room: mondayPeriod2RoomNoInput.value,
             faculty: [
               {
@@ -354,8 +347,8 @@ function createRoutine() {
           {
             // Monday - period 3
             subject: mondayPeriod3Input.value,
-            start: "11:30",
-            end: "12:25",
+            // start: "11:30",
+            // end: "12:25",
             room: mondayPeriod3RoomNoInput.value,
             faculty: [
               {
@@ -380,8 +373,8 @@ function createRoutine() {
           {
             // Monday - period 5
             subject: mondayPeriod5Input.value,
-            start: "2:30",
-            end: "3:25",
+            // start: "2:30",
+            // end: "3:25",
             room: mondayPeriod5RoomNoInput.value,
             faculty: [
               {
@@ -393,8 +386,8 @@ function createRoutine() {
           {
             // Monday - period 6
             subject: mondayPeriod6Input.value,
-            start: "3:30",
-            end: "4:25",
+            // start: "3:30",
+            // end: "4:25",
             room: mondayPeriod6RoomNoInput.value,
             faculty: [
               {
@@ -406,8 +399,8 @@ function createRoutine() {
           {
             // Monday - period 7
             subject: mondayPeriod7Input.value,
-            start: "4:30",
-            end: "5:25",
+            // start: "4:30",
+            // end: "5:25",
             room: mondayPeriod7RoomNoInput.value,
             faculty: [
               {
@@ -419,8 +412,8 @@ function createRoutine() {
           {
             // Monday - period 8
             subject: mondayPeriod8Input.value,
-            start: "5:30",
-            end: "6:25",
+            // start: "5:30",
+            // end: "6:25",
             room: mondayPeriod8RoomNoInput.value,
             faculty: [
               {
@@ -437,8 +430,8 @@ function createRoutine() {
           {
             // Tuesday - period 1
             subject: tuesdayPeriod1Input.value,
-            start: "9:30",
-            end: "10:25",
+            // start: "9:30",
+            // end: "10:25",
             room: tuesdayPeriod1RoomNoInput.value,
             faculty: [
               {
@@ -450,8 +443,8 @@ function createRoutine() {
           {
             // Tuesday - period 2
             subject: tuesdayPeriod2Input.value,
-            start: "10:30",
-            end: "11:25",
+            // start: "10:30",
+            // end: "11:25",
             room: tuesdayPeriod2RoomNoInput.value,
             faculty: [
               {
@@ -463,8 +456,8 @@ function createRoutine() {
           {
             // Tuesday - period 3
             subject: tuesdayPeriod3Input.value,
-            start: "11:30",
-            end: "12:25",
+            // start: "11:30",
+            // end: "12:25",
             room: tuesdayPeriod3RoomNoInput.value,
             faculty: [
               {
@@ -489,8 +482,8 @@ function createRoutine() {
           {
             // Tuesday - period 5
             subject: tuesdayPeriod5Input.value,
-            start: "2:30",
-            end: "3:25",
+            // start: "2:30",
+            // end: "3:25",
             room: tuesdayPeriod5RoomNoInput.value,
             faculty: [
               {
@@ -502,8 +495,8 @@ function createRoutine() {
           {
             // Tuesday - period 6
             subject: tuesdayPeriod6Input.value,
-            start: "3:30",
-            end: "4:25",
+            // start: "3:30",
+            // end: "4:25",
             room: tuesdayPeriod6RoomNoInput.value,
             faculty: [
               {
@@ -515,8 +508,8 @@ function createRoutine() {
           {
             // Tuesday - period 7
             subject: tuesdayPeriod7Input.value,
-            start: "4:30",
-            end: "5:25",
+            // start: "4:30",
+            // end: "5:25",
             room: tuesdayPeriod7RoomNoInput.value,
             faculty: [
               {
@@ -528,8 +521,8 @@ function createRoutine() {
           {
             // Tuesday - period 8
             subject: tuesdayPeriod8Input.value,
-            start: "5:30",
-            end: "6:25",
+            // start: "5:30",
+            // end: "6:25",
             room: tuesdayPeriod8RoomNoInput.value,
             faculty: [
               {
@@ -546,8 +539,8 @@ function createRoutine() {
           {
             // Wednesday - period 1
             subject: wednesdayPeriod1Input.value,
-            start: "9:30",
-            end: "10:25",
+            // start: "9:30",
+            // end: "10:25",
             room: wednesdayPeriod1RoomNoInput.value,
             faculty: [
               {
@@ -559,8 +552,8 @@ function createRoutine() {
           {
             // Wednesday - period 2
             subject: wednesdayPeriod2Input.value,
-            start: "10:30",
-            end: "11:25",
+            // start: "10:30",
+            // end: "11:25",
             room: wednesdayPeriod2RoomNoInput.value,
             faculty: [
               {
@@ -572,8 +565,8 @@ function createRoutine() {
           {
             // Wednesday - period 3
             subject: wednesdayPeriod3Input.value,
-            start: "11:30",
-            end: "12:25",
+            // start: "11:30",
+            // end: "12:25",
             room: wednesdayPeriod3RoomNoInput.value,
             faculty: [
               {
@@ -598,8 +591,8 @@ function createRoutine() {
           {
             // Wednesday - period 5
             subject: wednesdayPeriod5Input.value,
-            start: "2:30",
-            end: "3:25",
+            // start: "2:30",
+            // end: "3:25",
             room: wednesdayPeriod5RoomNoInput.value,
             faculty: [
               {
@@ -611,8 +604,8 @@ function createRoutine() {
           {
             // Wednesday - period 6
             subject: wednesdayPeriod6Input.value,
-            start: "3:30",
-            end: "4:25",
+            // start: "3:30",
+            // end: "4:25",
             room: wednesdayPeriod6RoomNoInput.value,
             faculty: [
               {
@@ -624,8 +617,8 @@ function createRoutine() {
           {
             // Wednesday - period 7
             subject: wednesdayPeriod7Input.value,
-            start: "4:30",
-            end: "5:25",
+            // start: "4:30",
+            // end: "5:25",
             room: wednesdayPeriod7RoomNoInput.value,
             faculty: [
               {
@@ -637,8 +630,8 @@ function createRoutine() {
           {
             // Wednesday - period 8
             subject: wednesdayPeriod8Input.value,
-            start: "5:30",
-            end: "6:25",
+            // start: "5:30",
+            // end: "6:25",
             room: wednesdayPeriod8RoomNoInput.value,
             faculty: [
               {
@@ -655,8 +648,8 @@ function createRoutine() {
           {
             // Thursday - period 1
             subject: thursdayPeriod1Input.value,
-            start: "9:30",
-            end: "10:25",
+            // start: "9:30",
+            // end: "10:25",
             room: thursdayPeriod1RoomNoInput.value,
             faculty: [
               {
@@ -668,8 +661,8 @@ function createRoutine() {
           {
             // Thursday - period 2
             subject: thursdayPeriod2Input.value,
-            start: "10:30",
-            end: "11:25",
+            // start: "10:30",
+            // end: "11:25",
             room: thursdayPeriod2RoomNoInput.value,
             faculty: [
               {
@@ -681,8 +674,8 @@ function createRoutine() {
           {
             // Thursday - period 3
             subject: thursdayPeriod3Input.value,
-            start: "11:30",
-            end: "12:25",
+            // start: "11:30",
+            // end: "12:25",
             room: thursdayPeriod3RoomNoInput.value,
             faculty: [
               {
@@ -707,8 +700,8 @@ function createRoutine() {
           {
             // Thursday - period 5
             subject: thursdayPeriod5Input.value,
-            start: "2:30",
-            end: "3:25",
+            // start: "2:30",
+            // end: "3:25",
             room: thursdayPeriod5RoomNoInput.value,
             faculty: [
               {
@@ -720,8 +713,8 @@ function createRoutine() {
           {
             // Thursday - period 6
             subject: thursdayPeriod6Input.value,
-            start: "3:30",
-            end: "4:25",
+            // start: "3:30",
+            // end: "4:25",
             room: thursdayPeriod6RoomNoInput.value,
             faculty: [
               {
@@ -733,8 +726,8 @@ function createRoutine() {
           {
             // Thursday - period 7
             subject: thursdayPeriod7Input.value,
-            start: "4:30",
-            end: "5:25",
+            // start: "4:30",
+            // end: "5:25",
             room: thursdayPeriod7RoomNoInput.value,
             faculty: [
               {
@@ -746,8 +739,8 @@ function createRoutine() {
           {
             // Thursday - period 8
             subject: thursdayPeriod8Input.value,
-            start: "5:30",
-            end: "6:25",
+            // start: "5:30",
+            // end: "6:25",
             room: thursdayPeriod8RoomNoInput.value,
             faculty: [
               {
@@ -764,8 +757,8 @@ function createRoutine() {
           {
             // Friday - period 1
             subject: fridayPeriod1Input.value,
-            start: "9:30",
-            end: "10:25",
+            // start: "9:30",
+            // end: "10:25",
             room: fridayPeriod1RoomNoInput.value,
             faculty: [
               {
@@ -777,8 +770,8 @@ function createRoutine() {
           {
             // Friday - period 2
             subject: fridayPeriod2Input.value,
-            start: "10:30",
-            end: "11:25",
+            // start: "10:30",
+            // end: "11:25",
             room: fridayPeriod2RoomNoInput.value,
             faculty: [
               {
@@ -790,8 +783,8 @@ function createRoutine() {
           {
             // Friday - period 3
             subject: fridayPeriod3Input.value,
-            start: "11:30",
-            end: "12:25",
+            // start: "11:30",
+            // end: "12:25",
             room: fridayPeriod3RoomNoInput.value,
             faculty: [
               {
@@ -816,8 +809,8 @@ function createRoutine() {
           {
             // Friday - period 5
             subject: fridayPeriod5Input.value,
-            start: "2:30",
-            end: "3:25",
+            // start: "2:30",
+            // end: "3:25",
             room: fridayPeriod5RoomNoInput.value,
             faculty: [
               {
@@ -829,8 +822,8 @@ function createRoutine() {
           {
             // Friday - period 6
             subject: fridayPeriod6Input.value,
-            start: "3:30",
-            end: "4:25",
+            // start: "3:30",
+            // end: "4:25",
             room: fridayPeriod6RoomNoInput.value,
             faculty: [
               {
@@ -842,8 +835,8 @@ function createRoutine() {
           {
             // Friday - period 7
             subject: fridayPeriod7Input.value,
-            start: "4:30",
-            end: "5:25",
+            // start: "4:30",
+            // end: "5:25",
             room: fridayPeriod7RoomNoInput.value,
             faculty: [
               {
@@ -855,8 +848,8 @@ function createRoutine() {
           {
             // Friday - period 8
             subject: fridayPeriod8Input.value,
-            start: "5:30",
-            end: "6:25",
+            // start: "5:30",
+            // end: "6:25",
             room: fridayPeriod8RoomNoInput.value,
             faculty: [
               {

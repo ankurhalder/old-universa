@@ -7,3 +7,64 @@
 	margin: 0;
 	padding: 0;
   }
+/* Style for the table */
+table {
+    border-collapse: collapse;
+    width: 97.5vw;
+    margin: 2.5vh 0;
+  }
+  
+  /* Style for the table headings */
+  th {
+    background-color: #f2f2f2;
+    color: #555;
+    font-size: 2.5vw;
+    font-weight: bold;
+    padding: 1.5vh 1vw;
+    text-align: left;
+    border: 0.1vw solid #ddd;
+  }
+  
+  /* Style for the table cells */
+  td {
+    border: 0.1vw solid #ddd;
+    padding: 1.5vh 1vw;
+  }
+  
+  /* Style for the input fields */
+  input[type="text"] {
+    border: none;
+    border-radius: 2.5vw;
+    box-shadow: 0px 0px 1.25vw #ddd;
+    padding: 1.5vh 1vw;
+    width: 100%;
+    transition: box-shadow 0.3s ease-in-out;
+  }
+  
+  input[type="text"]:focus {
+    outline: none;
+    box-shadow: 0px 0px 2.5vw #bbb;
+  }
+  
+  /* Style for the odd rows */
+  tr:nth-child(odd) {
+    background-color: #f9f9f9;
+  }
+  
+  /* Style for the even rows */
+  tr:nth-child(even) {
+    background-color: #fff;
+  }
+  .btn-container{
+	position: relative;
+	left: 48%
+
+  } 
+    .btn{
+	border-radius: 1vw;
+	font-size: 2vh;
+	padding: 2vh 1.5vw;
+	margin-top: 0vh;
+	margin-bottom: 2vh;
+  }
+    
