@@ -11,5 +11,5 @@ function gotoManageStudents() {
   window.location.href = "/ADMIN/manage_students.html";
 }
 function gotoCreateRoutine() {
-  window.location.href = "/ADMIN/updateRoutine.html";
+  window.location.href = "/ADMIN/createRoutine.html";
 }

@@ -4,6 +4,17 @@ function createRoutine() {
   const streamSelect = document.getElementById("select-stream");
   const sectionSelect = document.getElementById("select-section");
 
+  localStorage.setItem("routine_year", yearSelect.value);
+  localStorage.setItem("stream_year", streamSelect.value);
+  localStorage.setItem("section_year", sectionSelect.value);
+  const routineYear = localStorage.getItem("routine_year");
+  const streamYear = localStorage.getItem("stream_year");
+  const sectionYear = localStorage.getItem("section_year");
+
+  console.log(routineYear); // prints the stored value of "routine_year" key
+  console.log(streamYear); // prints the stored value of "stream_year" key
+  console.log(sectionYear); // prints the stored value of "section_year" key
+
   // Monday
   const mondayPeriod1Input = document.getElementById("monday-period-1");
   const mondayPeriod1FacultyInput = document.getElementById(
