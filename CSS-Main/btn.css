@@ -1,13 +1,13 @@
 .btn {
   background-color: black;
   border: 0.1vh solid black;
-  border-radius: 2vw;
+  border-radius: 1vw;
   color: white;
   cursor: pointer;
   font-family: 'Roboto', sans-serif;
   font-size: 2vh;
   font-weight: bold;
-  padding: 2vh 2vw;
+  padding: 2vh 1.5vw;
   transition: all 0.3s ease-in-out;
   text-shadow: 0 0.1vh 0.1vh black;
   box-shadow: 0 0.5vh 1vh rgba(0, 0, 0, 0.3);

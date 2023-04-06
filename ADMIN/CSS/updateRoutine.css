@@ -7,27 +7,28 @@
 	margin: 0;
 	padding: 0;
   }
+  
+
 /* Set the font family and size for the heading and paragraph elements */
 .heading, .student_year, .student_stream, .student_section {
 	font-family: "Roboto", Arial, sans-serif;
-	font-size: 1.5vw;
+	font-size: 1.2vw;
 	font-weight: bold;
 	color: black;
 	letter-spacing: 1.5px;
-	margin-left: 2vh;
+	margin-left: 3vw;
 	}
 	
 	/* Style the select elements */
 	select {
-	padding: 1.5vh;
+	padding: 1.2vh;
 	font-family: "Roboto", Arial, sans-serif;
-	font-size: 1.5vw;
+	font-size: 1.2vw;
 	font-weight: bold;
 	border: none;
 	border-radius: 2vh;
 	background-color: #f5f5f5;
-	width: 30vw;
-	margin-left: 1vw;
+	width: 13vw;
 	box-shadow: 0 2vh 4vh rgba(0, 0, 0, 0.2);
 	color: black;
 	transition: all 0.3s ease-in-out;
@@ -43,7 +44,7 @@
 	
 	/* Add some spacing between the heading and paragraph elements */
 	.heading {
-	margin-bottom: 5vh;
+	margin-bottom: 2vh;
 	text-transform: uppercase;
 	letter-spacing: 2px;
 	text-align: center;
@@ -51,7 +52,7 @@
 	align-items: center;
 	justify-content: center;
 	height: 10vh;
-	font-size: 3.5vw;
+	font-size: 3vw;
 	}
 	
 	/* Add hover and focus styles to the select elements */
@@ -60,309 +61,81 @@
 	outline: none;
 	}
 
-/* Define styles for the table */
-table {
+
+  
+  /* Style the table */
+  table {
+	width: 98.5vw;
 	border-collapse: collapse;
-	width: 100%;
   }
   
-  th,
-  td {
-	border: 1px solid black;
-	text-align: center;
-	padding: 8px;
-  }
-  
+  /* Style the table header */
   th {
-	background-color: #0e52a4;
-	color: white;
+	background-color: #2196f3;
+	color: #fff;
+	padding: 2vh;
+	text-align: center;
+	font-weight: bold;
   }
   
- /* Set the font color and background color for each cell */
-/* For better readability, use different background colors for odd/even cells */
-/* For example, use light gray for odd cells and white for even cells */
-.monday_period_1,
-.tuesday_period_1,
-.wednesday_period_1,
-.thursday_period_1,
-.friday_period_1,
-.monday_period_2,
-.tuesday_period_2,
-.wednesday_period_2,
-.thursday_period_2,
-.friday_period_2,
-.monday_period_3,
-.tuesday_period_3,
-.wednesday_period_3,
-.thursday_period_3,
-.friday_period_3,
-.monday_period_5,
-.tuesday_period_5,
-.wednesday_period_5,
-.thursday_period_5,
-.friday_period_5,
-.monday_period_6,
-.tuesday_period_6,
-.wednesday_period_6,
-.thursday_period_6,
-.monday_period_7,
-.tuesday_period_7,
-.wednesday_period_7,
-.thursday_period_7,
-.monday_period_8,
-.tuesday_period_8,
-.wednesday_period_8,
-.thursday_period_8,
-.roomno_monday_period_1,
-.roomno_tuesday_period_1,
-.roomno_wednesday_period_1,
-.roomno_thursday_period_1,
-.roomno_friday_period_1,
-.roomno_monday_period_2,
-.roomno_tuesday_period_2,
-.roomno_wednesday_period_2,
-.roomno_thursday_period_2,
-.roomno_friday_period_2,
-.roomno_monday_period_3,
-.roomno_tuesday_period_3,
-.roomno_wednesday_period_3,
-.roomno_thursday_period_3,
-.roomno_friday_period_3,
-.roomno_monday_period_5,
-.roomno_tuesday_period_5,
-.roomno_wednesday_period_5,
-.roomno_thursday_period_5,
-.roomno_friday_period_5,
-.roomno_monday_period_6,
-.roomno_tuesday_period_6,
-.roomno_wednesday_period_6,
-.roomno_thursday_period_6,
-.roomno_monday_period_7,
-.roomno_tuesday_period_7,
-.roomno_wednesday_period_7,
-.roomno_thursday_period_7,
-.roomno_monday_period_8,
-.roomno_tuesday_period_8,
-.roomno_wednesday_period_8,
-.roomno_thursday_period_8 {
-    color: black;
-    text-align: center;
-    padding: 5px;
-    border: 1px solid #ccc;
-}
-
-/* Use light gray background for odd cells */
-.monday_period_1:nth-child(odd),
-.tuesday_period_1:nth-child(odd),
-.wednesday_period_1:nth-child(odd),
-.thursday_period_1:nth-child(odd),
-.friday_period_1:nth-child(odd),
-.monday_period_2:nth-child(odd),
-.tuesday_period_2:nth-child(odd),
-.wednesday_period_2:nth-child(odd),
-.thursday_period_2:nth-child(odd),
-.friday_period_2:nth-child(odd),
-.monday_period_3:nth-child(odd),
-.tuesday_period_3:nth-child(odd),
-.wednesday_period_3:nth-child(odd),
-.thursday_period_3:nth-child(odd),
-.friday_period_3:nth-child(odd),
-.monday_period_5:nth-child(odd),
-.tuesday_period_5:nth-child(odd),
-.wednesday_period_5:nth-child(odd),
-.thursday_period_5:nth-child(odd),
-.friday_period_5:nth-child(odd),
-.monday_period_6:nth-child(odd),
-.tuesday_period_6:nth-child(odd),
-.wednesday_period_6:nth-child(odd),
-.thursday_period_6:nth-child(odd),
-.monday_period_7:nth-child(odd),
-.tuesday_period_7:nth-child(odd),
-.wednesday_period_7:nth-child(odd),
-.thursday_period_7:nth-child(odd),
-.monday_period_8:nth-child(odd),
-.tuesday_period_8:nth-child(odd),
-.wednesday_period_8:nth-child(odd),
-.thursday_period_8:nth-child(odd) {
-  background-color: #c3d8f2;;
-}
-
-/* Use white background for even cells */
-.monday_period_1:nth-child(even),
-.tuesday_period_1:nth-child(even),
-.wednesday_period_1:nth-child(even),
-.thursday_period_1:nth-child(even),
-.friday_period_1:nth-child(even),
-.monday_period_2:nth-child(even),
-.tuesday_period_2:nth-child(even),
-.wednesday_period_2:nth-child(even),
-.thursday_period_2:nth-child(even),
-.friday_period_2:nth-child(even),
-.monday_period_3:nth-child(even),
-.tuesday_period_3:nth-child(even),
-.wednesday_period_3:nth-child(even),
-.thursday_period_3:nth-child(even),
-.friday_period_3:nth-child(even),
-.monday_period_5:nth-child(even),
-.tuesday_period_5:nth-child(even),
-.wednesday_period_5:nth-child(even),
-.thursday_period_5:nth-child(even),
-.friday_period_5:nth-child(even),
-.monday_period_6:nth-child(even),
-.tuesday_period_6:nth-child(even),
-.wednesday_period_6:nth-child(even),
-.thursday_period_6:nth-child(even),
-.monday_period_7:nth-child(even),
-.tuesday_period_7:nth-child(even),
-.wednesday_period_7:nth-child(even),
-.thursday_period_7:nth-child(even),
-.monday_period_8:nth-child(even),
-.tuesday_period_8:nth-child(even),
-.wednesday_period_8:nth-child(even),
-.thursday_period_8:nth-child(even) {
-  background-color: white;
-}
-
-/* Set font color for all cells */
-.timetable td {
-  color: BLACK;
-}
-
-
-/* td {
-	opacity: 0;
-	animation: fadeIn 1s forwards;
+  /* Style the table cells */
+  td {
+	border: 0.1vw solid #ccc;
+	padding: 1vh;
+	text-align: center;
   }
   
-  @keyframes fadeIn {
-	from {
-	  opacity: 0;
-	}
-	to {
-	  opacity: .1;
-	}
-  } */
-  
-
-/* Change background color on active */
-/* .monday_period_1:active,
-.tuesday_period_1:active,
-.wednesday_period_1:active,
-.thursday_period_1:active,
-.friday_period_1:active {
-  background-color: #FFC0CB;
-} */
-
-/* Change background color on hover */
-/* .monday_period_2:hover,
-.tuesday_period_2:hover,
-.wednesday_period_2:hover,
-.thursday_period_2:hover,
-.friday_period_2:hover {
-  background-color: #ADD8E6;
-} */
-
-/* Scale up on hover */
-/* .monday_period_3:hover,
-.tuesday_period_3:hover,
-.wednesday_period_3:hover,
-.thursday_period_3:hover,
-.friday_period_3:hover {
-  transform: scale(1.1);
-} */
-
-/* Fade in animation */
-/* .monday_period_4 {
-	animation: fade-in 1s;
+  /* Style the input fields */
+  input {
+	width: 100%;
+	padding: 1.5vh;
+	border-radius: 2vw;
+	border: 0.1vw solid #ccc;
+	margin-top: .5vh;
+	box-sizing: border-box;
   }
   
-  @keyframes fade-in {
-	from {
-	  opacity: 0;
-	}
-	to {
-	  opacity: 1;
-	}
-  }
-   */
-  /* Bounce animation */
-  /* .monday_period_5 {
-	animation: bounce 0.5s infinite alternate;
+  /* Style the input placeholders */
+  ::-webkit-input-placeholder {
+	color: #333;
   }
   
-  @keyframes bounce {
-	from {
-	  transform: translateY(0);
-	}
-	to {
-	  transform: translateY(-10px);
-	}
-  } */
-
-  
-  /* On hover, change background color and add shadow */
-/* td:hover {
-	background-color: #9ebfe8;;
-	box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-  } */
-  
-  /* On active, change font color and scale up */
-  /* td:active {
-	color: #ff0000;
-	transform: scale(1.1);
-  } */
-  
-  /* Add animation to odd cells */
-  /* .monday_period_1:nth-child(odd),
-  .tuesday_period_1:nth-child(odd),
-  .wednesday_period_1:nth-child(odd),
-  .thursday_period_1:nth-child(odd),
-  .friday_period_1:nth-child(odd),
-  .monday_period_2:nth-child(odd),
-  .tuesday_period_2:nth-child(odd),
-  .wednesday_period_2:nth-child(odd),
-  .thursday_period_2:nth-child(odd),
-  .friday_period_2:nth-child(odd),
-  .monday_period_3:nth-child(odd),
-  .tuesday_period_3:nth-child(odd),
-  .wednesday_period_3:nth-child(odd),
-  .thursday_period_3:nth-child(odd),
-  .friday_period_3:nth-child(odd),
-  .monday_period_5:nth-child(odd),
-  .tuesday_period_5:nth-child(odd),
-  .wednesday_period_5:nth-child(odd),
-  .thursday_period_5:nth-child(odd),
-  .friday_period_5:nth-child(odd),
-  .monday_period_6:nth-child(odd),
-  .tuesday_period_6:nth-child(odd),
-  .wednesday_period_6:nth-child(odd),
-  .thursday_period_6:nth-child(odd),
-  .monday_period_7:nth-child(odd),
-  .tuesday_period_7:nth-child(odd),
-  .wednesday_period_7:nth-child(odd),
-  .thursday_period_7:nth-child(odd),
-  .monday_period_8:nth-child(odd),
-  .tuesday_period_8:nth-child(odd),
-  .wednesday_period_8:nth-child(odd),
-  .thursday_period_8:nth-child(odd) {
-	animation-name: color-change;
-	animation-duration: 1s;
-	animation-timing-function: ease-in-out;
-	animation-iteration-count: infinite;
+  :-moz-placeholder {
+	color: #ccc;
   }
   
-  @keyframes color-change {
-	0% {
-	  background-color: #eee;
-	  color: #333;
-	}
-	50% {
-	  background-color: #ddd;
-	  color: #222;
-	}
-	100% {
-	  background-color: #eee;
-	  color: #333;
-	}
+  ::-moz-placeholder {
+	color: #ccc;
   }
-   */
+  
+  :-ms-input-placeholder {
+	color: #ccc;
+  }
+  
+  /* Style the first column */
+  td:first-child {
+	background-color:  #cbddf3;
+	font-weight: bold;
+	text-align: left;
+  }
+  
+  /* Style the first row */
+  tr:first-child th:first-child {
+	border-top-left-radius: 2vw;
+  }
+  
+  tr:first-child th:last-child {
+	border-top-right-radius: 2vw;
+  }
+  .btn-container{
+	position: relative;
+	left: 48%
+  }
+  .btn{
+	border-radius: 1vw;
+	font-size: 2vh;
+	padding: 2vh 1.5vw;
+	margin-top: 2vh;
+	margin-bottom: 2vh;
+  }
+    
