@@ -202,128 +202,243 @@ function fetchWeeklyRoutine() {
       // period-5
       // Monday
       let monday_period_5 = document.getElementById("monday-period-5");
-      monday_period_5.innerText = data.data[16].subject;
+      monday_period_5.innerText = data.data[15].subject;
       let faculty_monday_period_5 = document.getElementById(
         "faculty-monday-period-5"
       );
-      faculty_monday_period_5.innerText = data.data[16].faculty[0].faculty_name;
+      faculty_monday_period_5.innerText = data.data[15].faculty[0].faculty_name;
       let roomno_monday_period_5 = document.getElementById(
         "roomno-monday-period-5"
       );
-      roomno_monday_period_5.innerText = data.data[16].room;
+      roomno_monday_period_5.innerText = data.data[15].room;
 
       // Tuesday
       let tuesday_period_5 = document.getElementById("tuesday-period-5");
-      tuesday_period_5.innerText = data.data[17].subject;
+      tuesday_period_5.innerText = data.data[16].subject;
       let faculty_tuesday_period_5 = document.getElementById(
         "faculty-tuesday-period-5"
       );
       faculty_tuesday_period_5.innerText =
-        data.data[17].faculty[0].faculty_name;
+        data.data[16].faculty[0].faculty_name;
       let roomno_tuesday_period_5 = document.getElementById(
         "roomno-tuesday-period-5"
       );
-      roomno_tuesday_period_5.innerText = data.data[17].room;
+      roomno_tuesday_period_5.innerText = data.data[16].room;
 
       // Wednesday
       let wednesday_period_5 = document.getElementById("wednesday-period-5");
-      wednesday_period_5.innerText = data.data[18].subject;
+      wednesday_period_5.innerText = data.data[17].subject;
       let faculty_wednesday_period_5 = document.getElementById(
         "faculty-wednesday-period-5"
       );
       faculty_wednesday_period_5.innerText =
-        data.data[18].faculty[0].faculty_name;
+        data.data[17].faculty[0].faculty_name;
       let roomno_wednesday_period_5 = document.getElementById(
         "roomno-wednesday-period-5"
       );
-      roomno_wednesday_period_5.innerText = data.data[18].room;
+      roomno_wednesday_period_5.innerText = data.data[17].room;
 
       // Thursday
       let thursday_period_5 = document.getElementById("thursday-period-5");
-      thursday_period_5.innerText = data.data[19].subject;
+      thursday_period_5.innerText = data.data[18].subject;
       let faculty_thursday_period_5 = document.getElementById(
         "faculty-thursday-period-5"
       );
       faculty_thursday_period_5.innerText =
-        data.data[19].faculty[0].faculty_name;
+        data.data[18].faculty[0].faculty_name;
       let roomno_thursday_period_5 = document.getElementById(
         "roomno-thursday-period-5"
       );
-      roomno_thursday_period_5.innerText = data.data[19].room;
+      roomno_thursday_period_5.innerText = data.data[18].room;
 
       // Friday
       let friday_period_5 = document.getElementById("friday-period-5");
-      friday_period_5.innerText = data.data[20].subject;
+      friday_period_5.innerText = data.data[19].subject;
       let faculty_friday_period_5 = document.getElementById(
         "faculty-friday-period-5"
       );
-      faculty_friday_period_5.innerText = data.data[20].faculty[0].faculty_name;
+      faculty_friday_period_5.innerText = data.data[19].faculty[0].faculty_name;
       let roomno_friday_period_5 = document.getElementById(
         "roomno-friday-period-5"
       );
-      roomno_friday_period_5.innerText = data.data[20].room;
+      roomno_friday_period_5.innerText = data.data[19].room;
       // period - 6
       // Monday
       let monday_period_6 = document.getElementById("monday-period-6");
-      monday_period_6.innerText = data.data[21].subject;
+      monday_period_6.innerText = data.data[20].subject;
       let faculty_monday_period_6 = document.getElementById(
         "faculty-monday-period-6"
       );
-      faculty_monday_period_6.innerText = data.data[21].faculty[0].faculty_name;
+      faculty_monday_period_6.innerText = data.data[20].faculty[0].faculty_name;
       let roomno_monday_period_6 = document.getElementById(
         "roomno-monday-period-6"
       );
-      roomno_monday_period_6.innerText = data.data[21].room;
+      roomno_monday_period_6.innerText = data.data[20].room;
       // Tuesday
       let tuesday_period_6 = document.getElementById("tuesday-period-6");
-      tuesday_period_6.innerText = data.data[22].subject;
+      tuesday_period_6.innerText = data.data[21].subject;
       let faculty_tuesday_period_6 = document.getElementById(
         "faculty-tuesday-period-6"
       );
       faculty_tuesday_period_6.innerText =
-        data.data[22].faculty[0].faculty_name;
+        data.data[21].faculty[0].faculty_name;
       let roomno_tuesday_period_6 = document.getElementById(
         "roomno-tuesday-period-6"
       );
-      roomno_tuesday_period_6.innerText = data.data[22].room;
+      roomno_tuesday_period_6.innerText = data.data[21].room;
       // Wednesday
       let wednesday_period_6 = document.getElementById("wednesday-period-6");
-      wednesday_period_6.innerText = data.data[23].subject;
+      wednesday_period_6.innerText = data.data[22].subject;
       let faculty_wednesday_period_6 = document.getElementById(
         "faculty-wednesday-period-6"
       );
       faculty_wednesday_period_6.innerText =
-        data.data[23].faculty[0].faculty_name;
+        data.data[22].faculty[0].faculty_name;
       let roomno_wednesday_period_6 = document.getElementById(
         "roomno-wednesday-period-6"
       );
-      roomno_wednesday_period_6.innerText = data.data[23].room;
+      roomno_wednesday_period_6.innerText = data.data[22].room;
       // Thursday
       let thursday_period_6 = document.getElementById("thursday-period-6");
-      thursday_period_6.innerText = data.data[24].subject;
+      thursday_period_6.innerText = data.data[23].subject;
       let faculty_thursday_period_6 = document.getElementById(
         "faculty-thursday-period-6"
       );
       faculty_thursday_period_6.innerText =
-        data.data[24].faculty[0].faculty_name;
+        data.data[23].faculty[0].faculty_name;
       let roomno_thursday_period_6 = document.getElementById(
         "roomno-thursday-period-6"
       );
-      roomno_thursday_period_6.innerText = data.data[24].room;
+      roomno_thursday_period_6.innerText = data.data[23].room;
       // Friday
       let friday_period_6 = document.getElementById("friday-period-6");
-      friday_period_6.innerText = data.data[25].subject;
+      friday_period_6.innerText = data.data[24].subject;
       let faculty_friday_period_6 = document.getElementById(
         "faculty-friday-period-6"
       );
-      faculty_friday_period_6.innerText = data.data[25].faculty[0].faculty_name;
+      faculty_friday_period_6.innerText = data.data[24].faculty[0].faculty_name;
       let roomno_friday_period_6 = document.getElementById(
         "roomno-friday-period-6"
       );
-      roomno_friday_period_6.innerText = data.data[25].room;
-      // period -7
-      // monday
-      let;
+      roomno_friday_period_6.innerText = data.data[24].room;
+      // period - 7
+      // Monday
+      let monday_period_7 = document.getElementById("monday-period-7");
+      monday_period_7.innerText = data.data[25].subject;
+      let faculty_monday_period_7 = document.getElementById(
+        "faculty-monday-period-7"
+      );
+      faculty_monday_period_7.innerText = data.data[25].faculty[0].faculty_name;
+      let roomno_monday_period_7 = document.getElementById(
+        "roomno-monday-period-7"
+      );
+      roomno_monday_period_7.innerText = data.data[25].room;
+      // Tuesday
+      let tuesday_period_7 = document.getElementById("tuesday-period-7");
+      tuesday_period_7.innerText = data.data[26].subject;
+      let faculty_tuesday_period_7 = document.getElementById(
+        "faculty-tuesday-period-7"
+      );
+      faculty_tuesday_period_7.innerText =
+        data.data[26].faculty[0].faculty_name;
+      let roomno_tuesday_period_7 = document.getElementById(
+        "roomno-tuesday-period-7"
+      );
+      roomno_tuesday_period_7.innerText = data.data[26].room;
+      // Wednesday
+      let wednesday_period_7 = document.getElementById("wednesday-period-7");
+      wednesday_period_7.innerText = data.data[27].subject;
+      let faculty_wednesday_period_7 = document.getElementById(
+        "faculty-wednesday-period-7"
+      );
+      faculty_wednesday_period_7.innerText =
+        data.data[27].faculty[0].faculty_name;
+      let roomno_wednesday_period_7 = document.getElementById(
+        "roomno-wednesday-period-7"
+      );
+      roomno_wednesday_period_7.innerText = data.data[27].room;
+      // Thursday
+      let thursday_period_7 = document.getElementById("thursday-period-7");
+      thursday_period_7.innerText = data.data[28].subject;
+      let faculty_thursday_period_7 = document.getElementById(
+        "faculty-thursday-period-7"
+      );
+      faculty_thursday_period_7.innerText =
+        data.data[28].faculty[0].faculty_name;
+      let roomno_thursday_period_7 = document.getElementById(
+        "roomno-thursday-period-7"
+      );
+      roomno_thursday_period_7.innerText = data.data[28].room;
+      // Friday
+      let friday_period_7 = document.getElementById("friday-period-7");
+      friday_period_7.innerText = data.data[29].subject;
+      let faculty_friday_period_7 = document.getElementById(
+        "faculty-friday-period-7"
+      );
+      faculty_friday_period_7.innerText = data.data[29].faculty[0].faculty_name;
+      let roomno_friday_period_7 = document.getElementById(
+        "roomno-friday-period-7"
+      );
+      roomno_friday_period_7.innerText = data.data[29].room;
+      // period - 8
+      // Monday
+      let monday_period_8 = document.getElementById("monday-period-8");
+      monday_period_8.innerText = data.data[30].subject;
+      let faculty_monday_period_8 = document.getElementById(
+        "faculty-monday-period-8"
+      );
+      faculty_monday_period_8.innerText = data.data[30].faculty[0].faculty_name;
+      let roomno_monday_period_8 = document.getElementById(
+        "roomno-monday-period-8"
+      );
+      roomno_monday_period_8.innerText = data.data[30].room;
+      // Tuesday
+      let tuesday_period_8 = document.getElementById("tuesday-period-8");
+      tuesday_period_8.innerText = data.data[31].subject;
+      let faculty_tuesday_period_8 = document.getElementById(
+        "faculty-tuesday-period-8"
+      );
+      faculty_tuesday_period_8.innerText =
+        data.data[31].faculty[0].faculty_name;
+      let roomno_tuesday_period_8 = document.getElementById(
+        "roomno-tuesday-period-8"
+      );
+      roomno_tuesday_period_8.innerText = data.data[31].room;
+      // Wednesday
+      let wednesday_period_8 = document.getElementById("wednesday-period-8");
+      wednesday_period_8.innerText = data.data[32].subject;
+      let faculty_wednesday_period_8 = document.getElementById(
+        "faculty-wednesday-period-8"
+      );
+      faculty_wednesday_period_8.innerText =
+        data.data[32].faculty[0].faculty_name;
+      let roomno_wednesday_period_8 = document.getElementById(
+        "roomno-wednesday-period-8"
+      );
+      roomno_wednesday_period_8.innerText = data.data[32].room;
+      // Thursday
+      let thursday_period_8 = document.getElementById("thursday-period-8");
+      thursday_period_8.innerText = data.data[33].subject;
+      let faculty_thursday_period_8 = document.getElementById(
+        "faculty-thursday-period-8"
+      );
+      faculty_thursday_period_8.innerText =
+        data.data[33].faculty[0].faculty_name;
+      let roomno_thursday_period_8 = document.getElementById(
+        "roomno-thursday-period-8"
+      );
+      roomno_thursday_period_8.innerText = data.data[33].room;
+      // Friday
+      let friday_period_8 = document.getElementById("friday-period-8");
+      friday_period_8.innerText = data.data[34].subject;
+      let faculty_friday_period_8 = document.getElementById(
+        "faculty-friday-period-8"
+      );
+      faculty_friday_period_8.innerText = data.data[34].faculty[0].faculty_name;
+      let roomno_friday_period_8 = document.getElementById(
+        "roomno-friday-period-8"
+      );
+      roomno_friday_period_8.innerText = data.data[34].room;
     })
     .catch((error) => console.error(error));
 }

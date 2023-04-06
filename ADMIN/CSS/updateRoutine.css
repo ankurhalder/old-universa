@@ -245,34 +245,34 @@ table {
   
 
 /* Change background color on active */
-.monday_period_1:active,
+/* .monday_period_1:active,
 .tuesday_period_1:active,
 .wednesday_period_1:active,
 .thursday_period_1:active,
 .friday_period_1:active {
   background-color: #FFC0CB;
-}
+} */
 
 /* Change background color on hover */
-.monday_period_2:hover,
+/* .monday_period_2:hover,
 .tuesday_period_2:hover,
 .wednesday_period_2:hover,
 .thursday_period_2:hover,
 .friday_period_2:hover {
   background-color: #ADD8E6;
-}
+} */
 
 /* Scale up on hover */
-.monday_period_3:hover,
+/* .monday_period_3:hover,
 .tuesday_period_3:hover,
 .wednesday_period_3:hover,
 .thursday_period_3:hover,
 .friday_period_3:hover {
   transform: scale(1.1);
-}
+} */
 
 /* Fade in animation */
-.monday_period_4 {
+/* .monday_period_4 {
 	animation: fade-in 1s;
   }
   
@@ -284,9 +284,9 @@ table {
 	  opacity: 1;
 	}
   }
-  
+   */
   /* Bounce animation */
-  .monday_period_5 {
+  /* .monday_period_5 {
 	animation: bounce 0.5s infinite alternate;
   }
   
@@ -297,23 +297,23 @@ table {
 	to {
 	  transform: translateY(-10px);
 	}
-  }
+  } */
 
   
   /* On hover, change background color and add shadow */
-td:hover {
+/* td:hover {
 	background-color: #9ebfe8;;
 	box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-  }
+  } */
   
   /* On active, change font color and scale up */
-  td:active {
+  /* td:active {
 	color: #ff0000;
 	transform: scale(1.1);
-  }
+  } */
   
   /* Add animation to odd cells */
-  .monday_period_1:nth-child(odd),
+  /* .monday_period_1:nth-child(odd),
   .tuesday_period_1:nth-child(odd),
   .wednesday_period_1:nth-child(odd),
   .thursday_period_1:nth-child(odd),
@@ -365,4 +365,4 @@ td:hover {
 	  color: #333;
 	}
   }
-  
+   */
