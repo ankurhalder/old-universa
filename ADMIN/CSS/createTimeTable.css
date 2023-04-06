@@ -1,0 +1,9 @@
+@import url(/CSS-Main/btn.css);
+@import url(/CSS-Main/font.css);
+@import url(/CSS-Main/footer.css);
+@import url(/ADMIN/CSS/admin_header.css);
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+  }
