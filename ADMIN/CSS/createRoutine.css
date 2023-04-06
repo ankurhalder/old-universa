@@ -7,7 +7,9 @@
 	margin: 0;
 	padding: 0;
   }
-  
+  body{
+	width: 100%;
+  }
 
 /* Set the font family and size for the heading and paragraph elements */
 .heading, .student_year, .student_stream, .student_section {
@@ -65,7 +67,7 @@
   
   /* Style the table */
   table {
-	width: 98.5vw;
+	width: 100%;
 	border-collapse: collapse;
   }
   
@@ -127,15 +129,21 @@
   tr:first-child th:last-child {
 	border-top-right-radius: 2vw;
   }
-  .btn-container{
+  /* .btn-container{
 	position: relative;
 	left: 48%
-  }
+  } */
   .btn{
 	border-radius: 1vw;
 	font-size: 2vh;
 	padding: 2vh 1.5vw;
 	margin-top: 2vh;
 	margin-bottom: 2vh;
+	position: relative;
+	left: 48%
+  }
+  .time-table-btn-container{
+	position: relative;
+	left: 10%
   }
     
