@@ -129,11 +129,7 @@
   tr:first-child th:last-child {
 	border-top-right-radius: 2vw;
   }
-  /* .btn-container{
-	position: relative;
-	left: 48%
-  } */
-  .btn{
+  .btn-container{
 	border-radius: 1vw;
 	font-size: 2vh;
 	padding: 2vh 1.5vw;
@@ -146,4 +142,5 @@
 	position: relative;
 	left: 10%
   }
+  
     
