@@ -321,6 +321,9 @@ function fetchWeeklyRoutine() {
         "roomno-friday-period-6"
       );
       roomno_friday_period_6.innerText = data.data[25].room;
+      // period -7
+      // monday
+      let;
     })
     .catch((error) => console.error(error));
 }
