@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Student Profile</title>
+  </head>
+  <link rel="stylesheet" href="/ADMIN/CSS/student_profile.css" />
+  <script src="/TEMP_STUDENT/js/logout.js"></script>
+  <script src="/ADMIN/js/gotoLinks.js"></script>
+  <script src="/ADMIN/js/fetchStudentData.js"></script>
+  <body onload="fetchData()">
+    <!-- Header -->
+    <header>
+      <div class="left_side">
+        <ul class="nav_links">
+          <li class="home_link"><a href="/ADMIN/admin.html">Universa</a></li>
+        </ul>
+      </div>
+      <div class="right_side">
+        <div class="dropdown">
+          <button class="dropbtn">Menu &#9660;</button>
+          <div class="dropdown-panel hide">
+            <a href="/ADMIN/admin_services.html">Services</a>
+            <a href="/ADMIN/admin_info.html">Info</a>
+            <a href="">Change Password</a>
+            <div class="logout_container">
+              <button onclick="logout()" class="logout btn">Logout</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main>
+      <!-- body part -->
+      <script src="/TEMP_STUDENT/js/fetchImage.js"></script>
+
+      <section
+        name="user_dashboard"
+        id="user_dashboard"
+        class="dashboard-section"
+      >
+        <h1 id="user_name_dashboard"></h1>
+        <img class="image" alt="image" id="user-image" src="" />
+        <script src="/TEMP_STUDENT/js/fetchImage.js"></script>
+        <script>
+          fetchImage();
+        </script>
+
+        <table class="user-table">
+          <tr>
+            <th>Full Name:</th>
+            <td id="full_name" class="user-info"></td>
+          </tr>
+          <tr>
+            <th>Email:</th>
+            <td id="email" class="user-info"></td>
+          </tr>
+          <tr>
+            <th>Contact No.:</th>
+            <td id="contact_no" class="user-info"></td>
+          </tr>
+          <tr>
+            <th>Gender</th>
+            <td id="gender" class="user-info"></td>
+          </tr>
+          <tr>
+            <th>Date Of Birth</th>
+            <td id="dob" class="user-info"></td>
+          </tr>
+          <tr>
+            <th>Blood Groop</th>
+            <td id="blood_group" class="user-info"></td>
+          </tr>
+          <tr>
+            <th>Category</th>
+            <td id="category" class="user-info"></td>
+          </tr>
+          <tr>
+            <th>Present Address</th>
+            <th></th>
+          </tr>
+          <tr>
+            <th>Address</th>
+            <br />
+            <td id="present_address" class="user-info"></td>
+          </tr>
+          <tr>
+            <th>Pincode</th>
+            <td id="present_pincode" class="user-info"></td>
+          </tr>
+          <tr>
+            <th>City</th>
+            <td id="present_city" class="user-info"></td>
+          </tr>
+          <tr>
+            <th>District</th>
+            <td id="present_district" class="user-info"></td>
+          </tr>
+          <tr>
+            <th>State</th>
+            <td id="present_state" class="user-info"></td>
+          </tr>
+          <tr>
+            <th>permanent Address</th>
+            <th></th>
+          </tr>
+          <tr>
+            <th>Address</th>
+            <br />
+            <td id="permanent_address" class="user-info"></td>
+          </tr>
+          <tr>
+            <th>Pincode</th>
+            <td id="permanent_pincode" class="user-info"></td>
+          </tr>
+          <tr>
+            <th>City</th>
+            <td id="permanent_city" class="user-info"></td>
+          </tr>
+          <tr>
+            <th>District</th>
+            <td id="permanent_district" class="user-info"></td>
+          </tr>
+          <tr>
+            <th>State</th>
+            <td id="permanent_state" class="user-info"></td>
+          </tr>
+          <tr>
+            <th>Aacademic Info</th>
+            <th></th>
+          </tr>
+          <tr>
+            <th>Admission Year</th>
+            <td class="user-info" id="admission_year"></td>
+          </tr>
+          <tr>
+            <th>Course Name</th>
+            <td class="user-info" id="course_name"></td>
+          </tr>
+          <tr>
+            <th>Course Duration</th>
+            <td class="user-info" id="course_duration"></td>
+          </tr>
+          <tr>
+            <th>Stream</th>
+            <td class="user-info" id="stream"></td>
+          </tr>
+          <tr>
+            <th>Enrollment Number</th>
+            <td class="enrollment-number" id="enrollment_number"></td>
+          </tr>
+          <tr>
+            <th>Registration Number</th>
+            <td class="registration-number" id="registration_number"></td>
+          </tr>
+        </table>
+      </section>
+    </main>
+    <footer>
+      <div class="contact-info">
+        <h3>Contact Us</h3>
+        <p>Kolkata , WestBengal , India</p>
+        <p>Phone: +919748903490</p>
+        <p><a href="mailto: ankur.halder12345@gmail.com">Send Email</a></p>
+      </div>
+      <div class="footer-info">
+        <p>&copy;College Group 23,Uem Kolkata,2021.All rights reserved.</p>
+      </div>
+      <div class="social-links">
+        <h3>Follow Us</h3>
+        <ul>
+          <li><a href="#">Facebook</a></li>
+          <li><a href="#">Twitter</a></li>
+          <li><a href="#">Instagram</a></li>
+        </ul>
+      </div>
+    </footer>
+  </body>
+</html>

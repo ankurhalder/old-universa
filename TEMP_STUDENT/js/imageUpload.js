@@ -11,7 +11,7 @@ function uploadImage(imageimage) {
     method: "PUT",
     credentials: "include",
     headers: {
-      token: Token,
+      "token": Token,
       profile_image_name: Token,
     },
     body: image,

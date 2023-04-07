@@ -26,7 +26,7 @@ function fetchTimeTable() {
       method: "GET",
       headers: {
         "Content-Type": "application/json",
-        token: localStorage.getItem("token"),
+        "token": localStorage.getItem("token"),
       },
     }
   )

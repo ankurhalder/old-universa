@@ -1,38 +1,34 @@
-function tempDataFetch() {
+function fetchData() {
   const urlParams = new URLSearchParams(window.location.search);
-  let applicant_id = urlParams.get("id");
-  if (applicant_id === null) {
-    console.log(localStorage.getItem("getApplicantID"));
-    applicant_id = localStorage.getItem("getApplicantID");
-  }
-  console.log("trying to get id you see");
-  console.log(applicant_id);
-  //  verifying login status
-  const token1 = localStorage.getItem("token");
-  console.log("token working");
-  if (token1 === null) {
+  // let applicant_id = urlParams.get("id");
+  const userId = urlParams.get("id");
+  const verify = localStorage.getItem("token");
+  if (verify === null) {
     window.location.href = "/index.html";
   }
-
-  fetch(`https://universa-api.onrender.com/student/temp/${applicant_id}`, {
+  // retrieve user_id from local storage
+  fetch(`https://universa-api.onrender.com/student/${userId}`, {
+    // include user_id in the URL
     method: "GET",
     headers: {
+      "token": verify,
       "Content-Type": "application/json",
-      "token": localStorage.getItem("token"),
     },
   })
     .then((response) => response.json())
     .then((data) => {
       console.log(data);
-      let first_Name = document.getElementById("first_name");
-      first_Name.innerText = data.data.personal_info.first_name;
-      let middle_Name = document.getElementById("middle_name");
-      middle_Name.innerText = data.data.personal_info.middle_name;
-      let last_Name = document.getElementById("last_name");
-      last_Name.innerText = data.data.personal_info.last_name;
+      let first_name_db = document.getElementById("full_name");
+      first_name_db.innerText =
+        data.data.personal_info.first_name +
+        " " +
+        data.data.personal_info.last_name;
+      let User_Name_Dashboard = document.getElementById("user_name_dashboard");
+      User_Name_Dashboard.innerText =
+        data.data.personal_info.first_name + `'s DASHBOARD`;
       let Email = document.getElementById("email");
       Email.innerText = data.data.personal_info.email;
-      let contactNo = document.getElementById("contact");
+      let contactNo = document.getElementById("contact_no");
       contactNo.innerText = data.data.personal_info.contact;
       let Gender = document.getElementById("gender");
       Gender.innerText = data.data.personal_info.gender;
@@ -79,18 +75,19 @@ function tempDataFetch() {
       let permanentState = document.getElementById("permanent_state");
       permanentState.innerText =
         data.data.personal_info.permanent_address.state;
-      // Academic Info
+      // course Info
       let admissionYear = document.getElementById("admission_year");
       admissionYear.innerText = data.data.course_info.admission_year;
+      let enrollmentNumber = document.getElementById("enrollment_number");
+      enrollmentNumber.innerText = data.data.course_info.enrollment_number;
       let courseName = document.getElementById("course_name");
       courseName.innerText = data.data.course_info.course_name;
       let courseDuration = document.getElementById("course_duration");
       courseDuration.innerText = data.data.course_info.duration;
       let Stream = document.getElementById("stream");
       Stream.innerText = data.data.course_info.stream;
-      let EnrollmentNo = document.getElementById("enrollment_number");
-      EnrollmentNo.innerText = data.data.course_info.enrollment_number;
+      let registrationNumber = document.getElementById("registration_number");
+      registrationNumber.innerText = data.data.course_info.registration_number;
     })
     .catch((error) => console.error(error));
-  console.log("bruh");
 }

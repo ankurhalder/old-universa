@@ -6,7 +6,7 @@ function deletePermanemt() {
     method: "DELETE",
     credentials: "include",
     headers: {
-      token: localStorage.getItem("token"),
+      "token": localStorage.getItem("token"),
     },
   })
     .then((response) => response.json())

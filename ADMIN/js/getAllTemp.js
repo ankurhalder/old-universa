@@ -10,7 +10,7 @@ function getAllTemp() {
     method: "GET",
     credentials: "include",
     headers: {
-      token: token1,
+      "token": token1,
     },
   })
     .then((response) => response.json())

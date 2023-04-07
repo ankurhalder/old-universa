@@ -5,7 +5,7 @@ function logout() {
     method: "GET",
     credentials: "include",
     headers: {
-      token: d,
+      "token": d,
     },
   })
     .then((response) => response.json())

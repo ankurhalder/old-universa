@@ -75,7 +75,7 @@ function approve() {
     body: JSON.stringify(userdata),
     headers: {
       "Content-Type": "application/json",
-      token: localStorage.getItem("token"),
+      "token": localStorage.getItem("token"),
     },
   })
     .then((response) => response.json())

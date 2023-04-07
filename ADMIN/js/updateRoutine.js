@@ -873,7 +873,7 @@ function updateRoutine() {
     method: "PUT",
     headers: {
       "Content-Type": "application/json",
-      token: localStorage.getItem("token"),
+      "token": localStorage.getItem("token"),
     },
     body: JSON.stringify(hello),
   })

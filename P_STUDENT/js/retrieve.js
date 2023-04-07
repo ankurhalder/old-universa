@@ -21,7 +21,7 @@ function retrieve() {
   fetch(`https://universa-api.onrender.com/student/${userId}`, {
     method: "GET",
     headers: {
-      token: verify,
+      "token": verify,
       "Content-Type": "application/json",
     },
   })

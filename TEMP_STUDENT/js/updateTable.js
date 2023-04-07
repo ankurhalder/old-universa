@@ -121,7 +121,7 @@ function updateTable(para) {
   fetch(`https://universa-api.onrender.com/student/temp/`, {
     method: "PUT",
     headers: {
-      token: verify,
+      "token": verify,
       "Content-Type": "application/json",
     },
     body: JSON.stringify(personalInfo),

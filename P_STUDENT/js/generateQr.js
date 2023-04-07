@@ -8,7 +8,7 @@ function generateQr(qrCodeMessage, element) {
         method: "GET",
         credentials: "include",
         headers: {
-          token: verify,
+          "token": verify,
         },
       }
     )

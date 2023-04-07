@@ -17,7 +17,7 @@ function fetchRoutine() {
       method: "GET",
       headers: {
         "Content-Type": "application/json",
-        token: verify,
+        "token": verify,
       },
     }
   )

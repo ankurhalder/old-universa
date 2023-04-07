@@ -4,14 +4,17 @@ function fetchImage() {
     method: "GET",
     credentials: "include",
     headers: {
-      token: Token,
+      "token": Token,
       profile_image_name: Token,
     },
   })
     .then((response) => response.json())
     .then((data) => {
       const img = document.getElementById("user-image");
-      img.src = data.data.files[0].url;
+      if (img) {
+        img.src = data.data.files[0].url;
+      }
+
       console.log(data.data.files[0].url);
       localStorage.setItem("imgurl", data.data.files[0].url);
     })

@@ -164,6 +164,10 @@
           student_enroll_num.classList.add("student__text");
           student_enroll_num.innerText = `Enrollment: ${student.course_info.enrollment_number}`;
           card.appendChild(student_enroll_num);
+          // localStorage.setItem(
+          //   "student_enrollment",
+          //   student.course_info.enrollment_number
+          // );
 
           //student reg number
           let student_reg_num = document.createElement("p");
@@ -181,7 +185,7 @@
           let student_profile_link = document.createElement("a");
           student_profile_link.classList.add("link");
           // *****************NOTE: GIVE THE LINK TO DESIRED FILE below*****************
-          student_profile_link.href = "/index.html";
+          student_profile_link.href = `/ADMIN/student_profile.html?id=${student.course_info.enrollment_number}`;
           student_profile_link.innerText = `Check Profile`;
           card.appendChild(student_profile_link);
 
@@ -200,7 +204,7 @@
         fetch("https://universa-api.onrender.com/student", {
           method: "GET",
           headers: {
-            token: token,
+            "token": token,
           },
         })
           .then((response) => response.json())

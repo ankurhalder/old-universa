@@ -7,7 +7,7 @@ function transferApplicantData() {
   fetch(`https://universa-api.onrender.com/student/temp/${userId}`, {
     method: "GET",
     headers: {
-      token: verify,
+      "token": verify,
       "Content-Type": "application/json",
     },
   })
