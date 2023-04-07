@@ -19,6 +19,7 @@ function logout() {
         // Remove user ID from local storage
         localStorage.removeItem("loginUserId");
         localStorage.removeItem("token");
+        localStorage.clear()
         // console.log(localStorage.getItem("loginUserId"));
 
         window.location.href = "/index.html";

@@ -121,3 +121,9 @@ section#user_dashboard td.registration-number {
 	text-transform: uppercase;
 	color: var(--blue);
 }
+
+.btn-1 {
+	position: relative;
+	left: 47.50%;
+	margin-bottom: 2%;
+}

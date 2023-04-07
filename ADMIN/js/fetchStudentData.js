@@ -2,6 +2,7 @@ function fetchData() {
   const urlParams = new URLSearchParams(window.location.search);
   // let applicant_id = urlParams.get("id");
   const userId = urlParams.get("id");
+  localStorage.setItem("student_update",userId);
   const verify = localStorage.getItem("token");
   if (verify === null) {
     window.location.href = "/index.html";
