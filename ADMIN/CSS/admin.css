@@ -2,18 +2,20 @@
 @import url(/CSS-Main/font.css);
 @import url(/CSS-Main/footer.css);
 @import url(/ADMIN/CSS/admin_header.css);
+
 * {
 	box-sizing: border-box;
 	margin: 0;
 	padding: 0;
-  }
-  
-  body {
+}
+
+body {
 	font-family: Arial, sans-serif;
 	font-size: 16px;
 	/* line-height: 1.5; */
-  }
-  body {
+}
+
+body {
 	font-family: Arial, sans-serif;
 	font-size: 1vw;
 	height: 80vh;
@@ -22,15 +24,15 @@
 
 /* Main content styles */
 main {
-	
-	width: 100%; 
+
+	width: 100%;
 	height: 100%;
-	
+
 }
 
 /* Nav Bar 1 */
 .nav-1 {
-	position:initial;
+	position: initial;
 	top: 10%;
 	left: 100%;
 	width: 100%;
@@ -38,7 +40,7 @@ main {
 	color: white;
 	z-index: 1;
 }
-	
+
 .nav-1 ul {
 	list-style-type: none;
 	margin: 0;
@@ -48,38 +50,39 @@ main {
 	justify-content: space-around;
 	align-items: center;
 }
-	
+
 .nav-1 li {
 	font-size: 2vh;
 	font-weight: bold;
 }
-	
+
 .nav-1 li span {
 	display: block;
 	padding: 1vh 1vw;
 }
 
 
-	/* Main Content */
+/* Main Content */
 .dashboard-title {
 	margin-top: 1%;
 	text-align: center;
 	margin-left: 3%;
-	}
-	
+}
+
 .section-title {
 	position: relative;
 	font-size: 3vh;
 	font-weight: bold;
 	margin-left: 5%;
 	margin-top: 2%;
-	}
-	
+}
+
 p {
-    position: relative;
+	position: relative;
 	margin-left: 6%;
 	margin-top: 0%;
-	}
+}
+
 .image {
 	position: relative;
 	width: 20vw;
@@ -88,13 +91,13 @@ p {
 	margin-top: 5vh;
 	mix-blend-mode: color-burn;
 	left: 40%;
-	  }
-  
+}
+
 /* Side panel */
 #mySidebar {
 	height: 100vh;
 	width: 20vw;
-	position:fixed;
+	position: fixed;
 	z-index: 1;
 	top: 0vh;
 	left: -25vw;
@@ -105,14 +108,15 @@ p {
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
-	
-  }
-  
+
+}
+
 #mySidebar.open {
 	left: 0;
-  }
+}
+
 #toggle-sidebar {
-	position:fixed;
+	position: fixed;
 	top: 20%;
 	left: 0;
 	transform: translateY(-50%);
@@ -127,7 +131,8 @@ p {
 	display: flex;
 	align-items: center;
 	justify-content: center;
-  }
+}
+
 #toggle-sidebar.open {
 
 	left: 20vw;
@@ -136,9 +141,10 @@ p {
 	/* border-radius:50%; */
 	text-align: center;
 	transform: rotate(180deg);
-  }
+}
+
 .sidebar-btn {
-	display:flex;
+	display: flex;
 	justify-content: center;
 	width: 90%;
 	margin-bottom: 5%;
@@ -150,9 +156,10 @@ p {
 	cursor: pointer;
 	font-size: 1.5vw;
 	font-weight: bold;
-	text-transform:capitalize;
-	
-  }
+	text-transform: capitalize;
+
+}
+
 .sidebar-btn:hover {
 	background-color: #ddd;
-  }
+}

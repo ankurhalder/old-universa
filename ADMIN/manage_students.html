@@ -139,7 +139,7 @@
         setCollegeDropdown();
       };
     </script>
-
+<script src="/ADMIN/js/deletePermanent.js"></script>
     <script>
       let studentArray;
       const studentPopulator = (studentArray) => {
@@ -188,6 +188,18 @@
           student_profile_link.href = `/ADMIN/student_profile.html?id=${student.course_info.enrollment_number}`;
           student_profile_link.innerText = `Check Profile`;
           card.appendChild(student_profile_link);
+
+
+
+          //student Delete link
+          let student_delete_link = document.createElement("a");
+          student_delete_link.classList.add("link");
+          // *****************NOTE: GIVE THE LINK TO DESIRED FILE below*****************
+          student_delete_link.href = `/ADMIN/callingdeletefunction.html?id=${student.course_info.enrollment_number}`;
+          student_delete_link.innerText = `Delete Profile`;
+          card.appendChild(student_delete_link);
+
+
 
           grid.appendChild(card);
         });

@@ -2,20 +2,24 @@
 @import url(/ADMIN/CSS/admin_header.css);
 @import url(/CSS-Main/font.css);
 @import url(/CSS-Main/btn.css);
-*{
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    }
-    body {
-    font-family: sans-serif;
 
-    }
-.full-body{
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: sans-serif;
+
+}
+
+.full-body {
   height: 80vh;
   max-height: 200vh;
 }
-.heading{
+
+.heading {
   text-transform: uppercase;
   position: relative;
   left: 35%;

@@ -2,27 +2,32 @@
 @import url(/CSS-Main/font.css);
 @import url(/CSS-Main/footer.css);
 @import url(/ADMIN/CSS/admin_header.css);
+
 * {
 	box-sizing: border-box;
 	margin: 0;
 	padding: 0;
-  }
-  body{
+}
+
+body {
 	width: 100%;
-  }
+}
 
 /* Set the font family and size for the heading and paragraph elements */
-.heading, .student_year, .student_stream, .student_section {
+.heading,
+.student_year,
+.student_stream,
+.student_section {
 	font-family: "Roboto", Arial, sans-serif;
 	font-size: 1.2vw;
 	font-weight: bold;
 	color: black;
 	letter-spacing: 1.5px;
 	margin-left: 3vw;
-	}
-	
-	/* Style the select elements */
-	select {
+}
+
+/* Style the select elements */
+select {
 	padding: 1.2vh;
 	font-family: "Roboto", Arial, sans-serif;
 	font-size: 1.2vw;
@@ -35,17 +40,19 @@
 	color: black;
 	transition: all 0.3s ease-in-out;
 	margin-bottom: 5vh;
-	}
-	
-	/* Position the select elements */
-	.student_year, .student_stream, .student_section {
+}
+
+/* Position the select elements */
+.student_year,
+.student_stream,
+.student_section {
 	display: inline-block;
 	width: 40vw;
 	vertical-align: middle;
-	}
-	
-	/* Add some spacing between the heading and paragraph elements */
-	.heading {
+}
+
+/* Add some spacing between the heading and paragraph elements */
+.heading {
 	margin-bottom: 2vh;
 	text-transform: uppercase;
 	letter-spacing: 2px;
@@ -55,81 +62,83 @@
 	justify-content: center;
 	height: 10vh;
 	font-size: 3vw;
-	}
-	
-	/* Add hover and focus styles to the select elements */
-	select:hover, select:focus {
+}
+
+/* Add hover and focus styles to the select elements */
+select:hover,
+select:focus {
 	background-color: #cbddf3;
 	outline: none;
-	}
+}
 
 
-  
-  /* Style the table */
-  table {
+
+/* Style the table */
+table {
 	width: 100%;
 	border-collapse: collapse;
-  }
-  
-  /* Style the table header */
-  th {
+}
+
+/* Style the table header */
+th {
 	background-color: #2196f3;
 	color: #fff;
 	padding: 2vh;
 	text-align: center;
 	font-weight: bold;
-  }
-  
-  /* Style the table cells */
-  td {
+}
+
+/* Style the table cells */
+td {
 	border: 0.1vw solid #ccc;
 	padding: 1vh;
 	text-align: center;
-  }
-  
-  /* Style the input fields */
-  input {
+}
+
+/* Style the input fields */
+input {
 	width: 100%;
 	padding: 1.5vh;
 	border-radius: 2vw;
 	border: 0.1vw solid #ccc;
 	margin-top: .5vh;
 	box-sizing: border-box;
-  }
-  
-  /* Style the input placeholders */
-  ::-webkit-input-placeholder {
+}
+
+/* Style the input placeholders */
+::-webkit-input-placeholder {
 	color: #333;
-  }
-  
-  :-moz-placeholder {
+}
+
+:-moz-placeholder {
 	color: #ccc;
-  }
-  
-  ::-moz-placeholder {
+}
+
+::-moz-placeholder {
 	color: #ccc;
-  }
-  
-  :-ms-input-placeholder {
+}
+
+:-ms-input-placeholder {
 	color: #ccc;
-  }
-  
-  /* Style the first column */
-  td:first-child {
-	background-color:  #cbddf3;
+}
+
+/* Style the first column */
+td:first-child {
+	background-color: #cbddf3;
 	font-weight: bold;
 	text-align: left;
-  }
-  
-  /* Style the first row */
-  tr:first-child th:first-child {
+}
+
+/* Style the first row */
+tr:first-child th:first-child {
 	border-top-left-radius: 2vw;
-  }
-  
-  tr:first-child th:last-child {
+}
+
+tr:first-child th:last-child {
 	border-top-right-radius: 2vw;
-  }
-  .btn-container{
+}
+
+.btn-container {
 	border-radius: 1vw;
 	font-size: 2vh;
 	padding: 2vh 1.5vw;
@@ -137,10 +146,9 @@
 	margin-bottom: 2vh;
 	position: relative;
 	left: 48%
-  }
-  .time-table-btn-container{
+}
+
+.time-table-btn-container {
 	position: relative;
 	left: 10%
-  }
-  
-    
+}

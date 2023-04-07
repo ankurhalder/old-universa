@@ -37,7 +37,7 @@ header {
 }
 
 .dropbtn {
-  background-color:black;
+  background-color: black;
   border: none;
   color: white;
   font-size: 2vw;
@@ -63,9 +63,11 @@ header {
   padding: 1vw 2vw;
   text-decoration: none;
 }
-.dropdown-panel a:hover{
+
+.dropdown-panel a:hover {
   background-color: rgba(128, 128, 128, 0.243);
 }
+
 .dropdown:hover .dropdown-panel {
   display: block;
 }
@@ -75,11 +77,12 @@ header {
   text-align: center;
   padding: 1vw;
 }
-.logout{
-  background-color:black;
+
+.logout {
+  background-color: black;
   border: none;
   color: white;
   font-size: 1.5vw;
   cursor: pointer;
   padding: .8vw;
-}                   
+}
