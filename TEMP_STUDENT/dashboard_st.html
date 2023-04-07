@@ -33,11 +33,9 @@
     </div>
 </header>
 <script src="/TEMP_STUDENT/js/dropDown.js"></script>
-<script src="/TEMP_STUDENT/js/colllage_info.js"></script>
+
   <main>
-    <script>
-  getCollegeData();
-    </script>
+
     <!-- Body Part -->
   <section name="user_dashboard" id="user_dashboard" class="dashboard-section">
     <form action="#" enctype="multipart/form-data" id="image-form">
@@ -179,22 +177,30 @@
           <th>Academic Info</th>
             <tr>
               <th>Course Name</th>
-              <td><input type="text" name="course_name" id="course_name" class="user-info"></td>
+              <td><select name="college_courses" id="course_name">
+                <option value="#" disabled selected style="display: none">
+                  Select Course
+                </option>
+              </select></td>
             </tr>
   
             <tr>
               <th>Duration</th>
-              <td><input type="text" name="course_duration" id="course_duration" class="user-info"></td>
+              <td><p id="course_duration"></p></td>
             </tr>
 
             <tr>
               <th>Stream</th>
-              <td><input type="text" name="course_stream" id="course_stream" class="user-info"></td>
+              <td><select name="college_streams" id="course_stream">
+                <option value="#" disabled selected style="display: none">
+                  Select Stream
+                </option>
+              </select></td>
             </tr>
 
             <tr>
               <th>Admission Year</th>
-              <td><input type="number" name="admission_year" id="admission_year" class="user-info"></td>
+              <td><p id="admission_year"></p></td>
             </tr>  
         </table>
         <br>
@@ -203,6 +209,10 @@
         </button></div>
     </form>
   </section>
+  <script src="/TEMP_STUDENT/js/usingCollageInfo.js"></script>
+  <script>
+    setCollegeDropdown();
+   </script>
  </main>
  <!-- Footer -->
 <footer>

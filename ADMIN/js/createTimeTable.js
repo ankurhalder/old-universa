@@ -256,23 +256,71 @@ function createTimeTable() {
       },
     ],
   };
+  let PERIOD_1_START_TIME = period_1_start_time.value.split(":");
+  let PERIOD_1_END_TIME = period_1_end_time.value.split(":");
+  let PERIOD_2_START_TIME = period_2_start_time.value.split(":");
+  let PERIOD_2_END_TIME = period_2_end_time.value.split(":");
+  let PERIOD_3_START_TIME = period_3_start_time.value.split(":");
+  let PERIOD_3_END_TIME = period_3_end_time.value.split(":");
+  let PERIOD_4_START_TIME = period_4_start_time.value.split(":");
+  let PERIOD_4_END_TIME = period_4_end_time.value.split(":");
+  let PERIOD_5_START_TIME = period_5_start_time.value.split(":");
+  let PERIOD_5_END_TIME = period_5_end_time.value.split(":");
+  let PERIOD_6_START_TIME = period_6_start_time.value.split(":");
+  let PERIOD_6_END_TIME = period_6_end_time.value.split(":");
+  let PERIOD_7_START_TIME = period_7_start_time.value.split(":");
+  let PERIOD_7_END_TIME = period_7_end_time.value.split(":");
+  let PERIOD_8_START_TIME = period_8_start_time.value.split(":");
+  let PERIOD_8_END_TIME = period_8_end_time.value.split(":");
 
   let period_1_duration = document.getElementById("period-1-duration");
-  period_1_duration.value = period_1_end_time.value - period_1_start_time.value;
+  period_1_duration.value =
+    parseInt(PERIOD_1_END_TIME[0]) * 60 +
+    parseInt(PERIOD_1_END_TIME[1]) -
+    (parseInt(PERIOD_1_START_TIME[0]) * 60 + parseInt(PERIOD_1_START_TIME[1])) +
+    ` Minutes`;
   let period_2_duration = document.getElementById("period-2-duration");
-  period_2_duration.value = period_2_end_time.value - period_2_start_time.value;
+  period_2_duration.value =
+    parseInt(PERIOD_2_END_TIME[0]) * 60 +
+    parseInt(PERIOD_2_END_TIME[1]) -
+    (parseInt(PERIOD_2_START_TIME[0]) * 60 + parseInt(PERIOD_2_START_TIME[1])) +
+    ` Minutes`;
   let period_3_duration = document.getElementById("period-3-duration");
-  period_3_duration.value = period_3_end_time.value - period_3_start_time.value;
+  period_3_duration.value =
+    parseInt(PERIOD_3_END_TIME[0]) * 60 +
+    parseInt(PERIOD_3_END_TIME[1]) -
+    (parseInt(PERIOD_3_START_TIME[0]) * 60 + parseInt(PERIOD_3_START_TIME[1])) +
+    ` Minutes`;
   let period_4_duration = document.getElementById("period-4-duration");
-  period_4_duration.value = period_4_end_time.value - period_4_start_time.value;
+  period_4_duration.value =
+    parseInt(PERIOD_4_END_TIME[0]) * 60 +
+    parseInt(PERIOD_4_END_TIME[1]) -
+    (parseInt(PERIOD_4_START_TIME[0]) * 60 +
+      parseInt(PERIOD_4_START_TIME[1]))` Minutes`;
   let period_5_duration = document.getElementById("period-5-duration");
-  period_5_duration.value = period_5_end_time.value - period_5_start_time.value;
+  period_5_duration.value =
+    parseInt(PERIOD_5_END_TIME[0]) * 60 +
+    parseInt(PERIOD_5_END_TIME[1]) -
+    (parseInt(PERIOD_5_START_TIME[0]) * 60 + parseInt(PERIOD_5_START_TIME[5])) +
+    ` Minutes`;
   let period_6_duration = document.getElementById("period-6-duration");
-  period_6_duration.value = period_6_end_time.value - period_6_start_time.value;
+  period_6_duration.value =
+    parseInt(PERIOD_6_END_TIME[0]) * 60 +
+    parseInt(PERIOD_6_END_TIME[1]) -
+    (parseInt(PERIOD_6_START_TIME[0]) * 60 + parseInt(PERIOD_6_START_TIME[1])) +
+    ` Minutes`;
   let period_7_duration = document.getElementById("period-7-duration");
-  period_7_duration.value = period_7_end_time.value - period_7_start_time.value;
+  period_7_duration.value =
+    parseInt(PERIOD_7_END_TIME[0]) * 60 +
+    parseInt(PERIOD_7_END_TIME[1]) -
+    (parseInt(PERIOD_7_START_TIME[0]) * 60 + parseInt(PERIOD_7_START_TIME[1])) +
+    ` Minutes`;
   let period_8_duration = document.getElementById("period-8-duration");
-  period_8_duration.value = period_8_end_time.value - period_8_start_time.value;
+  period_8_duration.value =
+    parseInt(PERIOD_8_END_TIME[0]) * 60 +
+    parseInt(PERIOD_8_END_TIME[1]) -
+    (parseInt(PERIOD_8_START_TIME[0]) * 60 + parseInt(PERIOD_8_START_TIME[1])) +
+    ` Minutes`;
 
   fetch(`https://universa-api.onrender.com/routine`, {
     // include user_id in the URL

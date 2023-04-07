@@ -17,13 +17,14 @@ body {
   font-family: 'Montserrat', sans-serif;
   margin: 0;
   padding: 0;
-  background-color: #0e52a4;
+  /* background-color: #0e52a4; */
 }
 
 /* Styles for the table */
 table {
   border-collapse: collapse;
   width: 100%;
+  height: auto;
   font-size: 1.5vw;
   margin: 2vh 0;
   box-shadow: 0 0.5vh 1vh rgba(0, 0, 0, 0.25);
@@ -34,7 +35,7 @@ th,
 td {
   text-align: center;
   padding: 2vh;
-  border: 1px solid #ddd;
+  border: .1vh solid black;
 }
 
 th {
@@ -45,50 +46,23 @@ tr:nth-child(even) {
   background-color: #f2f2f2;
 }
 
-/* Active and hover effects for table rows */
-tr:hover {
-  background-color:  #b9d2f1;
-  transition: background-color 0.5s ease;
-}
-
-tr:active {
-  background-color: #d9d9d9;
-  border: 2px solid black;
-}
-
 /* Styles for the headings */
 h1 {
   font-size: 4vw;
   margin: 2vh 0;
   text-align: center;
-  color: white;
+  color: black;
 }
 
 /* Styles for the periods */
 p {
   margin: 0;
+  font-size: 1vw;
 }
-
-p[class^="period_"] {
-  font-weight: bold;
-  color: black;
-}
-
-p[class*="_start_time"]::before {
-  content: "Start Time: ";
-  color: black;
-}
-
-p[class*="_end_time"]::before {
-  content: "End Time: ";
-  color: black;
-}
-
-/* Styles for the days */
-td:first-child {
+ td:first-child {
   font-weight: bold;
   text-align: left;
-  width: 20%;
+  width: 10%;
   color: black;
 }
 
@@ -96,8 +70,3 @@ td:not(:first-child) {
   width: 16%;
 }
 
-/* Hover effect for table cells */
-td:hover {
-  transform: scale(1.05);
-  transition: transform 0.5s ease;
-}

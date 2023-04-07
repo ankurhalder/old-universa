@@ -27,6 +27,14 @@ function transferApplicantData() {
       EMAIL.value = data.data.personal_info.email;
       let CONTACT = document.getElementById("personal_info_contact");
       CONTACT.value = data.data.personal_info.contact;
+      let GENDER = document.getElementById("gender");
+      GENDER.value = data.data.personal_info.gender;
+      let DOB = document.getElementById("dob");
+      DOB.value = data.data.personal_info.dob;
+      let BLOOD_GROUP = document.getElementById("blood_group");
+      BLOOD_GROUP.value = data.data.personal_info.blood_group;
+      let CATEGORY = document.getElementById("personal_info_category");
+      CATEGORY.value = data.data.personal_info.category;
 
       // Present Address
       let PRESENT_ADDRESS = document.getElementById("present_address");
@@ -55,8 +63,8 @@ function transferApplicantData() {
       PERMANENT_STATE.value = data.data.personal_info.permanent_address.state;
 
       // Academic Info
-      let COURSE_NAME = document.getElementById("course_name");
-      COURSE_NAME.value = data.data.course_info.course_name;
+      // let COURSE_NAME = document.getElementById("course_name");
+      // COURSE_NAME.value = data.data.course_info.course_name;
       let COURSE_DURATION = document.getElementById("course_duration");
       COURSE_DURATION.value = data.data.course_info.duration;
       let COURSE_STREAM = document.getElementById("course_stream");

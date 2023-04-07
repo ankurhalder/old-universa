@@ -71,7 +71,7 @@
         perspective: 3000px;
         left: 32%;
       }
-      .id-card--container:hover #id-card__front {
+      /* .id-card--container:hover #id-card__front {
         transform: rotateY(-180deg);
         z-index: 0;
       }
@@ -79,7 +79,7 @@
         transform: rotateY(-360deg);
         z-index: 1;
         visibility: visible;
-      }
+      } */
 
       .id-card {
         width: 100%;
@@ -126,7 +126,7 @@
 
       .id-card__college__logo {
         height: 100%;
-        background-image: url(./logo.png);
+        background-image: url(/P_STUDENT/image/logo.png);
         background-position: center;
         background-size: contain;
         background-repeat: no-repeat;
@@ -227,6 +227,8 @@
         font-size: 11px;
         text-transform: capitalize;
         opacity: 0.6;
+        user-select: none;
+        
       }
 
       .id-card__sign {
@@ -245,7 +247,7 @@
       .id-card__sign__image {
         width: 100%;
         height: 90%;
-        background-image: url(./sign.png);
+        background-image: url(/P_STUDENT/image/sign.png);
         background-position: center;
         background-size: contain;
         background-repeat: no-repeat;

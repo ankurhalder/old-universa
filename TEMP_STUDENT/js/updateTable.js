@@ -29,9 +29,9 @@ function updateTable(para) {
   const Contact = document.getElementById("personal_info_contact").value;
   // Academic Info
   const courseName = document.getElementById("course_name").value;
-  const Duration = document.getElementById("course_duration").value;
+  const Duration = document.getElementById("course_duration").innerText;
   const Stream = document.getElementById("course_stream").value;
-  const addmissionYear = document.getElementById("addmission_year").value;
+  const addmissionYear = document.getElementById("admission_year").innerText;
 
   const personalInfo = {
     personal_info: {

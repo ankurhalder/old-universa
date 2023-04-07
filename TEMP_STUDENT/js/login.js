@@ -1,3 +1,17 @@
+const collegedata = () => {
+  const college_id = "304";
+
+  fetch(`https://universa-api.onrender.com/college?college_id=${college_id}`, {
+    method: "GET",
+    headres: {},
+  })
+    .then((response) => response.json())
+    .then((data) => {
+      console.log(data);
+      localStorage.setItem("college_data", JSON.stringify(data.data));
+    });
+};
+
 const userId = document.getElementById("user_Id");
 const password = document.getElementById("password");
 function login() {
@@ -26,8 +40,11 @@ function login() {
       console.log(data);
       if (data.status === true) {
         // Login successful
+        collegedata();
         console.log("Login successful");
         console.log(data.message);
+        console.log(JSON.parse(localStorage.getItem("college_data")));
+
         // Store user ID in local storage
         localStorage.setItem("loginUserId", data.data.user_id);
         localStorage.setItem("userData", JSON.stringify(data.data));
@@ -39,7 +56,7 @@ function login() {
         } else if (data.data.type === "student") {
           window.location.href = "/P_STUDENT/p_student.html";
         }
-        console.log(localStorage.getItem("userId"));
+        console.log(localStorage.getItem("loginUserId"));
       } else if (data.status === false) {
         // Login unsuccessful
         console.log("Login unsuccessful");
