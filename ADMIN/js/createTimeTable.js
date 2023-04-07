@@ -291,12 +291,12 @@ function createTimeTable() {
     parseInt(PERIOD_3_END_TIME[1]) -
     (parseInt(PERIOD_3_START_TIME[0]) * 60 + parseInt(PERIOD_3_START_TIME[1])) +
     ` Minutes`;
-  let period_4_duration = document.getElementById("period-4-duration");
-  period_4_duration.value =
-    parseInt(PERIOD_4_END_TIME[0]) * 60 +
-    parseInt(PERIOD_4_END_TIME[1]) -
-    (parseInt(PERIOD_4_START_TIME[0]) * 60 +
-      parseInt(PERIOD_4_START_TIME[1]))` Minutes`;
+  // let period_4_duration = document.getElementById("period-4-duration");
+  // period_4_duration.value =
+  //   parseInt(PERIOD_4_END_TIME[0]) * 60 +
+  //   parseInt(PERIOD_4_END_TIME[1]) -
+  //   (parseInt(PERIOD_4_START_TIME[0]) * 60 +
+  //     parseInt(PERIOD_4_START_TIME[1]))` Minutes`;
   let period_5_duration = document.getElementById("period-5-duration");
   period_5_duration.value =
     parseInt(PERIOD_5_END_TIME[0]) * 60 +
@@ -334,6 +334,7 @@ function createTimeTable() {
     .then((response) => response.json())
     .then((data) => {
       console.log(data);
+      alert(data.data.message);
     })
     .catch((error) => console.error(error));
 }

@@ -5,44 +5,337 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Manage Student's</title>
+    <style>
+      .reset * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      .selector-group {
+        width: 95%;
+        max-width: 1000px;
+        margin: 20px auto;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 10px;
+        /* margin: 20px; */
+      }
+      .student-grid {
+        /* border: 2px solid red; */
+        /* height: 100px; */
+
+        width: 95%;
+        max-width: 1000px;
+        margin: auto;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 10px;
+      }
+
+      .card--student {
+        width: 100%;
+        height: 100%;
+        background-color: rgb(206, 235, 244);
+        padding: 15px;
+        font-family: sans-serif;
+        border-radius: 10px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 5px;
+      }
+
+      .student__name {
+        text-transform: capitalize;
+        text-align: center;
+      }
+      .student__text {
+        /* text-transform: capitalize; */
+        font-size: 12px;
+      }
+
+      .btn-group {
+        width: 100%;
+        height: fit-content;
+        display: flex;
+        justify-content: space-evenly;
+      }
+      .link {
+        padding: 8px 15px;
+        border-radius: 500px;
+        color: rgb(0, 102, 255);
+        font-size: 14px;
+        text-decoration: none;
+        border: 2px solid transparent;
+        transition: 0.2s ease-in-out;
+      }
+
+      .link:hover {
+        color: blueviolet;
+        border: 2px solid blueviolet;
+      }
+    </style>
   </head>
   <link rel="stylesheet" href="/ADMIN/CSS/manage_student's.css" />
   <script src="/TEMP_STUDENT/js/logout.js"></script>
   <script src="/ADMIN/js/verifyAdminLogin.js"></script>
   <script src="/ADMIN/js/gotoLinks.js"></script>
-  <body onload="veryfyLogin()">
-    <!-- Header -->
-    <header>
-      <div class="left_side">
-        <ul class="nav_links">
-          <li class="home_link"><a href="/ADMIN/admin.html">Universa</a></li>
-        </ul>
-      </div>
-      <div class="right_side">
-        <div class="dropdown">
-          <button class="dropbtn">Menu &#9660;</button>
-          <div class="dropdown-panel hide">
-            <a href="/ADMIN/admin_services.html">Services</a>
-            <a href="/ADMIN/admin_info.html">Info</a>
-            <a href="">Change Password</a>
-            <div class="logout_container">
-              <button onclick="logout()" class="logout btn">Logout</button>
-            </div>
+  <!-- Header -->
+  <header>
+    <div class="left_side">
+      <ul class="nav_links">
+        <li class="home_link"><a href="/ADMIN/admin.html">Universa</a></li>
+      </ul>
+    </div>
+    <div class="right_side">
+      <div class="dropdown">
+        <button class="dropbtn">Menu &#9660;</button>
+        <div class="dropdown-panel hide">
+          <a href="/ADMIN/admin_services.html">Services</a>
+          <a href="/ADMIN/admin_info.html">Info</a>
+          <a href="">Change Password</a>
+          <div class="logout_container">
+            <button onclick="logout()" class="logout btn">Logout</button>
           </div>
         </div>
       </div>
-    </header>
-    <script src="/TEMP_STUDENT/js/dropDown.js"></script>
-    <main class="full-body">
-      <h1 class="heading">All Student's</h1>
-      <script src="/ADMIN/js/getAllPermanent.js"></script>
-      <script>
-        getAllPermanent();
-      </script>
-      <body>
-        <div id="applicant"></div>
-      </body>
-    </main>
+    </div>
+  </header>
+  <script src="/TEMP_STUDENT/js/dropDown.js"></script>
+  <body onload="onLoadHandler()">
+    <!-- <select name="course_dropdown" id="course_dropdown">Select Course</select> -->
+    <div class="selector-group">
+      <select name="college_courses" id="college_courses">
+        <option value="#" disabled selected style="display: none">
+          Select Course
+        </option>
+      </select>
+      <select name="college_streams" id="college_streams">
+        <option value="#" disabled selected style="display: none">
+          Select Stream
+        </option>
+        <option value="all">All</option>
+      </select>
+      <select name="college_years" id="college_years">
+        <option value="#" disabled selected style="display: none">
+          Select Year
+        </option>
+        <option value="all">All</option>
+      </select>
+    </div>
+
+    <div class="reset student-grid" id="grid_student"></div>
+
+    <script>
+      const onLoadHandler = () => {
+        const token1 = localStorage.getItem("token");
+        console.log("token working");
+        if (token1 === null) {
+          window.location.href = "/index.html";
+        }
+
+        getAllStudents();
+        setCollegeDropdown();
+      };
+    </script>
+
+    <script>
+      let studentArray;
+      const studentPopulator = (studentArray) => {
+        const grid = document.getElementById("grid_student");
+        grid.replaceChildren();
+        studentArray.map((student) => {
+          let card = document.createElement("div");
+          card.classList.add("card--student");
+
+          //student name
+          let student_name = document.createElement("p");
+          student_name.classList.add("student__name");
+          if (student.personal_info.middle_name === "") {
+            student_name.innerText = `${student.personal_info.first_name} ${student.personal_info.last_name}`;
+          } else {
+            student_name.innerText = `${student.personal_info.first_name} ${student.personal_info.middle_name} ${student.personal_info.last_name}`;
+          }
+          card.appendChild(student_name);
+
+          //student enroll number
+          let student_enroll_num = document.createElement("p");
+          student_enroll_num.classList.add("student__text");
+          student_enroll_num.innerText = `Enrollment: ${student.course_info.enrollment_number}`;
+          card.appendChild(student_enroll_num);
+
+          //student reg number
+          let student_reg_num = document.createElement("p");
+          student_reg_num.classList.add("student__text");
+          student_reg_num.innerText = `Registration: ${student.course_info.registration_number}`;
+          card.appendChild(student_reg_num);
+
+          //student course details
+          let student_course_details = document.createElement("p");
+          student_course_details.classList.add("student__text");
+          student_course_details.innerText = `Course: ${student.course_info.course_name}, Stream: ${student.course_info.stream}, Year: ${student.course_info.current_year}`;
+          card.appendChild(student_course_details);
+
+          //student profile link
+          let student_profile_link = document.createElement("a");
+          student_profile_link.classList.add("link");
+          // *****************NOTE: GIVE THE LINK TO DESIRED FILE below*****************
+          student_profile_link.href = "/index.html";
+          student_profile_link.innerText = `Check Profile`;
+          card.appendChild(student_profile_link);
+
+          grid.appendChild(card);
+        });
+      };
+
+      localStorage.setItem(
+        "token",
+        "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiMzc5NzQ4OTAzNDkwMTg0OSIsImlhdCI6MTY4MDE5NjIyM30.9J-I2IPMenf4cezXFbiZz6hKS457UIHBux25WzFogxk"
+      );
+
+      const getAllStudents = () => {
+        const token = localStorage.getItem("token");
+        console.log("Fetching All Students");
+        fetch("https://universa-api.onrender.com/student", {
+          method: "GET",
+          headers: {
+            token: token,
+          },
+        })
+          .then((response) => response.json())
+          .then((data) => {
+            console.log(data);
+
+            studentArray = data.data;
+            studentPopulator(studentArray);
+          });
+      };
+    </script>
+
+    <script>
+      let filteredByCourse, filteredByStream, filteredByYear;
+      const collegeData = {
+        college_courses: [
+          {
+            name: "B.Tech",
+            code: "202",
+            fees: "70000",
+            streams: ["cse", "cst", "me", "ece"],
+            total_sem: "8",
+          },
+          {
+            name: "bba",
+            code: "204",
+            fees: "50000",
+            streams: ["a", "b", "c", "d"],
+            total_sem: "6",
+          },
+          {
+            name: "llb",
+            code: "210",
+            fees: "65000",
+            streams: [],
+            total_sem: "10",
+          },
+        ],
+      };
+      // const collegeData = JSON.parse(localStorage.getItem("college_data"))
+      const setCollegeDropdown = () => {
+        let courses_dropdown = document.getElementById("college_courses");
+        collegeData.college_courses.map((course) => {
+          let option = document.createElement("option");
+          courses_dropdown.appendChild(option);
+          option.value = course.name;
+          option.innerText = course.name;
+        });
+      };
+
+      const setStreamsDropdown = () => {
+        let courses_dropdown = document.getElementById("college_courses");
+        let streams_dropdown = document.getElementById("college_streams");
+        let years_dropdown = document.getElementById("college_years");
+        // let course_duration = document.getElementById("course_duration")
+        streams_dropdown.replaceChildren();
+        years_dropdown.replaceChildren();
+        const selected_course = courses_dropdown.value;
+
+        // let
+        // studentArray =
+        filteredByCourse = studentArray.filter(
+          (student) => student.course_info.course_name === selected_course
+        );
+        studentPopulator(filteredByCourse);
+
+        let available_streams, duration;
+        for (let i = 0; i < collegeData.college_courses.length; i++) {
+          if (collegeData.college_courses[i].name === selected_course) {
+            // course_duration.innerText = parseInt(collegeData.college_courses[i].total_sem)/2
+            available_streams = collegeData.college_courses[i].streams;
+            duration = parseInt(collegeData.college_courses[i].total_sem) / 2;
+          }
+        }
+
+        if (available_streams.length < 1) {
+          streams_dropdown.style.visibility = "hidden";
+        } else {
+          streams_dropdown.style.visibility = "visible";
+        }
+        available_streams.map((stream) => {
+          let option = document.createElement("option");
+          streams_dropdown.appendChild(option);
+          option.value = stream.toUpperCase();
+          option.innerText = stream;
+        });
+
+        for (let i = 1; i <= duration; i++) {
+          let option = document.createElement("option");
+          years_dropdown.appendChild(option);
+          option.value = i;
+          option.innerText = i;
+        }
+      };
+
+      let courses_dropdown = document.getElementById("college_courses");
+      courses_dropdown.addEventListener("change", setStreamsDropdown);
+
+      const filterByYear = () => {
+        const selected_year = document.getElementById("college_years").value;
+        if (filteredByStream) {
+          console.log("true");
+          filteredByYear = filteredByStream.filter(
+            (student) => student.course_info.current_year === selected_year
+          );
+        } else {
+          console.log("false");
+          filteredByYear = filteredByCourse.filter(
+            (student) => student.course_info.current_year === selected_year
+          );
+        }
+        studentPopulator(filteredByYear);
+      };
+      let years_dropdown = document.getElementById("college_years");
+      years_dropdown.addEventListener("change", filterByYear);
+
+      const filterByStream = () => {
+        const selected_stream =
+          document.getElementById("college_streams").value;
+        if (filteredByYear) {
+          console.log("true-s");
+          filteredByStream = filteredByYear.filter(
+            (student) => student.course_info.stream === selected_stream
+          );
+        } else {
+          console.log("false-s");
+          filteredByStream = filteredByCourse.filter(
+            (student) => student.course_info.stream === selected_stream
+          );
+        }
+        studentPopulator(filteredByStream);
+      };
+      let streams_dropdown = document.getElementById("college_streams");
+      streams_dropdown.addEventListener("change", filterByStream);
+    </script>
     <footer>
       <div class="contact-info">
         <h3>Contact Us</h3>

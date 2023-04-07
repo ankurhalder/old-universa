@@ -8,8 +8,7 @@
   </head>
   <link rel="stylesheet" href="/ADMIN/CSS/update_routine.css" />
   <script src="/TEMP_STUDENT/js/logout.js"></script>
-  <script src="/ADMIN/js/fetchTimeTable.js"></script>
-  <body onload="fetchTimeTable()">
+  <body onload=" ">
     <!-- Header -->
     <header>
       <div class="left_side">
@@ -87,11 +86,8 @@
       </select>
       <!-- Create Time Table -->
       <script src="/ADMIN/js/validateIncomigData.js"></script>
-      <button
-        onclick="validateIncomingData()"
-        class="btn time-table-btn-container"
-      >
-        Update Time Table
+      <button onclick="onLoadHandler()" class="btn time-table-btn-container">
+        Fetch Routine
       </button>
 
       <!-- Routine table start's from here -->
@@ -939,6 +935,10 @@
           </td>
         </tr>
       </table>
+      <script src="/ADMIN/js/updateRoutine.js"></script>
+      <div class="btn-container">
+        <button class="btn" onclick="updateRoutine()">Update</button>
+      </div>
     </main>
     <footer>
       <div class="contact-info">
@@ -959,5 +959,13 @@
         </ul>
       </div>
     </footer>
+    <script src="/ADMIN/js/updateRoutineDataFeed.js"></script>
+    <script src="/ADMIN/js/fetchTimeTable.js"></script>
+    <script>
+      const onLoadHandler = () => {
+        updateRoutineDataFeed();
+        fetchTimeTable();
+      };
+    </script>
   </body>
 </html>
