@@ -137,3 +137,10 @@ canvas {
     min-height: 2em;
   }
 }
+
+
+.btn{
+	position: relative;
+	top: 40%;
+	right: 30%;
+}

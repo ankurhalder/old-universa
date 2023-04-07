@@ -16,3 +16,6 @@ function gotoCreateRoutine() {
 function gotoSignature() {
   window.location.href = "/ADMIN/signature.html";
 }
+function gotoUpdateRoutine() {
+  window.location.href = "/ADMIN/updateRoutine.html";
+}
