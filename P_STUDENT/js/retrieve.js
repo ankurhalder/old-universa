@@ -28,6 +28,8 @@ function retrieve() {
     .then((response) => response.json())
     .then((data) => {
       console.log(data);
+      localStorage.setItem("year-for-routine",data.data.course_info.current_year)
+      localStorage.setItem("stream-for-routine",data.data.course_info.stream)
       let first_name_db = document.getElementById("full_name");
       first_name_db.innerText =
         data.data.personal_info.first_name +
