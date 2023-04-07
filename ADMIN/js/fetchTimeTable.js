@@ -38,25 +38,25 @@ function fetchTimeTable() {
         data.data[0].start + ` - ` + data.data[0].end;
       let period_2_start_time = document.getElementById("period-2-start-time");
       period_2_start_time.innerText =
-        data.data[1].start + ` - ` + data.data[1].end;
+        data.data[4].start + ` - ` + data.data[4].end;
       let period_3_start_time = document.getElementById("period-3-start-time");
       period_3_start_time.innerText =
-        data.data[2].start + ` - ` + data.data[2].end;
+        data.data[9].start + ` - ` + data.data[9].end;
       let period_4_start_time = document.getElementById("period-4-start-time");
       period_4_start_time.innerText =
-        data.data[3].start + ` - ` + data.data[3].end;
+        data.data[14].start + ` - ` + data.data[14].end;
       let period_5_start_time = document.getElementById("period-5-start-time");
       period_5_start_time.innerText =
-        data.data[4].start + ` - ` + data.data[4].end;
+        data.data[19].start + ` - ` + data.data[19].end;
       let period_6_start_time = document.getElementById("period-6-start-time");
       period_6_start_time.innerText =
-        data.data[5].start + ` - ` + data.data[5].end;
+        data.data[24].start + ` - ` + data.data[24].end;
       let period_7_start_time = document.getElementById("period-7-start-time");
       period_7_start_time.innerText =
-        data.data[6].start + ` - ` + data.data[6].end;
+        data.data[29].start + ` - ` + data.data[29].end;
       let period_8_start_time = document.getElementById("period-8-start-time");
       period_8_start_time.innerText =
-        data.data[7].start + ` - ` + data.data[7].end;
+        data.data[34].start + ` - ` + data.data[34].end;
     })
     .catch((error) => console.error(error));
 }
