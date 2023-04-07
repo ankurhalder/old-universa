@@ -13,3 +13,6 @@ function gotoManageStudents() {
 function gotoCreateRoutine() {
   window.location.href = "/ADMIN/createRoutine.html";
 }
+function gotoSignature() {
+  window.location.href = "/ADMIN/signature.html";
+}
