@@ -2,8 +2,122 @@
 @import url(/CSS-Main/font.css);
 @import url(/CSS-Main/footer.css);
 @import url(/ADMIN/CSS/admin_header.css);
+
+:root {
+	--blue: rgb(0, 102, 255);
+}
+
 * {
 	box-sizing: border-box;
 	margin: 0;
 	padding: 0;
-  }
+}
+
+/* General Styles */
+body {
+	font-family: Arial, sans-serif;
+	background-color: #f2f2f2;
+}
+
+
+
+h2 {
+	font-size: 1.5rem;
+	margin: 0;
+}
+
+p {
+	font-size: 1rem;
+}
+
+table {
+	border-collapse: collapse;
+	width: 100%;
+	margin-bottom: 2rem;
+}
+
+th,
+td {
+	text-align: left;
+	padding: 1rem;
+}
+
+th {
+	background-color: #0077cc;
+	color: white;
+}
+
+tr:nth-child(even) {
+	background-color: #f2f2f2;
+}
+
+tr:hover {
+	background-color: #ddd;
+}
+
+/* Section Styles */
+section#user_dashboard {
+	background-color: white;
+	border-radius: 10px;
+	box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+	padding: 2rem;
+	margin: 2rem auto;
+	max-width: 1600px;
+}
+
+section#user_dashboard img {
+	max-width: 200px;
+	display: block;
+	margin: 0 auto;
+	/* border-radius: 50%; */
+	border: 5px solid white;
+	box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+}
+
+section#user_dashboard h1 {
+	text-align: center;
+	margin-bottom: 1rem;
+}
+
+section#user_dashboard table {
+	font-size: 1.2rem;
+	margin-top: 2rem;
+}
+
+section#user_dashboard th {
+	font-weight: bold;
+	text-transform: uppercase;
+}
+
+section#user_dashboard td {
+	vertical-align: middle;
+}
+
+section#user_dashboard tr:hover {
+	background-color: transparent;
+}
+
+section#user_dashboard tr:nth-child(even) {
+	background-color: transparent;
+}
+
+section#user_dashboard tr:nth-child(even) td {
+	border-bottom: 1px solid #ddd;
+}
+
+section#user_dashboard tr:last-child td {
+	border-bottom: none;
+}
+
+section#user_dashboard td.enrollment-number,
+section#user_dashboard td.registration-number {
+	font-family: 'Courier New', Courier, monospace;
+	font-weight: bold;
+	letter-spacing: 2px;
+}
+
+#full_name {
+	font-size: 15px;
+	text-transform: uppercase;
+	color: var(--blue);
+}

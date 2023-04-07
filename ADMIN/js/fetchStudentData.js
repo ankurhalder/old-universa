@@ -24,8 +24,8 @@ function fetchData() {
         " " +
         data.data.personal_info.last_name;
       let User_Name_Dashboard = document.getElementById("user_name_dashboard");
-      User_Name_Dashboard.innerText =
-        data.data.personal_info.first_name + `'s DASHBOARD`;
+      // User_Name_Dashboard.innerText =
+      //   data.data.personal_info.first_name + `'s DASHBOARD`;
       let Email = document.getElementById("email");
       Email.innerText = data.data.personal_info.email;
       let contactNo = document.getElementById("contact_no");

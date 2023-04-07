@@ -1,6 +1,11 @@
 function fetchImage() {
   const Token = localStorage.getItem("token");
-  fetch(`https://universa-api.onrender.com/uploads/images/profile`, {
+  const urlParams = new URLSearchParams(window.location.search);
+  // let applicant_id = urlParams.get("id");
+
+  const userId = urlParams.get("id");
+  console.log(userId)
+  fetch(`https://universa-api.onrender.com/uploads/images/profile/id?user_id=${userId}`, {
     method: "GET",
     credentials: "include",
     headers: {
