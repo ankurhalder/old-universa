@@ -19,3 +19,6 @@ function gotoSignature() {
 function gotoUpdateRoutine() {
   window.location.href = "/ADMIN/updateRoutine.html";
 }
+function gotoScanner() {
+  window.location.href = "/ADMIN/scanner.html"
+}

@@ -69,7 +69,7 @@
 <script src="/TEMP_STUDENT/js/fetchImage.js"></script>
 <script>
   retrieve();
-  fetchImage();
+
 </script>
 
 <body onload="onLoadHandler()">
@@ -186,6 +186,7 @@
     </div>
     <script>
       const onLoadHandler = () => {
+        fetchImage();
         setIdCard();
         console.log("loaded");
         let currentDay = new Date().getDay();

@@ -63,14 +63,14 @@ function transferApplicantData() {
       PERMANENT_STATE.value = data.data.personal_info.permanent_address.state;
 
       // Academic Info
-      // let COURSE_NAME = document.getElementById("course_name");
-      // COURSE_NAME.value = data.data.course_info.course_name;
+      let COURSE_NAME = document.getElementById("course_name");
+      COURSE_NAME.value = data.data.course_info.course_name;
       let COURSE_DURATION = document.getElementById("course_duration");
-      COURSE_DURATION.value = data.data.course_info.duration;
+      COURSE_DURATION.innerText = data.data.course_info.duration;
       let COURSE_STREAM = document.getElementById("course_stream");
       COURSE_STREAM.value = data.data.course_info.stream;
       let ADMISSION_YEAR = document.getElementById("admission_year");
-      ADMISSION_YEAR.value = data.data.course_info.admission_year;
+      ADMISSION_YEAR.innerText = data.data.course_info.admission_year;
     })
     .catch((error) => console.error(error));
 }
