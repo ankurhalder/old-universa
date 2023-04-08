@@ -66,7 +66,7 @@ function approve() {
       course_name: Course_Name,
       duration: Course_Duration,
       stream: Stream,
-      total_sem:Course_Duration*2,
+      // total_sem:Course_Duration*2,
       //  registration_number: Registration_Number,
     },
   };
