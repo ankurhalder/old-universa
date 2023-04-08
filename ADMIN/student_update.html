@@ -1,226 +1,243 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Update Profile</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Update Profile</title>
 </head>
 <link rel="stylesheet" href="/ADMIN/CSS/student_update.css">
 <script src="/ADMIN/js/transferStudentData.js"></script>
+
 <body onload="transferStudentData()">
-    <!-- Header -->
-    <header>
-      <div class="left_side">
-        <ul class="nav_links">
-          <li class="home_link">
-            <a href="/P_STUDENT/p_student.html">Universa</a>
-          </li>
-        </ul>
-      </div>
-      <div class="right_side">
-        <div class="dropdown">
-          <button class="dropbtn">Menu &#9660;</button>
-          <div class="dropdown-panel hide">
-            <a href="/P_STUDENT/p_student_services.html">Services</a>
-            <a href="/P_STUDENT/p_student_info.html">Info</a>
-            <a href="/P_STUDENT/p_student_update.html">Update Profile</a>
-            <a href="/P_STUDENT/student_routine.html">See Routine</a>
-            <a href="/P_STUDENT/scanner.html">Go To Scanner</a>
-            <a href="">Change Password</a>
-            <div class="logout_container">
-              <button onclick="logout()" class="btn logout">Logout</button>
-            </div>
+  <!-- Header -->
+  <header>
+    <div class="left_side">
+      <ul class="nav_links">
+        <li class="home_link"><a href="/ADMIN/admin.html">Universa</a></li>
+      </ul>
+    </div>
+    <div class="right_side">
+      <div class="dropdown">
+        <button class="dropbtn">Menu &#9660;</button>
+        <div class="dropdown-panel hide">
+          <a href="/ADMIN/admin_services.html">Services</a>
+          <a href="/ADMIN/admin_info.html">Info</a>
+          <a href="">Change Password</a>
+          <div class="logout_container">
+            <button onclick="logout()" class="logout btn">Logout</button>
           </div>
         </div>
       </div>
-    </header>
-          <script src="/TEMP_STUDENT/js/dropDown.js"></script>
-    <main>
-        <section name="user_dashboard" id="user_dashboard" class="dashboard-section">
-            <!-- <form action="#" enctype="multipart/form-data" id="image-form">
+    </div>
+  </header>
+  <script src="/TEMP_STUDENT/js/dropDown.js"></script>
+  <main>
+    <section name="user_dashboard" id="user_dashboard" class="dashboard-section">
+      <!-- <form action="#" enctype="multipart/form-data" id="image-form">
             <img class="image" src="/TEMP_STUDENT/image/login.png" alt="image" id="user-image">
             <input type="file" name="profile_image"> 
             <script src="/TEMP_STUDENT/js/image.js"></script>
             <script src="/TEMP_STUDENT/js/imageUpload.js"></script>
             <input type="submit" class="upload_image">Upload Image</input>
              </form> -->
-             <form id="form"> 
-                <table class="user-table">
-                  <tr>
-                    <!-- Personal data Start's from here -->
-                    <th>First Name</th>
-                    <td><input type="text" name="first_name"id="personal_info_first_name" class="user-info"></td>
-                  </tr>
-        
-                  <tr>
-                    <th>Middle Name</th>
-                    <td><input type="text" name="middle_name"id="personal_info_middle_name" class="user-info"></td>
-                  </tr>
-        
-                  <tr>
-                    <th>Last Name</th>
-                    <td><input type="text" name="last_name"id="personal_info_last_name" class="user-info"></td>
-                  </tr>
-        
-                  <tr>
-                    <th>Gender</th>
-                    <td><select name="gender" id="gender" class="user-info" required>
-                      <option value="" disabled selected>Please Select</option>
-                      <option value="Male">Male</option>
-                      <option value="Female">Female</option>
-                      <option value="Others">Others</option>
-                  </select></td>
-                  </tr> 
-        
-                  <tr>
-                    <th>Date of Birth</th>
-                    <td><input type="date" name="dob"id="dob" class="user-info"></td>
-                  </tr> 
-        
-                  <tr>
-                    <th>Blood Group</th>
-                    <td><select name="blood_group" id="blood_group" class="user-info" required>
-                      <option value="" disabled selected>Please Select</option>
-                      <option value="A+">A+</option>
-                      <option value="A-">A-</option>
-                      <option value="B+">B+</option>
-                      <option value="B-">B-</option>
-                      <option value="O+">O+</option>
-                      <option value="O-">O-</option>
-                      <option value="AB+">AB+</option>
-                      <option value="Ab-">AB-</option>
-                  </select></td>
-                  </tr>
-        
-                  <tr>
-                    <th>Category</th>
-                    <td><select name="category" id="personal_info_category" class="user-info" required>
-                           <option value="" disabled selected>Please Select</option>
-                           <option value="general">General</option>
-                           <option value="obc">OBC</option>
-                           <option value="sc">SC</option>
-                           <option value="st">ST</option>
-                        </select></td>
-                  </tr>
-        
-                  <tr>
-                    <th>Email</th>
-                    <td><input type="email" name="email" id="personal_info_email" class="user-info" required></td>
-                  </tr> 
-        
-                  <tr>
-                    <th>Contact</th>
-                    <td><input type="number" name="contact" id="personal_info_contact" class="user-info" required></td>
-                  </tr>
-                <!-- Address Start's from here -->
-                  <tr>
-                    <th>Present Address</th>
-                    <th></th>
-                  </tr>
-        
-                  <tr>
-                    <th>Address</th>
-                    <td><textarea name="present_address" id="present_address" class="user-info" rows="4" cols="30"></textarea></td>
-                  </tr>
-        
-                  <tr>
-                    <th>Pincode</th>
-                    <td><input type="number" name="present_pincode" id="present_pincode" class="user-info"></td>
-                  </tr>
-                  <script src="/TEMP_STUDENT/js/dashboard_pincode.js"></script>
-                  <tr>
-                    <th>City</th>
-                    <td><input type="text" name="present_city" id="present_city" class="user-info"></td>
-                  </tr>
-        
-                  <tr>
-                    <th>District</th>
-                    <td><input type="text" name="present_district" id="present_district" class="user-info"></td>
-                  </tr>
-        
-                  <tr>
-                    <th>State</th>
-                    <td><input type="text" name="present_state" id="present_state" class="user-info"></td>
-                  </tr>
-                  <script src="/TEMP_STUDENT/js/dashboard_c_box.js"></script>
-                  <tr>
-                    <th></th>
-                    <td><input type="checkbox" id="same_as_present_address" onclick="copyPresentAddress()"> Same as Present Address</td>
-                  </tr>
-        
-                    <th>Permanent Address</th>
-                  <tr>
-                    <th>Address</th>
-                    <td><textarea name="permanent_address" id="permanent_address" class="user-info" rows="4" cols="30"></textarea></td>
-                  </tr>
-        
-                  <tr>
-                    <th>Pincode</th>
-                    <td><input type="number" name="permanent_pincode" id="permanent_pincode" class="user-info"></td>
-                  </tr>
-        
-                  <tr>
-                    <th>City</th>
-                    <td><input type="text" name="permanent_city" id="permanent_city" class="user-info"></td>
-                  </tr>
-        
-                  <tr>
-                    <th>District</th>
-                    <td><input type="text" name="permanent_district" id="permanent_district" class="user-info"></td>
-                  </tr>
-        
-                  <tr>
-                    <th>State</th>
-                    <td><input type="text" name="permanent_state" id="permanent_state" class="user-info"></td>
-                  </tr>
-                  <th>Academic Info</th>
-                    <tr>
-                      <th>Course Name</th>
-                      <td><input type="text" name="course_name" id="course_name" class="user-info"></td>
-                    </tr>
-          
-                    <tr>
-                      <th>Duration</th>
-                      <td><input type="text" name="course_duration" id="course_duration" class="user-info"></td>
-                    </tr>
-        
-                    <tr>
-                      <th>Stream</th>
-                      <td><input type="text" name="course_stream" id="course_stream" class="user-info"></td>
-                    </tr>
-        
-                    <tr>
-                      <th>Addmission Year</th>
-                      <td><input type="number" name="addmission_year" id="addmission_year" class="user-info"></td>
-                    </tr>  
-                </table>
-                <br>
-                <script src="/ADMIN/js/updateStudent.js"></script>
-                <div class="btn-container"><button class="btn btn-1">Save</button></div>
-            </form>
-          </section>
-    </main>
-   
-        <footer>
-            <div class="contact-info">
-                <h3>Contact Us</h3>
-                <p>Kolkata , WestBengal , India</p>
-                <p>Phone: +919748903490</p>
-                <p><a href="https://mail.google.com/mail/u/0/#inbox">Email</a></p>
-            </div>
-            <div class="footer-info">
-                <p>&copy;College Group 23,Uem Kolkata,2021.All rights reserved.</p>
-            </div>
-            <div class="social-links">
-                <h3>Follow Us</h3>
-               <ul>
-                    <li><a href="#">Facebook</a></li>
-                    <li><a href="#">Twitter</a></li>
-                    <li><a href="#">Instagram</a></li>
-                </ul>
-            </div>
-        </footer>
-    
+      <form id="form">
+        <table class="user-table">
+          <tr>
+            <!-- Personal data Start's from here -->
+            <th>First Name</th>
+            <td><input type="text" name="first_name" id="personal_info_first_name" class="user-info"></td>
+          </tr>
+
+          <tr>
+            <th>Middle Name</th>
+            <td><input type="text" name="middle_name" id="personal_info_middle_name" class="user-info"></td>
+          </tr>
+
+          <tr>
+            <th>Last Name</th>
+            <td><input type="text" name="last_name" id="personal_info_last_name" class="user-info"></td>
+          </tr>
+
+          <tr>
+            <th>Gender</th>
+            <td><select name="gender" id="gender" class="user-info" required>
+                <option value="" disabled selected>Please Select</option>
+                <option value="Male">Male</option>
+                <option value="Female">Female</option>
+                <option value="Others">Others</option>
+              </select></td>
+          </tr>
+
+          <tr>
+            <th>Date of Birth</th>
+            <td><input type="date" name="dob" id="dob" class="user-info"></td>
+          </tr>
+
+          <tr>
+            <th>Blood Group</th>
+            <td><select name="blood_group" id="blood_group" class="user-info" required>
+                <option value="" disabled selected>Please Select</option>
+                <option value="A+">A+</option>
+                <option value="A-">A-</option>
+                <option value="B+">B+</option>
+                <option value="B-">B-</option>
+                <option value="O+">O+</option>
+                <option value="O-">O-</option>
+                <option value="AB+">AB+</option>
+                <option value="Ab-">AB-</option>
+              </select></td>
+          </tr>
+
+          <tr>
+            <th>Category</th>
+            <td><select name="category" id="personal_info_category" class="user-info" required>
+                <option value="" disabled selected>Please Select</option>
+                <option value="general">General</option>
+                <option value="obc">OBC</option>
+                <option value="sc">SC</option>
+                <option value="st">ST</option>
+              </select></td>
+          </tr>
+
+          <tr>
+            <th>Email</th>
+            <td><input type="email" name="email" id="personal_info_email" class="user-info" required></td>
+          </tr>
+
+          <tr>
+            <th>Contact</th>
+            <td><input type="number" name="contact" id="personal_info_contact" class="user-info" required></td>
+          </tr>
+          <!-- Address Start's from here -->
+          <tr>
+            <th>Present Address</th>
+            <th></th>
+          </tr>
+
+          <tr>
+            <th>Address</th>
+            <td><textarea name="present_address" id="present_address" class="user-info" rows="4" cols="30"></textarea>
+            </td>
+          </tr>
+
+          <tr>
+            <th>Pincode</th>
+            <td><input type="number" name="present_pincode" id="present_pincode" class="user-info"></td>
+          </tr>
+          <script src="/TEMP_STUDENT/js/dashboard_pincode.js"></script>
+          <tr>
+            <th>City</th>
+            <td><input type="text" name="present_city" id="present_city" class="user-info"></td>
+          </tr>
+
+          <tr>
+            <th>District</th>
+            <td><input type="text" name="present_district" id="present_district" class="user-info"></td>
+          </tr>
+
+          <tr>
+            <th>State</th>
+            <td><input type="text" name="present_state" id="present_state" class="user-info"></td>
+          </tr>
+          <script src="/TEMP_STUDENT/js/dashboard_c_box.js"></script>
+          <tr>
+            <th></th>
+            <td><input type="checkbox" id="same_as_present_address" onclick="copyPresentAddress()"> Same as Present
+              Address</td>
+          </tr>
+
+          <th>Permanent Address</th>
+          <tr>
+            <th>Address</th>
+            <td><textarea name="permanent_address" id="permanent_address" class="user-info" rows="4"
+                cols="30"></textarea></td>
+          </tr>
+
+          <tr>
+            <th>Pincode</th>
+            <td><input type="number" name="permanent_pincode" id="permanent_pincode" class="user-info"></td>
+          </tr>
+
+          <tr>
+            <th>City</th>
+            <td><input type="text" name="permanent_city" id="permanent_city" class="user-info"></td>
+          </tr>
+
+          <tr>
+            <th>District</th>
+            <td><input type="text" name="permanent_district" id="permanent_district" class="user-info"></td>
+          </tr>
+
+          <tr>
+            <th>State</th>
+            <td><input type="text" name="permanent_state" id="permanent_state" class="user-info"></td>
+          </tr>
+          <th>Academic Info</th>
+          <tr>
+            <th>Course Name</th>
+            <td><select name="college_courses" id="course_name">
+                <option value="#" disabled selected style="display: none">
+                  Select Course
+                </option>
+              </select></td>
+          </tr>
+
+          <tr>
+            <th>Duration</th>
+            <td>
+              <p id="course_duration"></p>
+            </td>
+          </tr>
+
+          <tr>
+            <th>Stream</th>
+            <td><select name="college_streams" id="course_stream">
+                <option value="#" disabled selected style="display: none">
+                  Select Stream
+                </option>
+              </select></td>
+          </tr>
+
+          <tr>
+            <th>Admission Year</th>
+            <td>
+              <p id="admission_year"></p>
+            </td>
+          </tr>
+          <script src="/ADMIN/js/updateStudent.js"></script>
+          <div class="btn-container"><button class="btn btn-1">Save</button></div>
+      </form>
+    </section>
+    <script src="/TEMP_STUDENT/js/colllage_info.js"></script>
+    <script src="/TEMP_STUDENT/js/usingCollageInfo.js"></script>
+    <script>
+      collegedata();
+      setCollegeDropdown();
+    </script>
+  </main>
+
+  <!-- <footer>
+    <div class="contact-info">
+      <h3>Contact Us</h3>
+      <p>Kolkata , WestBengal , India</p>
+      <p>Phone: +919748903490</p>
+      <p><a href="https://mail.google.com/mail/u/0/#inbox">Email</a></p>
+    </div>
+    <div class="footer-info">
+      <p>&copy;College Group 23,Uem Kolkata,2021.All rights reserved.</p>
+    </div>
+    <div class="social-links">
+      <h3>Follow Us</h3>
+      <ul>
+        <li><a href="#">Facebook</a></li>
+        <li><a href="#">Twitter</a></li>
+        <li><a href="#">Instagram</a></li>
+      </ul>
+    </div>
+  </footer> -->
+
 </body>
+
 </html>

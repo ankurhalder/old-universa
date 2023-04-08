@@ -211,6 +211,7 @@
         let stream = localStorage.getItem("stream-for-routine");
         let year = localStorage.getItem("year-for-routine");
         const verify = localStorage.getItem("token");
+        console.log(stream, year)
         let data
         fetch(
           `https://universa-api.onrender.com/routine/daily?year=${year}&stream=${stream}&section=${section}&day=${currentDay}`,

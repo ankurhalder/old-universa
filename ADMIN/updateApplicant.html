@@ -176,22 +176,34 @@
           <th>Academic Info</th>
           <tr>
             <th>Course Name</th>
-            <td><input type="text" name="course_name" id="course_name" class="user-info"></td>
+            <td><select name="college_courses" id="course_name">
+                <option value="#" disabled selected style="display: none">
+                  Select Course
+                </option>
+              </select></td>
           </tr>
 
           <tr>
             <th>Duration</th>
-            <td><input type="text" name="course_duration" id="course_duration" class="user-info"></td>
+            <td>
+              <p id="course_duration"></p>
+            </td>
           </tr>
 
           <tr>
             <th>Stream</th>
-            <td><input type="text" name="course_stream" id="stream" class="user-info"></td>
+            <td><select name="college_streams" id="course_stream">
+                <option value="#" disabled selected style="display: none">
+                  Select Stream
+                </option>
+              </select></td>
           </tr>
 
           <tr>
-            <th>Addmission Year</th>
-            <td><input type="number" name="addmission_year" id="admission_year" class="user-info"></td>
+            <th>Admission Year</th>
+            <td>
+              <p id="admission_year"></p>
+            </td>
           </tr>
         </table>
         <br>
@@ -201,6 +213,12 @@
         </div>
       </form>
     </section>
+    <script src="/TEMP_STUDENT/js/colllage_info.js"></script>
+    <script src="/TEMP_STUDENT/js/usingCollageInfo.js"></script>
+    <script>
+      collegedata();
+      setCollegeDropdown();
+    </script>
   </main>
   <!-- Footer -->
   <footer>
