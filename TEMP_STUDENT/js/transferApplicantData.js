@@ -7,7 +7,7 @@ function transferApplicantData() {
   fetch(`https://universa-api.onrender.com/student/temp/${userId}`, {
     method: "GET",
     headers: {
-      "token": verify,
+      token: verify,
       "Content-Type": "application/json",
     },
   })
@@ -49,16 +49,13 @@ function transferApplicantData() {
       PRESENT_STATE.value = data.data.personal_info.present_address.state;
       // Permanent Address
       let PERMANENT_ADDRESS = document.getElementById("permanent_address");
-      PERMANENT_ADDRESS.value =
-        data.data.personal_info.permanent_address.street;
+      PERMANENT_ADDRESS.value = data.data.personal_info.permanent_address.street;
       let PERMANENT_PINCODE = document.getElementById("permanent_pincode");
-      PERMANENT_PINCODE.value =
-        data.data.personal_info.permanent_address.pincode;
+      PERMANENT_PINCODE.value = data.data.personal_info.permanent_address.pincode;
       let PERMANENT_CITY = document.getElementById("permanent_city");
       PERMANENT_CITY.value = data.data.personal_info.permanent_address.city;
       let PERMANENT_DISTRICT = document.getElementById("permanent_district");
-      PERMANENT_DISTRICT.value =
-        data.data.personal_info.permanent_address.district;
+      PERMANENT_DISTRICT.value = data.data.personal_info.permanent_address.district;
       let PERMANENT_STATE = document.getElementById("permanent_state");
       PERMANENT_STATE.value = data.data.personal_info.permanent_address.state;
 

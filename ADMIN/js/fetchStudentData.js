@@ -2,7 +2,7 @@ function fetchData() {
   const urlParams = new URLSearchParams(window.location.search);
   // let applicant_id = urlParams.get("id");
   const userId = urlParams.get("id");
-  localStorage.setItem("student_update",userId);
+  localStorage.setItem("student_update", userId);
   const verify = localStorage.getItem("token");
   if (verify === null) {
     window.location.href = "/index.html";
@@ -12,7 +12,7 @@ function fetchData() {
     // include user_id in the URL
     method: "GET",
     headers: {
-      "token": verify,
+      token: verify,
       "Content-Type": "application/json",
     },
   })
@@ -20,10 +20,7 @@ function fetchData() {
     .then((data) => {
       console.log(data);
       let first_name_db = document.getElementById("full_name");
-      first_name_db.innerText =
-        data.data.personal_info.first_name +
-        " " +
-        data.data.personal_info.last_name;
+      first_name_db.innerText = data.data.personal_info.first_name + " " + data.data.personal_info.last_name;
       let User_Name_Dashboard = document.getElementById("user_name_dashboard");
       // User_Name_Dashboard.innerText =
       //   data.data.personal_info.first_name + `'s DASHBOARD`;
@@ -40,9 +37,7 @@ function fetchData() {
         Dob.innerText = "Please Update";
       } else {
         let DOB = new Date(data.data.personal_info.dob);
-        Dob.innerText = `${DOB.getDate()}/${
-          DOB.getMonth() + 1
-        }/${DOB.getFullYear()}`;
+        Dob.innerText = `${DOB.getDate()}/${DOB.getMonth() + 1}/${DOB.getFullYear()}`;
       }
       let Category = document.getElementById("category");
       Category.innerText = data.data.personal_info.category;
@@ -54,28 +49,22 @@ function fetchData() {
       let presentCity = document.getElementById("present_city");
       presentCity.innerText = data.data.personal_info.present_address.city;
       let presentPincode = document.getElementById("present_pincode");
-      presentPincode.innerText =
-        data.data.personal_info.present_address.pincode;
+      presentPincode.innerText = data.data.personal_info.present_address.pincode;
       let presentDistrict = document.getElementById("present_district");
-      presentDistrict.innerText =
-        data.data.personal_info.present_address.district;
+      presentDistrict.innerText = data.data.personal_info.present_address.district;
       let presentState = document.getElementById("present_state");
       presentState.innerText = data.data.personal_info.present_address.state;
       // permanent address
       let permanentAddress = document.getElementById("permanent_address");
-      permanentAddress.innerText =
-        data.data.personal_info.permanent_address.street;
+      permanentAddress.innerText = data.data.personal_info.permanent_address.street;
       let permanentCity = document.getElementById("permanent_city");
       permanentCity.innerText = data.data.personal_info.permanent_address.city;
       let permanentPincode = document.getElementById("permanent_pincode");
-      permanentPincode.innerText =
-        data.data.personal_info.permanent_address.pincode;
+      permanentPincode.innerText = data.data.personal_info.permanent_address.pincode;
       let permanentDistrict = document.getElementById("permanent_district");
-      permanentDistrict.innerText =
-        data.data.personal_info.permanent_address.district;
+      permanentDistrict.innerText = data.data.personal_info.permanent_address.district;
       let permanentState = document.getElementById("permanent_state");
-      permanentState.innerText =
-        data.data.personal_info.permanent_address.state;
+      permanentState.innerText = data.data.personal_info.permanent_address.state;
       // course Info
       let admissionYear = document.getElementById("admission_year");
       admissionYear.innerText = data.data.course_info.admission_year;

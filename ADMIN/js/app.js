@@ -1,17 +1,13 @@
 const wrapper = document.getElementById("signature-pad");
 const clearButton = wrapper.querySelector("[data-action=clear]");
-const changeBackgroundColorButton = wrapper.querySelector(
-  "[data-action=change-background-color]"
-);
+const changeBackgroundColorButton = wrapper.querySelector("[data-action=change-background-color]");
 const changeColorButton = wrapper.querySelector("[data-action=change-color]");
 const changeWidthButton = wrapper.querySelector("[data-action=change-width]");
 const undoButton = wrapper.querySelector("[data-action=undo]");
 const savePNGButton = wrapper.querySelector("[data-action=save-png]");
 const saveJPGButton = wrapper.querySelector("[data-action=save-jpg]");
 const saveSVGButton = wrapper.querySelector("[data-action=save-svg]");
-const saveSVGWithBackgroundButton = wrapper.querySelector(
-  "[data-action=save-svg-with-background]"
-);
+const saveSVGWithBackgroundButton = wrapper.querySelector("[data-action=save-svg-with-background]");
 const canvas = wrapper.querySelector("canvas");
 const signaturePad = new SignaturePad(canvas, {
   // It's Necessary to use an opaque color when saving image as JPEG;

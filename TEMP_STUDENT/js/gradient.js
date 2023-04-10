@@ -2,15 +2,7 @@
 const heading = document.getElementById("my-heading");
 
 // Define the gradient colors
-const gradientColors = [
-  "blue",
-  "lightblue",
-  "yellow",
-  "green",
-  "blue",
-  "indigo",
-  "violet",
-];
+const gradientColors = ["blue", "lightblue", "yellow", "green", "blue", "indigo", "violet"];
 
 // Define the gradient direction
 const gradientDirection = "to right";
@@ -19,9 +11,7 @@ const gradientDirection = "to right";
 const gradientDuration = "2s";
 
 // Create the gradient CSS string
-const gradient = `linear-gradient(${gradientDirection}, ${gradientColors.join(
-  ", "
-)})`;
+const gradient = `linear-gradient(${gradientDirection}, ${gradientColors.join(", ")})`;
 
 // Set the gradient as the font color and animate it
 heading.style.color = gradient;

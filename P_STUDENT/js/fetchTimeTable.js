@@ -20,43 +20,32 @@ function fetchTimeTable() {
   console.log(year);
   console.log(stream);
   console.log(section);
-  fetch(
-    `https://universa-api.onrender.com/routine/weekly?year=${year}&stream=${stream}&section=${section}`,
-    {
-      method: "GET",
-      headers: {
-        "Content-Type": "application/json",
-        "token": localStorage.getItem("token"),
-      },
-    }
-  )
+  fetch(`https://universa-api.onrender.com/routine/weekly?year=${year}&stream=${stream}&section=${section}`, {
+    method: "GET",
+    headers: {
+      "Content-Type": "application/json",
+      token: localStorage.getItem("token"),
+    },
+  })
     .then((response) => response.json())
     .then((data) => {
       console.log(data);
       let period_1_start_time = document.getElementById("period-1-start-time");
-      period_1_start_time.innerText =
-        data.data[0].start + ` - ` + data.data[0].end;
+      period_1_start_time.innerText = data.data[0].start + ` - ` + data.data[0].end;
       let period_2_start_time = document.getElementById("period-2-start-time");
-      period_2_start_time.innerText =
-        data.data[1].start + ` - ` + data.data[1].end;
+      period_2_start_time.innerText = data.data[1].start + ` - ` + data.data[1].end;
       let period_3_start_time = document.getElementById("period-3-start-time");
-      period_3_start_time.innerText =
-        data.data[2].start + ` - ` + data.data[2].end;
+      period_3_start_time.innerText = data.data[2].start + ` - ` + data.data[2].end;
       let period_4_start_time = document.getElementById("period-4-start-time");
-      period_4_start_time.innerText =
-        data.data[3].start + ` - ` + data.data[3].end;
+      period_4_start_time.innerText = data.data[3].start + ` - ` + data.data[3].end;
       let period_5_start_time = document.getElementById("period-5-start-time");
-      period_5_start_time.innerText =
-        data.data[4].start + ` - ` + data.data[4].end;
+      period_5_start_time.innerText = data.data[4].start + ` - ` + data.data[4].end;
       let period_6_start_time = document.getElementById("period-6-start-time");
-      period_6_start_time.innerText =
-        data.data[5].start + ` - ` + data.data[5].end;
+      period_6_start_time.innerText = data.data[5].start + ` - ` + data.data[5].end;
       let period_7_start_time = document.getElementById("period-7-start-time");
-      period_7_start_time.innerText =
-        data.data[6].start + ` - ` + data.data[6].end;
+      period_7_start_time.innerText = data.data[6].start + ` - ` + data.data[6].end;
       let period_8_start_time = document.getElementById("period-8-start-time");
-      period_8_start_time.innerText =
-        data.data[7].start + ` - ` + data.data[7].end;
+      period_8_start_time.innerText = data.data[7].start + ` - ` + data.data[7].end;
     })
     .catch((error) => console.error(error));
 }

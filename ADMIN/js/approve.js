@@ -11,13 +11,10 @@ function approve() {
   const presentCity = document.getElementById("present_city").innerText;
   const presentDistrict = document.getElementById("present_district").innerText;
   const presentState = document.getElementById("present_state").innerText;
-  const permanentAddress =
-    document.getElementById("permanent_address").innerText;
-  const permanentPincode =
-    document.getElementById("permanent_pincode").innerText;
+  const permanentAddress = document.getElementById("permanent_address").innerText;
+  const permanentPincode = document.getElementById("permanent_pincode").innerText;
   const permanentCity = document.getElementById("permanent_city").innerText;
-  const permanentDistrict =
-    document.getElementById("permanent_district").innerText;
+  const permanentDistrict = document.getElementById("permanent_district").innerText;
   const permanentState = document.getElementById("permanent_state").innerText;
   const date_Of_Birth = document.getElementById("dob").innerText;
   const blood_Groop = document.getElementById("blood_group").innerText;
@@ -76,7 +73,7 @@ function approve() {
     body: JSON.stringify(userdata),
     headers: {
       "Content-Type": "application/json",
-      "token": localStorage.getItem("token"),
+      token: localStorage.getItem("token"),
     },
   })
     .then((response) => response.json())

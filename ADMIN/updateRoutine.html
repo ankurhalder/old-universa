@@ -1,971 +1,495 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Update Routine</title>
-  </head>
-  <link rel="stylesheet" href="/ADMIN/CSS/update_routine.css" />
-  <script src="/TEMP_STUDENT/js/logout.js"></script>
-  <body onload=" ">
-    <!-- Header -->
-    <header>
-      <div class="left_side">
-        <ul class="nav_links">
-          <li class="home_link"><a href="/ADMIN/admin.html">Universa</a></li>
-        </ul>
-      </div>
-      <div class="right_side">
-        <div class="dropdown">
-          <button class="dropbtn">Menu &#9660;</button>
-          <div class="dropdown-panel hide">
-            <a href="/ADMIN/admin_services.html">Services</a>
-            <a href="/ADMIN/admin_info.html">Info</a>
-            <a href="">Change Password</a>
-            <div class="logout_container">
-              <button onclick="logout()" class="logout btn">Logout</button>
-            </div>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Update Routine</title>
+</head>
+<link rel="stylesheet" href="/ADMIN/CSS/update_routine.css" />
+<script src="/TEMP_STUDENT/js/logout.js"></script>
+
+<body onload=" ">
+  <!-- Header -->
+  <header>
+    <div class="left_side">
+      <ul class="nav_links">
+        <li class="home_link"><a href="/ADMIN/admin.html">Universa</a></li>
+      </ul>
+    </div>
+    <div class="right_side">
+      <div class="dropdown">
+        <button class="dropbtn">Menu &#9660;</button>
+        <div class="dropdown-panel hide">
+          <a href="/ADMIN/admin_services.html">Services</a>
+          <a href="/ADMIN/admin_info.html">Info</a>
+          <a href="">Change Password</a>
+          <div class="logout_container">
+            <button onclick="logout()" class="logout btn">Logout</button>
           </div>
         </div>
       </div>
-    </header>
-    <main>
-      <h1 class="heading">Update Student Routine</h1>
-      <p class="student_year" id="student-year">Please Select Student Year:</p>
-      <select name="select-year" id="select-year" class="select_year" required>
-        <option value="" disabled selected>Please Select</option>
-        <option value="1">First Year</option>
-        <option value="2">Second Year</option>
-        <option value="3">Third Year</option>
-        <option value="4">Fourth Year</option>
-      </select>
+    </div>
+  </header>
+  <main>
+    <h1 class="heading">Update Student Routine</h1>
+    <p class="student_year" id="student-year">Please Select Student Year:</p>
+    <select name="select-year" id="select-year" class="select_year" required>
+      <option value="" disabled selected>Please Select</option>
+      <option value="1">First Year</option>
+      <option value="2">Second Year</option>
+      <option value="3">Third Year</option>
+      <option value="4">Fourth Year</option>
+    </select>
 
-      <p class="student_stream" id="student-stream">
-        PLease Select Student Stream
-      </p>
-      <select
-        name="select-stream"
-        id="select-stream"
-        class="select_stream"
-        required
-      >
-        <option value="" disabled selected>Please Select</option>
-        <option value="CST">CST</option>
-        <option value="CSIT">CSIT</option>
-        <option value="CSE">CSE</option>
-        <option value="CS(A.I.M.L)">CS(A.I.M.L)</option>
-        <option value="CS(I.O.T)">CS(I.O.T)</option>
-        <option value="BIO-TECH">BIO-TECH</option>
-      </select>
+    <p class="student_stream" id="student-stream">
+      PLease Select Student Stream
+    </p>
+    <select name="select-stream" id="select-stream" class="select_stream" required>
+      <option value="" disabled selected>Please Select</option>
+      <option value="CST">CST</option>
+      <option value="CSIT">CSIT</option>
+      <option value="CSE">CSE</option>
+      <option value="CS(A.I.M.L)">CS(A.I.M.L)</option>
+      <option value="CS(I.O.T)">CS(I.O.T)</option>
+      <option value="BIO-TECH">BIO-TECH</option>
+    </select>
 
-      <p class="student_section" id="student-section">
-        PLease Select Student Section
-      </p>
-      <select
-        name="select-section"
-        id="select-section"
-        class="select_stream"
-        required
-      >
-        <option value="" disabled selected>Please Select</option>
-        <option value="A">A</option>
-        <option value="B">B</option>
-        <option value="C">C</option>
-        <option value="D">D</option>
-        <option value="E">E</option>
-        <option value="F">F</option>
-        <option value="G">G</option>
-        <option value="H">H</option>
-        <option value="I">I</option>
-        <option value="J">J</option>
-        <option value="K">K</option>
-        <option value="L">L</option>
-        <option value="M">M</option>
-        <option value="N">N</option>
-      </select>
-      <!-- Create Time Table -->
-      <script src="/ADMIN/js/validateIncomigData.js"></script>
-      <button onclick="onLoadHandler()" class="btn time-table-btn-container">
-        Fetch Routine
-      </button>
+    <p class="student_section" id="student-section">
+      PLease Select Student Section
+    </p>
+    <select name="select-section" id="select-section" class="select_stream" required>
+      <option value="" disabled selected>Please Select</option>
+      <option value="A">A</option>
+      <option value="B">B</option>
+      <option value="C">C</option>
+      <option value="D">D</option>
+      <option value="E">E</option>
+      <option value="F">F</option>
+      <option value="G">G</option>
+      <option value="H">H</option>
+      <option value="I">I</option>
+      <option value="J">J</option>
+      <option value="K">K</option>
+      <option value="L">L</option>
+      <option value="M">M</option>
+      <option value="N">N</option>
+    </select>
+    <!-- Create Time Table -->
+    <script src="/ADMIN/js/validateIncomigData.js"></script>
+    <button onclick="onLoadHandler()" class="btn time-table-btn-container">
+      Fetch Routine
+    </button>
 
-      <!-- Routine table start's from here -->
-      <table>
-        <tr>
-          <th>Time Table</th>
-          <th>Monday</th>
-          <th>Tuesday</th>
-          <th>Wednesday</th>
-          <th>Thursday</th>
-          <th>Friday</th>
-        </tr>
-        <!-- First Period -->
-        <tr>
-          <td>
-            <p class="period_1_start_time" id="period-1-start-time"></p>
-            <p class="period_1_end_time" id="period-1-end-time"></p>
-          </td>
-          <td>
-            <input
-              class="monday_period_1"
-              type="text"
-              id="monday-period-1"
-              placeholder="Enter Subject"
-            />
-            <br />
-            <input
-              class="faculty_monday_period_1"
-              type="text"
-              id="faculty-monday-period-1"
-              placeholder="Enter Faculty Name"
-            />
-            <br />
-            <input
-              class="roomno_monday_period_1"
-              type="text"
-              id="roomno-monday-period-1"
-              placeholder="Enter Room No."
-            />
-          </td>
-          <td>
-            <input
-              class="tuesday_period_1"
-              type="text"
-              id="tuesday-period-1"
-              placeholder="Enter Subject"
-            />
-            <br />
-            <input
-              class="faculty_tuesday_period_1"
-              type="text"
-              id="faculty-tuesday-period-1"
-              placeholder="Enter Faculty Name"
-            />
-            <br />
-            <input
-              class="roomno_tuesday_period_1"
-              type="text"
-              id="roomno-tuesday-period-1"
-              placeholder="Enter Room No."
-            />
-          </td>
-          <td>
-            <input
-              class="wednesday_period_1"
-              type="text"
-              id="wednesday-period-1"
-              placeholder="Enter Subject"
-            />
-            <br />
-            <input
-              class="faculty_wednesday_period_1"
-              type="text"
-              id="faculty-wednesday-period-1"
-              placeholder="Enter Faculty Name"
-            />
-            <br />
-            <input
-              class="roomno_wednesday_period_1"
-              type="text"
-              id="roomno-wednesday-period-1"
-              placeholder="Enter Room No."
-            />
-          </td>
-          <td>
-            <input
-              class="thursday_period_1"
-              type="text"
-              id="thursday-period-1"
-              placeholder="Enter Subject"
-            />
-            <br />
-            <input
-              class="faculty_thursday_period_1"
-              type="text"
-              id="faculty-thursday-period-1"
-              placeholder="Enter Faculty Name"
-            />
-            <br />
-            <input
-              class="roomno_thursday_period_1"
-              type="text"
-              id="roomno-thursday-period-1"
-              placeholder="Enter Room No."
-            />
-          </td>
-          <td>
-            <input
-              class="friday_period_1"
-              type="text"
-              id="friday-period-1"
-              placeholder="Enter Subject"
-            />
-            <br />
-            <input
-              class="faculty_friday_period_1"
-              type="text"
-              id="faculty-friday-period-1"
-              placeholder="Enter Faculty Name"
-            />
-            <br />
-            <input
-              class="roomno_friday_period_1"
-              type="text"
-              id="roomno-friday-period-1"
-              placeholder="Enter Room No."
-            />
-          </td>
-        </tr>
-        <!-- 2nd Period -->
-        <tr>
-          <td>
-            <p class="period_2_start_time" id="period-2-start-time"></p>
-            <p class="period_2_end_time" id="period-2-end-time"></p>
-          </td>
-          <td>
-            <input
-              class="monday_period_2"
-              type="text"
-              id="monday-period-2"
-              placeholder="Enter Subject"
-            />
-            <br />
-            <input
-              class="faculty_monday_period_2"
-              type="text"
-              id="faculty-monday-period-2"
-              placeholder="Enter Faculty Name"
-            />
-            <br />
-            <input
-              class="roomno_monday_period_2"
-              type="text"
-              id="roomno-monday-period-2"
-              placeholder="Enter Room No."
-            />
-          </td>
-          <td>
-            <input
-              class="tuesday_period_2"
-              type="text"
-              id="tuesday-period-2"
-              placeholder="Enter Subject"
-            />
-            <br />
-            <input
-              class="faculty_tuesday_period_2"
-              type="text"
-              id="faculty-tuesday-period-2"
-              placeholder="Enter Faculty Name"
-            />
-            <br />
-            <input
-              class="roomno_tuesday_period_2"
-              type="text"
-              id="roomno-tuesday-period-2"
-              placeholder="Enter Room No."
-            />
-          </td>
-          <td>
-            <input
-              class="wednesday_period_2"
-              type="text"
-              id="wednesday-period-2"
-              placeholder="Enter Subject"
-            />
-            <br />
-            <input
-              class="faculty_wednesday_period_2"
-              type="text"
-              id="faculty-wednesday-period-2"
-              placeholder="Enter Faculty Name"
-            />
-            <br />
-            <input
-              class="roomno_wednesday_period_2"
-              type="text"
-              id="roomno-wednesday-period-2"
-              placeholder="Enter Room No."
-            />
-          </td>
-          <td>
-            <input
-              class="thursday_period_2"
-              type="text"
-              id="thursday-period-2"
-              placeholder="Enter Subject"
-            />
-            <br />
-            <input
-              class="faculty_thursday_period_2"
-              type="text"
-              id="faculty-thursday-period-2"
-              placeholder="Enter Faculty Name"
-            />
-            <br />
-            <input
-              class="roomno_thursday_period_2"
-              type="text"
-              id="roomno-thursday-period-2"
-              placeholder="Enter Room No."
-            />
-          </td>
-          <td>
-            <input
-              class="friday_period_2"
-              type="text"
-              id="friday-period-2"
-              placeholder="Enter Subject"
-            />
-            <br />
-            <input
-              class="faculty_friday_period_2"
-              type="text"
-              id="faculty-friday-period-2"
-              placeholder="Enter Faculty Name"
-            />
-            <br />
-            <input
-              class="roomno_friday_period_2"
-              type="text"
-              id="roomno-friday-period-2"
-              placeholder="Enter Room No."
-            />
-          </td>
-        </tr>
-        <!-- 3rd Period -->
-        <tr>
-          <td>
-            <p class="period_3_start_time" id="period-3-start-time"></p>
-            <p class="period_3_end_time" id="period-3-end-time"></p>
-          </td>
-          <td>
-            <input
-              class="monday_period_3"
-              type="text"
-              id="monday-period-3"
-              placeholder="Enter Subject"
-            />
-            <br />
-            <input
-              class="faculty_monday_period_3"
-              type="text"
-              id="faculty-monday-period-3"
-              placeholder="Enter Faculty Name"
-            />
-            <br />
-            <input
-              class="roomno_monday_period_3"
-              type="text"
-              id="roomno-monday-period-3"
-              placeholder="Enter Room No."
-            />
-          </td>
-          <td>
-            <input
-              class="tuesday_period_3"
-              type="text"
-              id="tuesday-period-3"
-              placeholder="Enter Subject"
-            />
-            <br />
-            <input
-              class="faculty_tuesday_period_3"
-              type="text"
-              id="faculty-tuesday-period-3"
-              placeholder="Enter Faculty Name"
-            />
-            <br />
-            <input
-              class="roomno_tuesday_period_3"
-              type="text"
-              id="roomno-tuesday-period-3"
-              placeholder="Enter Room No."
-            />
-          </td>
-          <td>
-            <input
-              class="wednesday_period_3"
-              type="text"
-              id="wednesday-period-3"
-              placeholder="Enter Subject"
-            />
-            <br />
-            <input
-              class="faculty_wednesday_period_3"
-              type="text"
-              id="faculty-wednesday-period-3"
-              placeholder="Enter Faculty Name"
-            />
-            <br />
-            <input
-              class="roomno_wednesday_period_3"
-              type="text"
-              id="roomno-wednesday-period-3"
-              placeholder="Enter Room No."
-            />
-          </td>
-          <td>
-            <input
-              class="thursday_period_3"
-              type="text"
-              id="thursday-period-3"
-              placeholder="Enter Subject"
-            />
-            <br />
-            <input
-              class="faculty_thursday_period_3"
-              type="text"
-              id="faculty-thursday-period-3"
-              placeholder="Enter Faculty Name"
-            />
-            <br />
-            <input
-              class="roomno_thursday_period_3"
-              type="text"
-              id="roomno-thursday-period-3"
-              placeholder="Enter Room No."
-            />
-          </td>
-          <td>
-            <input
-              class="friday_period_3"
-              type="text"
-              id="friday-period-3"
-              placeholder="Enter Subject"
-            />
-            <br />
-            <input
-              class="faculty_friday_period_3"
-              type="text"
-              id="faculty-friday-period-3"
-              placeholder="Enter Faculty Name"
-            />
-            <br />
-            <input
-              class="roomno_friday_period_3"
-              type="text"
-              id="roomno-friday-period-3"
-              placeholder="Enter Room No."
-            />
-          </td>
-        </tr>
-        <!-- 4th Period -->
-        <tr>
-          <td>
-            <p class="period_4_start_time" id="period-4-start-time"></p>
-            <p class="period_4_end_time" id="period-4-end-time"></p>
-          </td>
-          <td class="break" id="break-id">Break</td>
-          <td class="break" id="break-id">Break</td>
-          <td class="break" id="break-id">Break</td>
-          <td class="break" id="break-id">Break</td>
-          <td class="break" id="break-id">Break</td>
-        </tr>
-        <!-- 5th Period -->
-        <tr>
-          <td>
-            <p class="period_5_start_time" id="period-5-start-time"></p>
-            <p class="period_5_end_time" id="period-5-end-time"></p>
-          </td>
-          <td>
-            <input
-              class="monday_period_5"
-              type="text"
-              id="monday-period-5"
-              placeholder="Enter Subject"
-            />
-            <br />
-            <input
-              class="faculty_monday_period_5"
-              type="text"
-              id="faculty-monday-period-5"
-              placeholder="Enter Faculty Name"
-            />
-            <br />
-            <input
-              class="roomno_monday_period_5"
-              type="text"
-              id="roomno-monday-period-5"
-              placeholder="Enter Room No."
-            />
-          </td>
-          <td>
-            <input
-              class="tuesday_period_5"
-              type="text"
-              id="tuesday-period-5"
-              placeholder="Enter Subject"
-            />
-            <br />
-            <input
-              class="faculty_tuesday_period_5"
-              type="text"
-              id="faculty-tuesday-period-5"
-              placeholder="Enter Faculty Name"
-            />
-            <br />
-            <input
-              class="roomno_tuesday_period_5"
-              type="text"
-              id="roomno-tuesday-period-5"
-              placeholder="Enter Room No."
-            />
-          </td>
-          <td>
-            <input
-              class="wednesday_period_5"
-              type="text"
-              id="wednesday-period-5"
-              placeholder="Enter Subject"
-            />
-            <br />
-            <input
-              class="faculty_wednesday_period_5"
-              type="text"
-              id="faculty-wednesday-period-5"
-              placeholder="Enter Faculty Name"
-            />
-            <br />
-            <input
-              class="roomno_wednesday_period_5"
-              type="text"
-              id="roomno-wednesday-period-5"
-              placeholder="Enter Room No."
-            />
-          </td>
-          <td>
-            <input
-              class="thursday_period_5"
-              type="text"
-              id="thursday-period-5"
-              placeholder="Enter Subject"
-            />
-            <br />
-            <input
-              class="faculty_thursday_period_5"
-              type="text"
-              id="faculty-thursday-period-5"
-              placeholder="Enter Faculty Name"
-            />
-            <br />
-            <input
-              class="roomno_thursday_period_5"
-              type="text"
-              id="roomno-thursday-period-5"
-              placeholder="Enter Room No."
-            />
-          </td>
-          <td>
-            <input
-              class="friday_period_5"
-              type="text"
-              id="friday-period-5"
-              placeholder="Enter Subject"
-            />
-            <br />
-            <input
-              class="faculty_friday_period_5"
-              type="text"
-              id="faculty-friday-period-5"
-              placeholder="Enter Faculty Name"
-            />
-            <br />
-            <input
-              class="roomno_friday_period_5"
-              type="text"
-              id="roomno-friday-period-5"
-              placeholder="Enter Room No."
-            />
-          </td>
-        </tr>
+    <!-- Routine table start's from here -->
+    <table>
+      <tr>
+        <th>Time Table</th>
+        <th>Monday</th>
+        <th>Tuesday</th>
+        <th>Wednesday</th>
+        <th>Thursday</th>
+        <th>Friday</th>
+      </tr>
+      <!-- First Period -->
+      <tr>
+        <td>
+          <p class="period_1_start_time" id="period-1-start-time"></p>
+          <p class="period_1_end_time" id="period-1-end-time"></p>
+        </td>
+        <td>
+          <input class="monday_period_1" type="text" id="monday-period-1" placeholder="Enter Subject" />
+          <br />
+          <input class="faculty_monday_period_1" type="text" id="faculty-monday-period-1"
+            placeholder="Enter Faculty Name" />
+          <br />
+          <input class="roomno_monday_period_1" type="text" id="roomno-monday-period-1" placeholder="Enter Room No." />
+        </td>
+        <td>
+          <input class="tuesday_period_1" type="text" id="tuesday-period-1" placeholder="Enter Subject" />
+          <br />
+          <input class="faculty_tuesday_period_1" type="text" id="faculty-tuesday-period-1"
+            placeholder="Enter Faculty Name" />
+          <br />
+          <input class="roomno_tuesday_period_1" type="text" id="roomno-tuesday-period-1"
+            placeholder="Enter Room No." />
+        </td>
+        <td>
+          <input class="wednesday_period_1" type="text" id="wednesday-period-1" placeholder="Enter Subject" />
+          <br />
+          <input class="faculty_wednesday_period_1" type="text" id="faculty-wednesday-period-1"
+            placeholder="Enter Faculty Name" />
+          <br />
+          <input class="roomno_wednesday_period_1" type="text" id="roomno-wednesday-period-1"
+            placeholder="Enter Room No." />
+        </td>
+        <td>
+          <input class="thursday_period_1" type="text" id="thursday-period-1" placeholder="Enter Subject" />
+          <br />
+          <input class="faculty_thursday_period_1" type="text" id="faculty-thursday-period-1"
+            placeholder="Enter Faculty Name" />
+          <br />
+          <input class="roomno_thursday_period_1" type="text" id="roomno-thursday-period-1"
+            placeholder="Enter Room No." />
+        </td>
+        <td>
+          <input class="friday_period_1" type="text" id="friday-period-1" placeholder="Enter Subject" />
+          <br />
+          <input class="faculty_friday_period_1" type="text" id="faculty-friday-period-1"
+            placeholder="Enter Faculty Name" />
+          <br />
+          <input class="roomno_friday_period_1" type="text" id="roomno-friday-period-1" placeholder="Enter Room No." />
+        </td>
+      </tr>
+      <!-- 2nd Period -->
+      <tr>
+        <td>
+          <p class="period_2_start_time" id="period-2-start-time"></p>
+          <p class="period_2_end_time" id="period-2-end-time"></p>
+        </td>
+        <td>
+          <input class="monday_period_2" type="text" id="monday-period-2" placeholder="Enter Subject" />
+          <br />
+          <input class="faculty_monday_period_2" type="text" id="faculty-monday-period-2"
+            placeholder="Enter Faculty Name" />
+          <br />
+          <input class="roomno_monday_period_2" type="text" id="roomno-monday-period-2" placeholder="Enter Room No." />
+        </td>
+        <td>
+          <input class="tuesday_period_2" type="text" id="tuesday-period-2" placeholder="Enter Subject" />
+          <br />
+          <input class="faculty_tuesday_period_2" type="text" id="faculty-tuesday-period-2"
+            placeholder="Enter Faculty Name" />
+          <br />
+          <input class="roomno_tuesday_period_2" type="text" id="roomno-tuesday-period-2"
+            placeholder="Enter Room No." />
+        </td>
+        <td>
+          <input class="wednesday_period_2" type="text" id="wednesday-period-2" placeholder="Enter Subject" />
+          <br />
+          <input class="faculty_wednesday_period_2" type="text" id="faculty-wednesday-period-2"
+            placeholder="Enter Faculty Name" />
+          <br />
+          <input class="roomno_wednesday_period_2" type="text" id="roomno-wednesday-period-2"
+            placeholder="Enter Room No." />
+        </td>
+        <td>
+          <input class="thursday_period_2" type="text" id="thursday-period-2" placeholder="Enter Subject" />
+          <br />
+          <input class="faculty_thursday_period_2" type="text" id="faculty-thursday-period-2"
+            placeholder="Enter Faculty Name" />
+          <br />
+          <input class="roomno_thursday_period_2" type="text" id="roomno-thursday-period-2"
+            placeholder="Enter Room No." />
+        </td>
+        <td>
+          <input class="friday_period_2" type="text" id="friday-period-2" placeholder="Enter Subject" />
+          <br />
+          <input class="faculty_friday_period_2" type="text" id="faculty-friday-period-2"
+            placeholder="Enter Faculty Name" />
+          <br />
+          <input class="roomno_friday_period_2" type="text" id="roomno-friday-period-2" placeholder="Enter Room No." />
+        </td>
+      </tr>
+      <!-- 3rd Period -->
+      <tr>
+        <td>
+          <p class="period_3_start_time" id="period-3-start-time"></p>
+          <p class="period_3_end_time" id="period-3-end-time"></p>
+        </td>
+        <td>
+          <input class="monday_period_3" type="text" id="monday-period-3" placeholder="Enter Subject" />
+          <br />
+          <input class="faculty_monday_period_3" type="text" id="faculty-monday-period-3"
+            placeholder="Enter Faculty Name" />
+          <br />
+          <input class="roomno_monday_period_3" type="text" id="roomno-monday-period-3" placeholder="Enter Room No." />
+        </td>
+        <td>
+          <input class="tuesday_period_3" type="text" id="tuesday-period-3" placeholder="Enter Subject" />
+          <br />
+          <input class="faculty_tuesday_period_3" type="text" id="faculty-tuesday-period-3"
+            placeholder="Enter Faculty Name" />
+          <br />
+          <input class="roomno_tuesday_period_3" type="text" id="roomno-tuesday-period-3"
+            placeholder="Enter Room No." />
+        </td>
+        <td>
+          <input class="wednesday_period_3" type="text" id="wednesday-period-3" placeholder="Enter Subject" />
+          <br />
+          <input class="faculty_wednesday_period_3" type="text" id="faculty-wednesday-period-3"
+            placeholder="Enter Faculty Name" />
+          <br />
+          <input class="roomno_wednesday_period_3" type="text" id="roomno-wednesday-period-3"
+            placeholder="Enter Room No." />
+        </td>
+        <td>
+          <input class="thursday_period_3" type="text" id="thursday-period-3" placeholder="Enter Subject" />
+          <br />
+          <input class="faculty_thursday_period_3" type="text" id="faculty-thursday-period-3"
+            placeholder="Enter Faculty Name" />
+          <br />
+          <input class="roomno_thursday_period_3" type="text" id="roomno-thursday-period-3"
+            placeholder="Enter Room No." />
+        </td>
+        <td>
+          <input class="friday_period_3" type="text" id="friday-period-3" placeholder="Enter Subject" />
+          <br />
+          <input class="faculty_friday_period_3" type="text" id="faculty-friday-period-3"
+            placeholder="Enter Faculty Name" />
+          <br />
+          <input class="roomno_friday_period_3" type="text" id="roomno-friday-period-3" placeholder="Enter Room No." />
+        </td>
+      </tr>
+      <!-- 4th Period -->
+      <tr>
+        <td>
+          <p class="period_4_start_time" id="period-4-start-time"></p>
+          <p class="period_4_end_time" id="period-4-end-time"></p>
+        </td>
+        <td class="break" id="break-id">Break</td>
+        <td class="break" id="break-id">Break</td>
+        <td class="break" id="break-id">Break</td>
+        <td class="break" id="break-id">Break</td>
+        <td class="break" id="break-id">Break</td>
+      </tr>
+      <!-- 5th Period -->
+      <tr>
+        <td>
+          <p class="period_5_start_time" id="period-5-start-time"></p>
+          <p class="period_5_end_time" id="period-5-end-time"></p>
+        </td>
+        <td>
+          <input class="monday_period_5" type="text" id="monday-period-5" placeholder="Enter Subject" />
+          <br />
+          <input class="faculty_monday_period_5" type="text" id="faculty-monday-period-5"
+            placeholder="Enter Faculty Name" />
+          <br />
+          <input class="roomno_monday_period_5" type="text" id="roomno-monday-period-5" placeholder="Enter Room No." />
+        </td>
+        <td>
+          <input class="tuesday_period_5" type="text" id="tuesday-period-5" placeholder="Enter Subject" />
+          <br />
+          <input class="faculty_tuesday_period_5" type="text" id="faculty-tuesday-period-5"
+            placeholder="Enter Faculty Name" />
+          <br />
+          <input class="roomno_tuesday_period_5" type="text" id="roomno-tuesday-period-5"
+            placeholder="Enter Room No." />
+        </td>
+        <td>
+          <input class="wednesday_period_5" type="text" id="wednesday-period-5" placeholder="Enter Subject" />
+          <br />
+          <input class="faculty_wednesday_period_5" type="text" id="faculty-wednesday-period-5"
+            placeholder="Enter Faculty Name" />
+          <br />
+          <input class="roomno_wednesday_period_5" type="text" id="roomno-wednesday-period-5"
+            placeholder="Enter Room No." />
+        </td>
+        <td>
+          <input class="thursday_period_5" type="text" id="thursday-period-5" placeholder="Enter Subject" />
+          <br />
+          <input class="faculty_thursday_period_5" type="text" id="faculty-thursday-period-5"
+            placeholder="Enter Faculty Name" />
+          <br />
+          <input class="roomno_thursday_period_5" type="text" id="roomno-thursday-period-5"
+            placeholder="Enter Room No." />
+        </td>
+        <td>
+          <input class="friday_period_5" type="text" id="friday-period-5" placeholder="Enter Subject" />
+          <br />
+          <input class="faculty_friday_period_5" type="text" id="faculty-friday-period-5"
+            placeholder="Enter Faculty Name" />
+          <br />
+          <input class="roomno_friday_period_5" type="text" id="roomno-friday-period-5" placeholder="Enter Room No." />
+        </td>
+      </tr>
 
-        <!-- 6th Period -->
-        <tr>
-          <td>
-            <p class="period_6_start_time" id="period-6-start-time"></p>
-            <p class="period_6_end_time" id="period-6-end-time"></p>
-          </td>
-          <td>
-            <input
-              class="monday_period_6"
-              type="text"
-              id="monday-period-6"
-              placeholder="Enter Subject"
-            />
-            <br />
-            <input
-              class="faculty_monday_period_6"
-              type="text"
-              id="faculty-monday-period-6"
-              placeholder="Enter Faculty Name"
-            />
-            <br />
-            <input
-              class="roomno_monday_period_6"
-              type="text"
-              id="roomno-monday-period-6"
-              placeholder="Enter Room No."
-            />
-          </td>
-          <td>
-            <input
-              class="tuesday_period_6"
-              type="text"
-              id="tuesday-period-6"
-              placeholder="Enter Subject"
-            />
-            <br />
-            <input
-              class="faculty_tuesday_period_6"
-              type="text"
-              id="faculty-tuesday-period-6"
-              placeholder="Enter Faculty Name"
-            />
-            <br />
-            <input
-              class="roomno_tuesday_period_6"
-              type="text"
-              id="roomno-tuesday-period-6"
-              placeholder="Enter Room No."
-            />
-          </td>
-          <td>
-            <input
-              class="wednesday_period_6"
-              type="text"
-              id="wednesday-period-6"
-              placeholder="Enter Subject"
-            />
-            <br />
-            <input
-              class="faculty_wednesday_period_6"
-              type="text"
-              id="faculty-wednesday-period-6"
-              placeholder="Enter Faculty Name"
-            />
-            <br />
-            <input
-              class="roomno_wednesday_period_6"
-              type="text"
-              id="roomno-wednesday-period-6"
-              placeholder="Enter Room No."
-            />
-          </td>
-          <td>
-            <input
-              class="thursday_period_6"
-              type="text"
-              id="thursday-period-6"
-              placeholder="Enter Subject"
-            />
-            <br />
-            <input
-              class="faculty_thursday_period_6"
-              type="text"
-              id="faculty-thursday-period-6"
-              placeholder="Enter Faculty Name"
-            />
-            <br />
-            <input
-              class="roomno_thursday_period_6"
-              type="text"
-              id="roomno-thursday-period-6"
-              placeholder="Enter Room No."
-            />
-          </td>
-          <td>
-            <input
-              class="friday_period_6"
-              type="text"
-              id="friday-period-6"
-              placeholder="Enter Subject"
-            />
-            <br />
-            <input
-              class="faculty_friday_period_6"
-              type="text"
-              id="faculty-friday-period-6"
-              placeholder="Enter Faculty Name"
-            />
-            <br />
-            <input
-              class="roomno_friday_period_6"
-              type="text"
-              id="roomno-friday-period-6"
-              placeholder="Enter Room No."
-            />
-          </td>
-        </tr>
+      <!-- 6th Period -->
+      <tr>
+        <td>
+          <p class="period_6_start_time" id="period-6-start-time"></p>
+          <p class="period_6_end_time" id="period-6-end-time"></p>
+        </td>
+        <td>
+          <input class="monday_period_6" type="text" id="monday-period-6" placeholder="Enter Subject" />
+          <br />
+          <input class="faculty_monday_period_6" type="text" id="faculty-monday-period-6"
+            placeholder="Enter Faculty Name" />
+          <br />
+          <input class="roomno_monday_period_6" type="text" id="roomno-monday-period-6" placeholder="Enter Room No." />
+        </td>
+        <td>
+          <input class="tuesday_period_6" type="text" id="tuesday-period-6" placeholder="Enter Subject" />
+          <br />
+          <input class="faculty_tuesday_period_6" type="text" id="faculty-tuesday-period-6"
+            placeholder="Enter Faculty Name" />
+          <br />
+          <input class="roomno_tuesday_period_6" type="text" id="roomno-tuesday-period-6"
+            placeholder="Enter Room No." />
+        </td>
+        <td>
+          <input class="wednesday_period_6" type="text" id="wednesday-period-6" placeholder="Enter Subject" />
+          <br />
+          <input class="faculty_wednesday_period_6" type="text" id="faculty-wednesday-period-6"
+            placeholder="Enter Faculty Name" />
+          <br />
+          <input class="roomno_wednesday_period_6" type="text" id="roomno-wednesday-period-6"
+            placeholder="Enter Room No." />
+        </td>
+        <td>
+          <input class="thursday_period_6" type="text" id="thursday-period-6" placeholder="Enter Subject" />
+          <br />
+          <input class="faculty_thursday_period_6" type="text" id="faculty-thursday-period-6"
+            placeholder="Enter Faculty Name" />
+          <br />
+          <input class="roomno_thursday_period_6" type="text" id="roomno-thursday-period-6"
+            placeholder="Enter Room No." />
+        </td>
+        <td>
+          <input class="friday_period_6" type="text" id="friday-period-6" placeholder="Enter Subject" />
+          <br />
+          <input class="faculty_friday_period_6" type="text" id="faculty-friday-period-6"
+            placeholder="Enter Faculty Name" />
+          <br />
+          <input class="roomno_friday_period_6" type="text" id="roomno-friday-period-6" placeholder="Enter Room No." />
+        </td>
+      </tr>
 
-        <!-- 7th Period -->
-        <tr>
-          <td>
-            <p class="period_7_start_time" id="period-7-start-time"></p>
-            <p class="period_7_end_time" id="period-7-end-time"></p>
-          </td>
-          <td>
-            <input
-              class="monday_period_7"
-              type="text"
-              id="monday-period-7"
-              placeholder="Enter Subject"
-            />
-            <br />
-            <input
-              class="faculty_monday_period_7"
-              type="text"
-              id="faculty-monday-period-7"
-              placeholder="Enter Faculty Name"
-            />
-            <br />
-            <input
-              class="roomno_monday_period_7"
-              type="text"
-              id="roomno-monday-period-7"
-              placeholder="Enter Room No."
-            />
-          </td>
-          <td>
-            <input
-              class="tuesday_period_7"
-              type="text"
-              id="tuesday-period-7"
-              placeholder="Enter Subject"
-            />
-            <br />
-            <input
-              class="faculty_tuesday_period_7"
-              type="text"
-              id="faculty-tuesday-period-7"
-              placeholder="Enter Faculty Name"
-            />
-            <br />
-            <input
-              class="roomno_tuesday_period_7"
-              type="text"
-              id="roomno-tuesday-period-7"
-              placeholder="Enter Room No."
-            />
-          </td>
-          <td>
-            <input
-              class="wednesday_period_7"
-              type="text"
-              id="wednesday-period-7"
-              placeholder="Enter Subject"
-            />
-            <br />
-            <input
-              class="faculty_wednesday_period_7"
-              type="text"
-              id="faculty-wednesday-period-7"
-              placeholder="Enter Faculty Name"
-            />
-            <br />
-            <input
-              class="roomno_wednesday_period_7"
-              type="text"
-              id="roomno-wednesday-period-7"
-              placeholder="Enter Room No."
-            />
-          </td>
-          <td>
-            <input
-              class="thursday_period_7"
-              type="text"
-              id="thursday-period-7"
-              placeholder="Enter Subject"
-            />
-            <br />
-            <input
-              class="faculty_thursday_period_7"
-              type="text"
-              id="faculty-thursday-period-7"
-              placeholder="Enter Faculty Name"
-            />
-            <br />
-            <input
-              class="roomno_thursday_period_7"
-              type="text"
-              id="roomno-thursday-period-7"
-              placeholder="Enter Room No."
-            />
-          </td>
-          <td>
-            <input
-              class="friday_period_7"
-              type="text"
-              id="friday-period-7"
-              placeholder="Enter Subject"
-            />
-            <br />
-            <input
-              class="faculty_friday_period_7"
-              type="text"
-              id="faculty-friday-period-7"
-              placeholder="Enter Faculty Name"
-            />
-            <br />
-            <input
-              class="roomno_friday_period_7"
-              type="text"
-              id="roomno-friday-period-7"
-              placeholder="Enter Room No."
-            />
-          </td>
-        </tr>
+      <!-- 7th Period -->
+      <tr>
+        <td>
+          <p class="period_7_start_time" id="period-7-start-time"></p>
+          <p class="period_7_end_time" id="period-7-end-time"></p>
+        </td>
+        <td>
+          <input class="monday_period_7" type="text" id="monday-period-7" placeholder="Enter Subject" />
+          <br />
+          <input class="faculty_monday_period_7" type="text" id="faculty-monday-period-7"
+            placeholder="Enter Faculty Name" />
+          <br />
+          <input class="roomno_monday_period_7" type="text" id="roomno-monday-period-7" placeholder="Enter Room No." />
+        </td>
+        <td>
+          <input class="tuesday_period_7" type="text" id="tuesday-period-7" placeholder="Enter Subject" />
+          <br />
+          <input class="faculty_tuesday_period_7" type="text" id="faculty-tuesday-period-7"
+            placeholder="Enter Faculty Name" />
+          <br />
+          <input class="roomno_tuesday_period_7" type="text" id="roomno-tuesday-period-7"
+            placeholder="Enter Room No." />
+        </td>
+        <td>
+          <input class="wednesday_period_7" type="text" id="wednesday-period-7" placeholder="Enter Subject" />
+          <br />
+          <input class="faculty_wednesday_period_7" type="text" id="faculty-wednesday-period-7"
+            placeholder="Enter Faculty Name" />
+          <br />
+          <input class="roomno_wednesday_period_7" type="text" id="roomno-wednesday-period-7"
+            placeholder="Enter Room No." />
+        </td>
+        <td>
+          <input class="thursday_period_7" type="text" id="thursday-period-7" placeholder="Enter Subject" />
+          <br />
+          <input class="faculty_thursday_period_7" type="text" id="faculty-thursday-period-7"
+            placeholder="Enter Faculty Name" />
+          <br />
+          <input class="roomno_thursday_period_7" type="text" id="roomno-thursday-period-7"
+            placeholder="Enter Room No." />
+        </td>
+        <td>
+          <input class="friday_period_7" type="text" id="friday-period-7" placeholder="Enter Subject" />
+          <br />
+          <input class="faculty_friday_period_7" type="text" id="faculty-friday-period-7"
+            placeholder="Enter Faculty Name" />
+          <br />
+          <input class="roomno_friday_period_7" type="text" id="roomno-friday-period-7" placeholder="Enter Room No." />
+        </td>
+      </tr>
 
-        <!-- 8th Period -->
-        <tr>
-          <td>
-            <p class="period_8_start_time" id="period-8-start-time"></p>
-            <p class="period_8_end_time" id="period-8-end-time"></p>
-          </td>
-          <td>
-            <input
-              class="monday_period_8"
-              type="text"
-              id="monday-period-8"
-              placeholder="Enter Subject"
-            />
-            <br />
-            <input
-              class="faculty_monday_period_8"
-              type="text"
-              id="faculty-monday-period-8"
-              placeholder="Enter Faculty Name"
-            />
-            <br />
-            <input
-              class="roomno_monday_period_8"
-              type="text"
-              id="roomno-monday-period-8"
-              placeholder="Enter Room No."
-            />
-          </td>
-          <td>
-            <input
-              class="tuesday_period_8"
-              type="text"
-              id="tuesday-period-8"
-              placeholder="Enter Subject"
-            />
-            <br />
-            <input
-              class="faculty_tuesday_period_8"
-              type="text"
-              id="faculty-tuesday-period-8"
-              placeholder="Enter Faculty Name"
-            />
-            <br />
-            <input
-              class="roomno_tuesday_period_8"
-              type="text"
-              id="roomno-tuesday-period-8"
-              placeholder="Enter Room No."
-            />
-          </td>
-          <td>
-            <input
-              class="wednesday_period_8"
-              type="text"
-              id="wednesday-period-8"
-              placeholder="Enter Subject"
-            />
-            <br />
-            <input
-              class="faculty_wednesday_period_8"
-              type="text"
-              id="faculty-wednesday-period-8"
-              placeholder="Enter Faculty Name"
-            />
-            <br />
-            <input
-              class="roomno_wednesday_period_8"
-              type="text"
-              id="roomno-wednesday-period-8"
-              placeholder="Enter Room No."
-            />
-          </td>
-          <td>
-            <input
-              class="thursday_period_8"
-              type="text"
-              id="thursday-period-8"
-              placeholder="Enter Subject"
-            />
-            <br />
-            <input
-              class="faculty_thursday_period_8"
-              type="text"
-              id="faculty-thursday-period-8"
-              placeholder="Enter Faculty Name"
-            />
-            <br />
-            <input
-              class="roomno_thursday_period_8"
-              type="text"
-              id="roomno-thursday-period-8"
-              placeholder="Enter Room No."
-            />
-          </td>
-          <td>
-            <input
-              class="friday_period_8"
-              type="text"
-              id="friday-period-8"
-              placeholder="Enter Subject"
-            />
-            <br />
-            <input
-              class="faculty_friday_period_8"
-              type="text"
-              id="faculty-friday-period-8"
-              placeholder="Enter Faculty Name"
-            />
-            <br />
-            <input
-              class="roomno_friday_period_8"
-              type="text"
-              id="roomno-friday-period-8"
-              placeholder="Enter Room No."
-            />
-          </td>
-        </tr>
-      </table>
-      <script src="/ADMIN/js/updateRoutine.js"></script>
-      <div class="btn-container">
-        <button class="btn" onclick="updateRoutine()">Update</button>
-      </div>
-    </main>
-    <footer>
-      <div class="contact-info">
-        <h3>Contact Us</h3>
-        <p>Kolkata , WestBengal , India</p>
-        <p>Phone: +919748903490</p>
-        <p><a href="mailto: ankur.halder12345@gmail.com">Send Email</a></p>
-      </div>
-      <div class="footer-info">
-        <p>&copy;College Group 23,Uem Kolkata,2021.All rights reserved.</p>
-      </div>
-      <div class="social-links">
-        <h3>Follow Us</h3>
-        <ul>
-          <li><a href="#">Facebook</a></li>
-          <li><a href="#">Twitter</a></li>
-          <li><a href="#">Instagram</a></li>
-        </ul>
-      </div>
-    </footer>
-    <script src="/ADMIN/js/updateRoutineDataFeed.js"></script>
-    <script src="/ADMIN/js/fetchTimeTable.js"></script>
-    <script>
-      const onLoadHandler = () => {
-        updateRoutineDataFeed();
-        fetchTimeTable();
-      };
-    </script>
-  </body>
+      <!-- 8th Period -->
+      <tr>
+        <td>
+          <p class="period_8_start_time" id="period-8-start-time"></p>
+          <p class="period_8_end_time" id="period-8-end-time"></p>
+        </td>
+        <td>
+          <input class="monday_period_8" type="text" id="monday-period-8" placeholder="Enter Subject" />
+          <br />
+          <input class="faculty_monday_period_8" type="text" id="faculty-monday-period-8"
+            placeholder="Enter Faculty Name" />
+          <br />
+          <input class="roomno_monday_period_8" type="text" id="roomno-monday-period-8" placeholder="Enter Room No." />
+        </td>
+        <td>
+          <input class="tuesday_period_8" type="text" id="tuesday-period-8" placeholder="Enter Subject" />
+          <br />
+          <input class="faculty_tuesday_period_8" type="text" id="faculty-tuesday-period-8"
+            placeholder="Enter Faculty Name" />
+          <br />
+          <input class="roomno_tuesday_period_8" type="text" id="roomno-tuesday-period-8"
+            placeholder="Enter Room No." />
+        </td>
+        <td>
+          <input class="wednesday_period_8" type="text" id="wednesday-period-8" placeholder="Enter Subject" />
+          <br />
+          <input class="faculty_wednesday_period_8" type="text" id="faculty-wednesday-period-8"
+            placeholder="Enter Faculty Name" />
+          <br />
+          <input class="roomno_wednesday_period_8" type="text" id="roomno-wednesday-period-8"
+            placeholder="Enter Room No." />
+        </td>
+        <td>
+          <input class="thursday_period_8" type="text" id="thursday-period-8" placeholder="Enter Subject" />
+          <br />
+          <input class="faculty_thursday_period_8" type="text" id="faculty-thursday-period-8"
+            placeholder="Enter Faculty Name" />
+          <br />
+          <input class="roomno_thursday_period_8" type="text" id="roomno-thursday-period-8"
+            placeholder="Enter Room No." />
+        </td>
+        <td>
+          <input class="friday_period_8" type="text" id="friday-period-8" placeholder="Enter Subject" />
+          <br />
+          <input class="faculty_friday_period_8" type="text" id="faculty-friday-period-8"
+            placeholder="Enter Faculty Name" />
+          <br />
+          <input class="roomno_friday_period_8" type="text" id="roomno-friday-period-8" placeholder="Enter Room No." />
+        </td>
+      </tr>
+    </table>
+    <script src="/ADMIN/js/updateRoutine.js"></script>
+    <div class="btn-container">
+      <button class="btn" onclick="updateRoutine()">Update</button>
+    </div>
+  </main>
+  <footer>
+    <div class="contact-info">
+      <h3>Contact Us</h3>
+      <p>Kolkata , WestBengal , India</p>
+      <p>Phone: +919748903490</p>
+      <p><a href="mailto: ankur.halder12345@gmail.com">Send Email</a></p>
+    </div>
+    <div class="footer-info">
+      <p>&copy;College Group 23,Uem Kolkata,2021.All rights reserved.</p>
+    </div>
+    <div class="social-links">
+      <h3>Follow Us</h3>
+      <ul>
+        <li><a href="#">Facebook</a></li>
+        <li><a href="#">Twitter</a></li>
+        <li><a href="#">Instagram</a></li>
+      </ul>
+    </div>
+  </footer>
+  <script src="/ADMIN/js/updateRoutineDataFeed.js"></script>
+  <script src="/ADMIN/js/fetchTimeTable.js"></script>
+  <script>
+    const onLoadHandler = () => {
+      updateRoutineDataFeed();
+      fetchTimeTable();
+    };
+  </script>
+</body>
+
 </html>

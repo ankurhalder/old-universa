@@ -3,9 +3,7 @@ const collegedata = () => {
 
   fetch(`https://universa-api.onrender.com/college?college_id=${college_id}`, {
     method: "GET",
-    headres: {
-      
-    },
+    headres: {},
   })
     .then((response) => response.json())
     .then((data) => {

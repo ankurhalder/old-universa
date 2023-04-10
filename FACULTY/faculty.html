@@ -1,141 +1,142 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Faculty Dashboard</title>
-  </head>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.3.2/html2canvas.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.5/FileSaver.min.js"></script>
-  <script src="/TEMP_STUDENT/js/logout.js"></script>
-  <link rel="stylesheet" href="/FACULTY/css/faculty.css" />
-  <body>
-    <!-- Header -->
-    <header>
-      <div class="left_side">
-        <ul class="nav_links">
-          <li class="home_link">
-            <a href="/FACULTY/faculty.html">Universa</a>
-          </li>
-        </ul>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Faculty Dashboard</title>
+</head>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.3.2/html2canvas.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.5/FileSaver.min.js"></script>
+<script src="/TEMP_STUDENT/js/logout.js"></script>
+<link rel="stylesheet" href="/FACULTY/css/faculty.css" />
+
+<body>
+  <!-- Header -->
+  <header>
+    <div class="left_side">
+      <ul class="nav_links">
+        <li class="home_link">
+          <a href="/FACULTY/faculty.html">Universa</a>
+        </li>
+      </ul>
+    </div>
+    <div class="right_side">
+      <div class="dropdown">
+        <button class="dropbtn">Menu &#9660;</button>
+        <div class="dropdown-panel hide">
+          <a href="/FACULTY/services.html">Services</a>
+          <a href="/FACULTY/info.html">Info</a>
+          <a href="">Update Profile</a>
+          <a href="">See Routine</a>
+          <a href="">Go To Scanner</a>
+          <div class="logout_container">
+            <button onclick="logout()" class="btn logout">Logout</button>
+          </div>
+        </div>
       </div>
-      <div class="right_side">
-        <div class="dropdown">
-          <button class="dropbtn">Menu &#9660;</button>
-          <div class="dropdown-panel hide">
-            <a href="/FACULTY/services.html">Services</a>
-            <a href="/FACULTY/info.html">Info</a>
-            <a href="">Update Profile</a>
-            <a href="">See Routine</a>
-            <a href="">Go To Scanner</a>
-            <div class="logout_container">
-              <button onclick="logout()" class="btn logout">Logout</button>
+    </div>
+  </header>
+  <script src="/TEMP_STUDENT/js/dropDown.js"></script>
+  <main>
+    <h1 class="dashboard_heading" id="dashboard"></h1>
+    <!-- ID card  -->
+    <div class="id-card">
+      <div class="id-card-content">
+        <div class="id-card-header">
+          <img src="" alt="logo" class="logo" />
+          <h1 class="id-card-header-text">
+            University Of Engineering & Management
+          </h1>
+          <div class="id-card-header-details">
+            <p class="id-card-header-text">
+              Plot No - III-B/5, New Town Action Area - III, Kolkata 700160
+            </p>
+            <p class="id-card-header-text">PH: 080107 00500</p>
+            <p class="id-card-header-text">EMAIL: admissions@iemcal.com</p>
+          </div>
+        </div>
+        <div class="id-card-body">
+          <div class="id-card-left-side">
+            <div class="id-card-photo">
+              <img src="" alt="Student Photo" />
+            </div>
+            <div class="id-card-qr-code">
+              <img src="" alt="QR code" class="qrcode" />
+            </div>
+            <div class="id-card-signature">
+              <p class="id-card-signature-label">Signature</p>
+              <span class="id-card-signature-value" id="signature"></span>
+            </div>
+          </div>
+          <div class="id-card-right-side">
+            <div class="id-card-name">
+              <p class="id-card-label">Full Name:</p>
+              <span class="id-card-value" id="full_name"></span>
+            </div>
+            <div class="id-card-contact-no">
+              <p class="id-card-label">Contact No.:</p>
+              <span class="id-card-value" id="contact_no"></span>
+            </div>
+            <div class="id-card-blood-group">
+              <p class="id-card-label">Blood Group:</p>
+              <span class="id-card-value" id="blood_group"></span>
+            </div>
+            <div class="id-card-dob">
+              <p class="id-card-label">Date Of Birth:</p>
+              <span class="id-card-value" id="dob"></span>
+            </div>
+            <div class="id-card-stream">
+              <p class="id-card-label">Stream:</p>
+              <span class="id-card-value" id="stream"></span>
+            </div>
+            <div class="id-card-enrollment-no">
+              <p class="id-card-label">Enrollment no:</p>
+              <span class="id-card-value" id="enrollment_number"></span>
+            </div>
+            <div class="id-card-registration-no">
+              <p class="id-card-label">Registration no:</p>
+              <span class="id-card-value" id="registration_number">To be updated</span>
             </div>
           </div>
         </div>
       </div>
-    </header>
-    <script src="/TEMP_STUDENT/js/dropDown.js"></script>
-    <main>
-      <h1 class="dashboard_heading" id="dashboard"></h1>
-      <!-- ID card  -->
-      <div class="id-card">
-        <div class="id-card-content">
-          <div class="id-card-header">
-            <img src="" alt="logo" class="logo" />
-            <h1 class="id-card-header-text">
-              University Of Engineering & Management
-            </h1>
-            <div class="id-card-header-details">
-              <p class="id-card-header-text">
-                Plot No - III-B/5, New Town Action Area - III, Kolkata 700160
-              </p>
-              <p class="id-card-header-text">PH: 080107 00500</p>
-              <p class="id-card-header-text">EMAIL: admissions@iemcal.com</p>
-            </div>
-          </div>
-          <div class="id-card-body">
-            <div class="id-card-left-side">
-              <div class="id-card-photo">
-                <img src="" alt="Student Photo" />
-              </div>
-              <div class="id-card-qr-code">
-                <img src="" alt="QR code" class="qrcode" />
-              </div>
-              <div class="id-card-signature">
-                <p class="id-card-signature-label">Signature</p>
-                <span class="id-card-signature-value" id="signature"></span>
-              </div>
-            </div>
-            <div class="id-card-right-side">
-              <div class="id-card-name">
-                <p class="id-card-label">Full Name:</p>
-                <span class="id-card-value" id="full_name"></span>
-              </div>
-              <div class="id-card-contact-no">
-                <p class="id-card-label">Contact No.:</p>
-                <span class="id-card-value" id="contact_no"></span>
-              </div>
-              <div class="id-card-blood-group">
-                <p class="id-card-label">Blood Group:</p>
-                <span class="id-card-value" id="blood_group"></span>
-              </div>
-              <div class="id-card-dob">
-                <p class="id-card-label">Date Of Birth:</p>
-                <span class="id-card-value" id="dob"></span>
-              </div>
-              <div class="id-card-stream">
-                <p class="id-card-label">Stream:</p>
-                <span class="id-card-value" id="stream"></span>
-              </div>
-              <div class="id-card-enrollment-no">
-                <p class="id-card-label">Enrollment no:</p>
-                <span class="id-card-value" id="enrollment_number"></span>
-              </div>
-              <div class="id-card-registration-no">
-                <p class="id-card-label">Registration no:</p>
-                <span class="id-card-value" id="registration_number"
-                  >To be updated</span
-                >
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <!-- Sidebar -->
-      <button id="toggle-sidebar" onclick="toggleSidebar()">&#x25B6;</button>
-      <div id="mySidebar">
-        <button id="download-btn" class="sidebar-btn">Download ID Card</button>
-        <script src="/P_STUDENT/js/capture-ID.js"></script>
-        <!-- <script src="/P_STUDENT/js/redirect.js"></script>
+    </div>
+    <!-- Sidebar -->
+    <button id="toggle-sidebar" onclick="toggleSidebar()">&#x25B6;</button>
+    <div id="mySidebar">
+      <button id="download-btn" class="sidebar-btn">Download ID Card</button>
+      <script src="/P_STUDENT/js/capture-ID.js"></script>
+      <!-- <script src="/P_STUDENT/js/redirect.js"></script>
       <button onclick="scanner()" id="go-to-scanner-btn" class="sidebar-btn">Go to Scanner</button> -->
-        <script src=""></script>
-        <button onclick="routine()" id="go-to-routine-btn" class="sidebar-btn">
-          Go to Routine
-        </button>
-        <!-- <button onclick="updateProfile()" id="update-permanent-Account" class="sidebar-btn">Update Your Profile</button> -->
-      </div>
-      <script src="/P_STUDENT/js/sidebar.js"></script>
-    </main>
-    <footer>
-      <div class="contact-info">
-        <h3>Contact Us</h3>
-        <p>Kolkata , WestBengal , India</p>
-        <p>Phone: +919748903490</p>
-        <p><a href="mailto: ankur.halder12345@gmail.com">Send Email</a></p>
-      </div>
-      <div class="footer-info">
-        <p>&copy;College Group 23,Uem Kolkata,2021.All rights reserved.</p>
-      </div>
-      <div class="social-links">
-        <h3>Follow Us</h3>
-        <ul>
-          <li><a href="#">Facebook</a></li>
-          <li><a href="#">Twitter</a></li>
-          <li><a href="#">Instagram</a></li>
-        </ul>
-      </div>
-    </footer>
-  </body>
+      <script src=""></script>
+      <button onclick="routine()" id="go-to-routine-btn" class="sidebar-btn">
+        Go to Routine
+      </button>
+      <!-- <button onclick="updateProfile()" id="update-permanent-Account" class="sidebar-btn">Update Your Profile</button> -->
+    </div>
+    <script src="/P_STUDENT/js/sidebar.js"></script>
+  </main>
+  <footer>
+    <div class="contact-info">
+      <h3>Contact Us</h3>
+      <p>Kolkata , WestBengal , India</p>
+      <p>Phone: +919748903490</p>
+      <p><a href="mailto: ankur.halder12345@gmail.com">Send Email</a></p>
+    </div>
+    <div class="footer-info">
+      <p>&copy;College Group 23,Uem Kolkata,2021.All rights reserved.</p>
+    </div>
+    <div class="social-links">
+      <h3>Follow Us</h3>
+      <ul>
+        <li><a href="#">Facebook</a></li>
+        <li><a href="#">Twitter</a></li>
+        <li><a href="#">Instagram</a></li>
+      </ul>
+    </div>
+  </footer>
+</body>
+
 </html>

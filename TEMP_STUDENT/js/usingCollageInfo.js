@@ -20,8 +20,7 @@ const setStreamsDropdown = () => {
   let available_streams;
   for (let i = 0; i < collegeData.college_courses.length; i++) {
     if (collegeData.college_courses[i].name === selected_course) {
-      course_duration.innerText =
-        parseInt(collegeData.college_courses[i].total_sem) / 2;
+      course_duration.innerText = parseInt(collegeData.college_courses[i].total_sem) / 2;
       available_streams = collegeData.college_courses[i].streams;
     }
   }

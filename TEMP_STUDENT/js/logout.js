@@ -5,7 +5,7 @@ function logout() {
     method: "GET",
     credentials: "include",
     headers: {
-      "token": d,
+      token: d,
     },
   })
     .then((response) => response.json())
@@ -19,7 +19,7 @@ function logout() {
         // Remove user ID from local storage
         localStorage.removeItem("loginUserId");
         localStorage.removeItem("token");
-        localStorage.clear()
+        localStorage.clear();
         // console.log(localStorage.getItem("loginUserId"));
 
         window.location.href = "/index.html";

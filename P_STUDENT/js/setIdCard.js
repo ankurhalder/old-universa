@@ -42,14 +42,9 @@ const setIdCard = () => {
       identity_token: identity_token.identity_token,
     },
   };
-  document.getElementById("id-card-body-image").style.backgroundImage =
-    "url('" + localStorage.getItem("imgurl") + "')";
-  qrCode.src = `https://api.qrserver.com/v1/create-qr-code/?size=1000x1000&data=${JSON.stringify(
-    qrCodeData
-  )}&color=0-102-255`;
-  qrCodeBack.src = `https://api.qrserver.com/v1/create-qr-code/?size=1000x1000&data=${JSON.stringify(
-    qrCodeData
-  )}&color=0-102-255`;
+  document.getElementById("id-card-body-image").style.backgroundImage = "url('" + localStorage.getItem("imgurl") + "')";
+  qrCode.src = `https://api.qrserver.com/v1/create-qr-code/?size=1000x1000&data=${JSON.stringify(qrCodeData)}&color=0-102-255`;
+  qrCodeBack.src = `https://api.qrserver.com/v1/create-qr-code/?size=1000x1000&data=${JSON.stringify(qrCodeData)}&color=0-102-255`;
 };
 
 const showBackSide = () => {

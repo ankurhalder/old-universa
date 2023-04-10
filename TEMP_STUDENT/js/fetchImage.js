@@ -4,13 +4,13 @@ function fetchImage() {
     method: "GET",
     credentials: "include",
     headers: {
-      "token": Token,
+      token: Token,
       profile_image_name: Token,
     },
   })
     .then((response) => response.json())
     .then((data) => {
-      console.log(data)
+      console.log(data);
       const img = document.getElementById("user-image");
       if (img) {
         img.src = data.data.files[0].url;

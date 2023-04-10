@@ -1,280 +1,179 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Create Time Table</title>
-  </head>
-  <link rel="stylesheet" href="/ADMIN/CSS/createTimeTable.css" />
-  <script src="/ADMIN/js/verifyAdminLogin.js"></script>
-  <script src="/TEMP_STUDENT/js/logout.js"></script>
-  <script src="/ADMIN/js/createTimeTable.js"></script>
-  <body onload="veryfyLogin()">
-    <!-- Header -->
-    <header>
-      <div class="left_side">
-        <ul class="nav_links">
-          <li class="home_link"><a href="/ADMIN/admin.html">Universa</a></li>
-        </ul>
-      </div>
-      <div class="right_side">
-        <div class="dropdown">
-          <button class="dropbtn">Menu &#9660;</button>
-          <div class="dropdown-panel hide">
-            <a href="/ADMIN/admin_services.html">Services</a>
-            <a href="/ADMIN/admin_info.html">Info</a>
-            <a href="">Change Password</a>
-            <div class="logout_container">
-              <button onclick="logout()" class="logout btn">Logout</button>
-            </div>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Create Time Table</title>
+</head>
+<link rel="stylesheet" href="/ADMIN/CSS/createTimeTable.css" />
+<script src="/ADMIN/js/verifyAdminLogin.js"></script>
+<script src="/TEMP_STUDENT/js/logout.js"></script>
+<script src="/ADMIN/js/createTimeTable.js"></script>
+
+<body onload="veryfyLogin()">
+  <!-- Header -->
+  <header>
+    <div class="left_side">
+      <ul class="nav_links">
+        <li class="home_link"><a href="/ADMIN/admin.html">Universa</a></li>
+      </ul>
+    </div>
+    <div class="right_side">
+      <div class="dropdown">
+        <button class="dropbtn">Menu &#9660;</button>
+        <div class="dropdown-panel hide">
+          <a href="/ADMIN/admin_services.html">Services</a>
+          <a href="/ADMIN/admin_info.html">Info</a>
+          <a href="">Change Password</a>
+          <div class="logout_container">
+            <button onclick="logout()" class="logout btn">Logout</button>
           </div>
         </div>
       </div>
-    </header>
-    <script src="/TEMP_STUDENT/js/dropDown.js"></script>
-    <main>
-      <table>
-        <tr class="period-row" id="period-1-row">
-          <th class="period-header" id="period-1-header">Period-1</th>
-          <td>
-            <input
-              type="text"
-              class="period_1_start_time"
-              id="period-1-start-time"
-              placeholder="Period-1 Start Time hh:mm"
-            />
-          </td>
-          <td>
-            <input
-              type="text"
-              class="period_1_end_time"
-              id="period-1-end-time"
-              placeholder="Period-1 End Time hh:mm"
-            />
-          </td>
-          <td>
-            <input
-              type="text"
-              class="period_1_duration"
-              id="period-1-duration"
-              placeholder="Period-1 Duration (Don't need to type here)"
-            />
-          </td>
-        </tr>
-        <tr class="period-row" id="period-2-row">
-          <th class="period-header" id="period-2-header">Period-2</th>
-          <td>
-            <input
-              type="text"
-              class="period_2_start_time"
-              id="period-2-start-time"
-              placeholder="Period-2 Start Time hh:mm"
-            />
-          </td>
-          <td>
-            <input
-              type="text"
-              class="period_2_end_time"
-              id="period-2-end-time"
-              placeholder="Period-2 End Time hh:mm"
-            />
-          </td>
-          <td>
-            <input
-              type="text"
-              class="period_2_duration"
-              id="period-2-duration"
-              placeholder="Period-2 Duration (Don't need to type here)"
-            />
-          </td>
-        </tr>
-        <tr class="period-row" id="period-3-row">
-          <th class="period-header" id="period-3-header">Period-3</th>
-          <td>
-            <input
-              type="text"
-              class="period_3_start_time"
-              id="period-3-start-time"
-              placeholder="Period-3 Start Time hh:mm"
-            />
-          </td>
-          <td>
-            <input
-              type="text"
-              class="period_3_end_time"
-              id="period-3-end-time"
-              placeholder="Period-3 End Time hh:mm"
-            />
-          </td>
-          <td>
-            <input
-              type="text"
-              class="period_3_duration"
-              id="period-3-duration"
-              placeholder="Period-3 Duration (Don't need to type here)"
-            />
-          </td>
-        </tr>
-        <tr class="period-row" id="period-4-row">
-          <th class="period-header" id="period-4-header">Period-4</th>
-          <td>
-            <input
-              type="text"
-              class="period_4_start_time"
-              id="period-4-start-time"
-              placeholder="Period-4 Start Time hh:mm"
-            />
-          </td>
-          <td>
-            <input
-              type="text"
-              class="period_4_end_time"
-              id="period-4-end-time"
-              placeholder="Period-4 End Time hh:mm"
-            />
-          </td>
-          <td>
-            <input
-              type="text"
-              class="period_4_duration"
-              id="period-4-duration"
-              placeholder="Period-4 Duration (Don't need to type here)"
-            />
-          </td>
-        </tr>
-        <tr class="period-row" id="period-5-row">
-          <th class="period-header" id="period-5-header">Period-5</th>
-          <td>
-            <input
-              type="text"
-              class="period_5_start_time"
-              id="period-5-start-time"
-              placeholder="Period-5 Start Time hh:mm"
-            />
-          </td>
-          <td>
-            <input
-              type="text"
-              class="period_5_end_time"
-              id="period-5-end-time"
-              placeholder="Period-5 End Time hh:mm"
-            />
-          </td>
-          <td>
-            <input
-              type="text"
-              class="period_5_duration"
-              id="period-5-duration"
-              placeholder="Period-5 Duration (Don't need to type here)"
-            />
-          </td>
-        </tr>
-        <tr class="period-row" id="period-6-row">
-          <th class="period-header" id="period-6-header">Period-6</th>
-          <td>
-            <input
-              type="text"
-              class="period_6_start_time"
-              id="period-6-start-time"
-              placeholder="Period-6 Start Time hh:mm"
-            />
-          </td>
-          <td>
-            <input
-              type="text"
-              class="period_6_end_time"
-              id="period-6-end-time"
-              placeholder="Period-6 End Time hh:mm"
-            />
-          </td>
-          <td>
-            <input
-              type="text"
-              class="period_6_duration"
-              id="period-6-duration"
-              placeholder="Period-6 Duration (Don't need to type here)"
-            />
-          </td>
-        </tr>
-        <tr class="period-row" id="period-7-row">
-          <th class="period-header" id="period-7-header">Period-7</th>
-          <td>
-            <input
-              type="text"
-              class="period_7_start_time"
-              id="period-7-start-time"
-              placeholder="Period-7 Start Time hh:mm"
-            />
-          </td>
-          <td>
-            <input
-              type="text"
-              class="period_7_end_time"
-              id="period-7-end-time"
-              placeholder="Period-7 End Time hh:mm"
-            />
-          </td>
-          <td>
-            <input
-              type="text"
-              class="period_7_duration"
-              id="period-7-duration"
-              placeholder="Period-7 Duration (Don't need to type here)"
-            />
-          </td>
-        </tr>
-        <tr class="period-row" id="period-8-row">
-          <th class="period-header" id="period-8-header">Period-8</th>
-          <td>
-            <input
-              type="text"
-              class="period_8_start_time"
-              id="period-8-start-time"
-              placeholder="Period-8 Start Time hh:mm"
-            />
-          </td>
-          <td>
-            <input
-              type="text"
-              class="period_8_end_time"
-              id="period-8-end-time"
-              placeholder="Period-8 End Time hh:mm"
-            />
-          </td>
-          <td>
-            <input
-              type="text"
-              class="period_8_duration"
-              id="period-8-duration"
-              placeholder="Period-8 Duration (Don't need to type here)"
-            />
-          </td>
-        </tr>
-      </table>
-      <button onclick="createTimeTable()" class="btn btn-container">
-        Submit
-      </button>
-    </main>
-    <!-- Footer -->
-    <footer>
-      <div class="contact-info">
-        <h3>Contact Us</h3>
-        <p>Kolkata , WestBengal , India</p>
-        <p>Phone: +919748903490</p>
-        <p><a href="mailto: ankur.halder12345@gmail.com">Send Email</a></p>
-      </div>
-      <div class="footer-info">
-        <p>&copy;College Group 23,Uem Kolkata,2021.All rights reserved.</p>
-      </div>
-      <div class="social-links">
-        <h3>Follow Us</h3>
-        <ul>
-          <li><a href="#">Facebook</a></li>
-          <li><a href="#">Twitter</a></li>
-          <li><a href="#">Instagram</a></li>
-        </ul>
-      </div>
-    </footer>
-  </body>
+    </div>
+  </header>
+  <script src="/TEMP_STUDENT/js/dropDown.js"></script>
+  <main>
+    <table>
+      <tr class="period-row" id="period-1-row">
+        <th class="period-header" id="period-1-header">Period-1</th>
+        <td>
+          <input type="text" class="period_1_start_time" id="period-1-start-time"
+            placeholder="Period-1 Start Time hh:mm" />
+        </td>
+        <td>
+          <input type="text" class="period_1_end_time" id="period-1-end-time" placeholder="Period-1 End Time hh:mm" />
+        </td>
+        <td>
+          <input type="text" class="period_1_duration" id="period-1-duration"
+            placeholder="Period-1 Duration (Don't need to type here)" />
+        </td>
+      </tr>
+      <tr class="period-row" id="period-2-row">
+        <th class="period-header" id="period-2-header">Period-2</th>
+        <td>
+          <input type="text" class="period_2_start_time" id="period-2-start-time"
+            placeholder="Period-2 Start Time hh:mm" />
+        </td>
+        <td>
+          <input type="text" class="period_2_end_time" id="period-2-end-time" placeholder="Period-2 End Time hh:mm" />
+        </td>
+        <td>
+          <input type="text" class="period_2_duration" id="period-2-duration"
+            placeholder="Period-2 Duration (Don't need to type here)" />
+        </td>
+      </tr>
+      <tr class="period-row" id="period-3-row">
+        <th class="period-header" id="period-3-header">Period-3</th>
+        <td>
+          <input type="text" class="period_3_start_time" id="period-3-start-time"
+            placeholder="Period-3 Start Time hh:mm" />
+        </td>
+        <td>
+          <input type="text" class="period_3_end_time" id="period-3-end-time" placeholder="Period-3 End Time hh:mm" />
+        </td>
+        <td>
+          <input type="text" class="period_3_duration" id="period-3-duration"
+            placeholder="Period-3 Duration (Don't need to type here)" />
+        </td>
+      </tr>
+      <tr class="period-row" id="period-4-row">
+        <th class="period-header" id="period-4-header">Period-4</th>
+        <td>
+          <input type="text" class="period_4_start_time" id="period-4-start-time"
+            placeholder="Period-4 Start Time hh:mm" />
+        </td>
+        <td>
+          <input type="text" class="period_4_end_time" id="period-4-end-time" placeholder="Period-4 End Time hh:mm" />
+        </td>
+        <td>
+          <input type="text" class="period_4_duration" id="period-4-duration"
+            placeholder="Period-4 Duration (Don't need to type here)" />
+        </td>
+      </tr>
+      <tr class="period-row" id="period-5-row">
+        <th class="period-header" id="period-5-header">Period-5</th>
+        <td>
+          <input type="text" class="period_5_start_time" id="period-5-start-time"
+            placeholder="Period-5 Start Time hh:mm" />
+        </td>
+        <td>
+          <input type="text" class="period_5_end_time" id="period-5-end-time" placeholder="Period-5 End Time hh:mm" />
+        </td>
+        <td>
+          <input type="text" class="period_5_duration" id="period-5-duration"
+            placeholder="Period-5 Duration (Don't need to type here)" />
+        </td>
+      </tr>
+      <tr class="period-row" id="period-6-row">
+        <th class="period-header" id="period-6-header">Period-6</th>
+        <td>
+          <input type="text" class="period_6_start_time" id="period-6-start-time"
+            placeholder="Period-6 Start Time hh:mm" />
+        </td>
+        <td>
+          <input type="text" class="period_6_end_time" id="period-6-end-time" placeholder="Period-6 End Time hh:mm" />
+        </td>
+        <td>
+          <input type="text" class="period_6_duration" id="period-6-duration"
+            placeholder="Period-6 Duration (Don't need to type here)" />
+        </td>
+      </tr>
+      <tr class="period-row" id="period-7-row">
+        <th class="period-header" id="period-7-header">Period-7</th>
+        <td>
+          <input type="text" class="period_7_start_time" id="period-7-start-time"
+            placeholder="Period-7 Start Time hh:mm" />
+        </td>
+        <td>
+          <input type="text" class="period_7_end_time" id="period-7-end-time" placeholder="Period-7 End Time hh:mm" />
+        </td>
+        <td>
+          <input type="text" class="period_7_duration" id="period-7-duration"
+            placeholder="Period-7 Duration (Don't need to type here)" />
+        </td>
+      </tr>
+      <tr class="period-row" id="period-8-row">
+        <th class="period-header" id="period-8-header">Period-8</th>
+        <td>
+          <input type="text" class="period_8_start_time" id="period-8-start-time"
+            placeholder="Period-8 Start Time hh:mm" />
+        </td>
+        <td>
+          <input type="text" class="period_8_end_time" id="period-8-end-time" placeholder="Period-8 End Time hh:mm" />
+        </td>
+        <td>
+          <input type="text" class="period_8_duration" id="period-8-duration"
+            placeholder="Period-8 Duration (Don't need to type here)" />
+        </td>
+      </tr>
+    </table>
+    <button onclick="createTimeTable()" class="btn btn-container">
+      Submit
+    </button>
+  </main>
+  <!-- Footer -->
+  <footer>
+    <div class="contact-info">
+      <h3>Contact Us</h3>
+      <p>Kolkata , WestBengal , India</p>
+      <p>Phone: +919748903490</p>
+      <p><a href="mailto: ankur.halder12345@gmail.com">Send Email</a></p>
+    </div>
+    <div class="footer-info">
+      <p>&copy;College Group 23,Uem Kolkata,2021.All rights reserved.</p>
+    </div>
+    <div class="social-links">
+      <h3>Follow Us</h3>
+      <ul>
+        <li><a href="#">Facebook</a></li>
+        <li><a href="#">Twitter</a></li>
+        <li><a href="#">Instagram</a></li>
+      </ul>
+    </div>
+  </footer>
+</body>
+
 </html>

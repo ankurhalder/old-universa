@@ -16,305 +16,165 @@ function updateRoutine() {
 
   // Monday
   const mondayPeriod1Input = document.getElementById("monday-period-1");
-  const mondayPeriod1FacultyInput = document.getElementById(
-    "faculty-monday-period-1"
-  );
-  const mondayPeriod1RoomNoInput = document.getElementById(
-    "roomno-monday-period-1"
-  );
+  const mondayPeriod1FacultyInput = document.getElementById("faculty-monday-period-1");
+  const mondayPeriod1RoomNoInput = document.getElementById("roomno-monday-period-1");
 
   const mondayPeriod2Input = document.getElementById("monday-period-2");
-  const mondayPeriod2FacultyInput = document.getElementById(
-    "faculty-monday-period-2"
-  );
-  const mondayPeriod2RoomNoInput = document.getElementById(
-    "roomno-monday-period-2"
-  );
+  const mondayPeriod2FacultyInput = document.getElementById("faculty-monday-period-2");
+  const mondayPeriod2RoomNoInput = document.getElementById("roomno-monday-period-2");
 
   const mondayPeriod3Input = document.getElementById("monday-period-3");
-  const mondayPeriod3FacultyInput = document.getElementById(
-    "faculty-monday-period-3"
-  );
-  const mondayPeriod3RoomNoInput = document.getElementById(
-    "roomno-monday-period-3"
-  );
+  const mondayPeriod3FacultyInput = document.getElementById("faculty-monday-period-3");
+  const mondayPeriod3RoomNoInput = document.getElementById("roomno-monday-period-3");
 
   // const mondayPeriod4Input = document.getElementById("monday-period-4");
   // const mondayPeriod4FacultyInput = document.getElementById("faculty-monday-period-4");
   // const mondayPeriod4RoomNoInput = document.getElementById("roomno-monday-period-4");
 
   const mondayPeriod5Input = document.getElementById("monday-period-5");
-  const mondayPeriod5FacultyInput = document.getElementById(
-    "faculty-monday-period-5"
-  );
-  const mondayPeriod5RoomNoInput = document.getElementById(
-    "roomno-monday-period-5"
-  );
+  const mondayPeriod5FacultyInput = document.getElementById("faculty-monday-period-5");
+  const mondayPeriod5RoomNoInput = document.getElementById("roomno-monday-period-5");
 
   const mondayPeriod6Input = document.getElementById("monday-period-6");
-  const mondayPeriod6FacultyInput = document.getElementById(
-    "faculty-monday-period-6"
-  );
-  const mondayPeriod6RoomNoInput = document.getElementById(
-    "roomno-monday-period-6"
-  );
+  const mondayPeriod6FacultyInput = document.getElementById("faculty-monday-period-6");
+  const mondayPeriod6RoomNoInput = document.getElementById("roomno-monday-period-6");
 
   const mondayPeriod7Input = document.getElementById("monday-period-7");
-  const mondayPeriod7FacultyInput = document.getElementById(
-    "faculty-monday-period-7"
-  );
-  const mondayPeriod7RoomNoInput = document.getElementById(
-    "roomno-monday-period-7"
-  );
+  const mondayPeriod7FacultyInput = document.getElementById("faculty-monday-period-7");
+  const mondayPeriod7RoomNoInput = document.getElementById("roomno-monday-period-7");
 
   const mondayPeriod8Input = document.getElementById("monday-period-8");
-  const mondayPeriod8FacultyInput = document.getElementById(
-    "faculty-monday-period-8"
-  );
-  const mondayPeriod8RoomNoInput = document.getElementById(
-    "roomno-monday-period-8"
-  );
+  const mondayPeriod8FacultyInput = document.getElementById("faculty-monday-period-8");
+  const mondayPeriod8RoomNoInput = document.getElementById("roomno-monday-period-8");
   // tuesday
   const tuesdayPeriod1Input = document.getElementById("tuesday-period-1");
-  const tuesdayPeriod1FacultyInput = document.getElementById(
-    "faculty-tuesday-period-1"
-  );
-  const tuesdayPeriod1RoomNoInput = document.getElementById(
-    "roomno-tuesday-period-1"
-  );
+  const tuesdayPeriod1FacultyInput = document.getElementById("faculty-tuesday-period-1");
+  const tuesdayPeriod1RoomNoInput = document.getElementById("roomno-tuesday-period-1");
 
   const tuesdayPeriod2Input = document.getElementById("tuesday-period-2");
-  const tuesdayPeriod2FacultyInput = document.getElementById(
-    "faculty-tuesday-period-2"
-  );
-  const tuesdayPeriod2RoomNoInput = document.getElementById(
-    "roomno-tuesday-period-2"
-  );
+  const tuesdayPeriod2FacultyInput = document.getElementById("faculty-tuesday-period-2");
+  const tuesdayPeriod2RoomNoInput = document.getElementById("roomno-tuesday-period-2");
 
   const tuesdayPeriod3Input = document.getElementById("tuesday-period-3");
-  const tuesdayPeriod3FacultyInput = document.getElementById(
-    "faculty-tuesday-period-3"
-  );
-  const tuesdayPeriod3RoomNoInput = document.getElementById(
-    "roomno-tuesday-period-3"
-  );
+  const tuesdayPeriod3FacultyInput = document.getElementById("faculty-tuesday-period-3");
+  const tuesdayPeriod3RoomNoInput = document.getElementById("roomno-tuesday-period-3");
 
   // const tuesdayPeriod4Input = document.getElementById("tuesday-period-4");
   // const tuesdayPeriod4FacultyInput = document.getElementById("faculty-tuesday-period-4");
   // const tuesdayPeriod4RoomNoInput = document.getElementById("roomno-tuesday-period-4");
 
   const tuesdayPeriod5Input = document.getElementById("tuesday-period-5");
-  const tuesdayPeriod5FacultyInput = document.getElementById(
-    "faculty-tuesday-period-5"
-  );
-  const tuesdayPeriod5RoomNoInput = document.getElementById(
-    "roomno-tuesday-period-5"
-  );
+  const tuesdayPeriod5FacultyInput = document.getElementById("faculty-tuesday-period-5");
+  const tuesdayPeriod5RoomNoInput = document.getElementById("roomno-tuesday-period-5");
 
   const tuesdayPeriod6Input = document.getElementById("tuesday-period-6");
-  const tuesdayPeriod6FacultyInput = document.getElementById(
-    "faculty-tuesday-period-6"
-  );
-  const tuesdayPeriod6RoomNoInput = document.getElementById(
-    "roomno-tuesday-period-6"
-  );
+  const tuesdayPeriod6FacultyInput = document.getElementById("faculty-tuesday-period-6");
+  const tuesdayPeriod6RoomNoInput = document.getElementById("roomno-tuesday-period-6");
 
   const tuesdayPeriod7Input = document.getElementById("tuesday-period-7");
-  const tuesdayPeriod7FacultyInput = document.getElementById(
-    "faculty-tuesday-period-7"
-  );
-  const tuesdayPeriod7RoomNoInput = document.getElementById(
-    "roomno-tuesday-period-7"
-  );
+  const tuesdayPeriod7FacultyInput = document.getElementById("faculty-tuesday-period-7");
+  const tuesdayPeriod7RoomNoInput = document.getElementById("roomno-tuesday-period-7");
 
   const tuesdayPeriod8Input = document.getElementById("tuesday-period-8");
-  const tuesdayPeriod8FacultyInput = document.getElementById(
-    "faculty-tuesday-period-8"
-  );
-  const tuesdayPeriod8RoomNoInput = document.getElementById(
-    "roomno-tuesday-period-8"
-  );
+  const tuesdayPeriod8FacultyInput = document.getElementById("faculty-tuesday-period-8");
+  const tuesdayPeriod8RoomNoInput = document.getElementById("roomno-tuesday-period-8");
   // wednesday
   // Wednesday
   const wednesdayPeriod1Input = document.getElementById("wednesday-period-1");
-  const wednesdayPeriod1FacultyInput = document.getElementById(
-    "faculty-wednesday-period-1"
-  );
-  const wednesdayPeriod1RoomNoInput = document.getElementById(
-    "roomno-wednesday-period-1"
-  );
+  const wednesdayPeriod1FacultyInput = document.getElementById("faculty-wednesday-period-1");
+  const wednesdayPeriod1RoomNoInput = document.getElementById("roomno-wednesday-period-1");
 
   const wednesdayPeriod2Input = document.getElementById("wednesday-period-2");
-  const wednesdayPeriod2FacultyInput = document.getElementById(
-    "faculty-wednesday-period-2"
-  );
-  const wednesdayPeriod2RoomNoInput = document.getElementById(
-    "roomno-wednesday-period-2"
-  );
+  const wednesdayPeriod2FacultyInput = document.getElementById("faculty-wednesday-period-2");
+  const wednesdayPeriod2RoomNoInput = document.getElementById("roomno-wednesday-period-2");
 
   const wednesdayPeriod3Input = document.getElementById("wednesday-period-3");
-  const wednesdayPeriod3FacultyInput = document.getElementById(
-    "faculty-wednesday-period-3"
-  );
-  const wednesdayPeriod3RoomNoInput = document.getElementById(
-    "roomno-wednesday-period-3"
-  );
+  const wednesdayPeriod3FacultyInput = document.getElementById("faculty-wednesday-period-3");
+  const wednesdayPeriod3RoomNoInput = document.getElementById("roomno-wednesday-period-3");
 
   // const wednesdayPeriod4Input = document.getElementById("wednesday-period-4");
   // const wednesdayPeriod4FacultyInput = document.getElementById("faculty-wednesday-period-4");
   // const wednesdayPeriod4RoomNoInput = document.getElementById("roomno-wednesday-period-4");
 
   const wednesdayPeriod5Input = document.getElementById("wednesday-period-5");
-  const wednesdayPeriod5FacultyInput = document.getElementById(
-    "faculty-wednesday-period-5"
-  );
-  const wednesdayPeriod5RoomNoInput = document.getElementById(
-    "roomno-wednesday-period-5"
-  );
+  const wednesdayPeriod5FacultyInput = document.getElementById("faculty-wednesday-period-5");
+  const wednesdayPeriod5RoomNoInput = document.getElementById("roomno-wednesday-period-5");
 
   const wednesdayPeriod6Input = document.getElementById("wednesday-period-6");
-  const wednesdayPeriod6FacultyInput = document.getElementById(
-    "faculty-wednesday-period-6"
-  );
-  const wednesdayPeriod6RoomNoInput = document.getElementById(
-    "roomno-wednesday-period-6"
-  );
+  const wednesdayPeriod6FacultyInput = document.getElementById("faculty-wednesday-period-6");
+  const wednesdayPeriod6RoomNoInput = document.getElementById("roomno-wednesday-period-6");
 
   const wednesdayPeriod7Input = document.getElementById("wednesday-period-7");
-  const wednesdayPeriod7FacultyInput = document.getElementById(
-    "faculty-wednesday-period-7"
-  );
-  const wednesdayPeriod7RoomNoInput = document.getElementById(
-    "roomno-wednesday-period-7"
-  );
+  const wednesdayPeriod7FacultyInput = document.getElementById("faculty-wednesday-period-7");
+  const wednesdayPeriod7RoomNoInput = document.getElementById("roomno-wednesday-period-7");
 
   const wednesdayPeriod8Input = document.getElementById("wednesday-period-8");
-  const wednesdayPeriod8FacultyInput = document.getElementById(
-    "faculty-wednesday-period-8"
-  );
-  const wednesdayPeriod8RoomNoInput = document.getElementById(
-    "roomno-wednesday-period-8"
-  );
+  const wednesdayPeriod8FacultyInput = document.getElementById("faculty-wednesday-period-8");
+  const wednesdayPeriod8RoomNoInput = document.getElementById("roomno-wednesday-period-8");
   // Thursday
   const thursdayPeriod1Input = document.getElementById("thursday-period-1");
-  const thursdayPeriod1FacultyInput = document.getElementById(
-    "faculty-thursday-period-1"
-  );
-  const thursdayPeriod1RoomNoInput = document.getElementById(
-    "roomno-thursday-period-1"
-  );
+  const thursdayPeriod1FacultyInput = document.getElementById("faculty-thursday-period-1");
+  const thursdayPeriod1RoomNoInput = document.getElementById("roomno-thursday-period-1");
 
   const thursdayPeriod2Input = document.getElementById("thursday-period-2");
-  const thursdayPeriod2FacultyInput = document.getElementById(
-    "faculty-thursday-period-2"
-  );
-  const thursdayPeriod2RoomNoInput = document.getElementById(
-    "roomno-thursday-period-2"
-  );
+  const thursdayPeriod2FacultyInput = document.getElementById("faculty-thursday-period-2");
+  const thursdayPeriod2RoomNoInput = document.getElementById("roomno-thursday-period-2");
 
   const thursdayPeriod3Input = document.getElementById("thursday-period-3");
-  const thursdayPeriod3FacultyInput = document.getElementById(
-    "faculty-thursday-period-3"
-  );
-  const thursdayPeriod3RoomNoInput = document.getElementById(
-    "roomno-thursday-period-3"
-  );
+  const thursdayPeriod3FacultyInput = document.getElementById("faculty-thursday-period-3");
+  const thursdayPeriod3RoomNoInput = document.getElementById("roomno-thursday-period-3");
 
   // const thursdayPeriod4Input = document.getElementById("thursday-period-4");
   // const thursdayPeriod4FacultyInput = document.getElementById("faculty-thursday-period-4");
   // const thursdayPeriod4RoomNoInput = document.getElementById("roomno-thursday-period-4");
 
   const thursdayPeriod5Input = document.getElementById("thursday-period-5");
-  const thursdayPeriod5FacultyInput = document.getElementById(
-    "faculty-thursday-period-5"
-  );
-  const thursdayPeriod5RoomNoInput = document.getElementById(
-    "roomno-thursday-period-5"
-  );
+  const thursdayPeriod5FacultyInput = document.getElementById("faculty-thursday-period-5");
+  const thursdayPeriod5RoomNoInput = document.getElementById("roomno-thursday-period-5");
 
   const thursdayPeriod6Input = document.getElementById("thursday-period-6");
-  const thursdayPeriod6FacultyInput = document.getElementById(
-    "faculty-thursday-period-6"
-  );
-  const thursdayPeriod6RoomNoInput = document.getElementById(
-    "roomno-thursday-period-6"
-  );
+  const thursdayPeriod6FacultyInput = document.getElementById("faculty-thursday-period-6");
+  const thursdayPeriod6RoomNoInput = document.getElementById("roomno-thursday-period-6");
 
   const thursdayPeriod7Input = document.getElementById("thursday-period-7");
-  const thursdayPeriod7FacultyInput = document.getElementById(
-    "faculty-thursday-period-7"
-  );
-  const thursdayPeriod7RoomNoInput = document.getElementById(
-    "roomno-thursday-period-7"
-  );
+  const thursdayPeriod7FacultyInput = document.getElementById("faculty-thursday-period-7");
+  const thursdayPeriod7RoomNoInput = document.getElementById("roomno-thursday-period-7");
 
   const thursdayPeriod8Input = document.getElementById("thursday-period-8");
-  const thursdayPeriod8FacultyInput = document.getElementById(
-    "faculty-thursday-period-8"
-  );
-  const thursdayPeriod8RoomNoInput = document.getElementById(
-    "roomno-thursday-period-8"
-  );
+  const thursdayPeriod8FacultyInput = document.getElementById("faculty-thursday-period-8");
+  const thursdayPeriod8RoomNoInput = document.getElementById("roomno-thursday-period-8");
   // friday
   const fridayPeriod1Input = document.getElementById("friday-period-1");
-  const fridayPeriod1FacultyInput = document.getElementById(
-    "faculty-friday-period-1"
-  );
-  const fridayPeriod1RoomNoInput = document.getElementById(
-    "roomno-friday-period-1"
-  );
+  const fridayPeriod1FacultyInput = document.getElementById("faculty-friday-period-1");
+  const fridayPeriod1RoomNoInput = document.getElementById("roomno-friday-period-1");
 
   const fridayPeriod2Input = document.getElementById("friday-period-2");
-  const fridayPeriod2FacultyInput = document.getElementById(
-    "faculty-friday-period-2"
-  );
-  const fridayPeriod2RoomNoInput = document.getElementById(
-    "roomno-friday-period-2"
-  );
+  const fridayPeriod2FacultyInput = document.getElementById("faculty-friday-period-2");
+  const fridayPeriod2RoomNoInput = document.getElementById("roomno-friday-period-2");
 
   const fridayPeriod3Input = document.getElementById("friday-period-3");
-  const fridayPeriod3FacultyInput = document.getElementById(
-    "faculty-friday-period-3"
-  );
-  const fridayPeriod3RoomNoInput = document.getElementById(
-    "roomno-friday-period-3"
-  );
+  const fridayPeriod3FacultyInput = document.getElementById("faculty-friday-period-3");
+  const fridayPeriod3RoomNoInput = document.getElementById("roomno-friday-period-3");
 
   // const fridayPeriod4Input = document.getElementById("friday-period-4");
   // const fridayPeriod4FacultyInput = document.getElementById("faculty-friday-period-4");
   // const fridayPeriod4RoomNoInput = document.getElementById("roomno-friday-period-4");
 
   const fridayPeriod5Input = document.getElementById("friday-period-5");
-  const fridayPeriod5FacultyInput = document.getElementById(
-    "faculty-friday-period-5"
-  );
-  const fridayPeriod5RoomNoInput = document.getElementById(
-    "roomno-friday-period-5"
-  );
+  const fridayPeriod5FacultyInput = document.getElementById("faculty-friday-period-5");
+  const fridayPeriod5RoomNoInput = document.getElementById("roomno-friday-period-5");
 
   const fridayPeriod6Input = document.getElementById("friday-period-6");
-  const fridayPeriod6FacultyInput = document.getElementById(
-    "faculty-friday-period-6"
-  );
-  const fridayPeriod6RoomNoInput = document.getElementById(
-    "roomno-friday-period-6"
-  );
+  const fridayPeriod6FacultyInput = document.getElementById("faculty-friday-period-6");
+  const fridayPeriod6RoomNoInput = document.getElementById("roomno-friday-period-6");
 
   const fridayPeriod7Input = document.getElementById("friday-period-7");
-  const fridayPeriod7FacultyInput = document.getElementById(
-    "faculty-friday-period-7"
-  );
-  const fridayPeriod7RoomNoInput = document.getElementById(
-    "roomno-friday-period-7"
-  );
+  const fridayPeriod7FacultyInput = document.getElementById("faculty-friday-period-7");
+  const fridayPeriod7RoomNoInput = document.getElementById("roomno-friday-period-7");
 
   const fridayPeriod8Input = document.getElementById("friday-period-8");
-  const fridayPeriod8FacultyInput = document.getElementById(
-    "faculty-friday-period-8"
-  );
-  const fridayPeriod8RoomNoInput = document.getElementById(
-    "roomno-friday-period-8"
-  );
+  const fridayPeriod8FacultyInput = document.getElementById("faculty-friday-period-8");
+  const fridayPeriod8RoomNoInput = document.getElementById("roomno-friday-period-8");
 
   let hello = {
     year: yearSelect.value,
@@ -873,7 +733,7 @@ function updateRoutine() {
     method: "PUT",
     headers: {
       "Content-Type": "application/json",
-      "token": localStorage.getItem("token"),
+      token: localStorage.getItem("token"),
     },
     body: JSON.stringify(hello),
   })

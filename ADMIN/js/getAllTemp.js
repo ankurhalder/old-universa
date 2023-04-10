@@ -10,7 +10,7 @@ function getAllTemp() {
     method: "GET",
     credentials: "include",
     headers: {
-      "token": token1,
+      token: token1,
     },
   })
     .then((response) => response.json())
@@ -32,10 +32,7 @@ function getAllTemp() {
           // Add click event listener to "Approve Applicant" button
           anchor1.addEventListener("click", (event) => {
             event.preventDefault();
-            const p2Id = event.target
-              .closest(".temp")
-              .querySelector("p[id^='p2-']")
-              .getAttribute("data-id");
+            const p2Id = event.target.closest(".temp").querySelector("p[id^='p2-']").getAttribute("data-id");
             console.log("p2 id:", p2Id);
             localStorage.setItem("userid", p2Id);
             window.location.href = `/ADMIN/temp_st.html?id=${p2Id}`;
@@ -48,10 +45,7 @@ function getAllTemp() {
           anchor2.setAttribute("href", "");
           anchor2.addEventListener("click", (event) => {
             event.preventDefault();
-            const enrollmentNumber = event.target
-              .closest(".temp")
-              .querySelector("p[id^='p2-']")
-              .getAttribute("data-id");
+            const enrollmentNumber = event.target.closest(".temp").querySelector("p[id^='p2-']").getAttribute("data-id");
             console.log("enrollment number:", enrollmentNumber);
             deleteApplicant(enrollmentNumber);
           });
@@ -59,21 +53,11 @@ function getAllTemp() {
           innerDiv2.appendChild(anchor2);
           const p1 = document.createElement("p");
           p1.setAttribute("id", "p1-" + i);
-          p1.textContent =
-            "Applicant's Name: " +
-            data.data[i].personal_info.first_name +
-            " " +
-            data.data[i].personal_info.middle_name +
-            " " +
-            data.data[i].personal_info.last_name;
+          p1.textContent = "Applicant's Name: " + data.data[i].personal_info.first_name + " " + data.data[i].personal_info.middle_name + " " + data.data[i].personal_info.last_name;
           const p2 = document.createElement("p");
-          p2.textContent =
-            "USER ID: " + data.data[i].course_info.enrollment_number;
+          p2.textContent = "USER ID: " + data.data[i].course_info.enrollment_number;
           p2.setAttribute("id", "p2-" + i);
-          p2.setAttribute(
-            "data-id",
-            data.data[i].course_info.enrollment_number
-          ); // Add data-id attribute
+          p2.setAttribute("data-id", data.data[i].course_info.enrollment_number); // Add data-id attribute
           tempElement.appendChild(p1);
           tempElement.appendChild(p2);
           tempElement.appendChild(innerDiv1);

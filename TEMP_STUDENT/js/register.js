@@ -37,9 +37,7 @@ registerForm.addEventListener("submit", function (event) {
     return;
   }
   if (!validatePassword()) {
-    alert(
-      "Please enter a password that is at least 8 characters long and contains at least one uppercase letter, one lowercase letter, and one special character"
-    );
+    alert("Please enter a password that is at least 8 characters long and contains at least one uppercase letter, one lowercase letter, and one special character");
     return;
   }
   if (!validateConfirmPassword()) {
@@ -57,9 +55,7 @@ registerForm.addEventListener("submit", function (event) {
   })
     .then((response) => {
       if (response.ok) {
-        alert(
-          "Congratulations you are successfully registered now check your inbox"
-        );
+        alert("Congratulations you are successfully registered now check your inbox");
         window.location = "/Login.html";
       } else {
         alert("Registration was Unsuccessful");

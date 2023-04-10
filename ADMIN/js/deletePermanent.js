@@ -1,4 +1,3 @@
-
 function deletePermanemt() {
   const token1 = localStorage.getItem("token");
   const urlParams = new URLSearchParams(window.location.search);
@@ -8,9 +7,7 @@ function deletePermanemt() {
   }
   const userId = urlParams.get("id");
 
-  const confirmed = window.confirm(
-    "Are you sure you want to delete this applicant?"
-  );
+  const confirmed = window.confirm("Are you sure you want to delete this applicant?");
   if (!confirmed) {
     window.location.href = "/ADMIN/manage_students.html";
     return;
@@ -20,7 +17,7 @@ function deletePermanemt() {
     method: "DELETE",
     credentials: "include",
     headers: {
-      "token": localStorage.getItem("token"),
+      token: localStorage.getItem("token"),
     },
   })
     .then((response) => response.json())

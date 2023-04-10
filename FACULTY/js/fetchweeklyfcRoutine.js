@@ -7,17 +7,14 @@ function fetchRoutine() {
   }
   // retrieve user_id from local storage
   console.log(7563975692387);
-  fetch(
-    `https://universa-api.onrender.com/routine/weekly?faculty=${faculty_name}`,
-    {
-      // include user_id in the URL
-      method: "GET",
-      headers: {
-        "Content-Type": "application/json",
-        token: localStorage.getItem("token"),
-      },
-    }
-  )
+  fetch(`https://universa-api.onrender.com/routine/weekly?faculty=${faculty_name}`, {
+    // include user_id in the URL
+    method: "GET",
+    headers: {
+      "Content-Type": "application/json",
+      token: localStorage.getItem("token"),
+    },
+  })
     .then((response) => response.json())
     .then((data) => {
       console.log(data);

@@ -1,7 +1,5 @@
 function deleteApplicant(enrollmentNumber) {
-  const confirmed = window.confirm(
-    "Are you sure you want to delete this applicant?"
-  );
+  const confirmed = window.confirm("Are you sure you want to delete this applicant?");
   if (!confirmed) {
     window.location.href = "/ADMIN/manage_applicats.html";
     return;
@@ -12,7 +10,7 @@ function deleteApplicant(enrollmentNumber) {
     method: "DELETE",
     credentials: "include",
     headers: {
-      "token": localStorage.getItem("token"),
+      token: localStorage.getItem("token"),
     },
   })
     .then((response) => response.json())

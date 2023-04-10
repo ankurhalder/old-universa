@@ -20,5 +20,5 @@ function gotoUpdateRoutine() {
   window.location.href = "/ADMIN/updateRoutine.html";
 }
 function gotoScanner() {
-  window.location.href = "/ADMIN/scanner.html"
+  window.location.href = "/ADMIN/scanner.html";
 }

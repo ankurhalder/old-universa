@@ -4,13 +4,7 @@
  */
 
 (function (global, factory) {
-  typeof exports === "object" && typeof module !== "undefined"
-    ? (module.exports = factory())
-    : typeof define === "function" && define.amd
-    ? define(factory)
-    : ((global =
-        typeof globalThis !== "undefined" ? globalThis : global || self),
-      (global.SignaturePad = factory()));
+  typeof exports === "object" && typeof module !== "undefined" ? (module.exports = factory()) : typeof define === "function" && define.amd ? define(factory) : ((global = typeof globalThis !== "undefined" ? globalThis : global || self), (global.SignaturePad = factory()));
 })(this, function () {
   "use strict";
 
@@ -25,34 +19,18 @@
       this.time = time || Date.now();
     }
     distanceTo(start) {
-      return Math.sqrt(
-        Math.pow(this.x - start.x, 2) + Math.pow(this.y - start.y, 2)
-      );
+      return Math.sqrt(Math.pow(this.x - start.x, 2) + Math.pow(this.y - start.y, 2));
     }
     equals(other) {
-      return (
-        this.x === other.x &&
-        this.y === other.y &&
-        this.pressure === other.pressure &&
-        this.time === other.time
-      );
+      return this.x === other.x && this.y === other.y && this.pressure === other.pressure && this.time === other.time;
     }
     velocityFrom(start) {
-      return this.time !== start.time
-        ? this.distanceTo(start) / (this.time - start.time)
-        : 0;
+      return this.time !== start.time ? this.distanceTo(start) / (this.time - start.time) : 0;
     }
   }
 
   class Bezier {
-    constructor(
-      startPoint,
-      control2,
-      control1,
-      endPoint,
-      startWidth,
-      endWidth
-    ) {
+    constructor(startPoint, control2, control1, endPoint, startWidth, endWidth) {
       this.startPoint = startPoint;
       this.control2 = control2;
       this.control1 = control1;
@@ -61,16 +39,8 @@
       this.endWidth = endWidth;
     }
     static fromPoints(points, widths) {
-      const c2 = this.calculateControlPoints(
-        points[0],
-        points[1],
-        points[2]
-      ).c2;
-      const c3 = this.calculateControlPoints(
-        points[1],
-        points[2],
-        points[3]
-      ).c1;
+      const c2 = this.calculateControlPoints(points[0], points[1], points[2]).c2;
+      const c3 = this.calculateControlPoints(points[1], points[2], points[3]).c1;
       return new Bezier(points[1], c2, c3, points[2], widths.start, widths.end);
     }
     static calculateControlPoints(s1, s2, s3) {
@@ -100,20 +70,8 @@
       let py;
       for (let i = 0; i <= steps; i += 1) {
         const t = i / steps;
-        const cx = this.point(
-          t,
-          this.startPoint.x,
-          this.control1.x,
-          this.control2.x,
-          this.endPoint.x
-        );
-        const cy = this.point(
-          t,
-          this.startPoint.y,
-          this.control1.y,
-          this.control2.y,
-          this.endPoint.y
-        );
+        const cx = this.point(t, this.startPoint.x, this.control1.x, this.control2.x, this.endPoint.x);
+        const cy = this.point(t, this.startPoint.y, this.control1.y, this.control2.y, this.endPoint.y);
         if (i > 0) {
           const xdiff = cx - px;
           const ydiff = cy - py;
@@ -125,12 +83,7 @@
       return length;
     }
     point(t, start, c1, c2, end) {
-      return (
-        start * (1.0 - t) * (1.0 - t) * (1.0 - t) +
-        3.0 * c1 * (1.0 - t) * (1.0 - t) * t +
-        3.0 * c2 * (1.0 - t) * t * t +
-        end * t * t * t
-      );
+      return start * (1.0 - t) * (1.0 - t) * (1.0 - t) + 3.0 * c1 * (1.0 - t) * (1.0 - t) * t + 3.0 * c2 * (1.0 - t) * t * t + end * t * t * t;
     }
   }
 
@@ -270,9 +223,7 @@
       this.dotSize = options.dotSize || 0;
       this.penColor = options.penColor || "black";
       this.backgroundColor = options.backgroundColor || "rgba(0,0,0,0)";
-      this._strokeMoveUpdate = this.throttle
-        ? throttle(SignaturePad.prototype._strokeUpdate, this.throttle)
-        : SignaturePad.prototype._strokeUpdate;
+      this._strokeMoveUpdate = this.throttle ? throttle(SignaturePad.prototype._strokeUpdate, this.throttle) : SignaturePad.prototype._strokeUpdate;
       this._ctx = canvas.getContext("2d");
       this.clear();
       this.on();
@@ -313,9 +264,7 @@
           if (typeof encoderOptions !== "object") {
             encoderOptions = undefined;
           }
-          return `data:image/svg+xml;base64,${btoa(
-            this.toSVG(encoderOptions)
-          )}`;
+          return `data:image/svg+xml;base64,${btoa(this.toSVG(encoderOptions))}`;
         default:
           if (typeof encoderOptions !== "number") {
             encoderOptions = undefined;
@@ -327,8 +276,7 @@
       this.canvas.style.touchAction = "none";
       this.canvas.style.msTouchAction = "none";
       this.canvas.style.userSelect = "none";
-      const isIOS =
-        /Macintosh/.test(navigator.userAgent) && "ontouchstart" in document;
+      const isIOS = /Macintosh/.test(navigator.userAgent) && "ontouchstart" in document;
       if (window.PointerEvent && !isIOS) {
         this._handlePointerEvents();
       } else {
@@ -344,16 +292,10 @@
       this.canvas.style.userSelect = "auto";
       this.canvas.removeEventListener("pointerdown", this._handlePointerStart);
       this.canvas.removeEventListener("pointermove", this._handlePointerMove);
-      this.canvas.ownerDocument.removeEventListener(
-        "pointerup",
-        this._handlePointerEnd
-      );
+      this.canvas.ownerDocument.removeEventListener("pointerup", this._handlePointerEnd);
       this.canvas.removeEventListener("mousedown", this._handleMouseDown);
       this.canvas.removeEventListener("mousemove", this._handleMouseMove);
-      this.canvas.ownerDocument.removeEventListener(
-        "mouseup",
-        this._handleMouseUp
-      );
+      this.canvas.ownerDocument.removeEventListener("mouseup", this._handleMouseUp);
       this.canvas.removeEventListener("touchstart", this._handleTouchStart);
       this.canvas.removeEventListener("touchmove", this._handleTouchMove);
       this.canvas.removeEventListener("touchend", this._handleTouchEnd);
@@ -365,11 +307,7 @@
       if (clear) {
         this.clear();
       }
-      this._fromData(
-        pointGroups,
-        this._drawCurve.bind(this),
-        this._drawDot.bind(this)
-      );
+      this._fromData(pointGroups, this._drawCurve.bind(this), this._drawDot.bind(this));
       this._data = this._data.concat(pointGroups);
     }
     toData() {
@@ -381,19 +319,13 @@
         dotSize: group && "dotSize" in group ? group.dotSize : this.dotSize,
         minWidth: group && "minWidth" in group ? group.minWidth : this.minWidth,
         maxWidth: group && "maxWidth" in group ? group.maxWidth : this.maxWidth,
-        velocityFilterWeight:
-          group && "velocityFilterWeight" in group
-            ? group.velocityFilterWeight
-            : this.velocityFilterWeight,
+        velocityFilterWeight: group && "velocityFilterWeight" in group ? group.velocityFilterWeight : this.velocityFilterWeight,
       };
     }
     _strokeBegin(event) {
       this.dispatchEvent(new CustomEvent("beginStroke", { detail: event }));
       const pointGroupOptions = this._getPointGroupOptions();
-      const newPointGroup = Object.assign(
-        Object.assign({}, pointGroupOptions),
-        { points: [] }
-      );
+      const newPointGroup = Object.assign(Object.assign({}, pointGroupOptions), { points: [] });
       this._data.push(newPointGroup);
       this._reset(pointGroupOptions);
       this._strokeUpdate(event);
@@ -403,25 +335,15 @@
         this._strokeBegin(event);
         return;
       }
-      this.dispatchEvent(
-        new CustomEvent("beforeUpdateStroke", { detail: event })
-      );
+      this.dispatchEvent(new CustomEvent("beforeUpdateStroke", { detail: event }));
       const x = event.clientX;
       const y = event.clientY;
-      const pressure =
-        event.pressure !== undefined
-          ? event.pressure
-          : event.force !== undefined
-          ? event.force
-          : 0;
+      const pressure = event.pressure !== undefined ? event.pressure : event.force !== undefined ? event.force : 0;
       const point = this._createPoint(x, y, pressure);
       const lastPointGroup = this._data[this._data.length - 1];
       const lastPoints = lastPointGroup.points;
-      const lastPoint =
-        lastPoints.length > 0 && lastPoints[lastPoints.length - 1];
-      const isLastPointTooClose = lastPoint
-        ? point.distanceTo(lastPoint) <= this.minDistance
-        : false;
+      const lastPoint = lastPoints.length > 0 && lastPoints[lastPoints.length - 1];
+      const isLastPointTooClose = lastPoint ? point.distanceTo(lastPoint) <= this.minDistance : false;
       const pointGroupOptions = this._getPointGroupOptions(lastPointGroup);
       if (!lastPoint || !(lastPoint && isLastPointTooClose)) {
         const curve = this._addPoint(point, pointGroupOptions);
@@ -437,9 +359,7 @@
           pressure: point.pressure,
         });
       }
-      this.dispatchEvent(
-        new CustomEvent("afterUpdateStroke", { detail: event })
-      );
+      this.dispatchEvent(new CustomEvent("afterUpdateStroke", { detail: event }));
     }
     _strokeEnd(event) {
       this._strokeUpdate(event);
@@ -449,19 +369,13 @@
       this._drawningStroke = false;
       this.canvas.addEventListener("pointerdown", this._handlePointerStart);
       this.canvas.addEventListener("pointermove", this._handlePointerMove);
-      this.canvas.ownerDocument.addEventListener(
-        "pointerup",
-        this._handlePointerEnd
-      );
+      this.canvas.ownerDocument.addEventListener("pointerup", this._handlePointerEnd);
     }
     _handleMouseEvents() {
       this._drawningStroke = false;
       this.canvas.addEventListener("mousedown", this._handleMouseDown);
       this.canvas.addEventListener("mousemove", this._handleMouseMove);
-      this.canvas.ownerDocument.addEventListener(
-        "mouseup",
-        this._handleMouseUp
-      );
+      this.canvas.ownerDocument.addEventListener("mouseup", this._handleMouseUp);
     }
     _handleTouchEvents() {
       this.canvas.addEventListener("touchstart", this._handleTouchStart);
@@ -476,12 +390,7 @@
     }
     _createPoint(x, y, pressure) {
       const rect = this.canvas.getBoundingClientRect();
-      return new Point(
-        x - rect.left,
-        y - rect.top,
-        pressure,
-        new Date().getTime()
-      );
+      return new Point(x - rect.left, y - rect.top, pressure, new Date().getTime());
     }
     _addPoint(point, options) {
       const { _lastPoints } = this;
@@ -490,11 +399,7 @@
         if (_lastPoints.length === 3) {
           _lastPoints.unshift(_lastPoints[0]);
         }
-        const widths = this._calculateCurveWidths(
-          _lastPoints[1],
-          _lastPoints[2],
-          options
-        );
+        const widths = this._calculateCurveWidths(_lastPoints[1], _lastPoints[2], options);
         const curve = Bezier.fromPoints(_lastPoints, widths);
         _lastPoints.shift();
         return curve;
@@ -502,9 +407,7 @@
       return null;
     }
     _calculateCurveWidths(startPoint, endPoint, options) {
-      const velocity =
-        options.velocityFilterWeight * endPoint.velocityFrom(startPoint) +
-        (1 - options.velocityFilterWeight) * this._lastVelocity;
+      const velocity = options.velocityFilterWeight * endPoint.velocityFrom(startPoint) + (1 - options.velocityFilterWeight) * this._lastVelocity;
       const newWidth = this._strokeWidth(velocity, options);
       const widths = {
         end: newWidth,
@@ -544,10 +447,7 @@
         y += 3 * uu * t * curve.control1.y;
         y += 3 * u * tt * curve.control2.y;
         y += ttt * curve.endPoint.y;
-        const width = Math.min(
-          curve.startWidth + ttt * widthDelta,
-          options.maxWidth
-        );
+        const width = Math.min(curve.startWidth + ttt * widthDelta, options.maxWidth);
         this._drawCurveSegment(x, y, width);
       }
       ctx.closePath();
@@ -555,10 +455,7 @@
     }
     _drawDot(point, options) {
       const ctx = this._ctx;
-      const width =
-        options.dotSize > 0
-          ? options.dotSize
-          : (options.minWidth + options.maxWidth) / 2;
+      const width = options.dotSize > 0 ? options.dotSize : (options.minWidth + options.maxWidth) / 2;
       ctx.beginPath();
       this._drawCurveSegment(point.x, point.y, width);
       ctx.closePath();
@@ -572,12 +469,7 @@
         if (points.length > 1) {
           for (let j = 0; j < points.length; j += 1) {
             const basicPoint = points[j];
-            const point = new Point(
-              basicPoint.x,
-              basicPoint.y,
-              basicPoint.pressure,
-              basicPoint.time
-            );
+            const point = new Point(basicPoint.x, basicPoint.y, basicPoint.pressure, basicPoint.time);
             if (j === 0) {
               this._reset(pointGroupOptions);
             }
@@ -616,26 +508,10 @@
         pointGroups,
         (curve, { penColor }) => {
           const path = document.createElement("path");
-          if (
-            !isNaN(curve.control1.x) &&
-            !isNaN(curve.control1.y) &&
-            !isNaN(curve.control2.x) &&
-            !isNaN(curve.control2.y)
-          ) {
-            const attr =
-              `M ${curve.startPoint.x.toFixed(3)},${curve.startPoint.y.toFixed(
-                3
-              )} ` +
-              `C ${curve.control1.x.toFixed(3)},${curve.control1.y.toFixed(
-                3
-              )} ` +
-              `${curve.control2.x.toFixed(3)},${curve.control2.y.toFixed(3)} ` +
-              `${curve.endPoint.x.toFixed(3)},${curve.endPoint.y.toFixed(3)}`;
+          if (!isNaN(curve.control1.x) && !isNaN(curve.control1.y) && !isNaN(curve.control2.x) && !isNaN(curve.control2.y)) {
+            const attr = `M ${curve.startPoint.x.toFixed(3)},${curve.startPoint.y.toFixed(3)} ` + `C ${curve.control1.x.toFixed(3)},${curve.control1.y.toFixed(3)} ` + `${curve.control2.x.toFixed(3)},${curve.control2.y.toFixed(3)} ` + `${curve.endPoint.x.toFixed(3)},${curve.endPoint.y.toFixed(3)}`;
             path.setAttribute("d", attr);
-            path.setAttribute(
-              "stroke-width",
-              (curve.endWidth * 2.25).toFixed(3)
-            );
+            path.setAttribute("stroke-width", (curve.endWidth * 2.25).toFixed(3));
             path.setAttribute("stroke", penColor);
             path.setAttribute("fill", "none");
             path.setAttribute("stroke-linecap", "round");

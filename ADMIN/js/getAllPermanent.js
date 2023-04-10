@@ -30,16 +30,14 @@
 
 async function getAllPermanent() {
   try {
-    const response = await  fetch(`https://universa-api.onrender.com/student`, {
+    const response = await fetch(`https://universa-api.onrender.com/student`, {
       method: "GET",
       credentials: "include",
       headers: {
-        "token": localStorage.getItem("token"),
+        token: localStorage.getItem("token"),
       },
-    })
-    const data = await response.json()
-    console.log(data)
-  } catch (error) {
-    
-  }
+    });
+    const data = await response.json();
+    console.log(data);
+  } catch (error) {}
 }
